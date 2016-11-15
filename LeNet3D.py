@@ -37,6 +37,9 @@ from fuel.datasets.hdf5 import H5PYDataset
 from toolz.itertoolz import interleave
 import theano.tensor as T
 from blocks.initialization import Constant, Uniform
+from blocks.extensions.stopping import FinishIfNoImprovementAfter
+from blocks.extensions.training import TrackTheBest
+import tarfile
 
 theano.config.floatX = 'float32'
 floatX = theano.config.floatX
@@ -137,10 +140,34 @@ class LeNet(FeedforwardSequence, Initializable):
         self.top_mlp.activations = self.top_mlp_activations
         self.top_mlp.dims = [numpy.prod(conv_out_dim)] + self.top_mlp_dims
 
+from abc import ABCMeta, abstractmethod
+from blocks.bricks.base import application, Brick
+from six import add_metaclass
+@add_metaclass(ABCMeta)
+class Cost(Brick):
+    @abstractmethod
+    @application
+    def apply(self, *args, **kwargs):
+        pass
+class weighted_CategoricalCrossEntropy(Cost):
+    # @application(outputs=["cost"])
+    # def apply(self, y, y_hat, weight):
+    #     entropy = -tensor.sum(y * tensor.log(y_hat) * weight,
+    #                 axis=y_hat.ndim - 1)
+    #     cost = entropy.mean()
+    #     return cost
+    @application(outputs=["cost"])
+    def apply(self, y, y_hat, weight):
+        entropy = tensor.nnet.categorical_crossentropy(y_hat, y)
+        weighted_entropy = entropy * weight
+        cost = weighted_entropy.mean()
+        return cost
 
-def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
+
+def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
          conv_sizes=None, pool_sizes=None, batch_size=100,
-         num_batches=None):
+         num_batches=None, datafile_hdf5='shapenet10.hdf5'):
+
     if feature_maps is None:
         feature_maps = [16, 32]
     if mlp_hiddens is None:
@@ -150,8 +177,10 @@ def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
     if pool_sizes is None:
         pool_sizes = [2, 2, 2]
     image_size = (32, 32, 32)
-    output_size = 10
-
+    if datafile_hdf5=='shapenet10.hdf5':
+        output_size = 10
+    else:
+        output_size = 2
     # Use ReLUs everywhere and softmax for the final prediction
     conv_activations = [Rectifier() for _ in feature_maps]
     mlp_activations = [Rectifier() for _ in mlp_hiddens] + [Softmax()]
@@ -188,7 +217,9 @@ def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
 
     # Normalize input and apply the convnet
     probs = convnet.apply(x)
-    cost = (CategoricalCrossEntropy().apply(y.flatten(), probs)
+    # cost = (CategoricalCrossEntropy().apply(y.flatten(), probs)
+    #         .copy(name='cost'))
+    cost = (weighted_CategoricalCrossEntropy().apply(y.flatten(), probs, weight)
             .copy(name='cost'))
     error_rate = (MisclassificationRate().apply(y.flatten(), probs)
                   .copy(name='error_rate'))
@@ -199,11 +230,11 @@ def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
 
     params = VariableFilter(roles=[PARAMETER])(cg.variables)
 
-    train_set = H5PYDataset('shapenet10.hdf5', which_sets=('train',))
+    train_set = H5PYDataset(datafile_hdf5, which_sets=('train',))
     train_set_stream = DataStream.default_stream(
         train_set, iteration_scheme=ShuffledScheme(
             train_set.num_examples, batch_size))
-    test_set = H5PYDataset('shapenet10.hdf5', which_sets=('test',))
+    test_set = H5PYDataset(datafile_hdf5, which_sets=('test',))
     test_set_stream = DataStream.default_stream(
         test_set, iteration_scheme=ShuffledScheme(
             test_set.num_examples, batch_size))
@@ -215,13 +246,30 @@ def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
     # `Timing` extension reports time for reading data, aggregating a batch
     # and monitoring;
     # `ProgressBar` displays a nice progress bar during training.
+    # extensions = [Timing(),
+    #               FinishAfter(after_n_epochs=num_epochs,
+    #                           after_n_batches=num_batches),
+    #               DataStreamMonitoring(
+    #                   [cost, error_rate],
+    #                   test_set_stream,
+    #                   prefix="test"),
+    #               TrainingDataMonitoring(
+    #                   [cost, error_rate,
+    #                    aggregation.mean(algorithm.total_gradient_norm)],
+    #                   prefix="train",
+    #                   after_epoch=True),
+    #               Checkpoint(save_to),
+    #               ProgressBar(),
+    #               Printing()]
     extensions = [Timing(),
                   FinishAfter(after_n_epochs=num_epochs,
                               after_n_batches=num_batches),
                   DataStreamMonitoring(
                       [cost, error_rate],
                       test_set_stream,
-                      prefix="test"),
+                      prefix="valid"),
+                  TrackTheBest('valid_log_p'),
+                  FinishIfNoImprovementAfter('valid_log_p_best_so_far', epochs=10),
                   TrainingDataMonitoring(
                       [cost, error_rate,
                        aggregation.mean(algorithm.total_gradient_norm)],
@@ -232,7 +280,6 @@ def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
                   Printing()]
 
     model = Model(cost)
-
     main_loop = MainLoop(
         algorithm,
         train_set_stream,
@@ -240,6 +287,90 @@ def run_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
         extensions=extensions)
 
     main_loop.run()
+    return
+
+def forward_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
+         conv_sizes=None, pool_sizes=None, batch_size=100,
+         num_batches=None, datafile_hdf5='shapenet10.hdf5'):
+
+    tarball = tarfile.open(save_to, 'r')
+    ps = numpy.load(tarball.extractfile(tarball.getmember('_parameters')))
+    sorted(ps.keys())
+    conv_W0 = ps['|lenet|convolutionalsequence3|conv_0.W']
+    conv_b0 = ps['|lenet|convolutionalsequence3|conv_0.b']
+    conv_W1 = ps['|lenet|convolutionalsequence3|conv_1.W']
+    conv_b1 = ps['|lenet|convolutionalsequence3|conv_1.b']
+    mlp_W0 = ps['|lenet|mlp|linear_0.W']
+    mlp_b0 = ps['|lenet|mlp|linear_0.b']
+    mlp_W1 = ps['|lenet|mlp|linear_1.W']
+    mlp_b1 = ps['|lenet|mlp|linear_1.b']
+
+    if feature_maps is None:
+        feature_maps = [16, 32]
+    if mlp_hiddens is None:
+        mlp_hiddens = [200]
+    if conv_sizes is None:
+        conv_sizes = [5, 5, 5]
+    if pool_sizes is None:
+        pool_sizes = [2, 2, 2]
+    image_size = (32, 32, 32)
+    if datafile_hdf5=='shapenet10.hdf5':
+        output_size = 10
+    else:
+        output_size = 2
+
+    # Use ReLUs everywhere and softmax for the final prediction
+    conv_activations = [Rectifier() for _ in feature_maps]
+    mlp_activations = [Rectifier() for _ in mlp_hiddens] + [Softmax()]
+    convnet = LeNet(conv_activations, 1, image_size,
+                    filter_sizes=[(5,5,5),(5,5,5)],
+                    feature_maps=feature_maps,
+                    pooling_sizes=[(2,2,2),(2,2,2)],
+                    top_mlp_activations=mlp_activations,
+                    top_mlp_dims=mlp_hiddens + [output_size],
+                    border_mode='valid',
+                    weights_init=Uniform(width=.2),
+                    biases_init=Constant(0))
+    # We push initialization config to set different initialization schemes
+    # for convolutional layers.
+
+    convnet.push_initialization_config()
+    convnet.layers[0].weights_init = Constant(conv_W0)
+    convnet.layers[1].weights_init = Constant(conv_W1)
+    convnet.top_mlp.linear_transformations[0].weights_init = Constant(mlp_W0)
+    convnet.top_mlp.linear_transformations[1].weights_init = Constant(mlp_W1)
+    convnet.layers[0].biases_init = Constant(conv_b0)
+    convnet.layers[1].biases_init = Constant(conv_b1)
+    convnet.top_mlp.linear_transformations[0].biases_init = Constant(mlp_b0)
+    convnet.top_mlp.linear_transformations[1].biases_init = Constant(mlp_b1)
+    convnet.initialize()
+
+    logging.info("Input dim: {} {} {} {}".format(
+        *convnet.children[0].get_dim('input_')))
+    for i, layer in enumerate(convnet.layers):
+        if isinstance(layer, Activation):
+            logging.info("Layer {} ({})".format(
+                i, layer.__class__.__name__))
+        else:
+            logging.info("Layer {} ({}) dim: {} {} {} {}".format(
+                i, layer.__class__.__name__, *layer.get_dim('output')))
+
+    dtensor5 = T.TensorType(floatX, (False,) * 5)
+    x = dtensor5(name='input')
+    # y = tensor.lmatrix('targets')
+
+    f = theano.function([x], convnet.apply(x))
+
+    from fuel.datasets.hdf5 import H5PYDataset
+    train_set = H5PYDataset(datafile_hdf5, which_sets=('train',))
+    handle = train_set.open()
+    if datafile_hdf5=='shapenet10.hdf5':
+        n = 1000
+    else:
+        n = 18
+    train_data = train_set.get_data(handle, slice(0, n))
+
+    return f(train_data[0]),train_data[1]
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
@@ -263,5 +394,8 @@ if __name__ == "__main__":
                              "--conv-sizes.")
     parser.add_argument("--batch-size", type=int, default=100,
                         help="Batch size.")
+    parser.add_argument("--datafile-hdf5", default='shapenet10.hdf5', nargs="?",
+                        help="Training and testing data")
+
     args = parser.parse_args()
-    run_cnn3d(**vars(args))
+    train_cnn3d(1,**vars(args))

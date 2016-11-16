@@ -54,7 +54,7 @@ def boosting(predv,realv,weight):
         else:
             new_weight[i] = wi * numpy.exp(alpha)
     new_weight = new_weight / numpy.sum(weight)
-    return new_weight
+    return numpy.float32(new_weight)
 
 if __name__ == "__main__":
     # '''Adaboost'''
@@ -83,6 +83,7 @@ if __name__ == "__main__":
         LeNet3D.train_cnn3d(weight, **vars(args))
         predv, realv = LeNet3D.forward_cnn3d(**vars(args))
         weight = boosting(predv,realv,weight)
+        print(weight)
 
 
 

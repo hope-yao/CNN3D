@@ -163,6 +163,29 @@ class weighted_CategoricalCrossEntropy(Cost):
         cost = weighted_entropy.mean()
         return cost
 
+@add_metaclass(ABCMeta)
+class CostMatrix(Cost):
+    """Base class for costs which can be calculated element-wise.
+
+    Assumes that the data has format (batch, features).
+
+    """
+    @application(outputs=["cost"])
+    def apply(self, *args, **kwargs):
+        return self.cost_matrix(*args, **kwargs).sum(axis=1).mean()
+
+    @abstractmethod
+    @application
+    def cost_matrix(self, *args, **kwargs):
+        pass
+class weighted_BinaryCrossEntropy(CostMatrix):
+    @application
+    def cost_matrix(self, y, y_hat, weight):
+        # cost = tensor.nnet.binary_crossentropy(y_hat, y)
+        output = y_hat
+        target = y
+        cost = -(target * tensor.log(output) + (1.0 - target) * tensor.log(1.0 - output))
+        return cost
 
 def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
          conv_sizes=None, pool_sizes=None, batch_size=100,
@@ -199,7 +222,7 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     convnet.layers[0].weights_init = Uniform(width=.2)
     convnet.layers[1].weights_init = Uniform(width=.09)
     convnet.top_mlp.linear_transformations[0].weights_init = Uniform(width=.08)
-    convnet.top_mlp.linear_transformations[1].weights_init = Uniform(width=.11)
+    convnet.top_mlp.linear_transformations[1].weights_init = Uniform(width=.15)
     convnet.initialize()
     logging.info("Input dim: {} {} {} {}".format(
         *convnet.children[0].get_dim('input_')))
@@ -218,9 +241,17 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     # Normalize input and apply the convnet
     probs = convnet.apply(x)
     # cost = (CategoricalCrossEntropy().apply(y.flatten(), probs)
-    #         .copy(name='cost'))
-    cost = (weighted_CategoricalCrossEntropy().apply(y.flatten(), probs, weight)
-            .copy(name='cost'))
+    #         .copy(name='cost')) # original
+    # cost = (weighted_CategoricalCrossEntropy().apply(y.flatten(), probs, weight)
+    #         .copy(name='cost')) # problematic
+    # cost = (weighted_BinaryCrossEntropy().apply(y.flatten(), probs, weight)
+    #         .copy(name='cost')) # problematic
+    true_dist = y.flatten()
+    coding_dist = probs
+    entropy = theano.tensor.nnet.categorical_crossentropy(coding_dist, true_dist)
+    weighted_entropy = entropy * weight
+    cost = weighted_entropy.mean()
+
     error_rate = (MisclassificationRate().apply(y.flatten(), probs)
                   .copy(name='error_rate'))
 

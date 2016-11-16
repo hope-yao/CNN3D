@@ -249,7 +249,7 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     true_dist = y.flatten()
     coding_dist = probs
     entropy = theano.tensor.nnet.categorical_crossentropy(coding_dist, true_dist)
-    weighted_entropy = entropy * weight
+    weighted_entropy = entropy * theano.shared(weight)
     cost = weighted_entropy.mean()
 
     error_rate = (MisclassificationRate().apply(y.flatten(), probs)
@@ -388,9 +388,14 @@ def forward_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
 
     dtensor5 = T.TensorType(floatX, (False,) * 5)
     x = dtensor5(name='input')
-    # y = tensor.lmatrix('targets')
+    # f = theano.function([x], convnet.apply(x))
 
-    f = theano.function([x], convnet.apply(x))
+    y = tensor.lmatrix('targets')
+    true_dist = y.flatten()
+    coding_dist = convnet.apply(x)
+    entropy = theano.tensor.nnet.categorical_crossentropy(coding_dist, true_dist)
+    f = theano.function([x,y], entropy)
+
 
     from fuel.datasets.hdf5 import H5PYDataset
     train_set = H5PYDataset(datafile_hdf5, which_sets=('train',))
@@ -401,7 +406,7 @@ def forward_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
         n = 18
     train_data = train_set.get_data(handle, slice(0, n))
 
-    return f(train_data[0]),train_data[1]
+    return f(train_data[0],train_data[1])
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)

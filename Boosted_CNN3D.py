@@ -80,7 +80,7 @@ if __name__ == "__main__":
     for i in range(N):
         save_to = "LeNet3D_"+str(i)+".pkl"
         args = setting(save_to)
-        LeNet3D.train_cnn3d(weight, **vars(args))
+        # LeNet3D.train_cnn3d(weight, **vars(args))
         predv, realv = LeNet3D.forward_cnn3d(**vars(args))
         weight = boosting(predv,realv,weight)
         print(weight)

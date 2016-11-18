@@ -11,6 +11,7 @@ except:
 import logging
 from argparse import ArgumentParser
 import theano
+import theano.tensor as T
 import numpy
 
 theano.config.floatX = 'float32'
@@ -36,9 +37,9 @@ def setting(save_to):
                         help="Pooling sizes. The pooling windows are always "
                              "square. Should be the same length as "
                              "--conv-sizes.")
-    parser.add_argument("--batch-size", type=int, default=100,
+    parser.add_argument("--batch-size", type=int, default=18,
                         help="Batch size.")
-    parser.add_argument("--datafile-hdf5", default='potcup_vox.hdf5', nargs="?",
+    parser.add_argument("--datafile-hdf5", default='C:/Users/p2admin/documents/max/projects/CNN3D/potcup_vox.hdf5', nargs="?",
                         help="Training and testing data")
     args = parser.parse_args()
     return args
@@ -69,22 +70,38 @@ if __name__ == "__main__":
 
     import imp
     from path import Path
-    cfg_dir = Path("/home/hope-yao/Documents/CNN3D/LeNet3D.py")
+    cfg_dir = Path("C:/Users/p2admin/documents/max/projects/CNN3D/LeNet3D.py")
     LeNet3D = imp.load_source("train_cnn3d", cfg_dir)
 
     # ensemble N LeNet together
     N = 2
 
     n = 18
-    weight = numpy.ones(n)/n # weight on incorrect training sample
+    weight = numpy.ones(n)/float(n) # weight on incorrect training sample
     for i in range(N):
         save_to = "LeNet3D_"+str(i)+".pkl"
         args = setting(save_to)
-        # LeNet3D.train_cnn3d(weight, **vars(args))
+        LeNet3D.train_cnn3d(weight, **vars(args))
         predv, realv = LeNet3D.forward_cnn3d(**vars(args))
         weight = boosting(predv,realv,weight)
         print(weight)
+    # i = 0
+    # save_to = "LeNet3D_"+str(i)+".pkl"
+    # args = setting(save_to)
+    # convnet = LeNet3D.test(weight, **vars(args))
+    # dtensor5 = T.TensorType(floatX, (False,) * 5)
+    # x = dtensor5(name='input')
+    # t = convnet.apply(x)
+    # do_classify = theano.function([x], outputs=t)
+    # y = do_classify(numpy.random.normal(size=(18, 1, 32, 32, 32)).astype('float32'))
+    # a = 1
 
+
+    # y = tensor.lmatrix('targets')
+    # probs = convnet.apply(x)
+    # true_dist = y.flatten()
+    # coding_dist = probs
+    # entropy = theano.tensor.nnet.categorical_crossentropy(coding_dist, true_dist)
 
 
 

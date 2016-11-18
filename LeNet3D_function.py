@@ -21,7 +21,7 @@ from theano import tensor
 
 from blocks.algorithms import GradientDescent, Scale
 from blocks.bricks import (MLP, Rectifier, Initializable, FeedforwardSequence,
-                           Softmax, Activation)
+                           Softmax, Activation, Logistic)
 from blocks.bricks.cost import CategoricalCrossEntropy, MisclassificationRate
 from blocks.extensions import FinishAfter, Timing, Printing, ProgressBar
 from blocks.extensions.monitoring import (DataStreamMonitoring,
@@ -193,7 +193,7 @@ class weighted_BinaryCrossEntropy(CostMatrix):
 
 def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
          conv_sizes=None, pool_sizes=None, batch_size=100,
-         num_batches=None, datafile_hdf5='shapenet10.hdf5'):
+         num_batches=None, datafile_hdf5='potcup_org_function.hdf5'):
 
     if feature_maps is None:
         feature_maps = [16, 32]
@@ -207,10 +207,10 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     if datafile_hdf5=='shapenet10.hdf5':
         output_size = 10
     else:
-        output_size = 2
+        output_size = 3
     # Use ReLUs everywhere and softmax for the final prediction
     conv_activations = [Rectifier() for _ in feature_maps]
-    mlp_activations = [Rectifier() for _ in mlp_hiddens] + [Softmax()]
+    mlp_activations = [Rectifier() for _ in mlp_hiddens] + [Logistic()]
     convnet = LeNet(conv_activations, 1, image_size,
                     filter_sizes=[(5,5,5),(5,5,5)],
                     feature_maps=feature_maps,
@@ -243,23 +243,12 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     y = tensor.lmatrix('targets')
 
     # Normalize input and apply the convnet
-    probs = convnet.apply(x)
-    # cost = (CategoricalCrossEntropy().apply(y.flatten(), probs)
-    #         .copy(name='cost')) # original
-    # cost = (weighted_CategoricalCrossEntropy().apply(y.flatten(), probs, weight)
-    #         .copy(name='cost')) # problematic
-    # cost = (weighted_BinaryCrossEntropy().apply(y.flatten(), probs, weight)
-    #         .copy(name='cost')) # problematic
-    true_dist = y.flatten()
-    coding_dist = probs
-    entropy = theano.tensor.nnet.categorical_crossentropy(coding_dist, true_dist)
-    weighted_entropy = entropy * theano.shared(weight)
-    cost = weighted_entropy.mean()
+    true_dist = y
+    coding_dist = convnet.apply(x)
+    cost = T.abs_(coding_dist-true_dist).sum(axis=1).mean()
+    cost.name = 'cost'
 
-    error_rate = (MisclassificationRate().apply(y.flatten(), probs)
-                  .copy(name='error_rate'))
-
-    cg = ComputationGraph([cost, error_rate])
+    cg = ComputationGraph([cost])
     from blocks.filter import VariableFilter
     from blocks.roles import PARAMETER
 
@@ -300,13 +289,13 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
                   FinishAfter(after_n_epochs=num_epochs,
                               after_n_batches=num_batches),
                   DataStreamMonitoring(
-                      [cost, error_rate],
+                      [cost],
                       test_set_stream,
                       prefix="valid"),
                   TrackTheBest('valid_log_p'),
                   FinishIfNoImprovementAfter('valid_log_p_best_so_far', epochs=10),
                   TrainingDataMonitoring(
-                      [cost, error_rate,
+                      [cost,
                        aggregation.mean(algorithm.total_gradient_norm)],
                       prefix="train",
                       after_epoch=True),
@@ -349,10 +338,10 @@ def forward_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
     if pool_sizes is None:
         pool_sizes = [2, 2, 2]
     image_size = (32, 32, 32)
-    if datafile_hdf5=='potcup_org_function.hdf5':
+    if datafile_hdf5=='shapenet10.hdf5':
         output_size = 10
     else:
-        output_size = 2
+        output_size = 3
 
     # Use ReLUs everywhere and softmax for the final prediction
     conv_activations = [Rectifier() for _ in feature_maps]
@@ -395,19 +384,19 @@ def forward_cnn3d(save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
     # f = theano.function([x], convnet.apply(x))
 
     y = tensor.lmatrix('targets')
-    true_dist = y.flatten()
     coding_dist = convnet.apply(x)
-    entropy = theano.tensor.nnet.categorical_crossentropy(coding_dist, true_dist)
-    f = theano.function([x,y], entropy)
-
+    true_dist = y
+    cost = T.abs_(coding_dist-true_dist).sum(axis=1).mean()
+    f = theano.function([x,y], cost)
+    g = theano.function([x], coding_dist)
 
     from fuel.datasets.hdf5 import H5PYDataset
     train_set = H5PYDataset(datafile_hdf5, which_sets=('train',))
     handle = train_set.open()
-    if datafile_hdf5=='potcup_org_function.hdf5':
+    if datafile_hdf5=='shapenet10.hdf5':
         n = 1000
     else:
-        n = 18
+        n = 11
     train_data = train_set.get_data(handle, slice(0, n))
 
     return f(train_data[0],train_data[1])
@@ -418,7 +407,7 @@ if __name__ == "__main__":
                             "on 3D ShapeNet10 dataset.")
     parser.add_argument("--num-epochs", type=int, default=100,
                         help="Number of training epochs to do.")
-    parser.add_argument("save_to", default="LeNet3D_potcup.pkl", nargs="?",
+    parser.add_argument("save_to", default="LeNet3D_potcup_function.pkl", nargs="?",
                         help="Destination to save the state of the training "
                              "process.")
     parser.add_argument("--feature-maps", type=int, nargs='+',
@@ -439,3 +428,13 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     train_cnn3d(1,**vars(args))
+
+
+    # import imp
+    # from path import Path
+    # cfg_dir = Path("C:/Users/p2admin/documents/max/projects/CNN3D/LeNet3D_function.py")
+    # LeNet3D = imp.load_source("train_cnn3d", cfg_dir)
+    # save_to = 'LeNet3D_potcup_function.pkl'
+    # args.save_to = save_to
+    # LeNet3D.forward_cnn3d(**vars(args))
+

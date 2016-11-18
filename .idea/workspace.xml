@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeNet3D_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/potcup_data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeNet3D_potcup_function.pkl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Boosted_CNN3D.py" afterPath="$PROJECT_DIR$/Boosted_CNN3D.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeNet3D.py" afterPath="$PROJECT_DIR$/LeNet3D.py" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +50,8 @@
       <file leaf-file-name="LeNet3D_function.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LeNet3D_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="218" column="61" selection-start-line="218" selection-start-column="61" selection-end-line="218" selection-end-column="61" />
+            <state relative-caret-position="143">
+              <caret line="203" column="26" selection-start-line="203" selection-start-column="26" selection-end-line="203" selection-end-column="26" />
               <folding>
                 <element signature="e#10080#10151#0" expanded="false" />
               </folding>
@@ -395,6 +392,14 @@
       <option name="presentableId" value="Default" />
       <updated>1479182074407</updated>
     </task>
+    <task id="LOCAL-00001" summary="test Max's idea that uses a multidimensional label">
+      <created>1479497363276</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1479497363276</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -469,6 +474,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test Max's idea that uses a multidimensional label" />
+    <option name="LAST_COMMIT_MESSAGE" value="test Max's idea that uses a multidimensional label" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -675,8 +684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LeNet3D_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="218" column="61" selection-start-line="218" selection-start-column="61" selection-end-line="218" selection-end-column="61" />
+        <state relative-caret-position="143">
+          <caret line="203" column="26" selection-start-line="203" selection-start-column="26" selection-end-line="203" selection-end-column="26" />
           <folding>
             <element signature="e#10080#10151#0" expanded="false" />
           </folding>

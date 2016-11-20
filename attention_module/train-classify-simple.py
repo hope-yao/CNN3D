@@ -334,7 +334,7 @@ if __name__ == "__main__":
                         default=100, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
                         default=1e-3, help="Learning rate")
-    parser.add_argument("--attention", "-a", type=str, default="",
+    parser.add_argument("--attention", "-a", type=int, default=5,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--y-dim", type=int, dest="y_dim",
                         default=10, help="Decoder  RNN state dimension")  # dim should be the number of classes

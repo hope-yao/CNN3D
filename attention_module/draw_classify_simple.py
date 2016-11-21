@@ -18,6 +18,7 @@ from blocks.bricks.recurrent import BaseRecurrent, recurrent, LSTM
 from blocks.bricks import Random, Initializable, MLP, Linear, Rectifier
 from blocks.bricks.parallel import Parallel, Fork
 from blocks.bricks import Tanh, Identity, Softmax, Logistic
+from fuel.datasets.hdf5 import H5PYDataset
 
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
 
@@ -112,9 +113,6 @@ class RAM(BaseRecurrent, Initializable, Random):
 
     # ------------------------------------------------------------------------
 
-    # @recurrent(sequences=['x'], contexts=[],
-    #            states=['h'],
-    #            outputs=['prob', 'l'])
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
                outputs=['l', 'prob', 'h'])  # h seems not necessary
@@ -133,9 +131,6 @@ class RAM(BaseRecurrent, Initializable, Random):
         h_l = self.rect_linear_g1.apply(l)  # theta_g^1
         g_t = self.rect_g.apply(self.linear_g21.apply(h_g) + self.linear_g22.apply(h_l))  # theta_g^2
         h = self.rect_h.apply(self.linear_h1.apply(g_t) + self.linear_h2.apply(h))
-        # tmp1 = self.linear_h1.apply(g_t)
-        # tmp2 = self.linear_h2.apply(h)
-        # h = self.rect_h.apply(tmp1 + tmp2)
         l = self.linear_l.apply(h)
         prob = self.linear_a.apply(h)
         # l, _prob = self.fork.apply(h)
@@ -168,15 +163,6 @@ class RAM(BaseRecurrent, Initializable, Random):
         return l, prob
 
 if __name__ == "__main__":
-    # x = tensor.vector('x')
-    # ram= DrawClassifyModel(image_size=(28,28), channels=1, attention=5)
-    # ram.initialize()
-    # l, p = ram.apply(inputs=x)
-    # f = theano.function([x], [l, p])
-    # # l, prob = ram.apply(x=x)
-    # for states in f(np.ones((20,1,28,28), dtype=theano.config.floatX)):
-    #     print(states)
-    #
 
     # ----------------------------------------------------------------------
 
@@ -190,10 +176,10 @@ if __name__ == "__main__":
 
     f = theano.function([x], [l, prob])
     # test single forward pass
-    from fuel.datasets.hdf5 import H5PYDataset
-    mnist_train = H5PYDataset('C:/users/p2admin/documents/max/projects/cnn3d/mnist.hdf5', which_sets=('train',))
+    mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
     handle = mnist_train.open()
     train_data = mnist_train.get_data(handle, slice(0, 16))
     xx = train_data[0]
     print(xx.shape)
     l, prob = f(xx)
+    print(prob)

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="fixed hope n_iter problem">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/test.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161119-132715/bmnist" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CNN3D.iml" afterPath="$PROJECT_DIR$/.idea/CNN3D.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/attention.py" afterPath="$PROJECT_DIR$/attention_module/attention.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" afterPath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/train-classify-simple.py" afterPath="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,82 +30,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="draw_classify_simple.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train-classify-simple.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="71" column="75" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/attention_module/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draw_classify_simple.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scan_op.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="954" column="0" selection-start-line="954" selection-start-column="0" selection-end-line="954" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function_module.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/compile/function_module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="873" column="52" selection-start-line="873" selection-start-column="51" selection-end-line="873" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/gof/link.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sequences.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/sequences.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/recurrent/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scan.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="760" column="0" selection-start-line="760" selection-start-column="0" selection-end-line="760" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="e#34#81#0" expanded="true" />
+                <element signature="e#2772#2825#0" expanded="false" />
+                <element signature="e#3985#4022#0" expanded="false" />
+                <element signature="e#5587#5618#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,73 +70,13 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="278">
+              <caret line="564" column="0" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
               <folding>
-                <marker date="1479753373420" expanded="true" signature="335:730" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="340:614" ph="&quot;&quot;&quot;Batched version of dot-product....&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="852:8091" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="912:1286" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="921:1162" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="1356:2564" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="1365:1796" ph="&quot;&quot;&quot;Create a Fy and a Fx...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="2627:4301" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="2636:3706" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="4356:5302" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="5367:7007" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="5376:6429" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="7033:8091" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="7042:7543" ph="&quot;&quot;&quot;Convert neural-net outputs to attention parameters...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="8214:22307" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="8289:8755" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="8302:8576" ph="&quot;&quot;&quot;A zoomable attention window for images....&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="8822:10640" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="8835:9999" ph="&quot;&quot;&quot;Extract a batch of attention windows from the given images....&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="10649:12830" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="12914:14058" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="14127:16520" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="15433:15483" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="16194:16520" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="16589:18375" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="16602:17749" ph="&quot;&quot;&quot;Write a batch of windows into full sized images....&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="18462:19082" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="19155:19908" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="19938:21100" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="19951:20500" ph="&quot;&quot;&quot;Convert neural-net outputs to attention parameters...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="21142:22307" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="21155:21704" ph="&quot;&quot;&quot;Convert neural-net outputs to attention parameters...&quot;&quot;&quot;" />
-                <marker date="1479753373420" expanded="true" signature="21810:21986" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="22416:29306" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="22445:24848" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="23848:23909" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="24257:24400" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="24865:29306" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="25493:25878" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26017:26148" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26211:26298" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26403:29200" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26610:27509" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26654:27509" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26702:27509" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26746:27509" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="26992:27139" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="27177:27324" ph="..." />
-                <marker date="1479753373420" expanded="true" signature="27362:27509" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train-classify-simple.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-765">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <marker date="1479753373442" expanded="false" signature="58:140" ph="import ..." />
-                <marker date="1479753373442" expanded="true" signature="1499:1579" ph="..." />
-                <marker date="1479753373442" expanded="true" signature="1999:13776" ph="..." />
-                <marker date="1479753373442" expanded="true" signature="2442:2588" ph="..." />
+                <element signature="e#1365#2564#0" expanded="false" />
+                <element signature="e#5376#7007#0" expanded="false" />
+                <element signature="e#7042#8091#0" expanded="false" />
+                <element signature="e#8223#22310#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -202,15 +104,18 @@
         <option value="$PROJECT_DIR$/LeNet3D_function.py" />
         <option value="$PROJECT_DIR$/LeNet3D.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/attention_module/attention.py" />
+        <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
         <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+        <option value="$PROJECT_DIR$/attention_module/test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -237,8 +142,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,7 +172,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="boosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="attention_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="attention_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bmnist-simple-20161121-160608" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,124 +226,25 @@
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/CNN3D.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/attention_module/attention.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/attention_module/draw_classify_simple.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/attention_module/train-classify-simple.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/blocks-experiments.ipynb</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
-  <component name="RunManager" selected="Python.draw_classify_simple">
+  <component name="RunManager" selected="Python.test">
     <configuration default="false" name="draw_classify_simple" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="train-classify-simple" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -418,7 +256,41 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="attention" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/attention_module" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/attention.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/attention_module" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -557,12 +429,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
+      <item index="1" class="java.lang.String" itemvalue="Python.train-classify-simple" />
+      <item index="2" class="java.lang.String" itemvalue="Python.attention" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train-classify-simple" />
+        <item index="2" class="java.lang.String" itemvalue="Python.attention" />
+        <item index="3" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
       </list>
     </recent_temporary>
   </component>
@@ -612,19 +490,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23867229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23822562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3019272" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4664751" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47430408" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36015326" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46680942" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -703,21 +581,6 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py</url>
-          <line>1448</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py</url>
-          <line>1456</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py</url>
-          <line>1459</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LeNet3D_function.py</url>
           <line>394</line>
           <option name="timeStamp" value="64" />
@@ -753,29 +616,9 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>132</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/base.py</url>
           <line>290</line>
           <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>89</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py</url>
@@ -794,8 +637,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>82</line>
-          <option name="timeStamp" value="88" />
+          <line>184</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/attention_module/train-classify-simple.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/attention_module/test.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="93" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -808,7 +661,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="89" />
+      <option name="time" value="94" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -824,54 +677,9 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="15" selection-start-line="19" selection-start-column="0" selection-end-line="44" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeNet3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeNet3D_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6494">
-          <caret line="382" column="29" selection-start-line="382" selection-start-column="29" selection-end-line="382" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/saveload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/saveload.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py" />
     <entry file="file://$PROJECT_DIR$/potcup_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -880,38 +688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeNet3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeNet3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
+    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/extensions/monitoring.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/extensions/__init__.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/main_loop.py" />
@@ -929,24 +709,9 @@
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/graph.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/compile/function_module.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/cost.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py" />
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="15" selection-start-line="19" selection-start-column="0" selection-end-line="44" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py" />
     <entry file="file://$PROJECT_DIR$/potcup_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -955,46 +720,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/saveload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/saveload.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cnn3d_bricks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2613">
-          <caret line="327" column="40" selection-start-line="327" selection-start-column="40" selection-end-line="327" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeNet3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="394" column="12" selection-start-line="394" selection-start-column="12" selection-end-line="394" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cnn3d_bricks.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
     <entry file="file://$PROJECT_DIR$/LeNet3D_function.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-237">
@@ -1003,138 +739,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/sequences.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/base.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/recurrent/base.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/compile/function_module.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/gof/link.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <marker date="1479753373442" expanded="false" signature="58:140" ph="import ..." />
-            <marker date="1479753373442" expanded="true" signature="1499:1579" ph="..." />
-            <marker date="1479753373442" expanded="true" signature="1999:13776" ph="..." />
-            <marker date="1479753373442" expanded="true" signature="2442:2588" ph="..." />
-          </folding>
+        <state relative-caret-position="314">
+          <caret line="1459" column="0" selection-start-line="1459" selection-start-column="0" selection-end-line="1459" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="278">
+          <caret line="564" column="0" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
           <folding>
-            <marker date="1479753373420" expanded="true" signature="335:730" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="340:614" ph="&quot;&quot;&quot;Batched version of dot-product....&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="852:8091" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="912:1286" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="921:1162" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="1356:2564" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="1365:1796" ph="&quot;&quot;&quot;Create a Fy and a Fx...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="2627:4301" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="2636:3706" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="4356:5302" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="5367:7007" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="5376:6429" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="7033:8091" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="7042:7543" ph="&quot;&quot;&quot;Convert neural-net outputs to attention parameters...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="8214:22307" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="8289:8755" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="8302:8576" ph="&quot;&quot;&quot;A zoomable attention window for images....&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="8822:10640" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="8835:9999" ph="&quot;&quot;&quot;Extract a batch of attention windows from the given images....&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="10649:12830" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="12914:14058" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="14127:16520" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="15433:15483" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="16194:16520" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="16589:18375" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="16602:17749" ph="&quot;&quot;&quot;Write a batch of windows into full sized images....&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="18462:19082" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="19155:19908" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="19938:21100" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="19951:20500" ph="&quot;&quot;&quot;Convert neural-net outputs to attention parameters...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="21142:22307" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="21155:21704" ph="&quot;&quot;&quot;Convert neural-net outputs to attention parameters...&quot;&quot;&quot;" />
-            <marker date="1479753373420" expanded="true" signature="21810:21986" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="22416:29306" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="22445:24848" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="23848:23909" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="24257:24400" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="24865:29306" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="25493:25878" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26017:26148" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26211:26298" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26403:29200" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26610:27509" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26654:27509" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26702:27509" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26746:27509" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="26992:27139" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="27177:27324" ph="..." />
-            <marker date="1479753373420" expanded="true" signature="27362:27509" ph="..." />
+            <element signature="e#1365#2564#0" expanded="false" />
+            <element signature="e#5376#7007#0" expanded="false" />
+            <element signature="e#7042#8091#0" expanded="false" />
+            <element signature="e#8223#22310#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan.py">
+    <entry file="file://$PROJECT_DIR$/boosting/LeNet3D.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="760" column="0" selection-start-line="760" selection-start-column="0" selection-end-line="760" selection-end-column="0" />
+        <state relative-caret-position="212">
+          <caret line="237" column="38" selection-start-line="225" selection-start-column="18" selection-end-line="239" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/sequences.py">
+    <entry file="file://$PROJECT_DIR$/boosting/Boosted_CNN3D.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/base.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/extensions/saveload.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+        <state relative-caret-position="413">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/recurrent/base.py">
+    <entry file="file://$PROJECT_DIR$/attention_module/sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-120">
+          <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/compile/function_module.py">
+    <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="873" column="52" selection-start-line="873" selection-start-column="51" selection-end-line="873" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="954" column="0" selection-start-line="954" selection-start-column="0" selection-end-line="954" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/gof/link.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+        <state relative-caret-position="99">
+          <caret line="71" column="75" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#34#81#0" expanded="true" />
+            <element signature="e#2772#2825#0" expanded="false" />
+            <element signature="e#3985#4022#0" expanded="false" />
+            <element signature="e#5587#5618#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

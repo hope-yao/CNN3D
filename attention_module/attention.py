@@ -557,9 +557,12 @@ if __name__ == "__main__":
         delta_ = T.vector()
         sigma_ = T.vector()
         W_ = att.read(I_, center_y_, center_x_, delta_, sigma_)
-
         do_read = theano.function(inputs=[I_, center_y_, center_x_, delta_, sigma_],
                                   outputs=W_, allow_input_downcast=True)
+        # W_ = att.read_large(I_, center_y_, center_x_)
+        # do_read = theano.function(inputs=[I_, center_y_, center_x_],
+        #                           outputs=W_, allow_input_downcast=True)
+
 
         W_ = T.matrix()
         center_y_ = T.vector()

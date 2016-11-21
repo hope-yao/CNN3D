@@ -86,19 +86,14 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
     # ----------------------------------------------------------------------
 
     draw = DrawClassifyModel(image_size=image_size, channels=channels, attention=attention)
-    # draw.push_initialization_config()
-    # draw.conv_sequence.layers[0].weights_init = Uniform(width=.2)
-    # draw.conv_sequence.layers[1].weights_init = Uniform(width=.09)
-    # draw.top_mlp.linear_transformations[0].weights_init = Uniform(width=.08)
-    # draw.top_mlp.linear_transformations[1].weights_init = Uniform(width=.11)
+    draw.push_initialization_config()
     draw.initialize()
     # ------------------------------------------------------------------------
     x = tensor.matrix('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
+    l, y_hat = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
 
-    l, y_hat = draw.classify(x)  #directly use theano to build the graph? Might be able to track iteration idx.
-
-    y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
+    y_hat_last = prob[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
     y_int = T.cast(y, 'int64')
 
     tol = 1e-4

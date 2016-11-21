@@ -131,8 +131,6 @@ class ZoomableAttentionWindow(object):
         channels = self.channels
         batch_size = images.shape[0]
 
-        # delta = T.cast(theano.shared(np.ones(100)), 'float32')
-        # sigma = T.cast(theano.shared(np.ones(100)), 'float32')
         delta = T.ones([batch_size], 'float32')
         sigma = T.ones([batch_size], 'float32')
 

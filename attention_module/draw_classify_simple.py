@@ -16,7 +16,7 @@ import numpy as np
 from blocks.bricks.base import application, lazy
 from blocks.bricks.recurrent import BaseRecurrent, recurrent, LSTM
 from blocks.bricks import Random, Initializable, MLP, Linear, Rectifier
-
+from blocks.bricks.parallel import Parallel, Fork
 from blocks.bricks import Tanh, Identity, Softmax, Logistic
 
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
@@ -63,7 +63,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
 
         # location network
-        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, dim_data ], name="location network", **inits)
+        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, dim_data], name="location network", **inits)
 
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
@@ -71,7 +71,13 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
                          self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
 
-
+        # self.fork = Fork(prototype = Linear(use_bias=True),
+        #                          output_names = ['l', 'a'], input_dim = dim_h, output_dims = [dim_data, n_class],
+        #                          name="location classification", **inits)
+        # self.softmax = Softmax(name="softmax")
+        #
+        # self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
+        #                  self.rect_h, self.linear_h1, self.linear_h2, self.fork, self.softmax]
     @property
     def output_dim(self):
         return 10
@@ -91,6 +97,8 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2._push_allocation_config()
         self.linear_l._push_allocation_config()
         self.linear_a._push_allocation_config()
+        # self.fork._push_allocation_config()
+        # self.softmax._push_allocation_config()
 
     def get_dim(self, name):
         if name == 'prob':
@@ -109,7 +117,7 @@ class RAM(BaseRecurrent, Initializable, Random):
     #            outputs=['prob', 'l'])
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
-               outputs=['prob', 'l', 'h'])  # h seems not necessary
+               outputs=['l', 'prob', 'h'])  # h seems not necessary
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
 
@@ -130,7 +138,8 @@ class RAM(BaseRecurrent, Initializable, Random):
         # h = self.rect_h.apply(tmp1 + tmp2)
         l = self.linear_l.apply(h)
         prob = self.linear_a.apply(h)
-
+        # l, _prob = self.fork.apply(h)
+        # prob = self.softmax.apply(_prob)
         return l, prob, h
 
     # ------------------------------------------------------------------------
@@ -182,7 +191,7 @@ if __name__ == "__main__":
     f = theano.function([x], [l, prob])
     # test single forward pass
     from fuel.datasets.hdf5 import H5PYDataset
-    mnist_train = H5PYDataset('/home/hope-yao/Documents/Data/mnist.hdf5', which_sets=('train',))
+    mnist_train = H5PYDataset('C:/users/p2admin/documents/max/projects/cnn3d/mnist.hdf5', which_sets=('train',))
     handle = mnist_train.open()
     train_data = mnist_train.get_data(handle, slice(0, 16))
     xx = train_data[0]

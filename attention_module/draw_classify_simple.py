@@ -36,7 +36,10 @@ from attention import ZoomableAttentionWindow
 
 
 class DrawClassifyModel(BaseRecurrent, Initializable, Random):
-    def __init__(self, image_size, channels, attention, **kwargs):
+    def __init__(self, image_size, channels, attention, n_iter, **kwargs):
+        super(DrawClassifyModel, self).__init__(**kwargs)
+
+        self.n_iter = n_iter
         self.channels = channels
         self.read_N = attention
         self.image_ndim = len(image_size)
@@ -79,9 +82,9 @@ class DrawClassifyModel(BaseRecurrent, Initializable, Random):
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
 
-        self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g
-            , self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
-        super(DrawClassifyModel, self).__init__(**kwargs)
+        self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
+                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
+
 
     @property
     def output_dim(self):
@@ -118,10 +121,10 @@ class DrawClassifyModel(BaseRecurrent, Initializable, Random):
     # @recurrent(sequences=['x'], contexts=[],
     #            states=['h'],
     #            outputs=['prob', 'l'])
-    @recurrent(sequences=[], contexts=['x'],
+    @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
-               outputs=['prob', 'l', 'h'])
-    def apply(self, x, l=None, h=None):
+               outputs=['prob', 'l'])
+    def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
             from attention import ZoomableAttentionWindow
             zoomer = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N)
@@ -129,7 +132,7 @@ class DrawClassifyModel(BaseRecurrent, Initializable, Random):
         elif self.image_ndim == 3:
             from attention import ZoomableAttentionWindow3d
             zoomer = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N)
-            rho = zoomer.read_large(x, l[0], l[1], l[2]) # glimpse sensor in 2D
+            rho = zoomer.read_large(x, l[0], l[1], l[2]) # glimpse sensor in 3D
 
         h_g = self.rect_linear_g0.apply(rho)  # theta_g^1
         h_l = self.rect_linear_g1.apply(l)  # theta_g^0
@@ -144,6 +147,12 @@ class DrawClassifyModel(BaseRecurrent, Initializable, Random):
 
     @application(inputs=['features'], outputs=['l', 'prob'])
     def classify(self, features):
+        batch_size = features.shape[0]
+        # Sample from mean-zeros std.-one Gaussian
+        u = self.theano_rng.normal(
+            size=(self.n_iter, batch_size, 1),
+            avg=0., std=1.)
+
         if self.image_ndim == 2:
             center_y_ = T.vector()
             center_x_ = T.vector()
@@ -154,7 +163,7 @@ class DrawClassifyModel(BaseRecurrent, Initializable, Random):
             center_z_ = T.vector()
             init_l = [center_x_, center_y_, center_z_]
         init_l = tensor.matrix('l')  # for a batch
-        l, prob = self.apply(x=features, l=init_l)
+        l, prob = self.apply(x=features, dummy=u, l=init_l)
 
         return l, prob
 
@@ -171,7 +180,7 @@ if __name__ == "__main__":
 
     # ----------------------------------------------------------------------
 
-    draw = DrawClassifyModel(image_size=(28,28), channels=1, attention=5)
+    draw = DrawClassifyModel(image_size=(28,28), channels=1, attention=5, n_iter=4)
     draw.push_initialization_config()
     draw.initialize()
     # ------------------------------------------------------------------------

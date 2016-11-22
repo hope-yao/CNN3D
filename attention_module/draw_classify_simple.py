@@ -49,7 +49,7 @@ class RAM(BaseRecurrent, Initializable, Random):
 
         # glimpse network
         n0 = 50
-        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[dim_att*dim_att, n0], name="glimpse network 0", **inits)
+        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[self.read_N*self.read_N, n0], name="glimpse network 0", **inits)
 
         n1 = 20
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[2, n1], name="glimpse network 1", **inits)

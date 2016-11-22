@@ -4,7 +4,7 @@ from blocks.serialization import load
 from blocks.model import Model
 from fuel.datasets.hdf5 import H5PYDataset
 
-with open('/home/hope-yao/Documents/CNN3D/attention_module/bmnist-simple-20161121-160608/bmnist', "rb") as f:
+with open('/home/hope-yao/Documents/CNN3D/attention_module/bmnist-simple-20161121-174726/bmnist', "rb") as f:
     p = load(f, 'model')
 
 if isinstance(p, Model):

@@ -146,14 +146,14 @@ class ZoomableAttentionWindow(object):
 
         # apply to the batch of images
         W = my_batched_dot(my_batched_dot(FY, I), FX.transpose([0,2,1]))
-        W = W.reshape((batch_size * channels, N, N))
+        # W = W.reshape((batch_size * channels, N, N))
 
         # Max hack: convert back to an image
-        II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
+        # II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
 
-        return II.reshape((batch_size, channels*self.img_height*self.img_width))
+        # return II.reshape((batch_size, channels*self.img_height*self.img_width))
 
-        # return W.reshape((batch_size, channels*N*N))
+        return W.reshape((batch_size, channels*N*N))
 
     def write(self, windows, center_y, center_x, delta, sigma):
         """Write a batch of windows into full sized images.

@@ -61,47 +61,40 @@ sys.setrecursionlimit(100000)
 # ----------------------------------------------------------------------------
 
 def main(dataset, epochs, batch_size, learning_rate, attention,
-         y_dim):
+         n_iter):
 
 
-    # ---------------------------2D Setup-------------------------------------
+    # ---------------------------2D MNIST-------------------------------------
     image_size = (28, 28)
     channels = 1
 
     data_train = MNIST(which_sets=["train"], sources=['features', 'targets'])
     data_test = MNIST(which_sets=["test"], sources=['features', 'targets'])
-
     train_stream = DataStream.default_stream(data_train, iteration_scheme=SequentialScheme(data_train.num_examples, batch_size))
     # valid_stream = Flatten(
     #     DataStream.default_stream(data_valid, iteration_scheme=SequentialScheme(data_valid.num_examples, batch_size)))
     test_stream = DataStream.default_stream(data_test, iteration_scheme=SequentialScheme(data_test.num_examples, batch_size))
-
     subdir = dataset + "-simple-" + time.strftime("%Y%m%d-%H%M%S")
 
-
-    # ----------------------------------------------------------------------
-    ram = RAM(image_size=image_size, channels=channels, attention=5, n_iter=4)
+    # ---------------------------RAM SETUP-------------------------------------
+    ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter)
     ram.push_initialization_config()
     ram.initialize()
-    # ------------------------------------------------------------------------
+
+    # ---------------------------COMPILE-------------------------------------
     x = tensor.ftensor4('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
     l, y_hat = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
     y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
     y_int = T.cast(y, 'int64')
 
-    tol = 1e-4
-    recognition_convergence = (-y_hat * T.log2(y_hat + tol)).sum(axis=2).mean(axis=1).flatten()
-    recognition_convergence.name = "recognition_convergence"
-
-    # from LeNet
+    # ----------------------------COST----------------------------------
     cost = (CategoricalCrossEntropy().apply(y_int.flatten(), y_hat_last).copy(name='recognition'))
     error = (MisclassificationRate().apply(y_int.flatten(), y_hat_last).copy(name='error'))
-
-    # ------------------------------------------------------------
     cg = ComputationGraph([cost])
     params = VariableFilter(roles=[PARAMETER])(cg.variables)
 
+    # --------------------------ALGORITHM----------------------------------
     algorithm = GradientDescent(
         cost=cost,
         parameters=params,
@@ -110,12 +103,11 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         #     Adam(learning_rate),
         # ])
         # step_rule=RMSProp(learning_rate),
-        # step_rule=Momentum(learning_rate=learning_rate, momentum=0.95)
-        step_rule=Scale(learning_rate=learning_rate)
+        step_rule=Momentum(learning_rate=learning_rate, momentum=0.95)
+        # step_rule=Scale(learning_rate=learning_rate)
     )
 
-    # ------------------------------------------------------------------------
-    # Setup monitors
+    # -------------------------Setup monitors--------------------------------------
     monitors = [cost, error]
 
     train_monitors = monitors[:]
@@ -125,9 +117,6 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
     plot_channels = [
         ["train_total_gradient_norm", "train_total_step_norm"]
     ]
-
-    # ------------------------------------------------------------
-
     if not os.path.exists(subdir):
         os.makedirs(subdir)
 
@@ -137,6 +126,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
     #         Plot(name, channels=plot_channels)
     #     ]
 
+    # -------------------------MAIN LOOP--------------------------------------
     main_loop = MainLoop(
         model=Model(cost),
         data_stream=train_stream,
@@ -175,14 +165,14 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, dest="dataset",
                         default="bmnist", help="Dataset to use: [bmnist|mnist_lenet|cifar10]")
     parser.add_argument("--epochs", type=int, dest="epochs",
-                        default=5, help="how many epochs")
+                        default=200, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
                         default=100, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
-                        default=1e-3, help="Learning rate")
-    parser.add_argument("--attention", "-a", type=int, default=5,
+                        default=5e-1, help="Learning rate")
+    parser.add_argument("--attention", "-a", type=int, default=28,
                         help="Use attention mechanism (read_window)")
-    parser.add_argument("--y-dim", type=int, dest="y_dim",
-                        default=10, help="Decoder  RNN state dimension")  # dim should be the number of classes
+    parser.add_argument("--n-iter", type=int, dest="n_iter",
+                        default=1, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
     main(**vars(args))

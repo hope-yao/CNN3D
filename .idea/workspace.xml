@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="fixed hope n_iter problem">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161119-132715/bmnist" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CNN3D.iml" afterPath="$PROJECT_DIR$/.idea/CNN3D.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/attention.py" afterPath="$PROJECT_DIR$/attention_module/attention.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" afterPath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/test.py" afterPath="$PROJECT_DIR$/attention_module/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/train-classify-simple.py" afterPath="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,21 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train-classify-simple.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train-classify-simple.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="71" column="75" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+            <state relative-caret-position="361">
+              <caret line="174" column="33" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="225">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -55,13 +61,70 @@
       <file leaf-file-name="draw_classify_simple.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="190">
+              <caret line="51" column="169" selection-start-line="51" selection-start-column="169" selection-end-line="51" selection-end-column="169" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
-                <element signature="e#2772#2825#0" expanded="false" />
-                <element signature="e#3985#4022#0" expanded="false" />
-                <element signature="e#5587#5618#0" expanded="false" />
+                <element signature="e#2818#2871#0" expanded="false" />
+                <element signature="e#4031#4068#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initialization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/initialization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding>
+                <element signature="e#292#1540#0" expanded="false" />
+                <element signature="e#426#921#0" expanded="false" />
+                <element signature="e#426#921#2" expanded="false" />
+                <element signature="e#979#1540#0" expanded="false" />
+                <element signature="e#979#1389#1" expanded="false" />
+                <element signature="e#1586#2362#0" expanded="false" />
+                <element signature="e#1586#2058#1" expanded="false" />
+                <element signature="e#2101#2140#0" expanded="false" />
+                <element signature="e#2186#2293#0" expanded="false" />
+                <element signature="e#2327#2362#0" expanded="false" />
+                <element signature="e#2417#3111#0" expanded="false" />
+                <element signature="e#2417#2813#1" expanded="false" />
+                <element signature="e#2861#2900#0" expanded="false" />
+                <element signature="e#2946#3039#0" expanded="false" />
+                <element signature="e#3073#3111#0" expanded="false" />
+                <element signature="e#3156#4565#0" expanded="false" />
+                <element signature="e#3156#3905#1" expanded="false" />
+                <element signature="e#3969#4315#0" expanded="false" />
+                <element signature="e#4026#4117#0" expanded="false" />
+                <element signature="e#4043#4116#0" expanded="false" />
+                <element signature="e#4158#4245#0" expanded="false" />
+                <element signature="e#4361#4491#0" expanded="false" />
+                <element signature="e#4525#4565#0" expanded="false" />
+                <element signature="e#4611#5248#0" expanded="false" />
+                <element signature="e#4611#4928#1" expanded="false" />
+                <element signature="e#4969#4985#0" expanded="false" />
+                <element signature="e#5031#5183#0" expanded="false" />
+                <element signature="e#5217#5248#0" expanded="false" />
+                <element signature="e#5296#6959#0" expanded="false" />
+                <element signature="e#5296#5858#1" expanded="false" />
+                <element signature="e#5900#5918#0" expanded="false" />
+                <element signature="e#5964#6893#0" expanded="false" />
+                <element signature="e#6059#6327#0" expanded="false" />
+                <element signature="e#6059#6113#0" expanded="false" />
+                <element signature="e#6927#6959#0" expanded="false" />
+                <element signature="e#7003#8492#0" expanded="false" />
+                <element signature="e#7003#7529#1" expanded="false" />
+                <element signature="e#7604#7780#0" expanded="false" />
+                <element signature="e#7826#8492#0" expanded="false" />
+                <element signature="e#7942#8037#0" expanded="false" />
+                <element signature="e#8064#8180#0" expanded="false" />
+                <element signature="e#8298#8469#0" expanded="false" />
+                <element signature="e#8523#9936#0" expanded="false" />
+                <element signature="e#8523#9133#1" expanded="false" />
+                <element signature="e#9182#9247#0" expanded="false" />
+                <element signature="e#9293#9936#0" expanded="false" />
+                <element signature="e#9598#9696#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,13 +133,13 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="564" column="0" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
+            <state relative-caret-position="158">
+              <caret line="131" column="36" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="36" />
               <folding>
                 <element signature="e#1365#2564#0" expanded="false" />
-                <element signature="e#5376#7007#0" expanded="false" />
-                <element signature="e#7042#8091#0" expanded="false" />
-                <element signature="e#8223#22310#0" expanded="false" />
+                <element signature="e#5344#6975#0" expanded="false" />
+                <element signature="e#7010#8059#0" expanded="false" />
+                <element signature="e#8191#22278#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,10 +167,10 @@
         <option value="$PROJECT_DIR$/LeNet3D_function.py" />
         <option value="$PROJECT_DIR$/LeNet3D.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/attention_module/attention.py" />
-        <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
-        <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
         <option value="$PROJECT_DIR$/attention_module/test.py" />
+        <option value="$PROJECT_DIR$/attention_module/attention.py" />
+        <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+        <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
       </list>
     </option>
   </component>
@@ -142,8 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -190,26 +251,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CNN3D" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CNN3D" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attention_module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bmnist-simple-20161121-160608" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,7 +271,7 @@
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.train-classify-simple">
     <configuration default="false" name="draw_classify_simple" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -437,10 +482,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.train-classify-simple" />
-        <item index="2" class="java.lang.String" itemvalue="Python.attention" />
-        <item index="3" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
+        <item index="0" class="java.lang.String" itemvalue="Python.train-classify-simple" />
+        <item index="1" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.attention" />
       </list>
     </recent_temporary>
   </component>
@@ -486,23 +531,37 @@
       <option name="project" value="LOCAL" />
       <updated>1479687405337</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="training loop running now, but result is incorrect.">
+      <created>1479772081974</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1479772081974</updated>
+    </task>
+    <task id="LOCAL-00006" summary="problem: parameters not updating">
+      <created>1479776962464</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1479776962464</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23822562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22398685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3019272" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22055675" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47430408" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45074946" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46680942" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36830837" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -565,7 +624,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test Max's idea that uses a multidimensional label" />
     <MESSAGE value="fixed hope n_iter problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed hope n_iter problem" />
+    <MESSAGE value="training loop running now, but result is incorrect." />
+    <MESSAGE value="problem: parameters not updating" />
+    <option name="LAST_COMMIT_MESSAGE" value="problem: parameters not updating" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -637,18 +698,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>184</line>
+          <line>200</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/attention_module/train-classify-simple.py</url>
-          <line>104</line>
+          <line>94</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/attention_module/test.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="93" />
+          <line>27</line>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -661,7 +722,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="94" />
+      <option name="time" value="96" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -677,8 +738,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/saveload.py" />
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py" />
     <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py" />
     <entry file="file://$PROJECT_DIR$/potcup_data.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -750,20 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="1459" column="0" selection-start-line="1459" selection-start-column="0" selection-end-line="1459" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="564" column="0" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
-          <folding>
-            <element signature="e#1365#2564#0" expanded="false" />
-            <element signature="e#5376#7007#0" expanded="false" />
-            <element signature="e#7042#8091#0" expanded="false" />
-            <element signature="e#8223#22310#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="237" column="38" selection-start-line="225" selection-start-column="18" selection-end-line="239" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,40 +838,113 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
           <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
-            <element signature="e#24#71#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/initialization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="e#292#1540#0" expanded="false" />
+            <element signature="e#426#921#0" expanded="false" />
+            <element signature="e#426#921#2" expanded="false" />
+            <element signature="e#979#1540#0" expanded="false" />
+            <element signature="e#979#1389#1" expanded="false" />
+            <element signature="e#1586#2362#0" expanded="false" />
+            <element signature="e#1586#2058#1" expanded="false" />
+            <element signature="e#2101#2140#0" expanded="false" />
+            <element signature="e#2186#2293#0" expanded="false" />
+            <element signature="e#2327#2362#0" expanded="false" />
+            <element signature="e#2417#3111#0" expanded="false" />
+            <element signature="e#2417#2813#1" expanded="false" />
+            <element signature="e#2861#2900#0" expanded="false" />
+            <element signature="e#2946#3039#0" expanded="false" />
+            <element signature="e#3073#3111#0" expanded="false" />
+            <element signature="e#3156#4565#0" expanded="false" />
+            <element signature="e#3156#3905#1" expanded="false" />
+            <element signature="e#3969#4315#0" expanded="false" />
+            <element signature="e#4026#4117#0" expanded="false" />
+            <element signature="e#4043#4116#0" expanded="false" />
+            <element signature="e#4158#4245#0" expanded="false" />
+            <element signature="e#4361#4491#0" expanded="false" />
+            <element signature="e#4525#4565#0" expanded="false" />
+            <element signature="e#4611#5248#0" expanded="false" />
+            <element signature="e#4611#4928#1" expanded="false" />
+            <element signature="e#4969#4985#0" expanded="false" />
+            <element signature="e#5031#5183#0" expanded="false" />
+            <element signature="e#5217#5248#0" expanded="false" />
+            <element signature="e#5296#6959#0" expanded="false" />
+            <element signature="e#5296#5858#1" expanded="false" />
+            <element signature="e#5900#5918#0" expanded="false" />
+            <element signature="e#5964#6893#0" expanded="false" />
+            <element signature="e#6059#6327#0" expanded="false" />
+            <element signature="e#6059#6113#0" expanded="false" />
+            <element signature="e#6927#6959#0" expanded="false" />
+            <element signature="e#7003#8492#0" expanded="false" />
+            <element signature="e#7003#7529#1" expanded="false" />
+            <element signature="e#7604#7780#0" expanded="false" />
+            <element signature="e#7826#8492#0" expanded="false" />
+            <element signature="e#7942#8037#0" expanded="false" />
+            <element signature="e#8064#8180#0" expanded="false" />
+            <element signature="e#8298#8469#0" expanded="false" />
+            <element signature="e#8523#9936#0" expanded="false" />
+            <element signature="e#8523#9133#1" expanded="false" />
+            <element signature="e#9182#9247#0" expanded="false" />
+            <element signature="e#9293#9936#0" expanded="false" />
+            <element signature="e#9598#9696#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="131" column="36" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="36" />
+          <folding>
+            <element signature="e#1365#2564#0" expanded="false" />
+            <element signature="e#5344#6975#0" expanded="false" />
+            <element signature="e#7010#8059#0" expanded="false" />
+            <element signature="e#8191#22278#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="51" column="169" selection-start-line="51" selection-start-column="169" selection-end-line="51" selection-end-column="169" />
+          <folding>
+            <element signature="e#34#81#0" expanded="true" />
+            <element signature="e#2818#2871#0" expanded="false" />
+            <element signature="e#4031#4068#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="71" column="75" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+        <state relative-caret-position="361">
+          <caret line="174" column="33" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#34#81#0" expanded="true" />
-            <element signature="e#2772#2825#0" expanded="false" />
-            <element signature="e#3985#4022#0" expanded="false" />
-            <element signature="e#5587#5618#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

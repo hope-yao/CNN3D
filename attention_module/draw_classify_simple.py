@@ -49,7 +49,7 @@ class RAM(BaseRecurrent, Initializable, Random):
 
         # glimpse network
         n0 = 50
-        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[self.read_N*self.read_N, n0], name="glimpse network 0", **inits)
+        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N*self.read_N, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
         n1 = 20
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[2, n1], name="glimpse network 1", **inits)
@@ -112,16 +112,32 @@ class RAM(BaseRecurrent, Initializable, Random):
             super(RAM, self).get_dim(name)
 
     # ------------------------------------------------------------------------
-
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
                outputs=['l', 'prob', 'h'])  # h seems not necessary
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
-
+            from theano.tensor.signal.pool import pool_2d
             from attention import ZoomableAttentionWindow
-            zoomer = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N)
-            rho = zoomer.read_large(x, l[:,1], l[:,0]) # glimpse sensor in 2D
+
+            zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N)
+            rho_orig = zoomer_orig.read_large(x, l[:,1], l[:,0]) # glimpse sensor in 2D
+            rho_orig = rho_orig.reshape((x.shape[0], self.channels*self.read_N*self.read_N))
+
+            N_larger = 2*self.read_N
+            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
+            rho_larger = zoomer_larger.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
+            rho_larger = pool_2d(rho_larger,(2,2))
+            rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
+
+            N_larger = 4*self.read_N
+            zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
+            rho_largest = zoomer_largest.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
+            rho_largest = pool_2d(rho_largest,(4,4))
+            rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels*self.read_N*self.read_N))
+
+            rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
+
         elif self.image_ndim == 3:
             from attention import ZoomableAttentionWindow3d
             zoomer = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N)

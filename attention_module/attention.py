@@ -153,7 +153,7 @@ class ZoomableAttentionWindow(object):
 
         # return II.reshape((batch_size, channels*self.img_height*self.img_width))
 
-        return W.reshape((batch_size, channels*N*N))
+        return W
 
     def write(self, windows, center_y, center_x, delta, sigma):
         """Write a batch of windows into full sized images.

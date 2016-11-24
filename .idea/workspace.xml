@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/conv_RAM_model.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/draw_classify_simple_3d.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/train_classify_simple_3d.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" afterPath="$PROJECT_DIR$/attention_module/RAM_model.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/train-classify-simple.py" afterPath="$PROJECT_DIR$/attention_module/train_RAM.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/attention.py" afterPath="$PROJECT_DIR$/attention_module/attention.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" afterPath="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/test.py" afterPath="$PROJECT_DIR$/attention_module/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/train-classify-simple.py" afterPath="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bricks3D/LeNet3D.py" afterPath="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,21 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train-classify-simple.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
+      <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/attention_module/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="174" column="33" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+            <state relative-caret-position="278">
+              <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -49,8 +45,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -58,16 +54,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="draw_classify_simple.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
+      <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/attention_module/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="51" column="169" selection-start-line="51" selection-start-column="169" selection-end-line="51" selection-end-column="169" />
+            <state relative-caret-position="328">
+              <caret line="139" column="66" selection-start-line="139" selection-start-column="66" selection-end-line="139" selection-end-column="66" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
-                <element signature="e#2818#2871#0" expanded="false" />
-                <element signature="e#4031#4068#0" expanded="false" />
+                <element signature="e#2891#2944#0" expanded="false" />
+                <element signature="e#4104#4141#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conv_RAM_model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,15 +81,14 @@
       <file leaf-file-name="initialization.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/initialization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="144" column="10" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
               <folding>
                 <element signature="e#292#1540#0" expanded="false" />
                 <element signature="e#426#921#0" expanded="false" />
                 <element signature="e#426#921#2" expanded="false" />
                 <element signature="e#979#1540#0" expanded="false" />
                 <element signature="e#979#1389#1" expanded="false" />
-                <element signature="e#1586#2362#0" expanded="false" />
                 <element signature="e#1586#2058#1" expanded="false" />
                 <element signature="e#2101#2140#0" expanded="false" />
                 <element signature="e#2186#2293#0" expanded="false" />
@@ -133,13 +138,17 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="131" column="36" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="36" />
+            <state relative-caret-position="243">
+              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="18" />
               <folding>
                 <element signature="e#1365#2564#0" expanded="false" />
-                <element signature="e#5344#6975#0" expanded="false" />
-                <element signature="e#7010#8059#0" expanded="false" />
-                <element signature="e#8191#22278#0" expanded="false" />
+                <element signature="e#6323#7968#0" expanded="false" />
+                <element signature="e#6323#7376#1" expanded="false" />
+                <element signature="e#8034#9776#0" expanded="false" />
+                <element signature="e#8034#9087#1" expanded="false" />
+                <element signature="e#9811#10860#0" expanded="false" />
+                <element signature="e#10992#25079#0" expanded="false" />
+                <element signature="e#28141#32573#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -168,9 +177,13 @@
         <option value="$PROJECT_DIR$/LeNet3D.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/attention_module/test.py" />
-        <option value="$PROJECT_DIR$/attention_module/attention.py" />
+        <option value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
         <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
         <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
+        <option value="$PROJECT_DIR$/attention_module/conv_RAM_model.py" />
+        <option value="$PROJECT_DIR$/attention_module/attention.py" />
+        <option value="$PROJECT_DIR$/attention_module/RAM_model.py" />
+        <option value="$PROJECT_DIR$/attention_module/train_RAM.py" />
       </list>
     </option>
   </component>
@@ -233,6 +246,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bricks3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="boosting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -258,16 +299,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RTG" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/attention_module" />
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
@@ -284,7 +326,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/RAM_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -301,7 +343,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/train_RAM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -323,7 +365,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="LeNet3D" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="conv_RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -335,7 +394,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_module/conv_RAM_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -474,18 +533,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
       <item index="1" class="java.lang.String" itemvalue="Python.train-classify-simple" />
       <item index="2" class="java.lang.String" itemvalue="Python.attention" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.LeNet3D" />
+      <item index="4" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.train-classify-simple" />
         <item index="1" class="java.lang.String" itemvalue="Python.draw_classify_simple" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
         <item index="3" class="java.lang.String" itemvalue="Python.attention" />
+        <item index="4" class="java.lang.String" itemvalue="Python.LeNet3D" />
       </list>
     </recent_temporary>
   </component>
@@ -545,23 +606,30 @@
       <option name="project" value="LOCAL" />
       <updated>1479776962464</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="used multiple glimpse of different resolution.&#10;it can achieve 2.5% testing error when attention=28 and iter=1&#10;but it is not working for all other cases.">
+      <created>1479847304160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1479847304160</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22398685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16757941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22055675" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35331905" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45074946" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29336187" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36830837" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33190578" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -626,7 +694,8 @@
     <MESSAGE value="fixed hope n_iter problem" />
     <MESSAGE value="training loop running now, but result is incorrect." />
     <MESSAGE value="problem: parameters not updating" />
-    <option name="LAST_COMMIT_MESSAGE" value="problem: parameters not updating" />
+    <MESSAGE value="used multiple glimpse of different resolution.&#10;it can achieve 2.5% testing error when attention=28 and iter=1&#10;but it is not working for all other cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="used multiple glimpse of different resolution.&#10;it can achieve 2.5% testing error when attention=28 and iter=1&#10;but it is not working for all other cases." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -697,19 +766,29 @@
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/draw_classify_simple.py</url>
-          <line>200</line>
+          <url>file://$PROJECT_DIR$/attention_module/RAM_model.py</url>
+          <line>202</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/train-classify-simple.py</url>
-          <line>94</line>
+          <url>file://$PROJECT_DIR$/attention_module/train_RAM.py</url>
+          <line>91</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/attention_module/test.py</url>
           <line>27</line>
           <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bricks3D/LeNet3D.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/attention_module/attention.py</url>
+          <line>684</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -722,32 +801,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="96" />
+      <option name="time" value="100" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="t" language="Python" />
-        <watch expression="f([train_data[0][3]],[train_data[1][3]])" language="Python" />
-        <watch expression="h(train_data[0],train_data[1])" language="Python" />
-        <watch expression="g([train_data[0][7]])" language="Python" />
-        <watch expression="train_data[1]" language="Python" />
-        <watch expression="y" language="Python" />
-        <watch expression="len(train_targets)" language="Python" />
-        <watch expression="convnet" language="Python" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py" />
-    <entry file="file://$PROJECT_DIR$/potcup_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
     <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
     <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
     <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
@@ -760,13 +818,11 @@
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/tree/tree.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/ensemble/weight_boosting.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/fuel/utils/__init__.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/var.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/op.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scalar/basic.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/elemwise.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/graph.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/compile/function_module.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/cost.py" />
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
@@ -841,35 +897,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+        <state relative-caret-position="192">
+          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/test.py">
+    <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="406">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#9908#13446#0" expanded="false" />
+            <element signature="e#15063#15094#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple_3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/compile/function_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="771" column="0" selection-start-line="771" selection-start-column="0" selection-end-line="771" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/initialization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="144" column="10" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
           <folding>
             <element signature="e#292#1540#0" expanded="false" />
             <element signature="e#426#921#0" expanded="false" />
             <element signature="e#426#921#2" expanded="false" />
             <element signature="e#979#1540#0" expanded="false" />
             <element signature="e#979#1389#1" expanded="false" />
-            <element signature="e#1586#2362#0" expanded="false" />
             <element signature="e#1586#2058#1" expanded="false" />
             <element signature="e#2101#2140#0" expanded="false" />
             <element signature="e#2186#2293#0" expanded="false" />
@@ -917,33 +997,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="131" column="36" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="36" />
+        <state relative-caret-position="243">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="18" />
           <folding>
             <element signature="e#1365#2564#0" expanded="false" />
-            <element signature="e#5344#6975#0" expanded="false" />
-            <element signature="e#7010#8059#0" expanded="false" />
-            <element signature="e#8191#22278#0" expanded="false" />
+            <element signature="e#6323#7968#0" expanded="false" />
+            <element signature="e#6323#7376#1" expanded="false" />
+            <element signature="e#8034#9776#0" expanded="false" />
+            <element signature="e#8034#9087#1" expanded="false" />
+            <element signature="e#9811#10860#0" expanded="false" />
+            <element signature="e#10992#25079#0" expanded="false" />
+            <element signature="e#28141#32573#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
+    <entry file="file://$PROJECT_DIR$/attention_module/RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="51" column="169" selection-start-line="51" selection-start-column="169" selection-end-line="51" selection-end-column="169" />
+        <state relative-caret-position="328">
+          <caret line="139" column="66" selection-start-line="139" selection-start-column="66" selection-end-line="139" selection-end-column="66" />
           <folding>
             <element signature="e#34#81#0" expanded="true" />
-            <element signature="e#2818#2871#0" expanded="false" />
-            <element signature="e#4031#4068#0" expanded="false" />
+            <element signature="e#2891#2944#0" expanded="false" />
+            <element signature="e#4104#4141#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
+    <entry file="file://$PROJECT_DIR$/attention_module/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="174" column="33" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/train_RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
           <folding />
         </state>
       </provider>

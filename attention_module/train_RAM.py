@@ -28,7 +28,7 @@ from fuel.streams import DataStream
 from fuel.schemes import SequentialScheme
 from fuel.transformers import Flatten
 
-from blocks.algorithms import GradientDescent, CompositeRule, StepClipping, RMSProp, Adam, Momentum, Scale, AdaDelta
+from blocks.algorithms import GradientDescent, CompositeRule, StepClipping, RMSProp, Adam, Momentum, Scale, AdaDelta, AdaGrad
 from blocks.bricks import Tanh, Identity
 from blocks.bricks.cost import BinaryCrossEntropy, CategoricalCrossEntropy, MisclassificationRate
 from blocks.filter import VariableFilter
@@ -44,13 +44,10 @@ from blocks.model import Model
 
 from fuel.datasets.mnist import MNIST
 
+# from blocks.extras import Plot
+import blocks_extras.extensions.plot as Plot
 
-try:
-    from blocks.extras import Plot
-except ImportError:
-    pass
-
-from draw_classify_simple import *
+from RAM_model import *
 
 sys.setrecursionlimit(100000)
 
@@ -100,6 +97,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         #     Adam(learning_rate),
         # ])
         step_rule =AdaDelta()
+        # step_rule = AdaGrad()
         # step_rule=RMSProp(learning_rate),
         # step_rule=Momentum(learning_rate=learning_rate, momentum=0.95)
         # step_rule=Scale(learning_rate=learning_rate)
@@ -120,10 +118,9 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         os.makedirs(subdir)
 
     plotting_extensions = []
-    # if live_plotting:
-    #     plotting_extensions = [
-    #         Plot(name, channels=plot_channels)
-    #     ]
+    # plotting_extensions = [
+    #     Plot('shapenet10', channels=plot_channels)
+    # ]
 
     # -------------------------MAIN LOOP--------------------------------------
     main_loop = MainLoop(
@@ -168,10 +165,10 @@ if __name__ == "__main__":
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
                         default=100, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
-                        default=5e-2, help="Learning rate")
+                        default=1e-2, help="Learning rate")
     parser.add_argument("--attention", "-a", type=int, default=5,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
-                        default=4, help="number of time iteration in RNN")  # dim should be the number of classes
+                        default=5, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
     main(**vars(args))

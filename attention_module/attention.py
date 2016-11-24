@@ -123,8 +123,39 @@ class ZoomableAttentionWindow(object):
 
         # apply to the batch of images
         W = my_batched_dot(my_batched_dot(FY, I), FX.transpose([0, 2, 1]))
+        # W = W.reshape((batch_size, channels * N * N))
 
-        return W.reshape((batch_size, channels * N * N))
+        return W
+
+    def read_patch(self, images, center_y, center_x):
+        N = self.N
+        channels = self.channels
+        batch_size = images.shape[0]
+
+        delta = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32')
+
+
+        # Reshape input into proper 2d images
+        I = images.reshape( (batch_size*channels, self.img_height, self.img_width) )
+
+        # Get separable filterbank
+        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma)
+
+        FY = T.repeat(FY, channels, axis=0)
+        FX = T.repeat(FX, channels, axis=0)
+
+        # apply to the batch of images
+        W = my_batched_dot(my_batched_dot(FY, I), FX.transpose([0,2,1]))
+        W = W.reshape((batch_size * channels, N, N))
+
+        # Max hack: convert back to an image
+        # II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
+
+        # return II.reshape((batch_size, channels*self.img_height*self.img_width))
+
+        return W
+
 
     def read_large(self, images, center_y, center_x):
         N = self.N
@@ -146,14 +177,14 @@ class ZoomableAttentionWindow(object):
 
         # apply to the batch of images
         W = my_batched_dot(my_batched_dot(FY, I), FX.transpose([0,2,1]))
-        # W = W.reshape((batch_size * channels, N, N))
+        W = W.reshape((batch_size * channels, N, N))
 
         # Max hack: convert back to an image
-        # II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
+        II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
 
-        # return II.reshape((batch_size, channels*self.img_height*self.img_width))
+        # II = II.reshape((batch_size, channels*self.img_height*self.img_width))
 
-        return W
+        return II
 
     def write(self, windows, center_y, center_x, delta, sigma):
         """Write a batch of windows into full sized images.
@@ -195,8 +226,56 @@ class ZoomableAttentionWindow(object):
 
         # apply...
         I = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
+        I = I.reshape((batch_size, channels * self.img_height * self.img_width))
 
-        return I.reshape((batch_size, channels * self.img_height * self.img_width))
+        return I
+
+    def write_large(self, windows, center_y, center_x):
+        """Write a batch of windows into full sized images.
+        Parameters
+        ----------
+        windows : :class:`~tensor.TensorVariable`
+            Batch of images with shape (batch_size x N*N). Internally it
+            will be reshaped to a (batch_size, N, N)-shaped
+            stack of images.
+        center_y : :class:`~tensor.TensorVariable`
+            Center coordinates for the attention window.
+            Expected shape: (batch_size,)
+        center_x : :class:`~tensor.TensorVariable`
+            Center coordinates for the attention window.
+            Expected shape: (batch_size,)
+        delta : :class:`~tensor.TensorVariable`
+            Distance between extracted grid points.
+            Expected shape: (batch_size,)
+        sigma : :class:`~tensor.TensorVariable`
+            Std. dev. for Gaussian readout kernel.
+            Expected shape: (batch_size,)
+        Returns
+        -------
+        images : :class:`~tensor.TensorVariable`
+            extracted windows of shape: (batch_size x img_height*img_width)
+        """
+        N = self.N
+        channels = self.channels
+        batch_size = windows.shape[0]
+
+        delta = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32')
+
+        # Reshape input into proper 2d windows
+        W = windows.reshape((batch_size * channels, N, N))
+
+        # Get separable filterbank
+        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma)
+
+        FY = T.repeat(FY, channels, axis=0)
+        FX = T.repeat(FX, channels, axis=0)
+
+        # apply...
+        I = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
+        I = I.reshape((batch_size, channels * self.img_height * self.img_width))
+
+        return I
 
     def nn2att(self, l):
         """Convert neural-net outputs to attention parameters
@@ -556,12 +635,12 @@ if __name__ == "__main__":
         center_x_ = T.vector()
         delta_ = T.vector()
         sigma_ = T.vector()
-        W_ = att.read(I_, center_y_, center_x_, delta_, sigma_)
-        do_read = theano.function(inputs=[I_, center_y_, center_x_, delta_, sigma_],
-                                  outputs=W_, allow_input_downcast=True)
-        # W_ = att.read_large(I_, center_y_, center_x_)
-        # do_read = theano.function(inputs=[I_, center_y_, center_x_],
+        # W_ = att.read(I_, center_y_, center_x_, delta_, sigma_)
+        # do_read = theano.function(inputs=[I_, center_y_, center_x_, delta_, sigma_],
         #                           outputs=W_, allow_input_downcast=True)
+        W_ = att.read_large(I_, center_y_, center_x_)
+        do_read = theano.function(inputs=[I_, center_y_, center_x_],
+                                  outputs=W_, allow_input_downcast=True)
 
 
         W_ = T.matrix()
@@ -569,9 +648,11 @@ if __name__ == "__main__":
         center_x_ = T.vector()
         delta_ = T.vector()
         sigma_ = T.vector()
-        I_ = att.write(W_, center_y_, center_x_, delta_, sigma_)
-
-        do_write = theano.function(inputs=[W_, center_y_, center_x_, delta_, sigma_],
+        # I_ = att.write(W_, center_y_, center_x_, delta_, sigma_)
+        # do_write = theano.function(inputs=[W_, center_y_, center_x_, delta_, sigma_],
+        #                            outputs=I_, allow_input_downcast=True)
+        I_ = att.write_large(W_, center_y_, center_x_)
+        do_write = theano.function(inputs=[W_, center_y_, center_x_],
                                    outputs=I_, allow_input_downcast=True)
 
         # ------------------------------------------------------------------------
@@ -598,8 +679,10 @@ if __name__ == "__main__":
 
         # import ipdb; ipdb.set_trace()
 
-        W = do_read(I, center_y, center_x, delta, sigma)
-        I2 = do_write(W, center_y, center_x, delta, sigma)
+        # W = do_read(I, center_y, center_x, delta, sigma)
+        # I2 = do_write(W, center_y, center_x, delta, sigma)
+        W = do_read(I, center_y, center_x)
+        I2 = do_write(W, center_y, center_x)
 
 
         def imagify(flat_image, h, w):

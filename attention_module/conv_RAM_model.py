@@ -23,9 +23,9 @@ from fuel.datasets.hdf5 import H5PYDataset
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
 
 
-class RAM(BaseRecurrent, Initializable, Random):
+class conv_RAM(BaseRecurrent, Initializable, Random):
     def __init__(self, image_size, channels, attention, n_iter, **kwargs):
-        super(RAM, self).__init__(**kwargs)
+        super(conv_RAM, self).__init__(**kwargs)
 
         self.n_iter = n_iter
         self.channels = channels
@@ -35,23 +35,24 @@ class RAM(BaseRecurrent, Initializable, Random):
             self.img_height, self.img_width = image_size
         elif self.image_ndim == 3:
             self.img_height, self.img_width, self.img_depth = image_size
-        self.dim_h = 100
+        self.dim_h = 256
 
         l = tensor.matrix('l')  # for a batch
-        dim_att = 28
         n_class = 10
         dim_h = self.dim_h
         dim_data = 2
         inits = {
-            'weights_init': IsotropicGaussian(0.01),
-            'biases_init': Constant(0.),
+            # 'weights_init': IsotropicGaussian(0.01),
+            # 'biases_init': Constant(0.),
+            'weights_init': Orthogonal(),
+            'biases_init': IsotropicGaussian(),
         }
 
         # glimpse network
-        n0 = 50
+        n0 = 64
         self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N*self.read_N, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
-        n1 = 20
+        n1 = 32
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[2, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
@@ -109,7 +110,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         elif name == 'l':
             return self.image_ndim
         else:
-            super(RAM, self).get_dim(name)
+            super(conv_RAM, self).get_dim(name)
 
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
@@ -127,13 +128,13 @@ class RAM(BaseRecurrent, Initializable, Random):
             N_larger = 2*self.read_N
             zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
             rho_larger = zoomer_larger.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_larger = pool_2d(rho_larger,(2,2))
+            rho_larger = pool_2d(rho_larger,(2,2)) # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
 
             N_larger = 4*self.read_N
             zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
             rho_largest = zoomer_largest.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_largest = pool_2d(rho_largest,(4,4))
+            rho_largest = pool_2d(rho_largest,(4,4)) # downsampling
             rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels*self.read_N*self.read_N))
 
             rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
@@ -164,15 +165,15 @@ class RAM(BaseRecurrent, Initializable, Random):
             avg=0., std=1.)
         bs = 16
         img = 28
-        if self.image_ndim == 2:
-            center_y_ = T.ones((bs,)) * img/2
-            center_x_ = T.ones((bs,)) * img/2
-            init_l = [center_x_, center_y_]
-        else:
-            center_x_ = T.vector()
-            center_y_ = T.vector()
-            center_z_ = T.vector()
-            init_l = [center_x_, center_y_, center_z_]
+        # if self.image_ndim == 2:
+        #     center_y_ = T.ones((bs,)) * img/2
+        #     center_x_ = T.ones((bs,)) * img/2
+        #     init_l = [center_x_, center_y_]
+        # else:
+        #     center_x_ = T.vector()
+        #     center_y_ = T.vector()
+        #     center_z_ = T.vector()
+        #     init_l = [center_x_, center_y_, center_z_]
         # init_l = tensor.matrix('l')  # for a batch
         l, prob, h = self.apply(x=features, dummy=u)
 
@@ -182,7 +183,7 @@ if __name__ == "__main__":
 
     # ----------------------------------------------------------------------
 
-    ram = RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
+    ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
     ram.push_initialization_config()
     ram.initialize()
     # ------------------------------------------------------------------------
@@ -198,4 +199,5 @@ if __name__ == "__main__":
     xx = train_data[0]
     print(xx.shape)
     l, prob = f(xx)
+    print(l)
     print(prob)

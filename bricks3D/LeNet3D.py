@@ -141,7 +141,7 @@ class LeNet(FeedforwardSequence, Initializable):
 
 def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None,
          conv_sizes=None, pool_sizes=None, batch_size=100,
-         num_batches=None, datafile_hdf5='shapenet10.hdf5'):
+         num_batches=None, datafile_hdf5='./data/shapenet10.hdf5'):
 
     if feature_maps is None:
         feature_maps = [16, 32]
@@ -152,7 +152,7 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     if pool_sizes is None:
         pool_sizes = [2, 2, 2]
     image_size = (32, 32, 32)
-    if datafile_hdf5=='shapenet10.hdf5':
+    if datafile_hdf5=='./data/shapenet10.hdf5':
         output_size = 10
     else:
         output_size = 2
@@ -222,6 +222,10 @@ def train_cnn3d(weight, save_to, num_epochs, feature_maps=None, mlp_hiddens=None
     # `Timing` extension reports time for reading data, aggregating a batch
     # and monitoring;
     # `ProgressBar` displays a nice progress bar during training.
+    plot_channels = [
+        ["train_total_gradient_norm", "train_total_step_norm"]
+    ]
+
     extensions = [Timing(),
                   FinishAfter(after_n_epochs=num_epochs,
                               after_n_batches=num_batches),
@@ -359,7 +363,7 @@ if __name__ == "__main__":
                              "--conv-sizes.")
     parser.add_argument("--batch-size", type=int, default=100,
                         help="Batch size.")
-    parser.add_argument("--datafile-hdf5", default='shapenet10.hdf5', nargs="?",
+    parser.add_argument("--datafile-hdf5", default='./data/shapenet10.hdf5', nargs="?",
                         help="Training and testing data")
 
     args = parser.parse_args()

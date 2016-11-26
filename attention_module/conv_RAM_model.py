@@ -1,4 +1,4 @@
-# MAX: simple RNN model w/o VAE
+#!/usr/bin/env python
 
 
 from __future__ import division, print_function
@@ -21,7 +21,8 @@ from blocks.bricks import Tanh, Identity, Softmax, Logistic
 from fuel.datasets.hdf5 import H5PYDataset
 
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
-
+# from bricks3D.cnn3d_bricks import Convolutional3, MaxPooling3, ConvolutionalSequence3, Flattener3
+from blocks.bricks.conv import Convolutional, MaxPooling
 
 class conv_RAM(BaseRecurrent, Initializable, Random):
     def __init__(self, image_size, channels, attention, n_iter, **kwargs):
@@ -35,7 +36,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             self.img_height, self.img_width = image_size
         elif self.image_ndim == 3:
             self.img_height, self.img_width, self.img_depth = image_size
-        self.dim_h = 256
+        self.dim_h = 7**3
 
         l = tensor.matrix('l')  # for a batch
         n_class = 10
@@ -49,37 +50,38 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         }
 
         # glimpse network
-        n0 = 64
-        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N*self.read_N, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
-
-        n1 = 32
-        self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[2, n1], name="glimpse network 1", **inits)
-
-        self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
-        self.linear_g22 = MLP(activations=[Identity()], dims=[n1, dim_h], name="glimpse network 3", **inits)
-        self.rect_g = Rectifier()
-
+        self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_g0')
+        self.conv_g1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_g1')
+        self.conv_g2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_g2')
+        self.pool_g0 = MaxPooling(pooling_size=(2,2), name='pool_g0')
+        self.pool_g1 = MaxPooling(pooling_size=(2,2), name='pool_g1')
+        self.pool_g2 = MaxPooling(pooling_size=(2,2), name='pool_g2')
+        self.rect_g0 = Rectifier()
+        self.rect_g1 = Rectifier()
+        self.rect_g2 = Rectifier()
+        # self.conv_sequence_g = ConvolutionalSequence3(self.layers, num_channels, image_size=image_shape)
         # core network
-        self.rect_h = Rectifier()
-        self.linear_h1 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 0", **inits)
-        self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
+        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_h0')
+        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_h1')
+        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_h2')
+        self.pool_h0 = MaxPooling(pooling_size=(2,2), name='pool_h0')
+        self.pool_h1 = MaxPooling(pooling_size=(2,2), name='pool_h1')
+        self.pool_h2 = MaxPooling(pooling_size=(2,2), name='pool_h2')
+        self.rect_h0 = Rectifier()
+        self.rect_h1 = Rectifier()
+        self.rect_h2 = Rectifier()
 
         # location network
-        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, dim_data], name="location network", **inits)
+        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, dim_data], name="location network", **inits)
 
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
 
-        self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
+        self.children = [self.conv_g0, self.conv_g1, self.conv_g2, self.pool_g0, self.pool_g1, self.pool_g2, self.rect_g0, self.rect_g1, self.rect_g2,
+                         self.conv_h0, self.conv_h1, self.conv_h2, self.pool_h0, self.pool_h1, self.pool_h2,self.rect_h0, self.rect_h1, self.rect_h2,
+                         self.linear_l, self.linear_a]
 
-        # self.fork = Fork(prototype = Linear(use_bias=True),
-        #                          output_names = ['l', 'a'], input_dim = dim_h, output_dims = [dim_data, n_class],
-        #                          name="location classification", **inits)
-        # self.softmax = Softmax(name="softmax")
-        #
-        # self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-        #                  self.rect_h, self.linear_h1, self.linear_h2, self.fork, self.softmax]
+
     @property
     def output_dim(self):
         return 10
@@ -89,18 +91,28 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.top_mlp_dims[-1] = value
 
     def _push_allocation_config(self):
-        self.rect_linear_g0._push_allocation_config()
-        self.rect_linear_g1._push_allocation_config()
-        self.linear_g21._push_allocation_config()
-        self.linear_g22._push_allocation_config()
-        self.rect_g._push_allocation_config()
-        self.rect_h._push_allocation_config()
-        self.linear_h1._push_allocation_config()
-        self.linear_h2._push_allocation_config()
+        self.conv_g0._push_allocation_config()
+        self.conv_g1._push_allocation_config()
+        self.conv_g2._push_allocation_config()
+        self.pool_g0._push_allocation_config()
+        self.pool_g1._push_allocation_config()
+        self.pool_g2._push_allocation_config()
+        self.rect_g0._push_allocation_config()
+        self.rect_g1._push_allocation_config()
+        self.rect_g2._push_allocation_config()
+
+        self.conv_h0._push_allocation_config()
+        self.conv_h1._push_allocation_config()
+        self.conv_h2._push_allocation_config()
+        self.pool_h0._push_allocation_config()
+        self.pool_h1._push_allocation_config()
+        self.pool_h2._push_allocation_config()
+        self.rect_h0._push_allocation_config()
+        self.rect_h1._push_allocation_config()
+        self.rect_h2._push_allocation_config()
+
         self.linear_l._push_allocation_config()
         self.linear_a._push_allocation_config()
-        # self.fork._push_allocation_config()
-        # self.softmax._push_allocation_config()
 
     def get_dim(self, name):
         if name == 'prob':
@@ -115,44 +127,46 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
-               outputs=['l', 'prob', 'h'])  # h seems not necessary
+               outputs=['l', 'prob'])  # h seems not necessary
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
             from attention import ZoomableAttentionWindow
 
-            zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N)
-            rho_orig = zoomer_orig.read_large(x, l[:,1], l[:,0]) # glimpse sensor in 2D
-            rho_orig = rho_orig.reshape((x.shape[0], self.channels*self.read_N*self.read_N))
+            scale = 1
+            zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
+            rho_orig = zoomer_orig.read_large(x, l[:,1], l[:,0]) # glimpse sensor in 2D, output matrix
 
-            N_larger = 2*self.read_N
-            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
+            scale = 2
+            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
             rho_larger = zoomer_larger.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_larger = pool_2d(rho_larger,(2,2)) # downsampling
-            rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
 
-            N_larger = 4*self.read_N
-            zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
+            scale = 4
+            zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
             rho_largest = zoomer_largest.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_largest = pool_2d(rho_largest,(4,4)) # downsampling
-            rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels*self.read_N*self.read_N))
-
-            rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
 
         elif self.image_ndim == 3:
             from attention import ZoomableAttentionWindow3d
             zoomer = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N)
             rho = zoomer.read_large(x, l[:,0], l[:,1], l[:,2]) # glimpse sensor in 3D
 
-        h_g = self.rect_linear_g0.apply(rho)  # theta_g^0
-        h_l = self.rect_linear_g1.apply(l)  # theta_g^1
-        g_t = self.rect_g.apply(self.linear_g21.apply(h_g) + self.linear_g22.apply(h_l))  # theta_g^2
-        h = self.rect_h.apply(self.linear_h1.apply(g_t) + self.linear_h2.apply(h))
-        l = self.linear_l.apply(h)
-        prob = self.linear_a.apply(h)
-        # l, _prob = self.fork.apply(h)
-        # prob = self.softmax.apply(_prob)
-        return l, prob, h
+        # glimpse network
+        tt = self.conv_g0.apply(rho_orig)
+        g0 = self.rect_g0.apply(self.pool_g0.apply(tt))
+        g1 = self.rect_g1.apply(self.pool_g1.apply(self.conv_g1.apply(rho_larger)))
+        g2 = self.rect_g2.apply(self.pool_g2.apply(self.conv_g2.apply(rho_largest)))
+
+        # core network
+        h0 = self.rect_h0.apply(self.pool_h0.apply(self.conv_h0.apply(g0)))
+        h1 = self.rect_h1.apply(self.pool_h1.apply(self.conv_h1.apply(g1)))
+        h2 = self.rect_h2.apply(self.pool_h2.apply(self.conv_h2.apply(g2)))
+        # h = T.concatenate([h0, h1, h2],axis = 0) # might be wrong
+
+        h_flatten = T.concatenate([h0.flatten(),h1.flatten(),h2.flatten()])
+        prob = self.linear_a.apply(h_flatten)
+        l = self.linear_l.apply(h_flatten)
+
+        return l, prob
 
     # ------------------------------------------------------------------------
 
@@ -175,7 +189,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         #     center_z_ = T.vector()
         #     init_l = [center_x_, center_y_, center_z_]
         # init_l = tensor.matrix('l')  # for a batch
-        l, prob, h = self.apply(x=features, dummy=u)
+        l, prob = self.apply(x=features, dummy=u)
 
         return l, prob
 
@@ -185,7 +199,7 @@ if __name__ == "__main__":
 
     ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
     ram.push_initialization_config()
-    ram.initialize()
+    # ram.initialize()
     # ------------------------------------------------------------------------
     x = tensor.ftensor4('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel

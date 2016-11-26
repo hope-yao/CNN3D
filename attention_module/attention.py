@@ -34,7 +34,7 @@ def my_batched_dot(A, B):
 # -----------------------------------------------------------------------------
 
 class ZoomableAttentionWindow(object):
-    def __init__(self, channels, img_height, img_width, N):
+    def __init__(self, channels, img_height, img_width, N, scale):
         """A zoomable attention window for images.
         Parameters
         ----------
@@ -48,8 +48,9 @@ class ZoomableAttentionWindow(object):
         self.img_height = img_height
         self.img_width = img_width
         self.N = N
+        self.scale = scale  # read larger patches with lower resolution
 
-    def filterbank_matrices(self, center_y, center_x, delta, sigma):
+    def filterbank_matrices(self, center_y, center_x, delta, sigma, scale):
         """Create a Fy and a Fx
 
         Parameters
@@ -66,7 +67,7 @@ class ZoomableAttentionWindow(object):
             FX : T.fvector (shape: )
         """
         tol = 1e-4
-        N = self.N
+        N = self.N * scale
 
         rng = T.arange(N, dtype=floatX) - N / 2. + 0.5  # e.g.  [1.5, -0.5, 0.5, 1.5]
 
@@ -116,7 +117,7 @@ class ZoomableAttentionWindow(object):
         I = images.reshape((batch_size * channels, self.img_height, self.img_width))
 
         # Get separable filterbank
-        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma)
+        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma, 1)
 
         FY = T.repeat(FY, channels, axis=0)
         FX = T.repeat(FX, channels, axis=0)
@@ -140,7 +141,7 @@ class ZoomableAttentionWindow(object):
         I = images.reshape( (batch_size*channels, self.img_height, self.img_width) )
 
         # Get separable filterbank
-        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma)
+        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma, 1)
 
         FY = T.repeat(FY, channels, axis=0)
         FX = T.repeat(FX, channels, axis=0)
@@ -170,19 +171,24 @@ class ZoomableAttentionWindow(object):
         I = images.reshape( (batch_size*channels, self.img_height, self.img_width) )
 
         # Get separable filterbank
-        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma)
-
+        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma, self.scale)
         FY = T.repeat(FY, channels, axis=0)
         FX = T.repeat(FX, channels, axis=0)
 
         # apply to the batch of images
         W = my_batched_dot(my_batched_dot(FY, I), FX.transpose([0,2,1]))
-        W = W.reshape((batch_size * channels, N, N))
+        W = W.reshape((batch_size * channels, N*self.scale, N*self.scale))
 
-        # Max hack: convert back to an image
+        from theano.tensor.signal.pool import pool_2d
+        W = pool_2d(W, (self.scale, self.scale))  # downsampling
+
+        # Get larger separable filterbank to convert patch back to larger image with black paddings
+        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma, 1)
+        FY = T.repeat(FY, channels, axis=0)
+        FX = T.repeat(FX, channels, axis=0)
         II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
 
-        # II = II.reshape((batch_size, channels*self.img_height*self.img_width))
+        II = II.reshape((batch_size, channels,self.img_height,self.img_width))
 
         return II
 
@@ -622,13 +628,13 @@ if __name__ == "__main__":
     if dim == 2:
         from PIL import Image
 
-        N = 40
+        N = 100
         channels = 3
         height = 480
         width = 640
 
         # ------------------------------------------------------------------------
-        att = ZoomableAttentionWindow(channels, height, width, N)
+        att = ZoomableAttentionWindow(channels, height, width, N, 2)
 
         I_ = T.matrix()
         center_y_ = T.vector()
@@ -651,9 +657,9 @@ if __name__ == "__main__":
         # I_ = att.write(W_, center_y_, center_x_, delta_, sigma_)
         # do_write = theano.function(inputs=[W_, center_y_, center_x_, delta_, sigma_],
         #                            outputs=I_, allow_input_downcast=True)
-        I_ = att.write_large(W_, center_y_, center_x_)
-        do_write = theano.function(inputs=[W_, center_y_, center_x_],
-                                   outputs=I_, allow_input_downcast=True)
+        # I_ = att.write_large(W_, center_y_, center_x_)
+        # do_write = theano.function(inputs=[W_, center_y_, center_x_],
+        #                            outputs=I_, allow_input_downcast=True)
 
         # ------------------------------------------------------------------------
 
@@ -682,7 +688,7 @@ if __name__ == "__main__":
         # W = do_read(I, center_y, center_x, delta, sigma)
         # I2 = do_write(W, center_y, center_x, delta, sigma)
         W = do_read(I, center_y, center_x)
-        I2 = do_write(W, center_y, center_x)
+        # I2 = do_write(W, center_y, center_x)
 
 
         def imagify(flat_image, h, w):
@@ -697,13 +703,16 @@ if __name__ == "__main__":
         pylab.gray()
         pylab.imshow(imagify(I, height, width), interpolation='nearest')
 
+        # pylab.figure()
+        # pylab.gray()
+        # pylab.imshow(imagify(W, N, N), interpolation='nearest')
         pylab.figure()
         pylab.gray()
-        pylab.imshow(imagify(W, N, N), interpolation='nearest')
+        pylab.imshow(imagify(W, height, width), interpolation='nearest')
 
-        pylab.figure()
-        pylab.gray()
-        pylab.imshow(imagify(I2, height, width), interpolation='nearest')
+        # pylab.figure()
+        # pylab.gray()
+        # pylab.imshow(imagify(I2, height, width), interpolation='nearest')
         pylab.show(block=True)
 
         import ipdb;

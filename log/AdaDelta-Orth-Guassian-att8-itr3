@@ -1,0 +1,3497 @@
+/home/hope-yao/anaconda2/bin/python /home/hope-yao/Documents/CNN3D/attention_module/train_RAM.py
+Using gpu device 0: TITAN X (Pascal) (CNMeM is enabled with initial size: 10.0% of memory, cuDNN 5105)
+(Shape.0, Shape.0)
+(Shape.0, Shape.0)
+(Shape.0, Shape.0)
+(Shape.0, Shape.0)
+RAM_model.py:131: UserWarning: pool_2d() will have the parameter ignore_border default value changed to True (currently False). To have consistent behavior with all Theano version, explicitly add the parameter ignore_border=True. On the GPU, using ignore_border=True is needed to use cuDNN. When using ignore_border=False and not using cuDNN, the only GPU combination supported is when `ws == stride and pad == (0, 0) and mode == 'max'`. Otherwise, the convolution will be executed on CPU.
+  rho_larger = pool_2d(rho_larger,(2,2))
+(Shape.0, Shape.0)
+(Shape.0, Shape.0)
+RAM_model.py:137: UserWarning: pool_2d() will have the parameter ignore_border default value changed to True (currently False). To have consistent behavior with all Theano version, explicitly add the parameter ignore_border=True. On the GPU, using ignore_border=True is needed to use cuDNN. When using ignore_border=False and not using cuDNN, the only GPU combination supported is when `ws == stride and pad == (0, 0) and mode == 'max'`. Otherwise, the convolution will be executed on CPU.
+  rho_largest = pool_2d(rho_largest,(4,4))
+[17:03:32] blocks.algorithms Taking the cost gradient
+[17:03:38] blocks.algorithms The cost gradient computation graph is built
+[17:03:47] blocks.main_loop Entered the main loop
+[17:03:47] blocks.extensions.saveload Checkpointing has started
+[17:03:48] blocks.extensions.saveload Checkpointing has finished
+[17:03:48] blocks.algorithms Initializing the training algorithm
+[17:05:22] blocks.algorithms The training algorithm is initialized
+[17:05:22] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:05:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+
+-------------------------------------------------------------------------------
+BEFORE FIRST EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: True
+	 epochs_done: 0
+	 iterations_done: 0
+	 received_first_batch: False
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 0:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.899100363255
+	 test_recognition: 3.6330499649
+	 time_initialization: 94.3295691013
+
+Epoch 0, step 600 |                      #                                          | Elapsed Time: 0:00:23[17:05:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:05:48] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:05:48] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 1
+	 iterations_done: 600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.264600038528
+	 test_recognition: 0.81808578968
+	 time_read_data_this_epoch: 0.434762001038
+	 time_read_data_total: 0.434762001038
+	 time_train_this_epoch: 22.8418388367
+	 time_train_total: 22.8418388367
+	 train_error: 0.384183228016
+	 train_recognition: 1.10362327099
+
+[17:05:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 0, step 600 |   #                                                             | Elapsed Time: 0:00:25
+Epoch 1, step 600 |          #                                                      | Elapsed Time: 0:00:24[17:06:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:06:14] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:06:14] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 2
+	 iterations_done: 1200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.17809997499
+	 test_recognition: 0.559789836407
+	 time_read_data_this_epoch: 0.445421218872
+	 time_read_data_total: 0.88018321991
+	 time_train_this_epoch: 23.9374885559
+	 time_train_total: 46.7793273926
+	 train_error: 0.14239987731
+	 train_recognition: 0.440553128719
+
+[17:06:15] blocks.extensions.saveload Checkpointing has finished
+Epoch 1, step 600 |  #                                                              | Elapsed Time: 0:00:26
+Epoch 2, step 600 | #                                                               | Elapsed Time: 0:00:26[17:06:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:06:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:06:42] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 3
+	 iterations_done: 1800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.12610001862
+	 test_recognition: 0.400895386934
+	 time_read_data_this_epoch: 0.475078821182
+	 time_read_data_total: 1.35526204109
+	 time_train_this_epoch: 25.1098704338
+	 time_train_total: 71.8891978264
+	 train_error: 0.105383403599
+	 train_recognition: 0.325869441032
+
+[17:06:43] blocks.extensions.saveload Checkpointing has finished
+Epoch 2, step 600 |                 #                                               | Elapsed Time: 0:00:27
+Epoch 3, step 600 |   #                                                             | Elapsed Time: 0:00:25[17:07:08] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:07:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:07:10] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 4
+	 iterations_done: 2400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.109500065446
+	 test_recognition: 0.342014163733
+	 time_read_data_this_epoch: 0.448061227798
+	 time_read_data_total: 1.80332326889
+	 time_train_this_epoch: 24.6996803284
+	 time_train_total: 96.5888781548
+	 train_error: 0.0867334082723
+	 train_recognition: 0.269452154636
+
+[17:07:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 3, step 600 |                #                                                | Elapsed Time: 0:00:27
+Epoch 4, step 600 |                                 #                               | Elapsed Time: 0:00:22[17:07:33] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:07:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:07:34] blocks.extensions.saveload Checkpointing has started
+[17:07:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 4, step 600 |           #                                                     | Elapsed Time: 0:00:24
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 5
+	 iterations_done: 3000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.100100032985
+	 test_recognition: 0.315188109875
+	 time_read_data_this_epoch: 0.444768190384
+	 time_read_data_total: 2.24809145927
+	 time_train_this_epoch: 21.7062540054
+	 time_train_total: 118.29513216
+	 train_error: 0.0754500553012
+	 train_recognition: 0.234384968877
+
+Epoch 5, step 600 |                     #                                           | Elapsed Time: 0:00:23[17:07:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:08:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:08:00] blocks.extensions.saveload Checkpointing has started
+[17:08:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 5, step 600 |  #                                                              | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 6
+	 iterations_done: 3600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0819000229239
+	 test_recognition: 0.261888593435
+	 time_read_data_this_epoch: 0.423487901688
+	 time_read_data_total: 2.67157936096
+	 time_train_this_epoch: 22.888425827
+	 time_train_total: 141.183557987
+	 train_error: 0.066250026226
+	 train_recognition: 0.204850852489
+
+Epoch 6, step 600 |                    #                                            | Elapsed Time: 0:00:23[17:08:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:08:26] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:08:26] blocks.extensions.saveload Checkpointing has started
+[17:08:28] blocks.extensions.saveload Checkpointing has finished
+Epoch 6, step 600 |             #                                                   | Elapsed Time: 0:00:27
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 7
+	 iterations_done: 4200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0709000080824
+	 test_recognition: 0.227449625731
+	 time_read_data_this_epoch: 0.445525884628
+	 time_read_data_total: 3.11710524559
+	 time_train_this_epoch: 22.9922287464
+	 time_train_total: 164.175786734
+	 train_error: 0.0599666982889
+	 train_recognition: 0.183893889189
+
+Epoch 7, step 600 |                 #                                               | Elapsed Time: 0:00:24[17:08:52] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:08:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:08:54] blocks.extensions.saveload Checkpointing has started
+[17:08:54] blocks.extensions.saveload Checkpointing has finished
+Epoch 7, step 600 |  #                                                              | Elapsed Time: 0:00:26
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 8
+	 iterations_done: 4800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0674000009894
+	 test_recognition: 0.219771742821
+	 time_read_data_this_epoch: 0.46780538559
+	 time_read_data_total: 3.58491063118
+	 time_train_this_epoch: 23.1938793659
+	 time_train_total: 187.3696661
+	 train_error: 0.054100099951
+	 train_recognition: 0.168268114328
+
+Epoch 8, step 600 |                         #                                       | Elapsed Time: 0:00:23[17:09:18] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:09:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:09:19] blocks.extensions.saveload Checkpointing has started
+[17:09:20] blocks.extensions.saveload Checkpointing has finished
+Epoch 8, step 600 |     #                                                           | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 9
+	 iterations_done: 5400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 5400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0609000176191
+	 test_recognition: 0.203904882073
+	 time_read_data_this_epoch: 0.436239480972
+	 time_read_data_total: 4.02115011215
+	 time_train_this_epoch: 22.4946613312
+	 time_train_total: 209.864327431
+	 train_error: 0.0493167415261
+	 train_recognition: 0.152690321207
+
+Epoch 9, step 600 |                   #                                             | Elapsed Time: 0:00:24[17:09:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:09:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:09:45] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 10
+	 iterations_done: 6000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 6000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0646000131965
+	 test_recognition: 0.209979489446
+	 time_read_data_this_epoch: 0.429016590118
+	 time_read_data_total: 4.45016670227
+	 time_train_this_epoch: 23.0991592407
+	 time_train_total: 232.963486671
+	 train_error: 0.0457001142204
+	 train_recognition: 0.140178069472
+
+[17:09:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 9, step 600 |#                                                                | Elapsed Time: 0:00:26
+Epoch 10, step 600 |                          #                                     | Elapsed Time: 0:00:22[17:10:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:10:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:10:10] blocks.extensions.saveload Checkpointing has started
+[17:10:11] blocks.extensions.saveload Checkpointing has finished
+Epoch 10, step 600 |        #                                                       | Elapsed Time: 0:00:24
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 11
+	 iterations_done: 6600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 6600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0571000240743
+	 test_recognition: 0.188222631812
+	 time_read_data_this_epoch: 0.48127412796
+	 time_read_data_total: 4.93144083023
+	 time_train_this_epoch: 21.9122898579
+	 time_train_total: 254.875776529
+	 train_error: 0.043833438307
+	 train_recognition: 0.131853729486
+
+Epoch 11, step 600 |        #                                                       | Elapsed Time: 0:00:13[17:10:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:10:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:10:25] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 12
+	 iterations_done: 7200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 7200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0807000100613
+	 test_recognition: 0.269479602575
+	 time_read_data_this_epoch: 0.434126615524
+	 time_read_data_total: 5.36556744576
+	 time_train_this_epoch: 12.648951292
+	 time_train_total: 267.524727821
+	 train_error: 0.0401167571545
+	 train_recognition: 0.124922215939
+
+[17:10:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 11, step 600 |                      #                                         | Elapsed Time: 0:00:15
+Epoch 12, step 600 |       #                                                        | Elapsed Time: 0:00:13[17:10:39] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:10:40] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:10:40] blocks.extensions.saveload Checkpointing has started
+[17:10:41] blocks.extensions.saveload Checkpointing has finished
+Epoch 12, step 600 |                      #                                         | Elapsed Time: 0:00:15
+Epoch 13, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 13
+	 iterations_done: 7800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 7800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.063000023365
+	 test_recognition: 0.21342509985
+	 time_read_data_this_epoch: 0.436637639999
+	 time_read_data_total: 5.80220508575
+	 time_train_this_epoch: 12.6093351841
+	 time_train_total: 280.134063005
+	 train_error: 0.0384001173079
+	 train_recognition: 0.117046810687
+
+Epoch 13, step 600 |       #                                                        | Elapsed Time: 0:00:13[17:10:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:10:55] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:10:55] blocks.extensions.saveload Checkpointing has started
+[17:10:56] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 14
+	 iterations_done: 8400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 8400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0561000108719
+	 test_recognition: 0.194081395864
+	 time_read_data_this_epoch: 0.438051462173
+	 time_read_data_total: 6.24025654793
+	 time_train_this_epoch: 12.6183986664
+	 time_train_total: 292.752461672
+	 train_error: 0.0373668037355
+	 train_recognition: 0.112374089658
+
+Epoch 13, step 600 |                       #                                        | Elapsed Time: 0:00:15
+Epoch 14, step 600 |           #                                                    | Elapsed Time: 0:00:13[17:11:10] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:11:11] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:11:11] blocks.extensions.saveload Checkpointing has started
+[17:11:12] blocks.extensions.saveload Checkpointing has finished
+
+Epoch 14, step 600 |                            #                                   | Elapsed Time: 0:00:15
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+Epoch 15, step 1 |#                                                                 | Elapsed Time: 0:00:00-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 15
+	 iterations_done: 9000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 9000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0529000014067
+	 test_recognition: 0.184007257223
+	 time_read_data_this_epoch: 0.455311775208
+	 time_read_data_total: 6.69556832314
+	 time_train_this_epoch: 12.9090585709
+	 time_train_total: 305.661520243
+	 train_error: 0.035233464092
+	 train_recognition: 0.105685301125
+
+Epoch 15, step 600 |                   #                                            | Elapsed Time: 0:00:14[17:11:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:11:27] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:11:27] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 16
+	 iterations_done: 9600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 9600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.047499999404
+	 test_recognition: 0.175339415669
+	 time_read_data_this_epoch: 0.506195783615
+	 time_read_data_total: 7.20176410675
+	 time_train_this_epoch: 13.6129865646
+	 time_train_total: 319.274506807
+	 train_error: 0.0315834544599
+	 train_recognition: 0.0971247255802
+
+[17:11:28] blocks.extensions.saveload Checkpointing has finished
+Epoch 15, step 600 |                                    #                           | Elapsed Time: 0:00:16
+Epoch 16, step 600 |                                 #                              | Elapsed Time: 0:00:16[17:11:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:11:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:11:45] blocks.extensions.saveload Checkpointing has started
+[17:11:47] blocks.extensions.saveload Checkpointing has finished
+Epoch 16, step 600 |                                                       #        | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 17
+	 iterations_done: 10200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 10200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0546000152826
+	 test_recognition: 0.188311636448
+	 time_read_data_this_epoch: 0.513978719711
+	 time_read_data_total: 7.71574282646
+	 time_train_this_epoch: 15.0181896687
+	 time_train_total: 334.292696476
+	 train_error: 0.030350105837
+	 train_recognition: 0.0925864502788
+
+Epoch 17, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:12:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:12:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:12:10] blocks.extensions.saveload Checkpointing has started
+[17:12:11] blocks.extensions.saveload Checkpointing has finished
+Epoch 17, step 600 |      #                                                         | Elapsed Time: 0:00:24
+Epoch 18, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 18
+	 iterations_done: 10800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 10800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0583000145853
+	 test_recognition: 0.210852473974
+	 time_read_data_this_epoch: 0.527499198914
+	 time_read_data_total: 8.24324202538
+	 time_train_this_epoch: 21.6329410076
+	 time_train_total: 355.925637484
+	 train_error: 0.0296834371984
+	 train_recognition: 0.0884233787656
+
+Epoch 18, step 600 |                          #                                     | Elapsed Time: 0:00:22[17:12:34] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:12:36] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:12:36] blocks.extensions.saveload Checkpointing has started
+[17:12:37] blocks.extensions.saveload Checkpointing has finished
+Epoch 18, step 600 |    #                                                           | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 19
+	 iterations_done: 11400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 11400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0502999983728
+	 test_recognition: 0.188438683748
+	 time_read_data_this_epoch: 0.533591747284
+	 time_read_data_total: 8.77683377266
+	 time_train_this_epoch: 21.7732007504
+	 time_train_total: 377.698838234
+	 train_error: 0.0270834155381
+	 train_recognition: 0.0851203948259
+
+Epoch 19, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:12:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:13:01] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:13:01] blocks.extensions.saveload Checkpointing has started
+[17:13:02] blocks.extensions.saveload Checkpointing has finished
+Epoch 19, step 600 |      #                                                         | Elapsed Time: 0:00:24
+Epoch 20, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 20
+	 iterations_done: 12000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 12000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0464999973774
+	 test_recognition: 0.184903740883
+	 time_read_data_this_epoch: 0.534638643265
+	 time_read_data_total: 9.31147241592
+	 time_train_this_epoch: 21.6202058792
+	 time_train_total: 399.319044113
+	 train_error: 0.0265667382628
+	 train_recognition: 0.0808919668198
+
+Epoch 20, step 600 |                              #                                 | Elapsed Time: 0:00:22[17:13:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:13:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:13:25] blocks.extensions.saveload Checkpointing has started
+[17:13:26] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+Epoch 20, step 600 |       #                                                        | Elapsed Time: 0:00:24
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 21
+	 iterations_done: 12600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 12600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0474999919534
+	 test_recognition: 0.186876446009
+	 time_read_data_this_epoch: 0.524864435196
+	 time_read_data_total: 9.83633685112
+	 time_train_this_epoch: 21.4377720356
+	 time_train_total: 420.756816149
+	 train_error: 0.0259500872344
+	 train_recognition: 0.0775618478656
+
+Epoch 21, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:13:49] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:13:50] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:13:50] blocks.extensions.saveload Checkpointing has started
+[17:13:51] blocks.extensions.saveload Checkpointing has finished
+Epoch 21, step 600 |      #                                                         | Elapsed Time: 0:00:24
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 22
+	 iterations_done: 13200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 13200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0540000088513
+	 test_recognition: 0.215914815664
+	 time_read_data_this_epoch: 0.521906852722
+	 time_read_data_total: 10.3582437038
+	 time_train_this_epoch: 21.6288516521
+	 time_train_total: 442.385667801
+	 train_error: 0.0246334131807
+	 train_recognition: 0.0732017159462
+
+Epoch 22, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:14:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:14:15] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:14:15] blocks.extensions.saveload Checkpointing has started
+[17:14:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 22, step 600 |       #                                                        | Elapsed Time: 0:00:26
+Epoch 23, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 23
+	 iterations_done: 13800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 13800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0458999983966
+	 test_recognition: 0.177341938019
+	 time_read_data_this_epoch: 0.52873468399
+	 time_read_data_total: 10.8869783878
+	 time_train_this_epoch: 21.6099305153
+	 time_train_total: 463.995598316
+	 train_error: 0.0240334067494
+	 train_recognition: 0.0706543922424
+
+Epoch 23, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:14:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:14:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:14:42] blocks.extensions.saveload Checkpointing has started
+[17:14:43] blocks.extensions.saveload Checkpointing has finished
+Epoch 23, step 600 |      #                                                         | Elapsed Time: 0:00:24
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 24
+	 iterations_done: 14400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 14400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0452999919653
+	 test_recognition: 0.191694542766
+	 time_read_data_this_epoch: 0.52513551712
+	 time_read_data_total: 11.412113905
+	 time_train_this_epoch: 21.5960714817
+	 time_train_total: 485.591669798
+	 train_error: 0.0227500796318
+	 train_recognition: 0.0687040686607
+
+Epoch 24, step 600 |                          #                                     | Elapsed Time: 0:00:22[17:15:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:15:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:15:07] blocks.extensions.saveload Checkpointing has started
+[17:15:08] blocks.extensions.saveload Checkpointing has finished
+Epoch 24, step 600 |    #                                                           | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 25
+	 iterations_done: 15000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 15000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0478999987245
+	 test_recognition: 0.199661716819
+	 time_read_data_this_epoch: 0.513090133667
+	 time_read_data_total: 11.9252040386
+	 time_train_this_epoch: 21.8589098454
+	 time_train_total: 507.450579643
+	 train_error: 0.0208334177732
+	 train_recognition: 0.06326020509
+
+Epoch 25, step 600 |                        #                                       | Elapsed Time: 0:00:23[17:15:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:15:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:15:32] blocks.extensions.saveload Checkpointing has started
+[17:15:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 25, step 600 |      #                                                         | Elapsed Time: 0:00:24
+Epoch 26, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 26
+	 iterations_done: 15600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 15600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0441999919713
+	 test_recognition: 0.188116595149
+	 time_read_data_this_epoch: 0.521250724792
+	 time_read_data_total: 12.4464547634
+	 time_train_this_epoch: 21.9916141033
+	 time_train_total: 529.442193747
+	 train_error: 0.021100088954
+	 train_recognition: 0.0617567002773
+
+Epoch 26, step 600 |                           #                                    | Elapsed Time: 0:00:22[17:15:56] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:15:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:15:57] blocks.extensions.saveload Checkpointing has started
+[17:15:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 26, step 600 |     #                                                          | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+Epoch 27, step 1 |#                                                                 | Elapsed Time: 0:00:00	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 27
+	 iterations_done: 16200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 16200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0451999939978
+	 test_recognition: 0.206440925598
+	 time_read_data_this_epoch: 0.501366138458
+	 time_read_data_total: 12.9478209019
+	 time_train_this_epoch: 21.7204186916
+	 time_train_total: 551.162612438
+	 train_error: 0.0198000743985
+	 train_recognition: 0.0599821805954
+
+Epoch 27, step 600 |                           #                                    | Elapsed Time: 0:00:22[17:16:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:16:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:16:22] blocks.extensions.saveload Checkpointing has started
+[17:16:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 27, step 600 |    #                                                           | Elapsed Time: 0:00:25
+Epoch 28, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 28
+	 iterations_done: 16800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 16800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0530000180006
+	 test_recognition: 0.240197479725
+	 time_read_data_this_epoch: 0.493671417236
+	 time_read_data_total: 13.4414923191
+	 time_train_this_epoch: 21.8242549896
+	 time_train_total: 572.986867428
+	 train_error: 0.0199833940715
+	 train_recognition: 0.0580707676709
+
+Epoch 28, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:16:46] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:16:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:16:47] blocks.extensions.saveload Checkpointing has started
+[17:16:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 28, step 600 |     #                                                          | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 29
+	 iterations_done: 17400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 17400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0487000048161
+	 test_recognition: 0.225393503904
+	 time_read_data_this_epoch: 0.496456623077
+	 time_read_data_total: 13.9379489422
+	 time_train_this_epoch: 21.6918952465
+	 time_train_total: 594.678762674
+	 train_error: 0.0184667408466
+	 train_recognition: 0.05428352952
+
+Epoch 29, step 600 |                            #                                   | Elapsed Time: 0:00:22[17:17:11] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:17:12] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:17:12] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 30
+	 iterations_done: 18000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 18000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0466999970376
+	 test_recognition: 0.220188289881
+	 time_read_data_this_epoch: 0.502651453018
+	 time_read_data_total: 14.4406003952
+	 time_train_this_epoch: 21.6795034409
+	 time_train_total: 616.358266115
+	 train_error: 0.01821674034
+	 train_recognition: 0.0548234730959
+
+[17:17:13] blocks.extensions.saveload Checkpointing has finished
+Epoch 29, step 600 |     #                                                          | Elapsed Time: 0:00:25
+Epoch 30, step 600 |                           #                                    | Elapsed Time: 0:00:22[17:17:36] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:17:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:17:37] blocks.extensions.saveload Checkpointing has started
+[17:17:38] blocks.extensions.saveload Checkpointing has finished
+Epoch 30, step 600 |    #                                                           | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 31
+	 iterations_done: 18600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 18600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0409999787807
+	 test_recognition: 0.211025461555
+	 time_read_data_this_epoch: 0.512478113174
+	 time_read_data_total: 14.9530785084
+	 time_train_this_epoch: 21.706104517
+	 time_train_total: 638.064370632
+	 train_error: 0.0169500634074
+	 train_recognition: 0.0516350828111
+
+Epoch 31, step 600 |                                  #                             | Elapsed Time: 0:00:22[17:18:01] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:18:02] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:18:02] blocks.extensions.saveload Checkpointing has started
+[17:18:03] blocks.extensions.saveload Checkpointing has finished
+Epoch 31, step 600 |           #                                                    | Elapsed Time: 0:00:24
+Epoch 32, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 32
+	 iterations_done: 19200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 19200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0456000007689
+	 test_recognition: 0.239039376378
+	 time_read_data_this_epoch: 0.510108947754
+	 time_read_data_total: 15.4631874561
+	 time_train_this_epoch: 21.0290355682
+	 time_train_total: 659.0934062
+	 train_error: 0.0166500564665
+	 train_recognition: 0.0495551377535
+
+Epoch 32, step 600 |                           #                                    | Elapsed Time: 0:00:22[17:18:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:18:27] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:18:27] blocks.extensions.saveload Checkpointing has started
+[17:18:28] blocks.extensions.saveload Checkpointing has finished
+Epoch 32, step 600 |   #                                                            | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 33
+	 iterations_done: 19800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 19800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0439999811351
+	 test_recognition: 0.223651140928
+	 time_read_data_this_epoch: 0.520444631577
+	 time_read_data_total: 15.9836320877
+	 time_train_this_epoch: 21.710534811
+	 time_train_total: 680.803941011
+	 train_error: 0.0159833878279
+	 train_recognition: 0.0490882508457
+
+Epoch 33, step 600 |                           #                                    | Elapsed Time: 0:00:22[17:18:51] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:18:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:18:52] blocks.extensions.saveload Checkpointing has started
+[17:18:53] blocks.extensions.saveload Checkpointing has finished
+Epoch 33, step 600 |    #                                                           | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 34
+	 iterations_done: 20400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 20400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0446999892592
+	 test_recognition: 0.225766047835
+	 time_read_data_this_epoch: 0.508421421051
+	 time_read_data_total: 16.4920535088
+	 time_train_this_epoch: 21.74431777
+	 time_train_total: 702.548258781
+	 train_error: 0.0160000678152
+	 train_recognition: 0.046834230423
+
+Epoch 34, step 600 |                         #                                      | Elapsed Time: 0:00:23[17:19:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:19:17] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:19:17] blocks.extensions.saveload Checkpointing has started
+[17:19:19] blocks.extensions.saveload Checkpointing has finished
+Epoch 34, step 600 |  #                                                             | Elapsed Time: 0:00:25
+Epoch 35, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 35
+	 iterations_done: 21000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 21000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0487000048161
+	 test_recognition: 0.244939893484
+	 time_read_data_this_epoch: 0.516716241837
+	 time_read_data_total: 17.0087697506
+	 time_train_this_epoch: 21.8921990395
+	 time_train_total: 724.440457821
+	 train_error: 0.0162000637501
+	 train_recognition: 0.0475697554648
+
+Epoch 35, step 600 |                           #                                    | Elapsed Time: 0:00:22[17:19:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:19:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:19:43] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 36
+	 iterations_done: 21600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 21600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0427999831736
+	 test_recognition: 0.21532510221
+	 time_read_data_this_epoch: 0.518766641617
+	 time_read_data_total: 17.5275363922
+	 time_train_this_epoch: 21.7448244095
+	 time_train_total: 746.18528223
+	 train_error: 0.015200057067
+	 train_recognition: 0.0454415269196
+
+[17:19:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 35, step 600 |        #                                                       | Elapsed Time: 0:00:26
+Epoch 36, step 600 |                         #                                      | Elapsed Time: 0:00:23[17:20:08] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:20:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:20:09] blocks.extensions.saveload Checkpointing has started
+[17:20:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 36, step 600 | #                                                              | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 37
+	 iterations_done: 22200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 22200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0432999804616
+	 test_recognition: 0.203858166933
+	 time_read_data_this_epoch: 0.504096508026
+	 time_read_data_total: 18.0316329002
+	 time_train_this_epoch: 21.9310615063
+	 time_train_total: 768.116343737
+	 train_error: 0.0145167242736
+	 train_recognition: 0.0434873215854
+
+Epoch 37, step 600 |                          #                                     | Elapsed Time: 0:00:22[17:20:33] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:20:35] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:20:35] blocks.extensions.saveload Checkpointing has started
+[17:20:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 37, step 600 |  #                                                             | Elapsed Time: 0:00:25
+Epoch 38, step 0 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 38
+	 iterations_done: 22800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 22800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0429999828339
+	 test_recognition: 0.218465745449
+	 time_read_data_this_epoch: 0.537032604218
+	 time_read_data_total: 18.5686655045
+	 time_train_this_epoch: 21.770652771
+	 time_train_total: 789.886996508
+	 train_error: 0.0154000613838
+	 train_recognition: 0.0448848456144
+
+Epoch 38, step 600 |                        #                                       | Elapsed Time: 0:00:23[17:20:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:21:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:21:00] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 39
+	 iterations_done: 23400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 23400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0439999848604
+	 test_recognition: 0.23918068409
+	 time_read_data_this_epoch: 0.501497983932
+	 time_read_data_total: 19.0701634884
+	 time_train_this_epoch: 22.0455195904
+	 time_train_total: 811.932516098
+	 train_error: 0.0136000476778
+	 train_recognition: 0.0392857603729
+
+[17:21:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 38, step 600 |  #                                                             | Elapsed Time: 0:00:25
+Epoch 39, step 600 |                         #                                      | Elapsed Time: 0:00:23[17:21:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:21:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:21:25] blocks.extensions.saveload Checkpointing has started
+[17:21:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 39, step 600 |   #                                                            | Elapsed Time: 0:00:25
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 40
+	 iterations_done: 24000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 24000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0428999811411
+	 test_recognition: 0.218098208308
+	 time_read_data_this_epoch: 0.489512205124
+	 time_read_data_total: 19.5596756935
+	 time_train_this_epoch: 22.0022490025
+	 time_train_total: 833.9347651
+	 train_error: 0.0120667004958
+	 train_recognition: 0.0378166623414
+
+Epoch 40, step 600 |                     #                                          | Elapsed Time: 0:00:23[17:21:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:21:51] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:21:51] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 41
+	 iterations_done: 24600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 24600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0475000031292
+	 test_recognition: 0.246437340975
+	 time_read_data_this_epoch: 0.484243154526
+	 time_read_data_total: 20.043918848
+	 time_train_this_epoch: 22.3485190868
+	 time_train_total: 856.283284187
+	 train_error: 0.0138167189434
+	 train_recognition: 0.0423641502857
+
+[17:21:52] blocks.extensions.saveload Checkpointing has finished
+Epoch 40, step 600 |#                                                               | Elapsed Time: 0:00:25
+Epoch 41, step 600 |                       #                                        | Elapsed Time: 0:00:23[17:22:15] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:22:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:22:16] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 42
+	 iterations_done: 25200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 25200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0439999997616
+	 test_recognition: 0.248714804649
+	 time_read_data_this_epoch: 0.441682100296
+	 time_read_data_total: 20.4856009483
+	 time_train_this_epoch: 22.2701895237
+	 time_train_total: 878.553473711
+	 train_error: 0.0131833702326
+	 train_recognition: 0.0390169806778
+
+[17:22:17] blocks.extensions.saveload Checkpointing has finished
+Epoch 41, step 600 | #                                                              | Elapsed Time: 0:00:25
+Epoch 42, step 600 |                    #                                           | Elapsed Time: 0:00:23[17:22:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:22:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:22:42] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 43
+	 iterations_done: 25800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 25800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.041699975729
+	 test_recognition: 0.23653717339
+	 time_read_data_this_epoch: 0.479472875595
+	 time_read_data_total: 20.9650738239
+	 time_train_this_epoch: 22.5409607887
+	 time_train_total: 901.0944345
+	 train_error: 0.0130667109042
+	 train_recognition: 0.0384328924119
+
+[17:22:43] blocks.extensions.saveload Checkpointing has finished
+Epoch 42, step 600 |  #                                                             | Elapsed Time: 0:00:25
+Epoch 43, step 600 |                      #                                         | Elapsed Time: 0:00:23[17:23:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:23:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:23:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 44
+	 iterations_done: 26400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 26400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0418999865651
+	 test_recognition: 0.237607568502
+	 time_read_data_this_epoch: 0.444024562836
+	 time_read_data_total: 21.4090983868
+	 time_train_this_epoch: 22.3289630413
+	 time_train_total: 923.423397541
+	 train_error: 0.0125500457361
+	 train_recognition: 0.0381511002779
+
+[17:23:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 43, step 600 | #                                                              | Elapsed Time: 0:00:25
+Epoch 44, step 600 |                    #                                           | Elapsed Time: 0:00:23[17:23:32] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:23:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:23:34] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 45
+	 iterations_done: 27000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 27000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0447999984026
+	 test_recognition: 0.218007072806
+	 time_read_data_this_epoch: 0.438803195953
+	 time_read_data_total: 21.8479015827
+	 time_train_this_epoch: 22.6050751209
+	 time_train_total: 946.028472662
+	 train_error: 0.0114833675325
+	 train_recognition: 0.0352480784059
+
+[17:23:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 44, step 600 |     #                                                          | Elapsed Time: 0:00:26
+Epoch 45, step 600 |                                                         #      | Elapsed Time: 0:00:32[17:24:08] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:24:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:24:09] blocks.extensions.saveload Checkpointing has started
+[17:24:11] blocks.extensions.saveload Checkpointing has finished
+Epoch 45, step 600 |                    #                                           | Elapsed Time: 0:00:36
+Epoch 46, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 46
+	 iterations_done: 27600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 27600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.043999992311
+	 test_recognition: 0.251875907183
+	 time_read_data_this_epoch: 0.447010278702
+	 time_read_data_total: 22.2949118614
+	 time_train_this_epoch: 31.7199761868
+	 time_train_total: 977.748448849
+	 train_error: 0.0124500365928
+	 train_recognition: 0.0367568731308
+
+Epoch 46, step 600 |                                                         #      | Elapsed Time: 0:00:32[17:24:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:24:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:24:46] blocks.extensions.saveload Checkpointing has started
+[17:24:47] blocks.extensions.saveload Checkpointing has finished
+Epoch 46, step 600 |                              #                                 | Elapsed Time: 0:00:35
+Epoch 47, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 47
+	 iterations_done: 28200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 28200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0392999798059
+	 test_recognition: 0.231036663055
+	 time_read_data_this_epoch: 0.435088396072
+	 time_read_data_total: 22.7300002575
+	 time_train_this_epoch: 31.7557244301
+	 time_train_total: 1009.50417328
+	 train_error: 0.0121000343934
+	 train_recognition: 0.0349092558026
+
+Epoch 47, step 600 |                                                         #      | Elapsed Time: 0:00:32[17:25:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:25:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:25:21] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 48
+	 iterations_done: 28800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 28800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0410999879241
+	 test_recognition: 0.216982454062
+	 time_read_data_this_epoch: 0.432795286179
+	 time_read_data_total: 23.1627955437
+	 time_train_this_epoch: 31.7629253864
+	 time_train_total: 1041.26709867
+	 train_error: 0.0110333701596
+	 train_recognition: 0.0321265049279
+
+[17:25:22] blocks.extensions.saveload Checkpointing has finished
+Epoch 47, step 600 |                             #                                  | Elapsed Time: 0:00:35
+Epoch 48, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:25:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:25:56] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:25:56] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 49
+	 iterations_done: 29400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 29400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0428999774158
+	 test_recognition: 0.245226100087
+	 time_read_data_this_epoch: 0.454907417297
+	 time_read_data_total: 23.617702961
+	 time_train_this_epoch: 31.737657547
+	 time_train_total: 1073.00475621
+	 train_error: 0.0116500360891
+	 train_recognition: 0.0344107300043
+
+[17:25:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 48, step 600 |                              #                                 | Elapsed Time: 0:00:35
+Epoch 49, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:26:30] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:26:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:26:32] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 50
+	 iterations_done: 30000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 30000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0436999835074
+	 test_recognition: 0.230823457241
+	 time_read_data_this_epoch: 0.453085422516
+	 time_read_data_total: 24.0707883835
+	 time_train_this_epoch: 31.8009738922
+	 time_train_total: 1104.8057301
+	 train_error: 0.011166700162
+	 train_recognition: 0.0335256569088
+
+[17:26:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 49, step 600 |                             #                                  | Elapsed Time: 0:00:35
+Epoch 50, step 600 |                                                   #            | Elapsed Time: 0:00:33[17:27:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:27:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:27:08] blocks.extensions.saveload Checkpointing has started
+[17:27:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 50, step 600 |                         #                                      | Elapsed Time: 0:00:35
+Epoch 51, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 51
+	 iterations_done: 30600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 30600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0431999862194
+	 test_recognition: 0.250482231379
+	 time_read_data_this_epoch: 0.455937147141
+	 time_read_data_total: 24.5267255306
+	 time_train_this_epoch: 32.2591724396
+	 time_train_total: 1137.06490254
+	 train_error: 0.0100833652541
+	 train_recognition: 0.0300275553018
+
+Epoch 51, step 600 |                                                     #          | Elapsed Time: 0:00:33[17:27:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:27:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:27:43] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 52
+	 iterations_done: 31200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 31200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0402999781072
+	 test_recognition: 0.247526705265
+	 time_read_data_this_epoch: 0.444570541382
+	 time_read_data_total: 24.971296072
+	 time_train_this_epoch: 32.0823953152
+	 time_train_total: 1169.14729786
+	 train_error: 0.0109833655879
+	 train_recognition: 0.0328299999237
+
+[17:27:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 51, step 600 |                            #                                   | Elapsed Time: 0:00:35
+Epoch 52, step 600 |                                                      #         | Elapsed Time: 0:00:32[17:28:17] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:28:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:28:19] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 53
+	 iterations_done: 31800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 31800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0433999821544
+	 test_recognition: 0.23805218935
+	 time_read_data_this_epoch: 0.497171401978
+	 time_read_data_total: 25.468467474
+	 time_train_this_epoch: 31.9110693932
+	 time_train_total: 1201.05836725
+	 train_error: 0.00966668967158
+	 train_recognition: 0.0300232376903
+
+[17:28:20] blocks.extensions.saveload Checkpointing has finished
+Epoch 52, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 53, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:28:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:28:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:28:54] blocks.extensions.saveload Checkpointing has started
+[17:28:56] blocks.extensions.saveload Checkpointing has finished
+Epoch 53, step 600 |                            #                                   | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 54
+	 iterations_done: 32400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 32400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0403999835253
+	 test_recognition: 0.230560779572
+	 time_read_data_this_epoch: 0.512842178345
+	 time_read_data_total: 25.9813096523
+	 time_train_this_epoch: 31.6413097382
+	 time_train_total: 1232.69967699
+	 train_error: 0.00918335001916
+	 train_recognition: 0.0281310975552
+
+Epoch 54, step 600 |                                                          #     | Elapsed Time: 0:00:32[17:29:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:29:30] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:29:30] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 55
+	 iterations_done: 33000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 33000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0399999767542
+	 test_recognition: 0.239660859108
+	 time_read_data_this_epoch: 0.521797418594
+	 time_read_data_total: 26.5031070709
+	 time_train_this_epoch: 31.4596180916
+	 time_train_total: 1264.15929508
+	 train_error: 0.00840000994503
+	 train_recognition: 0.0250884275883
+
+[17:29:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 54, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 55, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:30:04] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:30:05] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:30:05] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 56
+	 iterations_done: 33600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 33600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.039899982512
+	 test_recognition: 0.249802783132
+	 time_read_data_this_epoch: 0.514715909958
+	 time_read_data_total: 27.0178229809
+	 time_train_this_epoch: 31.3539149761
+	 time_train_total: 1295.51321006
+	 train_error: 0.0103000244126
+	 train_recognition: 0.0300727430731
+
+[17:30:08] blocks.extensions.saveload Checkpointing has finished
+Epoch 55, step 600 |                   #                                            | Elapsed Time: 0:00:36
+Epoch 56, step 600 |                                                       #        | Elapsed Time: 0:00:32[17:30:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:30:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:30:42] blocks.extensions.saveload Checkpointing has started
+[17:30:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 56, step 600 |                         #                                      | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 57
+	 iterations_done: 34200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 34200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0390999801457
+	 test_recognition: 0.232185289264
+	 time_read_data_this_epoch: 0.523384571075
+	 time_read_data_total: 27.541207552
+	 time_train_this_epoch: 31.7326989174
+	 time_train_total: 1327.24590898
+	 train_error: 0.00948335509747
+	 train_recognition: 0.0290836393833
+
+Epoch 57, step 600 |                                                          #     | Elapsed Time: 0:00:32[17:31:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:31:18] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:31:18] blocks.extensions.saveload Checkpointing has started
+[17:31:19] blocks.extensions.saveload Checkpointing has finished
+Epoch 57, step 600 |                            #                                   | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 58
+	 iterations_done: 34800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 34800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0395999774337
+	 test_recognition: 0.245717749
+	 time_read_data_this_epoch: 0.50971031189
+	 time_read_data_total: 28.0509178638
+	 time_train_this_epoch: 31.4170792103
+	 time_train_total: 1358.66298819
+	 train_error: 0.00880002137274
+	 train_recognition: 0.0262412000448
+
+Epoch 58, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:31:52] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:31:53] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:31:53] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+[17:31:55] blocks.extensions.saveload Checkpointing has finished
+Epoch 58, step 600 |                            #                                   | Elapsed Time: 0:00:35
+	 epochs_done: 59
+	 iterations_done: 35400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 35400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0461000017822
+	 test_recognition: 0.329685360193
+	 time_read_data_this_epoch: 0.502670526505
+	 time_read_data_total: 28.5535883904
+	 time_train_this_epoch: 31.4101507664
+	 time_train_total: 1390.07313895
+	 train_error: 0.0101666916162
+	 train_recognition: 0.0302972830832
+
+Epoch 59, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:32:27] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:32:29] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:32:29] blocks.extensions.saveload Checkpointing has started
+[17:32:30] blocks.extensions.saveload Checkpointing has finished
+Epoch 59, step 600 |                             #                                  | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 60
+	 iterations_done: 36000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 36000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0365999825299
+	 test_recognition: 0.249492496252
+	 time_read_data_this_epoch: 0.507522583008
+	 time_read_data_total: 29.0611109734
+	 time_train_this_epoch: 31.3597276211
+	 time_train_total: 1421.43286657
+	 train_error: 0.00870001409203
+	 train_recognition: 0.0271321106702
+
+Epoch 60, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:33:03] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:33:04] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:33:04] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 61
+	 iterations_done: 36600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 36600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0429999791086
+	 test_recognition: 0.286422520876
+	 time_read_data_this_epoch: 0.517949819565
+	 time_read_data_total: 29.5790607929
+	 time_train_this_epoch: 31.3770837784
+	 time_train_total: 1452.80995035
+	 train_error: 0.00995002407581
+	 train_recognition: 0.031365044415
+
+[17:33:06] blocks.extensions.saveload Checkpointing has finished
+Epoch 60, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 61, step 600 |                                                      #         | Elapsed Time: 0:00:32[17:33:39] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:33:40] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:33:40] blocks.extensions.saveload Checkpointing has started
+[17:33:42] blocks.extensions.saveload Checkpointing has finished
+Epoch 61, step 600 |                       #                                        | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 62
+	 iterations_done: 37200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 37200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0395999848843
+	 test_recognition: 0.239929080009
+	 time_read_data_this_epoch: 0.532057285309
+	 time_read_data_total: 30.1111180782
+	 time_train_this_epoch: 31.8305978775
+	 time_train_total: 1484.64054823
+	 train_error: 0.00871668476611
+	 train_recognition: 0.027211509645
+
+Epoch 62, step 600 |                                                         #      | Elapsed Time: 0:00:32[17:34:15] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:34:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:34:16] blocks.extensions.saveload Checkpointing has started
+[17:34:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 62, step 600 |                          #                                     | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 63
+	 iterations_done: 37800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 37800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0381999798119
+	 test_recognition: 0.235906511545
+	 time_read_data_this_epoch: 0.517169475555
+	 time_read_data_total: 30.6282875538
+	 time_train_this_epoch: 31.5328996181
+	 time_train_total: 1516.17344785
+	 train_error: 0.00815001502633
+	 train_recognition: 0.024528644979
+
+Epoch 63, step 600 |                                                               #| Elapsed Time: 0:00:31[17:34:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:34:51] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:34:51] blocks.extensions.saveload Checkpointing has started
+[17:34:53] blocks.extensions.saveload Checkpointing has finished
+Epoch 63, step 600 |                                #                               | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 64
+	 iterations_done: 38400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 38400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0384999811649
+	 test_recognition: 0.259423702955
+	 time_read_data_this_epoch: 0.52272939682
+	 time_read_data_total: 31.1510169506
+	 time_train_this_epoch: 30.8705685139
+	 time_train_total: 1547.04401636
+	 train_error: 0.00785000901669
+	 train_recognition: 0.0249091442674
+
+Epoch 64, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:35:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:35:27] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:35:27] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 65
+	 iterations_done: 39000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 39000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0376999862492
+	 test_recognition: 0.234005749226
+	 time_read_data_this_epoch: 0.512679815292
+	 time_read_data_total: 31.6636967659
+	 time_train_this_epoch: 31.3799240589
+	 time_train_total: 1578.42394042
+	 train_error: 0.00776667753235
+	 train_recognition: 0.0226603429765
+
+[17:35:29] blocks.extensions.saveload Checkpointing has finished
+Epoch 64, step 600 |                #                                               | Elapsed Time: 0:00:36
+Epoch 65, step 600 |                                                               #| Elapsed Time: 0:00:31[17:36:01] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:36:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:36:03] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 66
+	 iterations_done: 39600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 39600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0379999838769
+	 test_recognition: 0.247168838978
+	 time_read_data_this_epoch: 0.513827562332
+	 time_read_data_total: 32.1775243282
+	 time_train_this_epoch: 30.8541958332
+	 time_train_total: 1609.27813625
+	 train_error: 0.00770000834018
+	 train_recognition: 0.022682690993
+
+[17:36:05] blocks.extensions.saveload Checkpointing has finished
+Epoch 65, step 600 |                                 #                              | Elapsed Time: 0:00:35
+Epoch 66, step 600 |                                                      #         | Elapsed Time: 0:00:32[17:36:37] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:36:39] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:36:39] blocks.extensions.saveload Checkpointing has started
+[17:36:41] blocks.extensions.saveload Checkpointing has finished
+Epoch 66, step 600 |                       #                                        | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 67
+	 iterations_done: 40200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 40200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0416999869049
+	 test_recognition: 0.250244259834
+	 time_read_data_this_epoch: 0.501094341278
+	 time_read_data_total: 32.6786186695
+	 time_train_this_epoch: 31.8304514885
+	 time_train_total: 1641.10858774
+	 train_error: 0.00823334790766
+	 train_recognition: 0.0263462103903
+
+Epoch 67, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:37:13] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:37:15] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:37:15] blocks.extensions.saveload Checkpointing has started
+[17:37:16] blocks.extensions.saveload Checkpointing has finished
+Epoch 67, step 600 |                            #                                   | Elapsed Time: 0:00:35
+Epoch 68, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 68
+	 iterations_done: 40800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 40800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0394999831915
+	 test_recognition: 0.235115930438
+	 time_read_data_this_epoch: 0.505709171295
+	 time_read_data_total: 33.1843278408
+	 time_train_this_epoch: 31.3257651329
+	 time_train_total: 1672.43435287
+	 train_error: 0.00780000910163
+	 train_recognition: 0.0233634803444
+
+Epoch 68, step 600 |                                                             #  | Elapsed Time: 0:00:32[17:37:48] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:37:50] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:37:50] blocks.extensions.saveload Checkpointing has started
+[17:37:52] blocks.extensions.saveload Checkpointing has finished
+Epoch 68, step 600 |                             #                                  | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 69
+	 iterations_done: 41400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 41400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0388999804854
+	 test_recognition: 0.268436282873
+	 time_read_data_this_epoch: 0.498731613159
+	 time_read_data_total: 33.683059454
+	 time_train_this_epoch: 31.143853426
+	 time_train_total: 1703.5782063
+	 train_error: 0.00741667114198
+	 train_recognition: 0.0224997512996
+
+Epoch 69, step 600 |                                                              # | Elapsed Time: 0:00:32[17:38:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:38:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:38:25] blocks.extensions.saveload Checkpointing has started
+[17:38:27] blocks.extensions.saveload Checkpointing has finished
+Epoch 69, step 600 |                             #                                  | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 70
+	 iterations_done: 42000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 42000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0364999808371
+	 test_recognition: 0.254814058542
+	 time_read_data_this_epoch: 0.50422334671
+	 time_read_data_total: 34.1872828007
+	 time_train_this_epoch: 31.076595068
+	 time_train_total: 1734.65480137
+	 train_error: 0.00835001096129
+	 train_recognition: 0.0262629333884
+
+Epoch 70, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:38:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:39:01] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:39:01] blocks.extensions.saveload Checkpointing has started
+[17:39:03] blocks.extensions.saveload Checkpointing has finished
+Epoch 70, step 600 |                            #                                   | Elapsed Time: 0:00:35
+Epoch 71, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 71
+	 iterations_done: 42600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 42600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0375999845564
+	 test_recognition: 0.249506220222
+	 time_read_data_this_epoch: 0.503199338913
+	 time_read_data_total: 34.6904821396
+	 time_train_this_epoch: 31.2983322144
+	 time_train_total: 1765.95313358
+	 train_error: 0.00686666322872
+	 train_recognition: 0.0206853412092
+
+Epoch 71, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:39:35] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:39:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:39:37] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 72
+	 iterations_done: 43200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 43200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0389999784529
+	 test_recognition: 0.258562296629
+	 time_read_data_this_epoch: 0.500865936279
+	 time_read_data_total: 35.1913480759
+	 time_train_this_epoch: 31.7186295986
+	 time_train_total: 1797.67176318
+	 train_error: 0.0070166666992
+	 train_recognition: 0.0224404279143
+
+[17:39:39] blocks.extensions.saveload Checkpointing has finished
+Epoch 71, step 600 |                       #                                        | Elapsed Time: 0:00:36
+Epoch 72, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:40:11] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:40:12] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:40:12] blocks.extensions.saveload Checkpointing has started
+[17:40:15] blocks.extensions.saveload Checkpointing has finished
+Epoch 72, step 600 |               #                                                | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 73
+	 iterations_done: 43800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 43800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.039099983871
+	 test_recognition: 0.268738359213
+	 time_read_data_this_epoch: 0.500873565674
+	 time_read_data_total: 35.6922216415
+	 time_train_this_epoch: 31.3042402267
+	 time_train_total: 1828.97600341
+	 train_error: 0.00663332827389
+	 train_recognition: 0.0214763917029
+
+Epoch 73, step 600 |                                                               #| Elapsed Time: 0:00:31[17:40:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:40:49] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:40:49] blocks.extensions.saveload Checkpointing has started
+[17:40:51] blocks.extensions.saveload Checkpointing has finished
+Epoch 73, step 600 |                               #                                | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 74
+	 iterations_done: 44400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 44400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0408999808133
+	 test_recognition: 0.283560723066
+	 time_read_data_this_epoch: 0.516055583954
+	 time_read_data_total: 36.2082772255
+	 time_train_this_epoch: 30.8392560482
+	 time_train_total: 1859.81525946
+	 train_error: 0.00541666243225
+	 train_recognition: 0.0178974606097
+
+Epoch 74, step 600 |                                                              # | Elapsed Time: 0:00:31[17:41:23] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:41:24] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:41:24] blocks.extensions.saveload Checkpointing has started
+[17:41:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 74, step 600 |                                #                               | Elapsed Time: 0:00:35
+Epoch 75, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 75
+	 iterations_done: 45000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 45000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0378999821842
+	 test_recognition: 0.274211496115
+	 time_read_data_this_epoch: 0.511563301086
+	 time_read_data_total: 36.7198405266
+	 time_train_this_epoch: 30.7836611271
+	 time_train_total: 1890.59892058
+	 train_error: 0.00668332818896
+	 train_recognition: 0.020595036447
+
+Epoch 75, step 600 |                                                             #  | Elapsed Time: 0:00:32[17:41:58] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:41:59] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:41:59] blocks.extensions.saveload Checkpointing has started
+[17:42:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 75, step 600 |                             #                                  | Elapsed Time: 0:00:35
+Epoch 76, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 76
+	 iterations_done: 45600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 45600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0380999818444
+	 test_recognition: 0.260514706373
+	 time_read_data_this_epoch: 0.500556230545
+	 time_read_data_total: 37.2203967571
+	 time_train_this_epoch: 31.1457943916
+	 time_train_total: 1921.74471498
+	 train_error: 0.00669999513775
+	 train_recognition: 0.0210928507149
+
+Epoch 76, step 600 |                                                          #     | Elapsed Time: 0:00:32[17:42:34] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:42:35] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:42:35] blocks.extensions.saveload Checkpointing has started
+[17:42:37] blocks.extensions.saveload Checkpointing has finished
+Epoch 76, step 600 |                         #                                      | Elapsed Time: 0:00:35
+Epoch 77, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 77
+	 iterations_done: 46200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 46200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0381999798119
+	 test_recognition: 0.238660588861
+	 time_read_data_this_epoch: 0.501489162445
+	 time_read_data_total: 37.7218859196
+	 time_train_this_epoch: 31.4500665665
+	 time_train_total: 1953.19478154
+	 train_error: 0.00648332806304
+	 train_recognition: 0.0207210946828
+
+Epoch 77, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:43:10] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:43:11] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:43:11] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 78
+	 iterations_done: 46800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 46800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0385999791324
+	 test_recognition: 0.270188689232
+	 time_read_data_this_epoch: 0.503110647202
+	 time_read_data_total: 38.2249965668
+	 time_train_this_epoch: 31.6823070049
+	 time_train_total: 1984.87708855
+	 train_error: 0.00693333148956
+	 train_recognition: 0.0214020907879
+
+[17:43:13] blocks.extensions.saveload Checkpointing has finished
+Epoch 77, step 600 |                       #                                        | Elapsed Time: 0:00:36
+Epoch 78, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:43:45] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:43:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:43:47] blocks.extensions.saveload Checkpointing has started
+[17:43:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 78, step 600 |                           #                                    | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 79
+	 iterations_done: 47400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 47400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0372999794781
+	 test_recognition: 0.267613589764
+	 time_read_data_this_epoch: 0.511378288269
+	 time_read_data_total: 38.736374855
+	 time_train_this_epoch: 31.2278892994
+	 time_train_total: 2016.10497785
+	 train_error: 0.00651666149497
+	 train_recognition: 0.0217701792717
+
+Epoch 79, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:44:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:44:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:44:23] blocks.extensions.saveload Checkpointing has started
+[17:44:24] blocks.extensions.saveload Checkpointing has finished
+Epoch 79, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 80, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 80
+	 iterations_done: 48000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 48000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0395999774337
+	 test_recognition: 0.282204419374
+	 time_read_data_this_epoch: 0.518543243408
+	 time_read_data_total: 39.2549180984
+	 time_train_this_epoch: 31.2325227261
+	 time_train_total: 2047.33750057
+	 train_error: 0.00720000173897
+	 train_recognition: 0.0234249047935
+
+Epoch 80, step 600 |                                                            #   | Elapsed Time: 0:00:31[17:44:56] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:44:58] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:44:58] blocks.extensions.saveload Checkpointing has started
+[17:45:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 80, step 600 |                      #                                         | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 81
+	 iterations_done: 48600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 48600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0390999801457
+	 test_recognition: 0.277963101864
+	 time_read_data_this_epoch: 0.504877328873
+	 time_read_data_total: 39.7597954273
+	 time_train_this_epoch: 30.5820736885
+	 time_train_total: 2077.91957426
+	 train_error: 0.00604999484494
+	 train_recognition: 0.0193467717618
+
+Epoch 81, step 600 |                                                      #         | Elapsed Time: 0:00:32[17:45:34] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:45:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:45:34] blocks.extensions.saveload Checkpointing has started
+[17:45:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 81, step 600 |                            #                                   | Elapsed Time: 0:00:35
+Epoch 82, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 82
+	 iterations_done: 49200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 49200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0358999818563
+	 test_recognition: 0.265208393335
+	 time_read_data_this_epoch: 0.512566804886
+	 time_read_data_total: 40.2723622322
+	 time_train_this_epoch: 31.8120825291
+	 time_train_total: 2109.73165679
+	 train_error: 0.00543332938105
+	 train_recognition: 0.0184803493321
+
+Epoch 82, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:46:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:46:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:46:10] blocks.extensions.saveload Checkpointing has started
+[17:46:12] blocks.extensions.saveload Checkpointing has finished
+Epoch 82, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 83, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 83
+	 iterations_done: 49800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 49800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0357999838889
+	 test_recognition: 0.251851052046
+	 time_read_data_this_epoch: 0.504101514816
+	 time_read_data_total: 40.776463747
+	 time_train_this_epoch: 31.6090106964
+	 time_train_total: 2141.34066749
+	 train_error: 0.00656666141003
+	 train_recognition: 0.0209371298552
+
+Epoch 83, step 600 |                                                          #     | Elapsed Time: 0:00:32[17:46:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:46:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:46:46] blocks.extensions.saveload Checkpointing has started
+[17:46:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 83, step 600 |                          #                                     | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 84
+	 iterations_done: 50400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 50400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0388999804854
+	 test_recognition: 0.291354626417
+	 time_read_data_this_epoch: 0.503273487091
+	 time_read_data_total: 41.2797372341
+	 time_train_this_epoch: 31.4205679893
+	 time_train_total: 2172.76123548
+	 train_error: 0.0064833285287
+	 train_recognition: 0.0201971512288
+
+Epoch 84, step 600 |                                                             #  | Elapsed Time: 0:00:32[17:47:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:47:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:47:21] blocks.extensions.saveload Checkpointing has started
+[17:47:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 84, step 600 |                           #                                    | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 85
+	 iterations_done: 51000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 51000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0351999849081
+	 test_recognition: 0.270056933165
+	 time_read_data_this_epoch: 0.505092144012
+	 time_read_data_total: 41.7848293781
+	 time_train_this_epoch: 31.1878049374
+	 time_train_total: 2203.94904041
+	 train_error: 0.00596666196361
+	 train_recognition: 0.0181453935802
+
+Epoch 85, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:47:56] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:47:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:47:57] blocks.extensions.saveload Checkpointing has started
+[17:47:59] blocks.extensions.saveload Checkpointing has finished
+Epoch 85, step 600 |                          #                                     | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 86
+	 iterations_done: 51600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 51600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0415999777615
+	 test_recognition: 0.283113062382
+	 time_read_data_this_epoch: 0.506498813629
+	 time_read_data_total: 42.2913281918
+	 time_train_this_epoch: 31.2675943375
+	 time_train_total: 2235.21663475
+	 train_error: 0.00723333517089
+	 train_recognition: 0.0232486799359
+
+Epoch 86, step 600 |                                                             #  | Elapsed Time: 0:00:32[17:48:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:48:33] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:48:33] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 87
+	 iterations_done: 52200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 52200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0379999801517
+	 test_recognition: 0.266223818064
+	 time_read_data_this_epoch: 0.505850076675
+	 time_read_data_total: 42.7971782684
+	 time_train_this_epoch: 31.1922008991
+	 time_train_total: 2266.40883565
+	 train_error: 0.00586666166782
+	 train_recognition: 0.0188640635461
+
+[17:48:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 86, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 87, step 600 |                                                         #      | Elapsed Time: 0:00:32[17:49:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:49:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:49:09] blocks.extensions.saveload Checkpointing has started
+[17:49:12] blocks.extensions.saveload Checkpointing has finished
+Epoch 87, step 600 |           #                                                    | Elapsed Time: 0:00:37
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 88
+	 iterations_done: 52800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 52800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0379999801517
+	 test_recognition: 0.266195565462
+	 time_read_data_this_epoch: 0.497799634933
+	 time_read_data_total: 43.2949779034
+	 time_train_this_epoch: 31.5283968449
+	 time_train_total: 2297.93723249
+	 train_error: 0.00538332900032
+	 train_recognition: 0.0170736014843
+
+Epoch 88, step 600 |                                                           #    | Elapsed Time: 0:00:32[17:49:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:49:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:49:46] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 89
+	 iterations_done: 53400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 53400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0421999804676
+	 test_recognition: 0.295592606068
+	 time_read_data_this_epoch: 0.503314733505
+	 time_read_data_total: 43.7982926369
+	 time_train_this_epoch: 31.3628599644
+	 time_train_total: 2329.30009246
+	 train_error: 0.00556666217744
+	 train_recognition: 0.0188087522984
+
+[17:49:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 88, step 600 |                         #                                      | Elapsed Time: 0:00:35
+Epoch 89, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:50:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:50:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:50:22] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 90
+	 iterations_done: 54000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 54000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0374999828637
+	 test_recognition: 0.259246170521
+	 time_read_data_this_epoch: 0.499656438828
+	 time_read_data_total: 44.2979490757
+	 time_train_this_epoch: 31.2846491337
+	 time_train_total: 2360.58474159
+	 train_error: 0.00511666247621
+	 train_recognition: 0.017754945904
+
+[17:50:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 89, step 600 |                          #                                     | Elapsed Time: 0:00:35
+Epoch 90, step 600 |                                                              # | Elapsed Time: 0:00:31[17:50:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:50:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:50:57] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 91
+	 iterations_done: 54600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 54600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.041199978441
+	 test_recognition: 0.291305750608
+	 time_read_data_this_epoch: 0.506862163544
+	 time_read_data_total: 44.8048112392
+	 time_train_this_epoch: 30.7264273167
+	 time_train_total: 2391.31116891
+	 train_error: 0.00468332972378
+	 train_recognition: 0.0147030493245
+
+[17:50:59] blocks.extensions.saveload Checkpointing has finished
+Epoch 90, step 600 |                              #                                 | Elapsed Time: 0:00:35
+Epoch 91, step 600 |                                                               #| Elapsed Time: 0:00:32[17:51:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:51:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:51:32] blocks.extensions.saveload Checkpointing has started
+[17:51:34] blocks.extensions.saveload Checkpointing has finished
+Epoch 91, step 600 |                            #                                   | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 92
+	 iterations_done: 55200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 55200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0379999838769
+	 test_recognition: 0.265589535236
+	 time_read_data_this_epoch: 0.496339797974
+	 time_read_data_total: 45.3011510372
+	 time_train_this_epoch: 30.9649548531
+	 time_train_total: 2422.27612376
+	 train_error: 0.00543332891539
+	 train_recognition: 0.017269173637
+
+Epoch 92, step 600 |                                                        #       | Elapsed Time: 0:00:32[17:52:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:52:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:52:09] blocks.extensions.saveload Checkpointing has started
+[17:52:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 92, step 600 |                      #                                         | Elapsed Time: 0:00:36
+Epoch 93, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 93
+	 iterations_done: 55800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 55800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0389999821782
+	 test_recognition: 0.321690291166
+	 time_read_data_this_epoch: 0.504146575928
+	 time_read_data_total: 45.8052976131
+	 time_train_this_epoch: 31.6740734577
+	 time_train_total: 2453.95019722
+	 train_error: 0.0051999958232
+	 train_recognition: 0.0180299784988
+
+Epoch 93, step 600 |                                                          #     | Elapsed Time: 0:00:32[17:52:43] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:52:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:52:45] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 94
+	 iterations_done: 56400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 56400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0387999862432
+	 test_recognition: 0.314505368471
+	 time_read_data_this_epoch: 0.496433258057
+	 time_read_data_total: 46.3017308712
+	 time_train_this_epoch: 31.441160202
+	 time_train_total: 2485.39135742
+	 train_error: 0.00546666234732
+	 train_recognition: 0.0180906057358
+
+[17:52:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 93, step 600 |                        #                                       | Elapsed Time: 0:00:35
+Epoch 94, step 600 |                                                          #     | Elapsed Time: 0:00:31[17:53:18] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:53:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:53:19] blocks.extensions.saveload Checkpointing has started
+[17:53:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 94, step 600 |                      #                                         | Elapsed Time: 0:00:36
+Epoch 95, step 1 |#                                                                 | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 95
+	 iterations_done: 57000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 57000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0399999804795
+	 test_recognition: 0.331401526928
+	 time_read_data_this_epoch: 0.490305900574
+	 time_read_data_total: 46.7920367718
+	 time_train_this_epoch: 30.3656601906
+	 time_train_total: 2515.75701761
+	 train_error: 0.00534999556839
+	 train_recognition: 0.0187423750758
+
+Epoch 95, step 600 |                                                              # | Elapsed Time: 0:00:32[17:53:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:53:56] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:53:56] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 96
+	 iterations_done: 57600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 57600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0382999815047
+	 test_recognition: 0.297026753426
+	 time_read_data_this_epoch: 0.521340847015
+	 time_read_data_total: 47.3133776188
+	 time_train_this_epoch: 31.0257191658
+	 time_train_total: 2546.78273678
+	 train_error: 0.00603332836181
+	 train_recognition: 0.0202753394842
+
+[17:53:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 95, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 96, step 600 |                                                            #   | Elapsed Time: 0:00:32[17:54:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:54:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:54:32] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 97
+	 iterations_done: 58200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 58200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0401999801397
+	 test_recognition: 0.318008393049
+	 time_read_data_this_epoch: 0.500863075256
+	 time_read_data_total: 47.814240694
+	 time_train_this_epoch: 31.2132833004
+	 time_train_total: 2577.99602008
+	 train_error: 0.00406666379422
+	 train_recognition: 0.0147754084319
+
+[17:54:34] blocks.extensions.saveload Checkpointing has finished
+Epoch 96, step 600 |                          #                                     | Elapsed Time: 0:00:35
+Epoch 97, step 600 |                                                              # | Elapsed Time: 0:00:32[17:55:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:55:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:55:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 98
+	 iterations_done: 58800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 58800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0394999831915
+	 test_recognition: 0.317304641008
+	 time_read_data_this_epoch: 0.496106386185
+	 time_read_data_total: 48.3103470802
+	 time_train_this_epoch: 31.1168835163
+	 time_train_total: 2609.11290359
+	 train_error: 0.00544999539852
+	 train_recognition: 0.0168219618499
+
+[17:55:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 97, step 600 |                           #                                    | Elapsed Time: 0:00:35
+Epoch 98, step 600 |                                                         #      | Elapsed Time: 0:00:32[17:55:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:55:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:55:44] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 99
+	 iterations_done: 59400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 59400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0376999825239
+	 test_recognition: 0.278634518385
+	 time_read_data_this_epoch: 0.498568058014
+	 time_read_data_total: 48.8089151382
+	 time_train_this_epoch: 31.5844438076
+	 time_train_total: 2640.6973474
+	 train_error: 0.00639999471605
+	 train_recognition: 0.0205770712346
+
+[17:55:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 98, step 600 |                      #                                         | Elapsed Time: 0:00:36
+Epoch 99, step 600 |                                                           #    | Elapsed Time: 0:00:31[17:56:17] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:56:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:56:19] blocks.extensions.saveload Checkpointing has started
+[17:56:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 99, step 600 |                                #                               | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 100
+	 iterations_done: 60000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 60000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.038799982518
+	 test_recognition: 0.307937353849
+	 time_read_data_this_epoch: 0.493679761887
+	 time_read_data_total: 49.3025949001
+	 time_train_this_epoch: 30.5257983208
+	 time_train_total: 2671.22314572
+	 train_error: 0.00594999501482
+	 train_recognition: 0.0205169469118
+
+Epoch 100, step 600 |                                                         #     | Elapsed Time: 0:00:32[17:56:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:56:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:56:54] blocks.extensions.saveload Checkpointing has started
+[17:56:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 100, step 600 |                     #                                         | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 101
+	 iterations_done: 60600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 60600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0363999828696
+	 test_recognition: 0.248506531119
+	 time_read_data_this_epoch: 0.492681741714
+	 time_read_data_total: 49.7952766418
+	 time_train_this_epoch: 30.9447720051
+	 time_train_total: 2702.16791773
+	 train_error: 0.00624999497086
+	 train_recognition: 0.0213529020548
+
+Epoch 101, step 600 |                                                         #     | Elapsed Time: 0:00:32[17:57:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:57:30] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:57:30] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 102
+	 iterations_done: 61200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 61200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0357999838889
+	 test_recognition: 0.280901938677
+	 time_read_data_this_epoch: 0.491462469101
+	 time_read_data_total: 50.2867391109
+	 time_train_this_epoch: 30.9484903812
+	 time_train_total: 2733.11640811
+	 train_error: 0.00551666226238
+	 train_recognition: 0.0180178433657
+
+[17:57:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 101, step 600 |         #                                                     | Elapsed Time: 0:00:36
+Epoch 102, step 600 |                                                       #       | Elapsed Time: 0:00:32[17:58:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:58:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:58:07] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 103
+	 iterations_done: 61800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 61800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0361999832094
+	 test_recognition: 0.289158523083
+	 time_read_data_this_epoch: 0.496788024902
+	 time_read_data_total: 50.7835271358
+	 time_train_this_epoch: 31.1541576385
+	 time_train_total: 2764.27056575
+	 train_error: 0.00493332929909
+	 train_recognition: 0.0172973703593
+
+[17:58:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 102, step 600 |                     #                                         | Elapsed Time: 0:00:35
+Epoch 103, step 600 |                                                   #           | Elapsed Time: 0:00:32[17:58:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:58:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:58:43] blocks.extensions.saveload Checkpointing has started
+[17:58:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 103, step 600 |               #                                               | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 104
+	 iterations_done: 62400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 62400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0358999818563
+	 test_recognition: 0.279263556004
+	 time_read_data_this_epoch: 0.490994215012
+	 time_read_data_total: 51.2745213509
+	 time_train_this_epoch: 31.5891575813
+	 time_train_total: 2795.85972333
+	 train_error: 0.00414999667555
+	 train_recognition: 0.0138188041747
+
+Epoch 104, step 600 |                                                     #         | Elapsed Time: 0:00:32[17:59:18] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:59:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:59:19] blocks.extensions.saveload Checkpointing has started
+[17:59:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 104, step 600 |                 #                                             | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 105
+	 iterations_done: 63000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 63000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0410999804735
+	 test_recognition: 0.318199306726
+	 time_read_data_this_epoch: 0.502487182617
+	 time_read_data_total: 51.7770085335
+	 time_train_this_epoch: 31.4027011395
+	 time_train_total: 2827.26242447
+	 train_error: 0.00538332900032
+	 train_recognition: 0.0172354038805
+
+Epoch 105, step 600 |                                                     #         | Elapsed Time: 0:00:32[17:59:54] blocks.extensions.monitoring Monitoring on auxiliary data started
+[17:59:55] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[17:59:55] blocks.extensions.saveload Checkpointing has started
+[17:59:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 105, step 600 |                 #                                             | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 106
+	 iterations_done: 63600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 63600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0379999838769
+	 test_recognition: 0.29132771492
+	 time_read_data_this_epoch: 0.508412837982
+	 time_read_data_total: 52.2854213715
+	 time_train_this_epoch: 31.2992680073
+	 time_train_total: 2858.56169248
+	 train_error: 0.00539999548346
+	 train_recognition: 0.0188480876386
+
+Epoch 106, step 600 |                                                     #         | Elapsed Time: 0:00:32[18:00:30] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:00:31] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:00:31] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 107
+	 iterations_done: 64200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 64200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0392999798059
+	 test_recognition: 0.286075621843
+	 time_read_data_this_epoch: 0.536225318909
+	 time_read_data_total: 52.8216466904
+	 time_train_this_epoch: 31.3016536236
+	 time_train_total: 2889.8633461
+	 train_error: 0.00501666264609
+	 train_recognition: 0.0168637558818
+
+[18:00:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 106, step 600 |                 #                                             | Elapsed Time: 0:00:36
+Epoch 107, step 600 |                                                   #           | Elapsed Time: 0:00:32[18:01:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:01:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:01:07] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 108
+	 iterations_done: 64800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 64800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0390999801457
+	 test_recognition: 0.335773319006
+	 time_read_data_this_epoch: 0.528196334839
+	 time_read_data_total: 53.3498430252
+	 time_train_this_epoch: 31.5007512569
+	 time_train_total: 2921.36409736
+	 train_error: 0.00511666247621
+	 train_recognition: 0.0169673673809
+
+[18:01:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 107, step 600 |                  #                                            | Elapsed Time: 0:00:35
+Epoch 108, step 600 |                                                     #         | Elapsed Time: 0:00:32[18:01:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:01:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:01:43] blocks.extensions.saveload Checkpointing has started
+[18:01:47] blocks.extensions.saveload Checkpointing has finished
+Epoch 108, step 600 |      #                                                        | Elapsed Time: 0:00:37
+Epoch 109, step 1 |#                                                                | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 109
+	 iterations_done: 65400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 65400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0401999801397
+	 test_recognition: 0.307209134102
+	 time_read_data_this_epoch: 0.541084527969
+	 time_read_data_total: 53.8909275532
+	 time_train_this_epoch: 31.2717833519
+	 time_train_total: 2952.63588071
+	 train_error: 0.00456666294485
+	 train_recognition: 0.0159613583237
+
+Epoch 109, step 600 |                                                   #           | Elapsed Time: 0:00:32[18:02:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:02:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:02:21] blocks.extensions.saveload Checkpointing has started
+[18:02:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 109, step 600 |               #                                               | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 110
+	 iterations_done: 66000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 66000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0395999774337
+	 test_recognition: 0.282207101583
+	 time_read_data_this_epoch: 0.50196480751
+	 time_read_data_total: 54.3928923607
+	 time_train_this_epoch: 31.5155115128
+	 time_train_total: 2984.15139222
+	 train_error: 0.00524999573827
+	 train_recognition: 0.0171779096127
+
+Epoch 110, step 600 |                                                      #        | Elapsed Time: 0:00:32[18:02:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:02:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:02:57] blocks.extensions.saveload Checkpointing has started
+[18:02:59] blocks.extensions.saveload Checkpointing has finished
+Epoch 110, step 600 |                 #                                             | Elapsed Time: 0:00:36
+Epoch 111, step 1 |#                                                                | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 111
+	 iterations_done: 66600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 66600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0371999815106
+	 test_recognition: 0.293471366167
+	 time_read_data_this_epoch: 0.493991374969
+	 time_read_data_total: 54.8868837357
+	 time_train_this_epoch: 31.2926750183
+	 time_train_total: 3015.44406724
+	 train_error: 0.00511666247621
+	 train_recognition: 0.0164718069136
+
+Epoch 111, step 600 |                                                           #   | Elapsed Time: 0:00:31[18:03:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:03:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:03:32] blocks.extensions.saveload Checkpointing has started
+[18:03:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 111, step 600 |                      #                                        | Elapsed Time: 0:00:35
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 112
+	 iterations_done: 67200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 67200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0376999825239
+	 test_recognition: 0.354009538889
+	 time_read_data_this_epoch: 0.494122505188
+	 time_read_data_total: 55.3810062408
+	 time_train_this_epoch: 30.8221514225
+	 time_train_total: 3046.26621866
+	 train_error: 0.00479999603704
+	 train_recognition: 0.0173186920583
+
+Epoch 112, step 600 |                                                         #     | Elapsed Time: 0:00:32[18:04:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:04:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:04:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 113
+	 iterations_done: 67800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 67800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0413999781013
+	 test_recognition: 0.320361405611
+	 time_read_data_this_epoch: 0.481550216675
+	 time_read_data_total: 55.8625564575
+	 time_train_this_epoch: 31.0146362782
+	 time_train_total: 3077.28085494
+	 train_error: 0.00564999552444
+	 train_recognition: 0.0200557969511
+
+[18:04:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 112, step 600 |                       #                                       | Elapsed Time: 0:00:35
+Epoch 113, step 600 |                                                            #  | Elapsed Time: 0:00:31[18:04:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:04:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:04:43] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 114
+	 iterations_done: 68400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 68400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0396999828517
+	 test_recognition: 0.343356698751
+	 time_read_data_this_epoch: 0.442941427231
+	 time_read_data_total: 56.3054978848
+	 time_train_this_epoch: 30.260999918
+	 time_train_total: 3107.54185486
+	 train_error: 0.00546666234732
+	 train_recognition: 0.0179009865969
+
+[18:04:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 113, step 600 |                                #                              | Elapsed Time: 0:00:34
+Epoch 114, step 600 |                                                       #       | Elapsed Time: 0:00:32[18:05:17] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:05:18] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:05:18] blocks.extensions.saveload Checkpointing has started
+[18:05:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 114, step 600 |           #                                                   | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 115
+	 iterations_done: 69000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 69000:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0385999828577
+	 test_recognition: 0.30250826478
+	 time_read_data_this_epoch: 0.466964960098
+	 time_read_data_total: 56.7724628448
+	 time_train_this_epoch: 31.2985162735
+	 time_train_total: 3138.84037113
+	 train_error: 0.00451666302979
+	 train_recognition: 0.0150564052165
+
+Epoch 115, step 600 |                                                   #           | Elapsed Time: 0:00:32[18:05:54] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:05:55] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:05:55] blocks.extensions.saveload Checkpointing has started
+[18:05:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 115, step 600 |                #                                              | Elapsed Time: 0:00:36
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 116
+	 iterations_done: 69600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 69600:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0397999808192
+	 test_recognition: 0.28967705369
+	 time_read_data_this_epoch: 0.506466627121
+	 time_read_data_total: 57.278929472
+	 time_train_this_epoch: 31.6136109829
+	 time_train_total: 3170.45398211
+	 train_error: 0.0047833295539
+	 train_recognition: 0.0164404921234
+
+Epoch 116, step 600 |                                                         #     | Elapsed Time: 0:00:32[18:06:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:06:31] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:06:31] blocks.extensions.saveload Checkpointing has started
+[18:06:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 116, step 600 |                       #                                       | Elapsed Time: 0:00:35
+Epoch 117, step 1 |#                                                                | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 117
+	 iterations_done: 70200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 70200:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0378999859095
+	 test_recognition: 0.299864470959
+	 time_read_data_this_epoch: 0.492631673813
+	 time_read_data_total: 57.7715611458
+	 time_train_this_epoch: 30.99426651
+	 time_train_total: 3201.44824862
+	 train_error: 0.0052833291702
+	 train_recognition: 0.0175498016179
+
+Epoch 117, step 600 |                                                        #      | Elapsed Time: 0:00:30[18:07:04] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:07:05] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:07:05] blocks.extensions.saveload Checkpointing has started
+[18:07:07] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 118
+	 iterations_done: 70800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 70800:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0372999832034
+	 test_recognition: 0.314718157053
+	 time_read_data_this_epoch: 0.471333503723
+	 time_read_data_total: 58.2428946495
+	 time_train_this_epoch: 29.8432235718
+	 time_train_total: 3231.2914722
+	 train_error: 0.00476666307077
+	 train_recognition: 0.0173550508916
+
+Epoch 117, step 600 |                                  #                            | Elapsed Time: 0:00:34
+Epoch 118, step 600 |                                                      #        | Elapsed Time: 0:00:43[18:07:51] blocks.extensions.monitoring Monitoring on auxiliary data started
+[18:07:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[18:07:52] blocks.extensions.saveload Checkpointing has started
+[18:07:54] blocks.extensions.saveload Checkpointing has finished
+Epoch 118, step 600 |                                 #                             | Elapsed Time: 0:00:47
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 119
+	 iterations_done: 71400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 71400:
+	 saved_to: ('bmnist-simple-20161123-170330/bmnist',)
+	 test_error: 0.0404999777675
+	 test_recognition: 0.353808522224
+	 time_read_data_this_epoch: 0.461070299149
+	 time_read_data_total: 58.7039649487
+	 time_train_this_epoch: 42.2220425606
+	 time_train_total: 3273.51351476
+	 train_error: 0.00463332980871
+	 train_recognition: 0.0156068596989
+
+Epoch 119, step 124 |                                  #                            | Elapsed Time: 0:00:09[18:08:03] blocks.main_loop Received epoch interrupt signal.
+
+Blocks will complete this epoch of training and run extensions before exiting. If you do not want to complete this epoch, press CTRL + C again to stop training after the current batch.
+Epoch 119, step 157 |          #                                                    | Elapsed Time: 0:00:11
+Process finished with exit code 137 (interrupted by signal 9: SIGKILL)
+

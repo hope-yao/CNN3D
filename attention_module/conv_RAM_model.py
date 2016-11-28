@@ -22,7 +22,7 @@ from fuel.datasets.hdf5 import H5PYDataset
 
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
 # from bricks3D.cnn3d_bricks import Convolutional3, MaxPooling3, ConvolutionalSequence3, Flattener3
-from blocks.bricks.conv import Convolutional, MaxPooling
+from blocks.bricks.conv import Convolutional, MaxPooling, Flattener, ConvolutionalSequence
 
 class conv_RAM(BaseRecurrent, Initializable, Random):
     def __init__(self, image_size, channels, attention, n_iter, **kwargs):
@@ -77,10 +77,11 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
 
+        self.flattener = Flattener()
+
         self.children = [self.conv_g0, self.conv_g1, self.conv_g2, self.pool_g0, self.pool_g1, self.pool_g2, self.rect_g0, self.rect_g1, self.rect_g2,
                          self.conv_h0, self.conv_h1, self.conv_h2, self.pool_h0, self.pool_h1, self.pool_h2,self.rect_h0, self.rect_h1, self.rect_h2,
-                         self.linear_l, self.linear_a]
-
+                         self.linear_l, self.linear_a, self.flattener]
 
     @property
     def output_dim(self):
@@ -151,18 +152,22 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             rho = zoomer.read_large(x, l[:,0], l[:,1], l[:,2]) # glimpse sensor in 3D
 
         # glimpse network
-        tt = self.conv_g0.apply(rho_orig)
-        g0 = self.rect_g0.apply(self.pool_g0.apply(tt))
-        g1 = self.rect_g1.apply(self.pool_g1.apply(self.conv_g1.apply(rho_larger)))
-        g2 = self.rect_g2.apply(self.pool_g2.apply(self.conv_g2.apply(rho_largest)))
+        g0 = self.pool_g0.apply(self.rect_g0.apply(self.conv_g0.apply(rho_orig)))
+        g1 = self.pool_g1.apply(self.rect_g1.apply(self.conv_g1.apply(rho_larger)))
+        g2 = self.pool_g2.apply(self.rect_g2.apply(self.conv_g2.apply(rho_largest)))
 
         # core network
-        h0 = self.rect_h0.apply(self.pool_h0.apply(self.conv_h0.apply(g0)))
-        h1 = self.rect_h1.apply(self.pool_h1.apply(self.conv_h1.apply(g1)))
-        h2 = self.rect_h2.apply(self.pool_h2.apply(self.conv_h2.apply(g2)))
+        h0 = self.pool_h0.apply(self.rect_h0.apply(self.conv_h0.apply(g0)))
+        h1 = self.pool_h1.apply(self.rect_h1.apply(self.conv_h1.apply(g1)))
+        h2 = self.pool_h2.apply(self.rect_h2.apply(self.conv_h2.apply(g2)))
         # h = T.concatenate([h0, h1, h2],axis = 0) # might be wrong
 
-        h_flatten = T.concatenate([h0.flatten(),h1.flatten(),h2.flatten()])
+        # from toolz.itertoolz import interleave
+        # layers = [self.conv_h0, self.rect_h0, self.pool_h0]
+        # conv_sequence = ConvolutionalSequence(layers, 24, image_size=(28,28))
+        # Flattener.apply(conv_sequence.apply(h0))
+
+        h_flatten = T.concatenate([self.flattener.apply(h0),self.flattener.apply(h1),self.flattener.apply(h2)], axis=1)
         prob = self.linear_a.apply(h_flatten)
         l = self.linear_l.apply(h_flatten)
 

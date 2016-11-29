@@ -23,6 +23,8 @@ from fuel.datasets.hdf5 import H5PYDataset
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
 # from bricks3D.cnn3d_bricks import Convolutional3, MaxPooling3, ConvolutionalSequence3, Flattener3
 from blocks.bricks.conv import Convolutional, MaxPooling, Flattener, ConvolutionalSequence
+from theano.tensor.signal.pool import pool_2d
+
 
 class conv_RAM(BaseRecurrent, Initializable, Random):
     def __init__(self, image_size, channels, attention, n_iter, **kwargs):
@@ -36,7 +38,8 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             self.img_height, self.img_width = image_size
         elif self.image_ndim == 3:
             self.img_height, self.img_width, self.img_depth = image_size
-        self.dim_h = 7**3
+
+        self.dim_h = 3528#7**2*3*24 #
 
         l = tensor.matrix('l')  # for a batch
         n_class = 10
@@ -50,9 +53,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         }
 
         # glimpse network
-        self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_g0')
-        self.conv_g1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_g1')
-        self.conv_g2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_g2')
+        self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g0')
+        self.conv_g1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g1')
+        self.conv_g2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g2')
         self.pool_g0 = MaxPooling(pooling_size=(2,2), name='pool_g0')
         self.pool_g1 = MaxPooling(pooling_size=(2,2), name='pool_g1')
         self.pool_g2 = MaxPooling(pooling_size=(2,2), name='pool_g2')
@@ -61,9 +64,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.rect_g2 = Rectifier()
         # self.conv_sequence_g = ConvolutionalSequence3(self.layers, num_channels, image_size=image_shape)
         # core network
-        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_h0')
-        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_h1')
-        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=1 ,step=(1,1),border_mode='valid',name='conv_h2')
+        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h0')
+        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=16,step=(1,1),border_mode='half',name='conv_h1')
+        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h2')
         self.pool_h0 = MaxPooling(pooling_size=(2,2), name='pool_h0')
         self.pool_h1 = MaxPooling(pooling_size=(2,2), name='pool_h1')
         self.pool_h2 = MaxPooling(pooling_size=(2,2), name='pool_h2')
@@ -118,8 +121,12 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     def get_dim(self, name):
         if name == 'prob':
             return 10 # for mnist_lenet
-        elif name == 'h':
-            return self.dim_h
+        elif name == 'h0':
+            return 14 * 14
+        elif name == 'h1':
+            return 14 * 14
+        elif name == 'h2':
+            return 14 * 14
         elif name == 'l':
             return self.image_ndim
         else:
@@ -127,9 +134,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
 
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
-               states=['l', 'h'],
-               outputs=['l', 'prob'])  # h seems not necessary
-    def apply(self, x, dummy, l=None, h=None):
+               states=['l', 'h0', 'h1', 'h2'],
+               outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # h seems not necessary
+    def apply(self, x, dummy, l=None, h0=None, h1=None, h2=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
             from attention import ZoomableAttentionWindow
@@ -157,25 +164,21 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         g2 = self.pool_g2.apply(self.rect_g2.apply(self.conv_g2.apply(rho_largest)))
 
         # core network
-        h0 = self.pool_h0.apply(self.rect_h0.apply(self.conv_h0.apply(g0)))
-        h1 = self.pool_h1.apply(self.rect_h1.apply(self.conv_h1.apply(g1)))
-        h2 = self.pool_h2.apply(self.rect_h2.apply(self.conv_h2.apply(g2)))
+        h0 = self.rect_h0.apply(self.conv_h0.apply(g0 ))
+        h1 = self.rect_h1.apply(self.conv_h1.apply(g1 ))
+        h2 = self.rect_h2.apply(self.conv_h2.apply(g2 ))
         # h = T.concatenate([h0, h1, h2],axis = 0) # might be wrong
 
-        # from toolz.itertoolz import interleave
-        # layers = [self.conv_h0, self.rect_h0, self.pool_h0]
-        # conv_sequence = ConvolutionalSequence(layers, 24, image_size=(28,28))
-        # Flattener.apply(conv_sequence.apply(h0))
-
-        h_flatten = T.concatenate([self.flattener.apply(h0),self.flattener.apply(h1),self.flattener.apply(h2)], axis=1)
+        # location and classification network
+        h_flatten = T.concatenate([self.flattener.apply(self.pool_h0.apply(h0)),self.flattener.apply(self.pool_h0.apply(h1)),self.flattener.apply(self.pool_h0.apply(h2))], axis=1)
         prob = self.linear_a.apply(h_flatten)
         l = self.linear_l.apply(h_flatten)
 
-        return l, prob
+        return l, prob, h0, h1, h2
 
     # ------------------------------------------------------------------------
 
-    @application(inputs=['features'], outputs=['l', 'prob'])
+    @application(inputs=['features'], outputs=['l', 'prob', 'h0', 'h1', 'h2'])
     def classify(self, features):
         batch_size = features.shape[0]
         # No particular use apart from control n_steps in RNN
@@ -193,30 +196,39 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         #     center_y_ = T.vector()
         #     center_z_ = T.vector()
         #     init_l = [center_x_, center_y_, center_z_]
-        # init_l = tensor.matrix('l')  # for a batch
-        l, prob = self.apply(x=features, dummy=u)
+        #     dtensor5 = T.TensorType(floatX, (False,) * 5)
+        #     x = dtensor5(name='input')
+        init_l = tensor.matrix('l')  # for a batch
+        init_h0 = tensor.tensor4('h0')  # for a batch
+        init_h1 = tensor.tensor4('h1')  # for a batch
+        init_h2 = tensor.tensor4('h2')  # for a batch
+        # l, prob, h0, h1, h2 = self.apply(x=features, dummy=u, l=init_l, h0=init_h0, h1=init_h1, h2=init_h2 )
+        l, prob, h0, h1, h2 = self.apply(x=features, dummy=u)
 
-        return l, prob
+        return l, prob, h0, h1, h2
 
 if __name__ == "__main__":
 
     # ----------------------------------------------------------------------
 
-    ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
+    ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=1)
     ram.push_initialization_config()
     # ram.initialize()
     # ------------------------------------------------------------------------
     x = tensor.ftensor4('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, prob, h0, h1, h2 = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
 
-    f = theano.function([x], [l, prob])
+    f = theano.function([x], [l, prob, h0, h1, h2])
     # test single forward pass
     mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
     handle = mnist_train.open()
-    train_data = mnist_train.get_data(handle, slice(0, 16))
+    train_data = mnist_train.get_data(handle, slice(0, 100))
     xx = train_data[0]
     print(xx.shape)
-    l, prob = f(xx)
-    print(l)
-    print(prob)
+    l, prob, h0, h1, h2 = f(xx)
+    print(l.shape)
+    print(prob.shape)
+    print(h0.shape)
+    print(h1.shape)
+    print(h2.shape)

@@ -136,7 +136,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h0', 'h1', 'h2'],
                outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # h seems not necessary
-    def apply(self, x, dummy, l=None, h0=None, h1=None, h2=None):
+    def apply(self, x, dummy, l=None, h0=tensor.zeros((100, 16, 14, 14)), h1=tensor.zeros((100, 16, 14, 14)), h2=tensor.zeros((100, 16, 14, 14))):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
             from attention import ZoomableAttentionWindow
@@ -164,13 +164,16 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         g2 = self.pool_g2.apply(self.rect_g2.apply(self.conv_g2.apply(rho_largest)))
 
         # core network
-        h0 = self.rect_h0.apply(self.conv_h0.apply(g0 ))
-        h1 = self.rect_h1.apply(self.conv_h1.apply(g1 ))
-        h2 = self.rect_h2.apply(self.conv_h2.apply(g2 ))
+        h0 = self.rect_h0.apply(self.conv_h0.apply(g0 +h0))
+        h1 = self.rect_h1.apply(self.conv_h1.apply(g1 +h1))
+        h2 = self.rect_h2.apply(self.conv_h2.apply(g2 +h2))
         # h = T.concatenate([h0, h1, h2],axis = 0) # might be wrong
 
         # location and classification network
-        h_flatten = T.concatenate([self.flattener.apply(self.pool_h0.apply(h0)),self.flattener.apply(self.pool_h0.apply(h1)),self.flattener.apply(self.pool_h0.apply(h2))], axis=1)
+        ph0 = self.pool_h0.apply(h0)
+        ph1 = self.pool_h0.apply(h1)
+        ph2 = self.pool_h0.apply(h2)
+        h_flatten = T.concatenate([self.flattener.apply(ph0),self.flattener.apply(ph1),self.flattener.apply(ph2)], axis=1)
         prob = self.linear_a.apply(h_flatten)
         l = self.linear_l.apply(h_flatten)
 

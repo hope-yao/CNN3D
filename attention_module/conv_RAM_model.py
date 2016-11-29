@@ -39,7 +39,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         elif self.image_ndim == 3:
             self.img_height, self.img_width, self.img_depth = image_size
 
-        self.dim_h = 3528#7**2*3*24 #
+        self.dim_h = (28/2/2)**2*3*16 #
 
         l = tensor.matrix('l')  # for a batch
         n_class = 10
@@ -64,9 +64,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.rect_g2 = Rectifier()
         # self.conv_sequence_g = ConvolutionalSequence3(self.layers, num_channels, image_size=image_shape)
         # core network
-        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h0')
-        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=16,step=(1,1),border_mode='half',name='conv_h1')
-        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=24, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h2')
+        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h0')
+        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16,step=(1,1),border_mode='half',name='conv_h1')
+        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h2')
         self.pool_h0 = MaxPooling(pooling_size=(2,2), name='pool_h0')
         self.pool_h1 = MaxPooling(pooling_size=(2,2), name='pool_h1')
         self.pool_h2 = MaxPooling(pooling_size=(2,2), name='pool_h2')
@@ -122,11 +122,11 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         if name == 'prob':
             return 10 # for mnist_lenet
         elif name == 'h0':
-            return 14 * 14
+            return 14 * 14 * 16 # hieght * width * channel
         elif name == 'h1':
-            return 14 * 14
+            return 14 * 14 * 16
         elif name == 'h2':
-            return 14 * 14
+            return 14 * 14 * 16
         elif name == 'l':
             return self.image_ndim
         else:
@@ -135,7 +135,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h0', 'h1', 'h2'],
-               outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # NOTICE: Blocks can only init vector RNN!!!
+               outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # NOTICE: Blocks RNN can only init state in 1D vector !!!
     def apply(self, x, dummy, l=None, h0=None, h1=None, h2=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
@@ -164,17 +164,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         g2 = self.pool_g2.apply(self.rect_g2.apply(self.conv_g2.apply(rho_largest)))
 
         # core network
-        t0 = h0.dimshuffle([0,'x',1])
-        t00 = t0.reshape((g0.shape[2],g0.shape[3]))
-        h0 = g0 + t00
-        t1 = h1.dimshuffle([0,'x',1])
-        t11 = t1.reshape((g1.shape[2],g1.shape[3]))
-        h1 = g1 + t11
-        t2 = h2.dimshuffle([0,'x',1])
-        t22 = t2.reshape((g2.shape[2],g2.shape[3]))
-        h2 = g2 + t22
-        # h1 = g1 + h1.dimshuffle([0,'x',1]).reshape((g0.shape[2],g0.shape[3]))
-        # h2 = g2 + h2.dimshuffle([0,'x',1]).reshape((g0.shape[2],g0.shape[3]))
+        h0 = h0.reshape((g0.shape[0],g0.shape[1],g0.shape[2],g0.shape[3])) # broadcase across channel
+        h1 = h1.reshape((g1.shape[0],g1.shape[1],g1.shape[2],g1.shape[3]))
+        h2 = h2.reshape((g2.shape[0],g2.shape[1],g2.shape[2],g2.shape[3]))
 
         h0 = self.rect_h0.apply(self.conv_h0.apply(g0 +h0))
         h1 = self.rect_h1.apply(self.conv_h1.apply(g1 +h1))
@@ -188,6 +180,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         prob = self.linear_a.apply(h_flatten)
         l = self.linear_l.apply(h_flatten)
 
+        h0 = h0.reshape((h0.shape[0],h0.shape[1]*h0.shape[2]*h0.shape[3]))
+        h1 = h1.reshape((h1.shape[0],h1.shape[1]*h1.shape[2]*h1.shape[3]))
+        h2 = h2.reshape((h2.shape[0],h2.shape[1]*h2.shape[2]*h2.shape[3]))
         return l, prob, h0, h1, h2
 
     # ------------------------------------------------------------------------
@@ -225,7 +220,7 @@ if __name__ == "__main__":
 
     # ----------------------------------------------------------------------
 
-    ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=1)
+    ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=3)
     ram.push_initialization_config()
     # ram.initialize()
     # ------------------------------------------------------------------------

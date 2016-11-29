@@ -26,7 +26,7 @@
       <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
+            <state relative-caret-position="1665">
               <caret line="118" column="39" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="39" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="conv_RAM_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="138" column="111" selection-start-line="138" selection-start-column="111" selection-end-line="138" selection-end-column="145" />
+            <state relative-caret-position="812">
+              <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
               <folding>
                 <element signature="e#24#71#0" expanded="true" />
               </folding>
@@ -52,7 +52,7 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
+            <state relative-caret-position="1650">
               <caret line="120" column="15" selection-start-line="120" selection-start-column="15" selection-end-line="120" selection-end-column="15" />
               <folding />
             </state>
@@ -62,7 +62,7 @@
       <file leaf-file-name="scan.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-454">
+            <state relative-caret-position="11400">
               <caret line="760" column="0" selection-start-line="760" selection-start-column="0" selection-end-line="760" selection-end-column="0" />
               <folding />
             </state>
@@ -72,7 +72,7 @@
       <file leaf-file-name="conv.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="2175">
               <caret line="145" column="52" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -84,7 +84,7 @@
       <file leaf-file-name="abstract_conv.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/abstract_conv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
+            <state relative-caret-position="15615">
               <caret line="1057" column="0" selection-start-line="1055" selection-start-column="16" selection-end-line="1057" selection-end-column="27" />
               <folding />
             </state>
@@ -94,7 +94,7 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="4215">
               <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
               <folding />
             </state>
@@ -104,7 +104,7 @@
       <file leaf-file-name="LeNet3D.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
+            <state relative-caret-position="2820">
               <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="189" selection-end-column="30" />
               <folding>
                 <element signature="e#9908#13446#0" expanded="false" />
@@ -117,7 +117,7 @@
       <file leaf-file-name="sequences.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/sequences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
+            <state relative-caret-position="1740">
               <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
               <folding>
                 <element signature="e#69#80#0" expanded="true" />
@@ -138,6 +138,11 @@
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bb450dd109afa4274867bbe415345c23723cea1d" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -163,9 +168,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -192,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,11 +273,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../keras" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
@@ -619,19 +624,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17524645" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17579408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3351178" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38222697" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33940044" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29336187" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29336187" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -790,26 +795,6 @@
           <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py</url>
           <line>241</line>
           <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/conv_RAM_model.py</url>
-          <line>161</line>
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/conv_RAM_model.py</url>
-          <line>207</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/conv_RAM_model.py</url>
-          <line>179</line>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/attention_module/conv_RAM_model.py</url>
-          <line>139</line>
-          <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py</url>
@@ -985,7 +970,7 @@
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-454">
+        <state relative-caret-position="11400">
           <caret line="760" column="0" selection-start-line="760" selection-start-column="0" selection-end-line="760" selection-end-column="0" />
           <folding />
         </state>
@@ -995,13 +980,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/sequences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
+        <state relative-caret-position="1740">
           <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
           <folding>
             <element signature="e#69#80#0" expanded="true" />
@@ -1011,7 +995,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
+        <state relative-caret-position="1665">
           <caret line="118" column="39" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="39" />
           <folding>
             <element signature="e#34#81#0" expanded="true" />
@@ -1023,7 +1007,7 @@
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/abstract_conv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
+        <state relative-caret-position="15615">
           <caret line="1057" column="0" selection-start-line="1055" selection-start-column="16" selection-end-line="1057" selection-end-column="27" />
           <folding />
         </state>
@@ -1031,7 +1015,7 @@
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="4215">
           <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
           <folding />
         </state>
@@ -1039,7 +1023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="2820">
           <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="189" selection-end-column="30" />
           <folding>
             <element signature="e#9908#13446#0" expanded="false" />
@@ -1052,13 +1036,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="2175">
           <caret line="145" column="52" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -1068,7 +1051,7 @@
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
+        <state relative-caret-position="1650">
           <caret line="120" column="15" selection-start-line="120" selection-start-column="15" selection-end-line="120" selection-end-column="15" />
           <folding />
         </state>
@@ -1076,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="138" column="111" selection-start-line="138" selection-start-column="111" selection-end-line="138" selection-end-column="145" />
+        <state relative-caret-position="812">
+          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
           <folding>
             <element signature="e#24#71#0" expanded="true" />
           </folding>

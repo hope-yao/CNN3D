@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-132952/bmnist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/train_conv_RAM.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161123-190204/bmnist" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/test.py" afterPath="$PROJECT_DIR$/attention_module/test_saved_model.py" />
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="single forward pass of RAM is running now, by changing the states into vectors">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-135937/bmnist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-141215/bmnist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-142350/bmnist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-160547/bmnist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/attention.py" afterPath="$PROJECT_DIR$/attention_module/attention.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attention_module/conv_RAM_model.py" afterPath="$PROJECT_DIR$/attention_module/conv_RAM_model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +41,7 @@
       <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="2205">
               <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/train_conv_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="131">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,8 +65,8 @@
       <file leaf-file-name="conv_RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="228" column="36" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="36" />
               <folding>
                 <element signature="e#24#71#0" expanded="true" />
               </folding>
@@ -74,20 +74,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="attention.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="628" column="29" selection-start-line="628" selection-start-column="29" selection-end-line="628" selection-end-column="29" />
-              <folding>
-                <element signature="e#6796#8441#0" expanded="false" />
-                <element signature="e#6796#7849#1" expanded="false" />
-                <element signature="e#8507#10249#0" expanded="false" />
-                <element signature="e#8507#9560#1" expanded="false" />
-                <element signature="e#10284#11333#0" expanded="false" />
-                <element signature="e#11465#25552#0" expanded="false" />
-                <element signature="e#28755#33187#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="435">
+              <caret line="896" column="0" selection-start-line="896" selection-start-column="0" selection-end-line="896" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +145,6 @@
         <option value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
         <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
         <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
-        <option value="$PROJECT_DIR$/attention_module/attention.py" />
         <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py" />
         <option value="$PROJECT_DIR$/attention_module/blocks_conv_same_border.py" />
         <option value="$PROJECT_DIR$/attention_module/RAM_model.py" />
@@ -161,6 +152,7 @@
         <option value="$PROJECT_DIR$/attention_module/train_conv_RAM.py" />
         <option value="$PROJECT_DIR$/attention_module/test_saved_model.py" />
         <option value="$PROJECT_DIR$/attention_module/conv_RAM_model.py" />
+        <option value="$PROJECT_DIR$/attention_module/attention.py" />
       </list>
     </option>
   </component>
@@ -642,19 +634,26 @@
       <option name="project" value="LOCAL" />
       <updated>1480442943852</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="single forward pass of RAM is running now, by changing the states into vectors">
+      <created>1480461867856</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1480461867856</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17688937" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17688937" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38222697" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4678801" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40899357" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40899357" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -796,7 +795,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/attention_module/attention.py</url>
-          <line>690</line>
+          <line>735</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="python-line">
@@ -1043,33 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="628" column="29" selection-start-line="628" selection-start-column="29" selection-end-line="628" selection-end-column="29" />
-          <folding>
-            <element signature="e#6796#8441#0" expanded="false" />
-            <element signature="e#6796#7849#1" expanded="false" />
-            <element signature="e#8507#10249#0" expanded="false" />
-            <element signature="e#8507#9560#1" expanded="false" />
-            <element signature="e#10284#11333#0" expanded="false" />
-            <element signature="e#11465#25552#0" expanded="false" />
-            <element signature="e#28755#33187#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,7 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
+        <state relative-caret-position="2205">
           <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
           <folding>
             <element signature="e#34#81#0" expanded="true" />
@@ -1095,8 +1067,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attention_module/train_conv_RAM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="131">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/conv_RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="228" column="36" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="36" />
+          <folding>
+            <element signature="e#24#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="896" column="0" selection-start-line="896" selection-start-column="0" selection-end-line="896" selection-end-column="0" />
           <folding />
         </state>
       </provider>

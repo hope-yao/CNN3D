@@ -52,8 +52,8 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             'biases_init': IsotropicGaussian(),
         }
         conv_inits = {
-            'weights_init': IsotropicGaussian(),
-            'biases_init': IsotropicGaussian()
+            'weights_init': Uniform(width=.2),
+            'biases_init': Constant(0.)
         }
         # glimpse network
         self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g0', **conv_inits)

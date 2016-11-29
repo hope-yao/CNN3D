@@ -51,11 +51,14 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             'weights_init': Orthogonal(),
             'biases_init': IsotropicGaussian(),
         }
-
+        conv_inits = {
+            'weights_init': IsotropicGaussian(),
+            'biases_init': IsotropicGaussian()
+        }
         # glimpse network
-        self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g0')
-        self.conv_g1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g1')
-        self.conv_g2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g2')
+        self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g0', **conv_inits)
+        self.conv_g1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g1', **conv_inits)
+        self.conv_g2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g2', **conv_inits)
         self.pool_g0 = MaxPooling(pooling_size=(2,2), name='pool_g0')
         self.pool_g1 = MaxPooling(pooling_size=(2,2), name='pool_g1')
         self.pool_g2 = MaxPooling(pooling_size=(2,2), name='pool_g2')
@@ -64,9 +67,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.rect_g2 = Rectifier()
         # self.conv_sequence_g = ConvolutionalSequence3(self.layers, num_channels, image_size=image_shape)
         # core network
-        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h0')
-        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16,step=(1,1),border_mode='half',name='conv_h1')
-        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h2')
+        self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h0', **conv_inits)
+        self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16,step=(1,1),border_mode='half',name='conv_h1', **conv_inits)
+        self.conv_h2 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h2', **conv_inits)
         self.pool_h0 = MaxPooling(pooling_size=(2,2), name='pool_h0')
         self.pool_h1 = MaxPooling(pooling_size=(2,2), name='pool_h1')
         self.pool_h2 = MaxPooling(pooling_size=(2,2), name='pool_h2')
@@ -135,7 +138,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h0', 'h1', 'h2'],
-               outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # NOTICE: Blocks RNN can only init state in 1D vector !!!
+               outputs=['l', 'prob', 'h0', 'h1', 'h2', 'out_test'])  # NOTICE: Blocks RNN can only init state in 1D vector !!!
     def apply(self, x, dummy, l=None, h0=None, h1=None, h2=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
@@ -178,16 +181,17 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         ph2 = self.pool_h0.apply(h2)
         h_flatten = T.concatenate([self.flattener.apply(ph0),self.flattener.apply(ph1),self.flattener.apply(ph2)], axis=1)
         prob = self.linear_a.apply(h_flatten)
+        tmp = h_flatten
         l = self.linear_l.apply(h_flatten)
 
         h0 = h0.reshape((h0.shape[0],h0.shape[1]*h0.shape[2]*h0.shape[3]))
         h1 = h1.reshape((h1.shape[0],h1.shape[1]*h1.shape[2]*h1.shape[3]))
         h2 = h2.reshape((h2.shape[0],h2.shape[1]*h2.shape[2]*h2.shape[3]))
-        return l, prob, h0, h1, h2
+        return l, prob, h0, h1, h2, tmp
 
     # ------------------------------------------------------------------------
 
-    @application(inputs=['features'], outputs=['l', 'prob', 'h0', 'h1', 'h2'])
+    @application(inputs=['features'], outputs=['l', 'prob', 'h0', 'h1', 'h2', 'out_test'])
     def classify(self, features):
         batch_size = features.shape[0]
         # No particular use apart from control n_steps in RNN
@@ -207,14 +211,15 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         #     init_l = [center_x_, center_y_, center_z_]
         #     dtensor5 = T.TensorType(floatX, (False,) * 5)
         #     x = dtensor5(name='input')
+
         init_l = tensor.matrix('l')  # for a batch
         init_h0 = tensor.tensor4('h0')  # for a batch
         init_h1 = tensor.tensor4('h1')  # for a batch
         init_h2 = tensor.tensor4('h2')  # for a batch
         # l, prob, h0, h1, h2 = self.apply(x=features, dummy=u, l=init_l, h0=init_h0, h1=init_h1, h2=init_h2 )
-        l, prob, h0, h1, h2 = self.apply(x=features, dummy=u)
+        l, prob, h0, h1, h2, out_test  = self.apply(x=features, dummy=u)
 
-        return l, prob, h0, h1, h2
+        return l, prob, h0, h1, h2, out_test
 
 if __name__ == "__main__":
 
@@ -222,22 +227,24 @@ if __name__ == "__main__":
 
     ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=3)
     ram.push_initialization_config()
-    # ram.initialize()
+    ram.initialize()
     # ------------------------------------------------------------------------
     x = tensor.ftensor4('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, prob, h0, h1, h2 = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, prob, h0, h1, h2, out_test  = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
 
-    f = theano.function([x], [l, prob, h0, h1, h2])
+    f = theano.function([x], [l, prob, h0, h1, h2, out_test])
     # test single forward pass
     mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
     handle = mnist_train.open()
-    train_data = mnist_train.get_data(handle, slice(0, 100))
+    train_data = mnist_train.get_data(handle, slice(0, 1))
     xx = train_data[0]
     print(xx.shape)
-    l, prob, h0, h1, h2 = f(xx)
-    print(l.shape)
-    print(prob.shape)
+    print(train_data[1])
+    l, prob, h0, h1, h2, out_test  = f(xx)
+    print(out_test)
+    print(l)
+    print(prob)
     print(h0.shape)
     print(h1.shape)
     print(h2.shape)

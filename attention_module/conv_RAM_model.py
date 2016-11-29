@@ -135,8 +135,8 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h0', 'h1', 'h2'],
-               outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # h seems not necessary
-    def apply(self, x, dummy, l=None, h0=tensor.zeros((100, 16, 14, 14)), h1=tensor.zeros((100, 16, 14, 14)), h2=tensor.zeros((100, 16, 14, 14))):
+               outputs=['l', 'prob', 'h0', 'h1', 'h2'])  # NOTICE: Blocks can only init vector RNN!!!
+    def apply(self, x, dummy, l=None, h0=None, h1=None, h2=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
             from attention import ZoomableAttentionWindow
@@ -164,10 +164,21 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         g2 = self.pool_g2.apply(self.rect_g2.apply(self.conv_g2.apply(rho_largest)))
 
         # core network
+        t0 = h0.dimshuffle([0,'x',1])
+        t00 = t0.reshape((g0.shape[2],g0.shape[3]))
+        h0 = g0 + t00
+        t1 = h1.dimshuffle([0,'x',1])
+        t11 = t1.reshape((g1.shape[2],g1.shape[3]))
+        h1 = g1 + t11
+        t2 = h2.dimshuffle([0,'x',1])
+        t22 = t2.reshape((g2.shape[2],g2.shape[3]))
+        h2 = g2 + t22
+        # h1 = g1 + h1.dimshuffle([0,'x',1]).reshape((g0.shape[2],g0.shape[3]))
+        # h2 = g2 + h2.dimshuffle([0,'x',1]).reshape((g0.shape[2],g0.shape[3]))
+
         h0 = self.rect_h0.apply(self.conv_h0.apply(g0 +h0))
         h1 = self.rect_h1.apply(self.conv_h1.apply(g1 +h1))
         h2 = self.rect_h2.apply(self.conv_h2.apply(g2 +h2))
-        # h = T.concatenate([h0, h1, h2],axis = 0) # might be wrong
 
         # location and classification network
         ph0 = self.pool_h0.apply(h0)

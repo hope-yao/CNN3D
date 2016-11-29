@@ -55,6 +55,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             'weights_init': Uniform(width=.2),
             'biases_init': Constant(0.)
         }
+
         # glimpse network
         self.conv_g0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g0', **conv_inits)
         self.conv_g1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=1 ,step=(1,1),border_mode='half',name='conv_g1', **conv_inits)
@@ -65,7 +66,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.rect_g0 = Rectifier()
         self.rect_g1 = Rectifier()
         self.rect_g2 = Rectifier()
-        # self.conv_sequence_g = ConvolutionalSequence3(self.layers, num_channels, image_size=image_shape)
+
         # core network
         self.conv_h0 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16 ,step=(1,1),border_mode='half',name='conv_h0', **conv_inits)
         self.conv_h1 = Convolutional(filter_size=(5,5),num_filters=16, num_channels=16,step=(1,1),border_mode='half',name='conv_h1', **conv_inits)
@@ -78,10 +79,10 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.rect_h2 = Rectifier()
 
         # location network
-        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, dim_data], name="location network", **inits)
+        self.linear_l = MLP(activations=[Logistic()], dims=[944, dim_data], name="location network", **inits)
 
         # classification network
-        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
+        self.linear_a = MLP(activations=[Softmax()], dims=[944, n_class], name="classification network", **inits)
 
         self.flattener = Flattener()
 
@@ -127,9 +128,9 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         elif name == 'h0':
             return 14 * 14 * 16 # hieght * width * channel
         elif name == 'h1':
-            return 14 * 14 * 16
+            return 7 *  7 * 16
         elif name == 'h2':
-            return 14 * 14 * 16
+            return 3 * 3 * 16
         elif name == 'l':
             return self.image_ndim
         else:
@@ -146,15 +147,15 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
 
             scale = 1
             zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
-            rho_orig = zoomer_orig.read_large(x, l[:,1], l[:,0]) # glimpse sensor in 2D, output matrix
+            rho_orig = zoomer_orig.read_small(x, l[:,1], l[:,0]) # glimpse sensor in 2D, output matrix
 
             scale = 2
             zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
-            rho_larger = zoomer_larger.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
+            rho_larger = zoomer_larger.read_small(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
 
             scale = 4
             zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
-            rho_largest = zoomer_largest.read_large(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
+            rho_largest = zoomer_largest.read_small(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
 
         elif self.image_ndim == 3:
             from attention import ZoomableAttentionWindow3d

@@ -76,16 +76,16 @@ class ZoomableAttentionWindow(object):
         muX = center_x.dimshuffle([0, 'x']) + delta.dimshuffle([0, 'x']) * rng
         muY = center_y.dimshuffle([0, 'x']) + delta.dimshuffle([0, 'x']) * rng
 
-        if chope == 1:  # chope down paddings for a smaller image
-            a = tensor.arange(self.img_width / self.scale, dtype=floatX)
-            b = tensor.arange(self.img_height / self.scale, dtype=floatX)
-            FX = tensor.exp(-(a*self.scale - muX.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
-            FY = tensor.exp(-(b*self.scale - muY.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
-        else:
-            a = tensor.arange(self.img_width, dtype=floatX)
-            b = tensor.arange(self.img_height, dtype=floatX)
-            FX = tensor.exp(-(a - muX.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
-            FY = tensor.exp(-(b - muY.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
+        # if chope == 1:  # chope down paddings for a smaller image
+        #     a = tensor.arange(self.img_width / self.scale, dtype=floatX)
+        #     b = tensor.arange(self.img_height / self.scale, dtype=floatX)
+        #     FX = tensor.exp(-(a*self.scale - muX.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
+        #     FY = tensor.exp(-(b*self.scale - muY.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
+        # else:
+        a = tensor.arange(self.img_width, dtype=floatX)
+        b = tensor.arange(self.img_height, dtype=floatX)
+        FX = tensor.exp(-(a - muX.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
+        FY = tensor.exp(-(b - muY.dimshuffle([0, 1, 'x'])) ** 2 / 2. / sigma.dimshuffle([0, 'x', 'x']) ** 2)
 
         FX = FX / (FX.sum(axis=-1).dimshuffle(0, 1, 'x') + tol)
         FY = FY / (FY.sum(axis=-1).dimshuffle(0, 1, 'x') + tol)
@@ -162,7 +162,7 @@ class ZoomableAttentionWindow(object):
 
         # return II.reshape((batch_size, channels*self.img_height*self.img_width))
 
-        return W
+        return W,FY
 
     def read_large(self, images, center_y, center_x):
         N = self.N
@@ -210,25 +210,21 @@ class ZoomableAttentionWindow(object):
 
         # Get separable filterbank
         FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma, self.scale)
+
         FY = T.repeat(FY, channels, axis=0)
         FX = T.repeat(FX, channels, axis=0)
 
-        # apply to the batch of images
+        # # apply to the batch of images
         W = my_batched_dot(my_batched_dot(FY, I), FX.transpose([0, 2, 1]))
-        W = W.reshape((batch_size * channels, N * self.scale, N * self.scale))
+        W = W.reshape((batch_size * channels, self.scale*N, self.scale*N))
 
-        from theano.tensor.signal.pool import pool_2d
-        W = pool_2d(W, (self.scale, self.scale))  # downsampling
-
-        # Get larger separable filterbank to convert patch back to larger image with black paddings
-        FY, FX = self.filterbank_matrices(center_y, center_x, delta, sigma, 1, chope=1)
-        FY = T.repeat(FY, channels, axis=0)
-        FX = T.repeat(FX, channels, axis=0)
+        # Max hack: convert back to an image
         II = my_batched_dot(my_batched_dot(FY.transpose([0, 2, 1]), W), FX)
 
-        dimx = int(self.img_height/self.scale)
-        dimy = int(self.img_width/self.scale)
-        II = II.reshape((batch_size, channels, dimx , dimy))
+        II =  II.reshape((batch_size*channels,self.img_height,self.img_width))
+        from theano.tensor.signal.pool import pool_2d
+        II = pool_2d(II , (self.scale, self.scale))  # downsampling
+        II =  II.reshape((batch_size, channels,int(self.img_height/self.scale),int(self.img_width/self.scale)))
 
         return II
 
@@ -677,7 +673,7 @@ if __name__ == "__main__":
         channels = 3
         height = 480
         width = 640
-        scale = 4
+        scale = 2
 
         # ------------------------------------------------------------------------
         att = ZoomableAttentionWindow(channels, height, width, N, scale)
@@ -735,7 +731,8 @@ if __name__ == "__main__":
         W = do_read(I, center_y, center_x)
         # I2 = do_write(W, center_y, center_x)
 
-
+        # print(W.shape)
+        # print(FX.shape)
 
         def imagify(flat_image, h, w):
             image = flat_image.reshape([channels, h, w])

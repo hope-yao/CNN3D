@@ -677,7 +677,7 @@ if __name__ == "__main__":
         channels = 3
         height = 480
         width = 640
-        scale = 2
+        scale = 4
 
         # ------------------------------------------------------------------------
         att = ZoomableAttentionWindow(channels, height, width, N, scale)
@@ -692,7 +692,7 @@ if __name__ == "__main__":
         #                           outputs=W_, allow_input_downcast=True)
         W_ = att.read_small(I_, center_y_, center_x_)
         do_read = theano.function(inputs=[I_, center_y_, center_x_],
-                                  outputs=[W_], allow_input_downcast=True)
+                                  outputs=W_, allow_input_downcast=True)
 
         W_ = T.matrix()
         center_y_ = T.vector()

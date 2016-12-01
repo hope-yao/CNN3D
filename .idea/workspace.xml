@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-132952/bmnist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-135937/bmnist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-141215/bmnist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-142350/bmnist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-142840/bmnist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/attention_module/bmnist-simple-20161129-160547/bmnist" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/RAM_model.py" afterPath="$PROJECT_DIR$/RAM/RAM_model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/__init__.py" afterPath="$PROJECT_DIR$/RAM/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/attention.py" afterPath="$PROJECT_DIR$/RAM/attention.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/blocks_conv_same_border.readme" afterPath="$PROJECT_DIR$/RAM/blocks_conv_same_border.readme" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/cat.jpg" afterPath="$PROJECT_DIR$/RAM/cat.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/conv_RAM_model.py" afterPath="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/sample.py" afterPath="$PROJECT_DIR$/RAM/sample.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/samplecheckpoint.py" afterPath="$PROJECT_DIR$/RAM/samplecheckpoint.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/test_saved_model.py" afterPath="$PROJECT_DIR$/RAM/test_saved_model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/train_RAM.py" afterPath="$PROJECT_DIR$/RAM/train_RAM.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/attention_module/train_conv_RAM.py" afterPath="$PROJECT_DIR$/RAM/train_conv_RAM.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/AdaDelta-Orth-Guassian-att5-itr3" afterPath="$PROJECT_DIR$/log/RAM/AdaDelta-Orth-Guassian-att5-itr3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/AdaDelta-Orth-Guassian-att5-itr5" afterPath="$PROJECT_DIR$/log/RAM/AdaDelta-Orth-Guassian-att5-itr5" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/AdaDelta-Orth-Guassian-att5-itr7" afterPath="$PROJECT_DIR$/log/RAM/AdaDelta-Orth-Guassian-att5-itr7" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/AdaDelta-Orth-Guassian-att8-itr3" afterPath="$PROJECT_DIR$/log/RAM/AdaDelta-Orth-Guassian-att8-itr3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/AdaGrad-Guassian-Const-att8-itr3" afterPath="$PROJECT_DIR$/log/RAM/AdaGrad-Guassian-Const-att8-itr3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/AdaGrad-Orth-Guassian-att8-itr3" afterPath="$PROJECT_DIR$/log/RAM/AdaGrad-Orth-Guassian-att8-itr3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/summary" afterPath="$PROJECT_DIR$/log/RAM/summary" />
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="conv_RAM is running now, but RAM is not. changing back">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM/RAM_model.py" afterPath="$PROJECT_DIR$/RAM/RAM_model.py" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,18 +26,18 @@
       <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1132">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="135" column="91" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+            <state relative-caret-position="116">
+              <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
                 <element signature="e#2891#2944#0" expanded="false" />
@@ -72,31 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
-        <entry file="vcs:///home/hope-yao/Documents/CNN3D/attention_module/RAM_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="134" column="104" selection-start-line="134" selection-start-column="104" selection-end-line="134" selection-end-column="104" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
-        <entry file="vcs:///home/hope-yao/Documents/CNN3D/attention_module/attention.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="172" column="32" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RAM/train_conv_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="171" column="33" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
+            <state relative-caret-position="77">
+              <caret line="141" column="39" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -105,8 +60,8 @@
       <file leaf-file-name="conv_RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/conv_RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+            <state relative-caret-position="-1216">
+              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
               <folding>
                 <element signature="e#24#71#0" expanded="true" />
               </folding>
@@ -117,10 +72,10 @@
       <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/attention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3314">
-              <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
+            <state relative-caret-position="-1248">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="18" />
               <folding>
-                <element signature="e#13220#26376#0" expanded="false" />
+                <element signature="e#25#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -269,7 +224,7 @@
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RAM_model">
+  <component name="RunManager" selected="Python.train_conv_RAM">
     <configuration default="false" name="RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,6 +238,57 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/RAM_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="train_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/train_RAM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="conv_RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="train_conv_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/train_conv_RAM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -421,12 +427,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.RAM_model" />
+      <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
+      <item index="2" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
+      <item index="3" class="java.lang.String" itemvalue="Python.train_conv_RAM" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.RAM_model" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.train_conv_RAM" />
+        <item index="1" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
+        <item index="2" class="java.lang.String" itemvalue="Python.train_RAM" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RAM_model" />
       </list>
     </recent_temporary>
   </component>
@@ -563,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480473671193</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="conv_RAM is running now, but RAM is not. changing back">
+      <created>1480552744126</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1480552744126</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -573,7 +592,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11336254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30942184" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4293362" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3083512" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -633,7 +652,8 @@
     <MESSAGE value="detached heads" />
     <MESSAGE value="RAM on different patch size starts training now" />
     <MESSAGE value="RAM on different patch size still converges slow only to 40%" />
-    <option name="LAST_COMMIT_MESSAGE" value="RAM on different patch size still converges slow only to 40%" />
+    <MESSAGE value="conv_RAM is running now, but RAM is not. changing back" />
+    <option name="LAST_COMMIT_MESSAGE" value="conv_RAM is running now, but RAM is not. changing back" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,7 +725,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM/RAM_model.py</url>
-          <line>200</line>
+          <line>202</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -742,11 +762,6 @@
           <url>file://$PROJECT_DIR$/RAM/attention.py</url>
           <line>736</line>
           <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM/RAM_model.py</url>
-          <line>127</line>
-          <option name="timeStamp" value="136" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -951,36 +966,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/conv_RAM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
-          <folding>
-            <element signature="e#24#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/train_conv_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="171" column="33" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/train_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1132">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -993,25 +982,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3314">
-          <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
-          <folding>
-            <element signature="e#13220#26376#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RAM/RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="135" column="91" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+        <state relative-caret-position="116">
+          <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
           <folding>
             <element signature="e#34#81#0" expanded="true" />
             <element signature="e#2891#2944#0" expanded="false" />
             <element signature="e#4104#4141#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/train_RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/attention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1248">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="18" />
+          <folding>
+            <element signature="e#25#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/conv_RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1216">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/train_conv_RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="141" column="39" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -64,6 +64,10 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 
     data_train = MNIST(which_sets=["train"], sources=['features', 'targets'])
     data_test = MNIST(which_sets=["test"], sources=['features', 'targets'])
+
+    # data_train = H5PYDataset('/home/hope-yao/Documents/Data/mnist.hdf5', which_sets=('train',))
+    # data_test = H5PYDataset('/home/hope-yao/Documents/Data/mnist.hdf5', which_sets=('test',))
+
     train_stream = DataStream.default_stream(data_train, iteration_scheme=SequentialScheme(data_train.num_examples, batch_size))
     # valid_stream = Flatten(
     #     DataStream.default_stream(data_valid, iteration_scheme=SequentialScheme(data_valid.num_examples, batch_size)))

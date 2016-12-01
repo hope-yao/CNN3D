@@ -162,7 +162,7 @@ class ZoomableAttentionWindow(object):
 
         # return II.reshape((batch_size, channels*self.img_height*self.img_width))
 
-        return W,FY
+        return W
 
     def read_large(self, images, center_y, center_x):
         N = self.N

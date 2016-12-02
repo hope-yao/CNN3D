@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="conv_RAM is running now, but RAM is not. changing back">
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="Both RAM and cov_RAM is running now.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM/read_patch_2D.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM/read_small_2D.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/potcup-simple-20161201-151111/potcup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/potcup-simple-20161201-151301/potcup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/potcup-simple-20161201-152310/potcup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/potcup-simple-20161201-153941/potcup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/potcup-simple-20161201-154603/potcup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapenet-simple-20161201-154146/shapenet" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapenet-simple-20161201-154234/shapenet" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapenet-simple-20161201-155632/shapenet" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapenet-simple-20161201-160103/shapenet" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapenet-simple-20161201-160323/shapenet" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM/attentione2d.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM/attentione3d.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM/attention.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM/RAM_model.py" afterPath="$PROJECT_DIR$/RAM/RAM_model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM/conv_RAM_model.py" afterPath="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM/train_RAM.py" afterPath="$PROJECT_DIR$/RAM/train_RAM.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boosting/Boosted_CNN3D.py" afterPath="$PROJECT_DIR$/boosting/Boosted_CNN3D.py" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,12 +43,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RAM/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="137">
+              <caret line="150" column="55" selection-start-line="150" selection-start-column="55" selection-end-line="150" selection-end-column="55" />
+              <folding>
+                <element signature="e#58#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeNet3D.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="189" column="28" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="28" />
+              <folding>
+                <element signature="e#9908#13446#0" expanded="false" />
+                <element signature="e#15063#15094#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,23 +71,60 @@
       <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
+            <state relative-caret-position="360">
+              <caret line="229" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
-                <element signature="e#2891#2944#0" expanded="false" />
-                <element signature="e#4104#4141#0" expanded="false" />
+                <element signature="e#4335#4372#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cnn3d_bricks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bricks3D/cnn3d_bricks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="278" column="22" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pool.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/signal/pool.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/train_conv_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="141" column="39" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
+            <state relative-caret-position="182">
+              <caret line="131" column="44" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attentione3d.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM/attentione3d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3150">
+              <caret line="424" column="30" selection-start-line="424" selection-start-column="30" selection-end-line="424" selection-end-column="30" />
+              <folding>
+                <element signature="e#1411#3076#0" expanded="false" />
+                <element signature="e#3082#3083#0" expanded="false" />
+                <element signature="e#10077#11710#0" expanded="false" />
+                <element signature="e#11798#12361#0" expanded="false" />
+                <element signature="e#12439#13135#0" expanded="false" />
+                <element signature="e#13170#14219#0" expanded="false" />
+                <element signature="e#14266#15318#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +132,8 @@
       <file leaf-file-name="conv_RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM/conv_RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1216">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="270">
+              <caret line="236" column="45" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
               <folding>
                 <element signature="e#24#71#0" expanded="true" />
               </folding>
@@ -69,14 +141,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attention.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM/attention.py">
+      <file leaf-file-name="test_saved_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM/test_saved_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1248">
-              <caret line="52" column="18" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="18" />
-              <folding>
-                <element signature="e#25#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +179,6 @@
         <option value="$PROJECT_DIR$/LeNet3D.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/attention_module/test.py" />
-        <option value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
         <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
         <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
         <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py" />
@@ -121,12 +190,17 @@
         <option value="$PROJECT_DIR$/attention_module/RAM_model.py" />
         <option value="$PROJECT_DIR$/attention_module/train_RAM.py" />
         <option value="$PROJECT_DIR$/RAM/attention.py" />
+        <option value="$PROJECT_DIR$/RAM/attentione2d.py" />
+        <option value="$PROJECT_DIR$/RAM/attentione3d.py" />
+        <option value="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
         <option value="$PROJECT_DIR$/RAM/RAM_model.py" />
+        <option value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
+        <option value="$PROJECT_DIR$/RAM/train_RAM.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="1985" />
     <option name="y" value="-4" />
     <option name="width" value="1855" />
     <option name="height" value="1084" />
@@ -157,6 +231,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,63 +260,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CNN3D" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CNN3D" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="RAM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blocks-examples" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/log/RAM" />
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RAM" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/attention_module" />
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train_conv_RAM">
-    <configuration default="false" name="RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/RAM_model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.train_RAM">
     <configuration default="false" name="train_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -259,7 +305,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="conv_RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -271,12 +317,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/RAM_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="train_conv_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="attentione3d" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/attentione3d.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="conv_RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -288,7 +351,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/train_conv_RAM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LeNet3D" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -427,18 +507,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.RAM_model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
-      <item index="2" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
-      <item index="3" class="java.lang.String" itemvalue="Python.train_conv_RAM" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.train_RAM" />
+      <item index="1" class="java.lang.String" itemvalue="Python.RAM_model" />
+      <item index="2" class="java.lang.String" itemvalue="Python.attentione3d" />
+      <item index="3" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
+      <item index="4" class="java.lang.String" itemvalue="Python.LeNet3D" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.train_conv_RAM" />
-        <item index="1" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
-        <item index="2" class="java.lang.String" itemvalue="Python.train_RAM" />
-        <item index="3" class="java.lang.String" itemvalue="Python.RAM_model" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.train_RAM" />
+        <item index="1" class="java.lang.String" itemvalue="Python.LeNet3D" />
+        <item index="2" class="java.lang.String" itemvalue="Python.RAM_model" />
+        <item index="3" class="java.lang.String" itemvalue="Python.conv_RAM_model" />
+        <item index="4" class="java.lang.String" itemvalue="Python.attentione3d" />
       </list>
     </recent_temporary>
   </component>
@@ -582,30 +664,37 @@
       <option name="project" value="LOCAL" />
       <updated>1480552744126</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Both RAM and cov_RAM is running now.">
+      <created>1480553721296</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1480553721296</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11336254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17743702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4293362" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3083512" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38115633" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3940043" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34582442" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -653,7 +742,8 @@
     <MESSAGE value="RAM on different patch size starts training now" />
     <MESSAGE value="RAM on different patch size still converges slow only to 40%" />
     <MESSAGE value="conv_RAM is running now, but RAM is not. changing back" />
-    <option name="LAST_COMMIT_MESSAGE" value="conv_RAM is running now, but RAM is not. changing back" />
+    <MESSAGE value="Both RAM and cov_RAM is running now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Both RAM and cov_RAM is running now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -725,18 +815,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM/RAM_model.py</url>
-          <line>202</line>
+          <line>242</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM/test_saved_model.py</url>
           <line>27</line>
           <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/bricks3D/LeNet3D.py</url>
-          <line>208</line>
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="python-line">
           <url>file://$PROJECT_DIR$/bricks3D/LeNet3D.py</url>
@@ -759,9 +844,24 @@
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM/attention.py</url>
-          <line>736</line>
+          <url>file://$PROJECT_DIR$/RAM/attentione2d.py</url>
+          <line>424</line>
           <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bricks3D/LeNet3D.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RAM/attentione3d.py</url>
+          <line>461</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RAM/train_RAM.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="146" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -774,19 +874,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="137" />
+      <option name="time" value="148" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/var.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/op.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scalar/basic.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/elemwise.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/graph.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/cost.py" />
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
     <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py" />
     <entry file="file://$PROJECT_DIR$/potcup_data.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -865,13 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bricks3D/cnn3d_bricks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="72" column="61" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11400">
@@ -897,17 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15615">
           <caret line="1057" column="0" selection-start-line="1055" selection-start-column="16" selection-end-line="1057" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="189" selection-end-column="30" />
-          <folding>
-            <element signature="e#9908#13446#0" expanded="false" />
-            <element signature="e#15063#15094#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,6 +1047,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/fuel/datasets/hdf5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/fuel/datasets/mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="e#24#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/read_small_2D.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/read_patch_2D.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/attentione2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+          <folding>
+            <element signature="e#23#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/train_conv_RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="131" column="44" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/RAM/summary">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/conv_RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="236" column="45" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
+          <folding>
+            <element signature="e#24#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RAM/test_saved_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -982,51 +1119,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RAM/attentione3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3150">
+          <caret line="424" column="30" selection-start-line="424" selection-start-column="30" selection-end-line="424" selection-end-column="30" />
+          <folding>
+            <element signature="e#1411#3076#0" expanded="false" />
+            <element signature="e#3082#3083#0" expanded="false" />
+            <element signature="e#10077#11710#0" expanded="false" />
+            <element signature="e#11798#12361#0" expanded="false" />
+            <element signature="e#12439#13135#0" expanded="false" />
+            <element signature="e#13170#14219#0" expanded="false" />
+            <element signature="e#14266#15318#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/signal/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bricks3D/cnn3d_bricks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="278" column="22" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RAM/RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
+        <state relative-caret-position="360">
+          <caret line="229" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
           <folding>
             <element signature="e#34#81#0" expanded="true" />
-            <element signature="e#2891#2944#0" expanded="false" />
-            <element signature="e#4104#4141#0" expanded="false" />
+            <element signature="e#4335#4372#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="1579" column="0" selection-start-line="1579" selection-start-column="0" selection-end-line="1579" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="189" column="28" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="28" />
+          <folding>
+            <element signature="e#9908#13446#0" expanded="false" />
+            <element signature="e#15063#15094#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RAM/train_RAM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/attention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1248">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="18" />
+        <state relative-caret-position="137">
+          <caret line="150" column="55" selection-start-line="150" selection-start-column="55" selection-end-line="150" selection-end-column="55" />
           <folding>
-            <element signature="e#25#56#0" expanded="true" />
+            <element signature="e#58#105#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/conv_RAM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1216">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-          <folding>
-            <element signature="e#24#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM/train_conv_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="141" column="39" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>

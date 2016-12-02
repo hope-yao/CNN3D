@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
     # ensemble N LeNets together
     N = 10
-    datafile_hdf5 = './data/potcup_vox.hdf5'
+    datafile_hdf5 = './data/shapenet10.hdf5'
     train_set = H5PYDataset(datafile_hdf5, which_sets=('train',))
     n = train_set.num_examples# number of training data
     tt_alpha = numpy.zeros(N)

@@ -143,7 +143,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
     def apply(self, x, dummy, l=None, h0=None, h1=None, h2=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
-            from attention import ZoomableAttentionWindow
+            from attentione2d import ZoomableAttentionWindow
 
             scale = 1
             zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale)
@@ -158,7 +158,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
             rho_largest = zoomer_largest.read_small(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
 
         elif self.image_ndim == 3:
-            from attention import ZoomableAttentionWindow3d
+            from attentione2d import ZoomableAttentionWindow3d
             zoomer = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N)
             rho = zoomer.read_large(x, l[:,0], l[:,1], l[:,2]) # glimpse sensor in 3D
 
@@ -223,10 +223,12 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         return l, prob, h0, h1, h2, out_test
 
 if __name__ == "__main__":
-
+    ndim = 2
     # ----------------------------------------------------------------------
-
-    ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=3)
+    if ndim == 2:
+        ram = conv_RAM(image_size=(28,28), channels=1, attention=5, n_iter=3)
+    elif ndim==3:
+        ram = conv_RAM(image_size=(32,32,32), channels=1, attention=5, n_iter=3)
     ram.push_initialization_config()
     ram.initialize()
     # ------------------------------------------------------------------------

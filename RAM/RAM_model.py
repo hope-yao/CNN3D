@@ -21,6 +21,7 @@ from blocks.bricks import Tanh, Identity, Softmax, Logistic
 from fuel.datasets.hdf5 import H5PYDataset
 
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
+from bricks3D.cnn3d_bricks import Convolutional3, MaxPooling3, ConvolutionalSequence3, Flattener3
 
 
 class RAM(BaseRecurrent, Initializable, Random):
@@ -40,7 +41,6 @@ class RAM(BaseRecurrent, Initializable, Random):
         l = tensor.matrix('l')  # for a batch
         n_class = 10
         dim_h = self.dim_h
-        dim_data = 2
         inits = {
             # 'weights_init': IsotropicGaussian(0.01),
             # 'biases_init': Constant(0.),
@@ -50,10 +50,10 @@ class RAM(BaseRecurrent, Initializable, Random):
 
         # glimpse network
         n0 = 64
-        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N*self.read_N, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
+        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
         n1 = 32
-        self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[2, n1], name="glimpse network 1", **inits)
+        self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
         self.linear_g22 = MLP(activations=[Identity()], dims=[n1, dim_h], name="glimpse network 3", **inits)
@@ -65,13 +65,15 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
 
         # location network
-        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, dim_data], name="location network", **inits)
+        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, self.image_ndim], name="location network", **inits)
 
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
 
+        self.pool_3d_1 = MaxPooling3((2, 2, 2))
+        self.pool_3d_2 = MaxPooling3((4, 4, 4))
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
+                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a, self.pool_3d_1, self.pool_3d_2]
 
         # self.fork = Fork(prototype = Linear(use_bias=True),
         #                          output_names = ['l', 'a'], input_dim = dim_h, output_dims = [dim_data, n_class],
@@ -119,14 +121,14 @@ class RAM(BaseRecurrent, Initializable, Random):
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
-            from attention import ZoomableAttentionWindow
+            from attentione2d import ZoomableAttentionWindow
 
             zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, 1)
             rho_orig = zoomer_orig.read_patch(x, l[:,1], l[:,0]) # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels*self.read_N*self.read_N))
 
             N_larger = 2*self.read_N
-            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, 2)
+            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, 2) #accurally the last parameter is not used in read_patch function
             rho_larger = zoomer_larger.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
             rho_larger = pool_2d(rho_larger,(2,2)) # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
@@ -140,9 +142,25 @@ class RAM(BaseRecurrent, Initializable, Random):
             rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
 
         elif self.image_ndim == 3:
-            from attention import ZoomableAttentionWindow3d
-            zoomer = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N)
-            rho = zoomer.read_large(x, l[:,0], l[:,1], l[:,2]) # glimpse sensor in 3D
+            from attentione3d import ZoomableAttentionWindow3d
+
+            zoomer_orig = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N, 1)
+            rho_orig = zoomer_orig.read_patch(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_orig = rho_orig.reshape((x.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
+
+            N_larger = 2 * self.read_N
+            zoomer_larger = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, N_larger, 2)
+            rho_larger = zoomer_larger.read_patch(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_larger = self.pool_3d_1.apply(rho_larger)  # downsampling
+            rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
+
+            N_larger = 4 * self.read_N
+            zoomer_largest = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, N_larger, 4)
+            rho_largest = zoomer_largest.read_patch(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_largest = self.pool_3d_2.apply(rho_largest)  # downsampling
+            rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
+
+            rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
 
         h_g = self.rect_linear_g0.apply(rho)  # theta_g^0
         h_l = self.rect_linear_g1.apply(l)  # theta_g^1
@@ -180,24 +198,46 @@ class RAM(BaseRecurrent, Initializable, Random):
         return l, prob
 
 if __name__ == "__main__":
-
+    ndim = 3
     # ----------------------------------------------------------------------
-
-    ram = RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
-    ram.push_initialization_config()
-    ram.initialize()
-    # ------------------------------------------------------------------------
-    x = tensor.ftensor4('features')  # keyword from fuel
-    y = tensor.matrix('targets')  # keyword from fuel
-    l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
-
-    f = theano.function([x], [l, prob])
-    # test single forward pass
-    mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
-    handle = mnist_train.open()
-    train_data = mnist_train.get_data(handle, slice(0, 16))
-    xx = train_data[0]
-    print(xx.shape)
-    l, prob = f(xx)
-    print(l)
-    print(prob)
+    if ndim==2:
+        ram = RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
+        ram.push_initialization_config()
+        ram.initialize()
+        # ------------------------------------------------------------------------
+        x = tensor.ftensor4('features')  # keyword from fuel
+        y = tensor.matrix('targets')  # keyword from fuel
+        l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+        f = theano.function([x], [l, prob])
+        # ------------------------------------------------------------------------
+        # test single forward pass
+        from fuel.datasets.hdf5 import H5PYDataset
+        mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
+        handle = mnist_train.open()
+        train_data = mnist_train.get_data(handle, slice(0, 16))
+        xx = train_data[0]
+        print(xx.shape)
+        l, prob = f(xx)
+        print(l)
+        print(prob)
+    elif ndim==3:
+        ram = RAM(image_size=(32,32,32), channels=1, attention=7, n_iter=4)
+        ram.push_initialization_config()
+        ram.initialize()
+        # ------------------------------------------------------------------------
+        dtensor5 = T.TensorType('float32', (False,) * 5)
+        x = dtensor5('features')  # keyword from fuel
+        y = tensor.matrix('targets')  # keyword from fuel
+        l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+        f = theano.function([x], [l, prob])
+        # ------------------------------------------------------------------------
+        # test single forward pass
+        from fuel.datasets.hdf5 import H5PYDataset
+        mnist_train = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
+        handle = mnist_train.open()
+        train_data = mnist_train.get_data(handle, slice(0, 16))
+        xx = train_data[0]
+        print(xx.shape)
+        l, prob = f(xx)
+        print(l)
+        print(prob)

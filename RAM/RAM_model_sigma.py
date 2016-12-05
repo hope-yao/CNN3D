@@ -38,7 +38,7 @@ class RAM(BaseRecurrent, Initializable, Random):
             self.img_height, self.img_width, self.img_depth = image_size
         self.dim_h = 256
 
-        # l = tensor.matrix('l')  # for a batch
+        l = tensor.matrix('l')  # for a batch
         n_class = 10
         dim_h = self.dim_h
         inits = {
@@ -53,7 +53,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
         n1 = 32
-        self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim, n1], name="glimpse network 1", **inits)
+        self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim+1, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
         self.linear_g22 = MLP(activations=[Identity()], dims=[n1, dim_h], name="glimpse network 3", **inits)
@@ -65,7 +65,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
 
         # location network
-        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, self.image_ndim], name="location network", **inits)
+        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, self.image_ndim+1], name="location network", **inits)
 
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
@@ -110,7 +110,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         elif name == 'h':
             return self.dim_h
         elif name == 'l':
-            return self.image_ndim
+            return self.image_ndim+1
         else:
             super(RAM, self).get_dim(name)
 
@@ -141,22 +141,22 @@ class RAM(BaseRecurrent, Initializable, Random):
 
             rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
 
-        elif self.image_ndim == 3:
+        else:
             from attentione3d import ZoomableAttentionWindow3d
 
             zoomer_orig = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N, 1)
-            rho_orig = zoomer_orig.read_patch(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_orig = zoomer_orig.read_patch_sigma(x, l[:, 0], l[:, 1], l[:, 2], l[:, 3])  # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
             N_larger = 2 * self.read_N
             zoomer_larger = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, N_larger, 2)
-            rho_larger = zoomer_larger.read_patch(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_larger = zoomer_larger.read_patch_sigma(x, l[:, 0], l[:, 1], l[:, 2], l[:, 3])  # glimpse sensor in 2D
             rho_larger = self.pool_3d_1.apply(rho_larger)  # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
             N_larger = 4 * self.read_N
             zoomer_largest = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, N_larger, 4)
-            rho_largest = zoomer_largest.read_patch(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_largest = zoomer_largest.read_patch_sigma(x, l[:, 0], l[:, 1], l[:, 2], l[:, 3])  # glimpse sensor in 2D
             rho_largest = self.pool_3d_2.apply(rho_largest)  # downsampling
             rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
@@ -214,14 +214,14 @@ if __name__ == "__main__":
         from fuel.datasets.hdf5 import H5PYDataset
         mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
         handle = mnist_train.open()
-        train_data = mnist_train.get_data(handle, slice(0, 16))
+        train_data = mnist_train.get_data(handle, slice(0, 17))
         xx = train_data[0]
         print(xx.shape)
         l, prob = f(xx)
         print(l)
         print(prob)
     elif ndim==3:
-        ram = RAM(image_size=(32,32,32), channels=1, attention=7, n_iter=4)
+        ram = RAM(image_size=(32,32,32), channels=1, attention=7, n_iter=1)
         ram.push_initialization_config()
         ram.initialize()
         # ------------------------------------------------------------------------
@@ -235,7 +235,7 @@ if __name__ == "__main__":
         from fuel.datasets.hdf5 import H5PYDataset
         mnist_train = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
         handle = mnist_train.open()
-        train_data = mnist_train.get_data(handle, slice(0, 16))
+        train_data = mnist_train.get_data(handle, slice(0, 17))
         xx = train_data[0]
         print(xx.shape)
         l, prob = f(xx)

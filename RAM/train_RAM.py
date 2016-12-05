@@ -47,7 +47,7 @@ from fuel.datasets.mnist import MNIST
 # from blocks.extras import Plot
 import blocks_extras.extensions.plot as Plot
 
-from RAM_model import *
+from RAM_model_sigma import *
 
 sys.setrecursionlimit(100000)
 

@@ -206,7 +206,7 @@ class ZoomableAttentionWindow3d(object):
         channels = self.channels
         batch_size = images.shape[0]
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32') * 0.3
+        sigma = T.ones([batch_size], 'float32') * 0.5
 
         # Reshape input into proper 3d images
         I = images.reshape((batch_size, self.img_height, self.img_width, self.img_depth))
@@ -371,6 +371,8 @@ class ZoomableAttentionWindow3d(object):
 # =============================================================================
 
 if __name__ == "__main__":
+    from mpl_toolkits.mplot3d import Axes3D
+    import matplotlib.pyplot as plt
 
     N = 10
     channels = 1
@@ -407,9 +409,9 @@ if __name__ == "__main__":
     I[0,10:11,10:11,10:11] = 1.
     I = I.reshape((1,width*height*depth))
 
-    center_x = [15]
-    center_y = [15]
-    center_z = [15]
+    center_x = [5]
+    center_y = [5]
+    center_z = [5]
 
     W = do_read(I, center_x, center_y, center_z)
 
@@ -463,7 +465,7 @@ if __name__ == "__main__":
 
         fig = plt.figure()
         ax = fig.add_subplot(221, projection='3d')
-        im = ax.scatter(x, y, z, c=t, marker='o', s=10)
+        im = ax.plot(x, y, z, c=t, marker='o', s=10)
         ax.set_xlabel('X Label')
         ax.set_ylabel('Y Label')
         ax.set_zlabel('Z Label')
@@ -471,21 +473,21 @@ if __name__ == "__main__":
         plt.ylim(0, V.shape[1])
 
         ax = fig.add_subplot(222)
-        im = ax.scatter(y1, z1, c=t1, marker='o', s=30)
+        im = ax.plot(y1, z1, c=t1, marker='o', s=30)
         ax.set_xlabel('Y Label')
         ax.set_ylabel('Z Label')
         plt.xlim(0, V.shape[0])
         plt.ylim(0, V.shape[1])
 
         ax = fig.add_subplot(223)
-        im = ax.scatter(x2, z2, c=t2, marker='o', s=30)
+        im = ax.plot(x2, z2, c=t2, marker='o', s=30)
         ax.set_xlabel('X Label')
         ax.set_ylabel('Z Label')
         plt.xlim(0, V.shape[0])
         plt.ylim(0, V.shape[1])
 
         ax = fig.add_subplot(224)
-        im = ax.scatter(x3, y3, c=t3, marker='o', s=30)
+        im = ax.plot(x3, y3, c=t3, marker='o', s=30)
         ax.set_xlabel('X Label')
         ax.set_ylabel('Y Label')
         plt.xlim(0, V.shape[0])
@@ -499,7 +501,5 @@ if __name__ == "__main__":
         a = 1
 
 
-    from mpl_toolkits.mplot3d import Axes3D
-    import matplotlib.pyplot as plt
 
     viz2(WW)

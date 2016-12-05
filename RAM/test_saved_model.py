@@ -4,7 +4,9 @@ from blocks.serialization import load
 from blocks.model import Model
 from fuel.datasets.hdf5 import H5PYDataset
 
-with open('./log/RAM3D/potcup-simple-20161204-192319/potcup', "rb") as f:
+d = 5 # attention window size
+
+with open('./log/RAM3D/shapenet-simple-20161204-204548/shapenet', "rb") as f:
     p = load(f, 'model')
 
 if isinstance(p, Model):
@@ -17,9 +19,9 @@ y = tensor.matrix('targets')  # keyword from fuel
 l, y_hat = ram.classify(x)
 f = theano.function([x], [l, y_hat])
 
-mnist_train = H5PYDataset('./data/potcup_vox.hdf5', which_sets=('train',))
+mnist_train = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
 handle = mnist_train.open()
-model_idx = 2
+model_idx = 1
 train_data = mnist_train.get_data(handle, slice(model_idx , model_idx +1))
 xx = train_data[0]
 YY = train_data[1]
@@ -45,7 +47,7 @@ import numpy as np
 #     print(cx, cy, cz)
 cx,cy,cz = l[:,0,0],l[:,0,1],l[:,0,2]
 '''visualize 3D data'''
-def plot_cube(ax, x, y, z, inc, a):
+def plot_cube(ax, x, y, z, inc, a, i):
     "x y z location and alpha"
     ax.plot_surface([[x, x + inc], [x, x + inc]], [[y, y], [y + inc, y + inc]], z, alpha=a,facecolors='y')
     ax.plot_surface([[x, x + inc], [x, x + inc]], [[y, y], [y + inc, y + inc]], z + inc, alpha=a,facecolors='y')
@@ -56,7 +58,10 @@ def plot_cube(ax, x, y, z, inc, a):
     ax.plot_surface([[x, x], [x + inc, x + inc]], y, [[z, z + inc], [z, z + inc]], alpha=a,facecolors='y')
     ax.plot_surface([[x, x], [x + inc, x + inc]], y + inc, [[z, z + inc], [z, z + inc]], alpha=a,facecolors='y')
 
-def viz2(V,cx,cy,cz):
+    ax.text(x+inc/2.0, y+inc/2.0, z+inc/2.0, i, fontsize=15)
+
+
+def viz2(V,cx,cy,cz,d):
 
     x = y = z = t = []
     x1 = y1 = z1 = t1 = []
@@ -124,10 +129,9 @@ def viz2(V,cx,cy,cz):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     im = ax.scatter(x, y, z, c=t, marker='o', s=10, alpha=0.2)
-    im = ax.scatter(cx, cy, cz, c=range(1,cx.shape[0]+1,1), marker='s', s=30)
-    d = 5
+    # im = ax.scatter(cx, cy, cz, c=range(1,cx.shape[0]+1,1), marker='s', s=30)
     for i in range(len(cx)):
-        plot_cube(ax, cx[i]-d/2, cy[i]-d/2, cz[i]-d/2, d, float(i)/len(cx))
+        plot_cube(ax, cx[i]-d/2, cy[i]-d/2, cz[i]-d/2, d, 0.1, i)
     ax.set_xlabel('X Label')
     ax.set_ylabel('Y Label')
     ax.set_zlabel('Z Label')
@@ -142,7 +146,7 @@ def viz2(V,cx,cy,cz):
 
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
-viz2(train_data[0][0][0].reshape(32,32,32),cx,cy,cz)
+viz2(train_data[0][0][0].reshape(32,32,32),cx,cy,cz,d)
 print(cx)
 print(cy)
 print(cz)

@@ -88,7 +88,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
         test_set = H5PYDataset('./data/shapenet10.hdf5', which_sets=('test',))
         test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
- 
+
     subdir = dataset + "-simple-" + time.strftime("%Y%m%d-%H%M%S")
     # ---------------------------RAM SETUP-------------------------------------
     ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter)
@@ -160,7 +160,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--dataset", type=str, dest="dataset",
-                        default="shapenet", help="Dataset to use: [mnist|shapnet|potcup]")
+                        default="shapenet", help="Dataset to use: [mnist|shapenet|potcup]")
     parser.add_argument("--epochs", type=int, dest="epochs",
                         default=200, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",

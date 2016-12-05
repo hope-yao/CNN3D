@@ -133,7 +133,7 @@ class ZoomableAttentionWindow3d(object):
     #         FF = tensor.ones((batch_size, channels*self.img_depth*self.img_height*self.img_width))*center_x
     #         return FF
 
-    def filterbank_matrices(self, center_y, center_x, center_z, delta, sigma, scale, chope=0):
+    def filterbank_matrices(self, center_x, center_y, center_z, delta, sigma, scale, chope=0):
         tol = 1e-4
         N = self.N * scale
 
@@ -163,7 +163,7 @@ class ZoomableAttentionWindow3d(object):
         print(images.ndim)
 
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32') * 0.3
 
         # Reshape input into proper 3d images
         I = images.reshape((batch_size, self.img_height, self.img_width, self.img_depth))
@@ -206,12 +206,12 @@ class ZoomableAttentionWindow3d(object):
         channels = self.channels
         batch_size = images.shape[0]
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32') * 0.3
 
         # Reshape input into proper 3d images
         I = images.reshape((batch_size, self.img_height, self.img_width, self.img_depth))
         # Get separable filterbank
-        FY, FX, FZ = self.filterbank_matrices(center_y, center_x, center_z, delta, sigma, 1)
+        FY, FX, FZ = self.filterbank_matrices( center_x, center_y, center_z, delta, sigma, 1)
         FY = T.repeat(FY, channels, axis=0)
         FX = T.repeat(FX, channels, axis=0)
         FZ = T.repeat(FZ, channels, axis=0)
@@ -388,22 +388,24 @@ if __name__ == "__main__":
     center_z_ = T.vector()
     delta_ = T.vector()
     sigma_ = T.vector()
-    W_ = att.read_patch(I_, center_x_, center_y_, center_z_)
+    W_ = att.read_large(I_, center_x_, center_y_, center_z_)
 
     do_read = theano.function(inputs=[I_, center_x_, center_y_, center_z_],
                               outputs=W_)
 
     # ------------------------------------------------------------------------
-    from fuel.datasets.hdf5 import H5PYDataset
-    train_set = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
-    handle = train_set.open()
-    data = train_set.get_data(handle, slice(0, 1))
-    I = data[0].reshape(1,width*height*depth)
-    print((I.shape))
-    # I = np.float32(np.ones((1, width * height * depth)))
-    # I = np.float32(np.zeros((1, width, height, depth)))
-    # I[0,15:16,:,:] = 1.
-    # I = I.reshape((1,width*height*depth))
+    # from fuel.datasets.hdf5 import H5PYDataset
+    # train_set = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
+    # handle = train_set.open()
+    # data = train_set.get_data(handle, slice(0, 1))
+    # I = data[0].reshape(1,width*height*depth)
+    # print((I.shape))
+
+    I = np.float32(np.ones((1, width * height * depth)))
+    I = np.float32(np.zeros((1, width, height, depth)))
+    I[0,15:16,15:16,15:16] = 1.
+    I[0,10:11,10:11,10:11] = 1.
+    I = I.reshape((1,width*height*depth))
 
     center_x = [15]
     center_y = [15]
@@ -414,10 +416,10 @@ if __name__ == "__main__":
     ## this is for read_large
     # WW = W.reshape((height, width, depth))
     ## this is for read_patch
-    WW = W.reshape((N, N, N))
+    WW = W.reshape((width, width, width))
 
     def viz2(V):
-        V = V / np.max(V)
+        # V = V / np.max(V)
 
         x = y = z = t = []
         x1 = y1 = z1 = t1 = []

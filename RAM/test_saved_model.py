@@ -6,7 +6,7 @@ from fuel.datasets.hdf5 import H5PYDataset
 
 d = 5 # attention window size
 
-with open('./log/RAM3D/shapenet-simple-20161204-204548/shapenet', "rb") as f:
+with open('./log/RAM3D/shapenet-simple-20161204-215147/shapenet', "rb") as f:
     p = load(f, 'model')
 
 if isinstance(p, Model):
@@ -33,7 +33,7 @@ print(prob)
 
 import matplotlib.pyplot as plt
 plt.figure()
-for i in range(8):
+for i in range(10):
     a = prob[:, 0, i]
     c = range(0,a.shape[0])
     plt.plot(c,a)
@@ -137,6 +137,7 @@ def viz2(V,cx,cy,cz,d):
     ax.set_zlabel('Z Label')
     plt.xlim(0, V.shape[0])
     plt.ylim(0, V.shape[1])
+    ax.set_zlim(0, V.shape[2])
     fig.subplots_adjust(right=0.8)
     cbar_ax = fig.add_axes([0.85, 0.15, 0.05, 0.7])
     fig.colorbar(im, cax=cbar_ax)

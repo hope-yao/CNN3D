@@ -25,7 +25,7 @@ from argparse import ArgumentParser
 from theano import tensor
 
 from fuel.streams import DataStream
-from fuel.schemes import SequentialScheme
+from fuel.schemes import SequentialScheme, ShuffledScheme
 from fuel.transformers import Flatten
 
 from blocks.algorithms import GradientDescent, CompositeRule, StepClipping, RMSProp, Adam, Momentum, Scale, AdaDelta, AdaGrad
@@ -47,7 +47,7 @@ from fuel.datasets.mnist import MNIST
 # from blocks.extras import Plot
 import blocks_extras.extensions.plot as Plot
 
-from conv_RAM_model import *
+from RAM_model import *
 
 sys.setrecursionlimit(100000)
 
@@ -59,28 +59,59 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 
 
     # ---------------------------2D MNIST-------------------------------------
-    image_size = (28, 28)
-    channels = 1
 
-    data_train = MNIST(which_sets=["train"], sources=['features', 'targets'])
-    data_test = MNIST(which_sets=["test"], sources=['features', 'targets'])
-    train_stream = DataStream.default_stream(data_train, iteration_scheme=SequentialScheme(data_train.num_examples, batch_size))
-    # valid_stream = Flatten(
-    #     DataStream.default_stream(data_valid, iteration_scheme=SequentialScheme(data_valid.num_examples, batch_size)))
-    test_stream = DataStream.default_stream(data_test, iteration_scheme=SequentialScheme(data_test.num_examples, batch_size))
+    if dataset=='mnist':
+        image_size = (28, 28)
+        channels = 1
+        img_ndim = 2
+        data_train = MNIST(which_sets=["train"], sources=['features', 'targets'])
+        data_test = MNIST(which_sets=["test"], sources=['features', 'targets'])
+        train_stream = DataStream.default_stream(data_train, iteration_scheme=SequentialScheme(data_train.num_examples, batch_size))
+        # valid_stream = Flatten(
+        #     DataStream.default_stream(data_valid, iteration_scheme=SequentialScheme(data_valid.num_examples, batch_size)))
+        test_stream = DataStream.default_stream(data_test, iteration_scheme=SequentialScheme(data_test.num_examples, batch_size))
+    elif dataset == 'potcup':
+        image_size = (32,32,32)
+        channels = 1
+        img_ndim = 3
+        from fuel.datasets.hdf5 import H5PYDataset
+        train_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('train',))
+        train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
+        test_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('test',))
+        test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
+    elif dataset == 'shapenet':
+        image_size = (32,32,32)
+        channels = 1
+        img_ndim = 3
+        from fuel.datasets.hdf5 import H5PYDataset
+        train_set = H5PYDataset('../data/shapenet10.hdf5', which_sets=('train',))
+        train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
+        test_set = H5PYDataset('../data/shapenet10.hdf5', which_sets=('test',))
+        test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
+
     subdir = dataset + "-simple-" + time.strftime("%Y%m%d-%H%M%S")
-
-    # ---------------------------RAM SETUP-------------------------------------
-    ram = conv_RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter)
+    # ---------------------------RAM_blocks SETUP-------------------------------------
+    ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter)
     ram.push_initialization_config()
     ram.initialize()
 
     # ---------------------------COMPILE-------------------------------------
-    x = tensor.ftensor4('features')  # keyword from fuel
+    if img_ndim==2:
+        x = tensor.ftensor4('features')  # keyword from fuel
+    elif img_ndim == 3:
+        dtensor5 = T.TensorType('float32', (False,) * 5)
+        x = dtensor5('input')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, y_hat, h0, h1, h2,_ = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, y_hat = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
     y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
     y_int = T.cast(y, 'int64')
+
+    # y = tensor.matrix('targets')  # keyword from fuel
+    # l0 = tensor.matrix('l0')
+    # l, y_hat = ram.classify(x, l0)  # directly use theano to build the graph? Might be able to track iteration idx.
+    # y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
+    # # f = theano.function([x, l0], [l, y_hat_last])
+    # y_int = T.cast(y, 'int64')
 
     # ----------------------------COST----------------------------------
     cost = (CategoricalCrossEntropy().apply(y_int.flatten(), y_hat_last).copy(name='recognition'))
@@ -102,25 +133,10 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         # step_rule=Momentum(learning_rate=learning_rate, momentum=0.95)
         # step_rule=Scale(learning_rate=learning_rate)
     )
-    # algorithm = AdaDelta()
 
     # -------------------------Setup monitors--------------------------------------
-    monitors = [cost, error]
-
-    train_monitors = monitors[:]
-    # train_monitors += [aggregation.mean(algorithm.total_gradient_norm)]
-    # train_monitors += [aggregation.mean(algorithm.total_step_norm)]
-    # Live plotting...
-    plot_channels = [
-        ["train_total_gradient_norm", "train_total_step_norm"]
-    ]
     if not os.path.exists(subdir):
         os.makedirs(subdir)
-
-    plotting_extensions = []
-    # plotting_extensions = [
-    #     Plot('shapenet10', channels=plot_channels)
-    # ]
 
     # -------------------------MAIN LOOP--------------------------------------
     main_loop = MainLoop(
@@ -131,26 +147,18 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
                        Timing(),
                        FinishAfter(after_n_epochs=epochs),
                        TrainingDataMonitoring(
-                           train_monitors,
+                           [cost, error],
                            prefix="train",
                            after_epoch=True),
-                       #            DataStreamMonitoring(
-                       #                monitors,
-                       #                valid_stream,
-                       ##                updates=scan_updates,
-                       #                prefix="valid"),
                        DataStreamMonitoring(
-                           monitors,
+                           [cost, error],
                            test_stream,
-                           #                updates=scan_updates,
                            prefix="test"),
-                       # Checkpoint(name, before_training=False, after_epoch=True, save_separately=['log', 'model']),
                        Checkpoint("{}/{}".format(subdir, dataset), save_main_loop=False, before_training=True,
                                   after_epoch=True, save_separately=['log', 'model']),
-                       # SampleCheckpoint(image_size=image_size[0], channels=channels, save_subdir=subdir,
-                       #                  before_training=True, after_epoch=True),
                        ProgressBar(),
-                       Printing()] + plotting_extensions)
+                       Printing()]
+    )
 
     main_loop.run()
 
@@ -159,11 +167,11 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--dataset", type=str, dest="dataset",
-                        default="bmnist", help="Dataset to use: [bmnist|mnist_lenet|cifar10]")
+                        default="shapenet", help="Dataset to use: [mnist|shapenet|potcup]")
     parser.add_argument("--epochs", type=int, dest="epochs",
                         default=200, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
-                        default=100, help="Size of each mini-batch")
+                        default=32, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
                         default=1e-2, help="Learning rate")
     parser.add_argument("--attention", "-a", type=int, default=5,

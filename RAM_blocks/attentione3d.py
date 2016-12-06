@@ -206,7 +206,7 @@ class ZoomableAttentionWindow3d(object):
         channels = self.channels
         batch_size = images.shape[0]
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32') * 0.3
+        sigma = T.ones([batch_size], 'float32')
 
         # Reshape input into proper 3d images
         I = images.reshape((batch_size, self.img_height, self.img_width, self.img_depth))
@@ -226,6 +226,41 @@ class ZoomableAttentionWindow3d(object):
 
 
         return IZ.reshape((batch_size*channels, N, N, N))
+
+
+    def read_small(self, images, center_x, center_y, center_z):
+        N = self.N
+        channels = self.channels
+        batch_size = images.shape[0]
+
+        delta = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32')* 0.3
+
+        # Reshape input into proper 2d images
+        I = images.reshape((batch_size * channels, self.img_height, self.img_width, self.img_depth))
+
+        # Get separable filterbank
+        FY, FX, FZ = self.filterbank_matrices(center_x, center_y, center_z, delta, sigma, self.scale)
+
+        FX = T.repeat(FX, channels, axis=0)
+        FY = T.repeat(FY, channels, axis=0)
+        FZ = T.repeat(FZ, channels, axis=0)
+
+        # # apply to the batch of images
+        # apply to the batch of images
+        I1 = I.reshape((batch_size, self.img_height, self.img_width * self.img_depth))
+        IY = my_batched_dot(FY, I1).reshape((batch_size, N*self.scale, self.img_width, self.img_depth))
+        I2 = IY.dimshuffle([0, 1, 3, 2]).reshape((batch_size, N*self.scale * self.img_depth, self.img_width))
+        IX = my_batched_dot(I2, FX.transpose([0, 2, 1])).reshape((batch_size, N*self.scale, self.img_depth, N*self.scale)).dimshuffle([0, 1, 3, 2])
+        I3 = IX.dimshuffle([0, 3, 1, 2]).reshape((batch_size, self.img_depth, N*self.scale * N*self.scale))
+        IZ = my_batched_dot(FZ, I3)
+
+        II =  IZ.reshape((batch_size*channels,N*self.scale,N*self.scale,N*self.scale))
+        from theano.tensor.signal.pool import pool_3d
+        II = pool_3d(II , ws=(self.scale, self.scale, self.scale))  # downsampling
+        II =  II.reshape((batch_size, channels,N,N,N))
+
+        return II
 
     def read_patch_sigma(self, images, center_y, center_x, center_z, sigma ):
 
@@ -406,7 +441,7 @@ if __name__ == "__main__":
     depth = 32
     height = 32
     width = 32
-    scale = 1
+    scale = 4
 
     # ------------------------------------------------------------------------
     att = ZoomableAttentionWindow3d(channels, height, width, depth, N, scale)
@@ -417,7 +452,7 @@ if __name__ == "__main__":
     center_z_ = T.vector()
     delta_ = T.vector()
     sigma_ = T.vector()
-    W_ = att.read_patch(I_, center_x_, center_y_, center_z_)
+    W_ = att.read_small(I_, center_x_, center_y_, center_z_)
 
     do_read = theano.function(inputs=[I_, center_x_, center_y_, center_z_],
                               outputs=W_)
@@ -433,7 +468,8 @@ if __name__ == "__main__":
     I = np.float32(np.ones((1, width * height * depth)))
     I = np.float32(np.zeros((1, width, height, depth)))
     I[0,15:16,15:16,15:16] = 1.
-    I[0,15:16,15:16,5:9] = 1.
+    I[0,15:16,15:16,5:8] = 1.
+    I[0,1:3,15:16,15:16] = 10.
     I = I.reshape((1,width*height*depth))
 
     center_x = [15]

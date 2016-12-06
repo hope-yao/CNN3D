@@ -6,7 +6,7 @@ from fuel.datasets.hdf5 import H5PYDataset
 
 d = 5 # attention window size
 
-with open('./log/RAM3D/shapenet-simple-20161204-215147/shapenet', "rb") as f:
+with open('../log/RAM3D/shapenet-simple-20161204-215147/shapenet', "rb") as f:
     p = load(f, 'model')
 
 if isinstance(p, Model):
@@ -19,7 +19,7 @@ y = tensor.matrix('targets')  # keyword from fuel
 l, y_hat = ram.classify(x)
 f = theano.function([x], [l, y_hat])
 
-mnist_train = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
+mnist_train = H5PYDataset('../data/shapenet10.hdf5', which_sets=('train',))
 handle = mnist_train.open()
 model_idx = 1
 train_data = mnist_train.get_data(handle, slice(model_idx , model_idx +1))

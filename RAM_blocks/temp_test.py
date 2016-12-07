@@ -19,28 +19,36 @@ class FeedbackRNN(BaseRecurrent):
         inits = {
             # 'weights_init': IsotropicGaussian(0.01),
             # 'biases_init': Constant(0.),
-            'weights_init': Orthogonal(),
-            'biases_init': IsotropicGaussian(),
+            'weights_init': Constant(1.),
+            'biases_init': Constant(0.),
         }
-        self.mlp = MLP(activations=[Identity()], dims=[11, 2], name="mlp", **inits)
+        self.mlp = MLP(activations=[Identity()], dims=[13, 2], name="mlp", **inits)
         self.children = [self.mlp]
 
     def get_dim(self, name):
         if name == 'b':
             return 1
+        if name == 'c':
+            return 1
         if name == 'inputs':
             return 1
+        # if name == 'dummy':
+        #     return 1
 
-    @recurrent(sequences=['inputs'], contexts=[],states=['b'],outputs=['b'])
-    def apply(self, inputs, b=None):
-        aa = T.concatenate([inputs, b[0]], axis=0)
-        b = self.mlp.apply(aa)
-        return b
+    @recurrent(sequences=['dummy'], contexts=['inputs'],states=['b'],outputs=['c'])
+    def apply(self, inputs, dummy, b=tensor.ones((1,2))):
+        inputs = T.concatenate([inputs, b], axis=1)
+        c = self.mlp.apply(inputs)
+        b = c
+        return c
 
-x = tensor.lmatrix('x')
+x = tensor.lmatrix('x') # batch * input_dim
 feedback = FeedbackRNN()
 feedback.initialize()
-b = feedback.apply(inputs=x)
+
+u = theano.tensor.zeros(4) #(self.n_iter, batch_size, 1)
+b = feedback.apply(inputs=x, dummy=u)
 f = theano.function([x], [b])
-for states in f(numpy.ones((4, 10))):
-    print(states)
+
+l = f(numpy.ones((1,11),dtype='int64'))
+print(l)

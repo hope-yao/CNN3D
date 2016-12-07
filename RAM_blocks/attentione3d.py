@@ -49,7 +49,7 @@ class ZoomableAttentionWindow3d(object):
         self.img_height = img_height
         self.img_width = img_width
         self.img_depth = img_depth
-        self.N = N
+        self.N = N * scale
         self.scale = scale
 
     def read(self, images, center_y, center_x, delta, sigma):
@@ -436,12 +436,12 @@ if __name__ == "__main__":
     from mpl_toolkits.mplot3d import Axes3D
     import matplotlib.pyplot as plt
 
-    N = 7
+    N = 10
     channels = 1
     depth = 32
     height = 32
     width = 32
-    scale = 3
+    scale = 2
 
     # ------------------------------------------------------------------------
     att = ZoomableAttentionWindow3d(channels, height, width, depth, N, scale)
@@ -453,9 +453,13 @@ if __name__ == "__main__":
     delta_ = T.vector()
     sigma_ = T.vector()
     W_ = att.read_small(I_, center_x_, center_y_, center_z_)
+    from bricks3D.cnn3d_bricks import Convolutional3, MaxPooling3, ConvolutionalSequence3, Flattener3
+    pool_3d_1 = MaxPooling3((scale, scale, scale))
+    W_ = pool_3d_1.apply(W_ )  # downsampling
 
     do_read = theano.function(inputs=[I_, center_x_, center_y_, center_z_],
                               outputs=W_)
+
 
     # ------------------------------------------------------------------------
     from fuel.datasets.hdf5 import H5PYDataset
@@ -481,6 +485,7 @@ if __name__ == "__main__":
     ## this is for read_large
     # WW = W.reshape((height, width, depth))
     ## this is for read_patch
+    print(W.shape)
     WW = W.reshape((N, N, N))
 
     def viz2(V):

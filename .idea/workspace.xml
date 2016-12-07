@@ -1,55 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="read_small in attention3d is not working, start testing RAM3D">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/potcup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_att.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_probpng.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/potcup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/shapenet" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/cat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_patch_2D.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_2D.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_3D_cup_att10_scale3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_3D_cup_att30_scale1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_3D_cup_att6_scale5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM_blocks/cat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM_blocks/read_patch_2D.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM_blocks/read_small_2D.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n128" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n128" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att8-itr5-0n128" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr5-0n128" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att8-itr8-0n64" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr8-0n64" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/potcup-simple-20161204-192319/potcup" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/potcup-simple-20161204-192319/potcup" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_100_prob_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_100_prob_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_100_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_100_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_10_prob_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_10_prob_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_10_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_10_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_test10_prob_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_test10_prob_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_test10_window_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_test10_window_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204435/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204435/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/modelidx_10_prob_tar_204523.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/modelidx_10_prob_tar_204523.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/modelidx_10_window_tar_204523.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/modelidx_10_window_tar_204523.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-220803/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-220803/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161204-204548/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161204-204548/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161204-215147/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161204-215147/shapenet" />
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="temp_test works for just one step">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_KERAS/RAM.py" afterPath="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/RAM_model.py" afterPath="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/attentione3d.py" afterPath="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/temp_test.py" afterPath="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" afterPath="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/train_RAM.py" afterPath="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,8 +30,8 @@
       <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2460">
-              <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
+            <state relative-caret-position="170">
+              <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
               <folding>
                 <element signature="e#58#105#0" expanded="true" />
               </folding>
@@ -84,11 +42,12 @@
       <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+            <state relative-caret-position="462">
+              <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
-                <element signature="e#3837#3874#0" expanded="false" />
+                <element signature="e#3944#3981#0" expanded="false" />
+                <element signature="e#4620#6140#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,21 +56,31 @@
       <file leaf-file-name="RAM_model_sigma.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3180">
+            <state relative-caret-position="84">
               <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="temp_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="795">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="e#53#65#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="66" column="46" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,24 +97,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attentione3d.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="attentione3d.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="461" column="47" selection-start-line="461" selection-start-column="47" selection-end-line="461" selection-end-column="47" />
+            <state relative-caret-position="285">
+              <caret line="141" column="43" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="43" />
               <folding>
                 <element signature="e#23#54#0" expanded="true" />
-                <element signature="e#1411#3076#0" expanded="false" />
-                <element signature="e#3082#3083#0" expanded="false" />
-                <element signature="e#6385#8728#0" expanded="false" />
-                <element signature="e#8804#10005#0" expanded="false" />
-                <element signature="e#11743#12952#0" expanded="false" />
-                <element signature="e#13026#14659#0" expanded="false" />
-                <element signature="e#14747#15310#0" expanded="false" />
-                <element signature="e#15388#16084#0" expanded="false" />
-                <element signature="e#16119#17168#0" expanded="false" />
-                <element signature="e#17215#18267#0" expanded="false" />
-                <element signature="e#19926#22480#0" expanded="false" />
+                <element signature="e#1419#3084#0" expanded="false" />
+                <element signature="e#3090#3091#0" expanded="false" />
+                <element signature="e#6393#8736#0" expanded="false" />
+                <element signature="e#8812#10013#0" expanded="false" />
+                <element signature="e#11751#12960#0" expanded="false" />
+                <element signature="e#13034#14667#0" expanded="false" />
+                <element signature="e#14755#15318#0" expanded="false" />
+                <element signature="e#15396#16092#0" expanded="false" />
+                <element signature="e#16127#17176#0" expanded="false" />
+                <element signature="e#17223#18275#0" expanded="false" />
+                <element signature="e#20154#22708#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -154,12 +123,12 @@
       <file leaf-file-name="test_saved_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+            <state relative-caret-position="-288">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#1360#2110#0" expanded="false" />
-                <element signature="e#2142#4633#0" expanded="false" />
+                <element signature="e#1435#2185#0" expanded="false" />
+                <element signature="e#2217#4708#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -179,7 +148,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bb450dd109afa4274867bbe415345c23723cea1d" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -219,14 +188,14 @@
         <option value="$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py" />
         <option value="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
         <option value="$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-        <option value="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-155413/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1-bs16" />
         <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
+        <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
+        <option value="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
         <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
+        <option value="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
       </list>
     </option>
   </component>
@@ -289,14 +258,122 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="read_small" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="read_small" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="potcup-simple-20161206-181231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM_blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="RAM_KERAS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,7 +397,7 @@
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_saved_model">
+  <component name="RunManager" selected="Python.temp_test">
     <configuration default="false" name="train_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -355,23 +432,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test_saved_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="temp_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -402,6 +462,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -540,19 +617,37 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.train_RAM" />
-      <item index="1" class="java.lang.String" itemvalue="Python.attentione3d" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_saved_model" />
+    <configuration default="false" name="test_saved_model" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.test_saved_model" />
+      <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
+      <item index="2" class="java.lang.String" itemvalue="Python.attentione3d" />
       <item index="3" class="java.lang.String" itemvalue="Python.temp_test" />
       <item index="4" class="java.lang.String" itemvalue="Python.RAM" />
+      <item index="5" class="java.lang.String" itemvalue="Python.RAM_model" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_saved_model" />
+        <item index="0" class="java.lang.String" itemvalue="Python.temp_test" />
         <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
-        <item index="2" class="java.lang.String" itemvalue="Python.attentione3d" />
-        <item index="3" class="java.lang.String" itemvalue="Python.temp_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.RAM_model" />
+        <item index="3" class="java.lang.String" itemvalue="Python.attentione3d" />
         <item index="4" class="java.lang.String" itemvalue="Python.RAM" />
       </list>
     </recent_temporary>
@@ -760,7 +855,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480996252169</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="changed potcup dataset">
+      <created>1481075722266</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1481075722266</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -776,23 +878,23 @@
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20920044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20920044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5256959" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43040684" sideWeight="0.5043812" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53747326" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41327623" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35438973" sideWeight="0.49561885" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5364026" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40364027" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -847,7 +949,9 @@
     <MESSAGE value="It seems there are something wrong with read_patch for 3D.&#10;1. Scale factor doesn't work at all.&#10;2. tend to ignore smaller parts with small sigma&#10;3. larger sigma will result in blur patch" />
     <MESSAGE value="testing adding sigma as a parameter in RNN. &#10;NEED to figure out how to initial l" />
     <MESSAGE value="read_small in attention3d is not working, start testing RAM3D" />
-    <option name="LAST_COMMIT_MESSAGE" value="read_small in attention3d is not working, start testing RAM3D" />
+    <MESSAGE value="changed potcup dataset" />
+    <MESSAGE value="temp_test works for just one step" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp_test works for just one step" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -959,23 +1063,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM_blocks/temp_test.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM_blocks/temp_test.py</url>
-          <line>43</line>
+          <line>50</line>
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan_op.py</url>
-          <line>538</line>
-          <option name="timeStamp" value="177" />
+          <url>file://$PROJECT_DIR$/RAM_blocks/temp_test.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RAM_blocks/RAM_model.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RAM_blocks/attentione3d.py</url>
+          <line>488</line>
+          <option name="timeStamp" value="191" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -988,19 +1097,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="187" />
+      <option name="time" value="192" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple_3d.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/simple.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1055,6 +1156,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1154,6 +1255,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="274" column="7" selection-start-line="274" selection-start-column="7" selection-end-line="274" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,6 +1271,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,14 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3180">
-          <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -1217,32 +1312,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/conv_RAM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="212" column="44" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/train_conv_RAM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="114" column="26" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan_op.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="538" column="0" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,33 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_KERAS/RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#499#536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
-          <folding>
-            <element signature="e#58#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="2464" column="15" selection-start-line="2464" selection-start-column="5" selection-end-line="2464" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_probpng.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1298,56 +1344,128 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
+    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+        <state relative-caret-position="149">
+          <caret line="2464" column="15" selection-start-line="2464" selection-start-column="5" selection-end-line="2464" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/samplecheckpoint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="83" column="26" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_KERAS/RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#34#81#0" expanded="true" />
-            <element signature="e#3837#3874#0" expanded="false" />
+            <element signature="e#499#536#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan_op.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="e#53#65#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="161">
+          <caret line="538" column="0" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/conv_RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="148" column="114" selection-start-line="148" selection-start-column="114" selection-end-line="148" selection-end-column="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        <state relative-caret-position="-288">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#1360#2110#0" expanded="false" />
-            <element signature="e#2142#4633#0" expanded="false" />
+            <element signature="e#1435#2185#0" expanded="false" />
+            <element signature="e#2217#4708#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+          <folding>
+            <element signature="e#58#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+          <folding>
+            <element signature="e#34#81#0" expanded="true" />
+            <element signature="e#3944#3981#0" expanded="false" />
+            <element signature="e#4620#6140#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="461" column="47" selection-start-line="461" selection-start-column="47" selection-end-line="461" selection-end-column="47" />
+        <state relative-caret-position="285">
+          <caret line="141" column="43" selection-start-line="141" selection-start-column="14" selection-end-line="141" selection-end-column="43" />
           <folding>
             <element signature="e#23#54#0" expanded="true" />
-            <element signature="e#1411#3076#0" expanded="false" />
-            <element signature="e#3082#3083#0" expanded="false" />
-            <element signature="e#6385#8728#0" expanded="false" />
-            <element signature="e#8804#10005#0" expanded="false" />
-            <element signature="e#11743#12952#0" expanded="false" />
-            <element signature="e#13026#14659#0" expanded="false" />
-            <element signature="e#14747#15310#0" expanded="false" />
-            <element signature="e#15388#16084#0" expanded="false" />
-            <element signature="e#16119#17168#0" expanded="false" />
-            <element signature="e#17215#18267#0" expanded="false" />
-            <element signature="e#19926#22480#0" expanded="false" />
+            <element signature="e#1419#3084#0" expanded="false" />
+            <element signature="e#3090#3091#0" expanded="false" />
+            <element signature="e#6393#8736#0" expanded="false" />
+            <element signature="e#8812#10013#0" expanded="false" />
+            <element signature="e#11751#12960#0" expanded="false" />
+            <element signature="e#13034#14667#0" expanded="false" />
+            <element signature="e#14755#15318#0" expanded="false" />
+            <element signature="e#15396#16092#0" expanded="false" />
+            <element signature="e#16127#17176#0" expanded="false" />
+            <element signature="e#17223#18275#0" expanded="false" />
+            <element signature="e#20154#22708#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding>
+            <element signature="e#53#65#0" expanded="true" />
           </folding>
         </state>
       </provider>

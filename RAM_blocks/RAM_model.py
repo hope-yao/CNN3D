@@ -39,7 +39,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.dim_h = 256
 
         ########change according to number of classes
-        self.n_class = 2
+        self.n_class = 10
         dim_h = self.dim_h
         inits = {
             # 'weights_init': IsotropicGaussian(0.01),
@@ -49,10 +49,10 @@ class RAM(BaseRecurrent, Initializable, Random):
         }
 
         # glimpse network
-        n0 = 64
+        n0 = 8
         self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
-        n1 = 32
+        n1 = 8
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
@@ -70,8 +70,10 @@ class RAM(BaseRecurrent, Initializable, Random):
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, self.n_class], name="classification network", **inits)
 
-        self.pool_3d_1 = MaxPooling3((2, 2, 2))
-        self.pool_3d_2 = MaxPooling3((4, 4, 4))
+        self.scale1 = 1
+        self.scale2 = 1
+        self.pool_3d_1 = MaxPooling3((self.scale1, self.scale1, self.scale1))
+        self.pool_3d_2 = MaxPooling3((self.scale2, self.scale2, self.scale2))
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
                          self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a, self.pool_3d_1, self.pool_3d_2]
 
@@ -122,14 +124,14 @@ class RAM(BaseRecurrent, Initializable, Random):
             rho_orig = zoomer_orig.read_patch(x, l[:,1], l[:,0]) # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels*self.read_N*self.read_N))
 
-            scale = 2
+            scale = self.scale1
             N_larger = scale *self.read_N
             zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, scale ) #accurally the last parameter is not used in read_patch function
             rho_larger = zoomer_larger.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
             rho_larger = pool_2d(rho_larger,(scale ,scale )) # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
 
-            scale = 4
+            scale = self.scale2
             N_larger = scale *self.read_N
             zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, scale )
             rho_largest = zoomer_largest.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
@@ -140,20 +142,18 @@ class RAM(BaseRecurrent, Initializable, Random):
 
         elif self.image_ndim == 3:
             from attentione3d import ZoomableAttentionWindow3d
-
+            shiftx = shifty = shiftz = 16.0  # change initial attention window to the center
             zoomer_orig = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, self.read_N, 1)
-            rho_orig = zoomer_orig.read_small(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            rho_orig = zoomer_orig.read_small(x, l[:, 0]+shiftx, l[:, 1]+shifty, l[:, 2]+shiftz)  # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
-            N_larger = 2 * self.read_N
-            zoomer_larger = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, N_larger, 2)
-            rho_larger = zoomer_larger.read_small(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            zoomer_larger = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth,  self.read_N, self.scale1)
+            rho_larger = zoomer_larger.read_small(x, l[:, 0]+shiftx, l[:, 1]+shifty, l[:, 2]+shiftz)  # glimpse sensor in 2D
             rho_larger = self.pool_3d_1.apply(rho_larger)  # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
-            N_larger = 4 * self.read_N
-            zoomer_largest = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth, N_larger, 4)
-            rho_largest = zoomer_largest.read_small(x, l[:, 0], l[:, 1], l[:, 2])  # glimpse sensor in 2D
+            zoomer_largest = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth,  self.read_N, self.scale1)
+            rho_largest = zoomer_largest.read_small(x, l[:, 0]+shiftx, l[:, 1]+shifty, l[:, 2]+shiftz)  # glimpse sensor in 2D
             rho_largest = self.pool_3d_2.apply(rho_largest)  # downsampling
             rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 

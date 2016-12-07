@@ -6,8 +6,9 @@ from fuel.datasets.hdf5 import H5PYDataset
 
 d = 5 # attention window size
 
-with open('../log/RAM3D/read_small/potcup-simple-20161206-181231/potcup', "rb") as f:
-    p = load(f, 'model')
+# with open('../log/RAM3D/read_small/potcup-simple-20161206-181231/potcup', "rb") as f:
+with open('./shapenet-simple-20161207-132832/shapenet', "rb") as f:
+        p = load(f, 'model')
 
 if isinstance(p, Model):
     model = p
@@ -19,9 +20,9 @@ y = tensor.matrix('targets')  # keyword from fuel
 l, y_hat = ram.classify(x)
 f = theano.function([x], [l, y_hat])
 
-mnist_train = H5PYDataset('../data/potcup_vox1.hdf5', which_sets=('train',))
+mnist_train = H5PYDataset('../data/shapenet10.hdf5', which_sets=('train',))
 handle = mnist_train.open()
-model_idx = 1
+model_idx = 10
 train_data = mnist_train.get_data(handle, slice(model_idx , model_idx +1))
 xx = train_data[0]
 YY = train_data[1]
@@ -34,7 +35,7 @@ print(prob)
 import matplotlib.pyplot as plt
 plt.figure()
 ########change according to number of classes
-for i in range(2):
+for i in range(10):
     a = prob[:, 0, i]
     c = range(0,a.shape[0])
     plt.plot(c,a)

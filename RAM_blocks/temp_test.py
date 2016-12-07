@@ -10,6 +10,9 @@ from blocks.bricks import Random, Initializable, MLP, Linear, Rectifier
 from blocks.initialization import Constant, IsotropicGaussian, Orthogonal, Uniform
 import theano.tensor as T
 
+theano.config.floatX = 'float32'
+floatX = theano.config.floatX
+
 class FeedbackRNN(BaseRecurrent):
     def __init__(self, **kwargs):
         super(FeedbackRNN, self).__init__(**kwargs)
@@ -19,7 +22,7 @@ class FeedbackRNN(BaseRecurrent):
             'weights_init': Orthogonal(),
             'biases_init': IsotropicGaussian(),
         }
-        self.mlp = MLP(activations=[Identity()], dims=[11, 2], name="mlp1", **inits)
+        self.mlp = MLP(activations=[Identity()], dims=[11, 2], name="mlp", **inits)
         self.children = [self.mlp]
 
     def get_dim(self, name):
@@ -39,5 +42,5 @@ feedback = FeedbackRNN()
 feedback.initialize()
 b = feedback.apply(inputs=x)
 f = theano.function([x], [b])
-for states in f(numpy.ones((4, 3))):
+for states in f(numpy.ones((4, 10))):
     print(states)

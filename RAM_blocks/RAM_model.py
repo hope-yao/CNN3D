@@ -38,8 +38,8 @@ class RAM(BaseRecurrent, Initializable, Random):
             self.img_height, self.img_width, self.img_depth = image_size
         self.dim_h = 256
 
-        # l = tensor.matrix('l')  # for a batch
-        n_class = 10
+        ########change according to number of classes
+        self.n_class = 2
         dim_h = self.dim_h
         inits = {
             # 'weights_init': IsotropicGaussian(0.01),
@@ -68,23 +68,17 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_l = MLP(activations=[Identity()], dims=[dim_h, self.image_ndim], name="location network", **inits)
 
         # classification network
-        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
+        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, self.n_class], name="classification network", **inits)
 
         self.pool_3d_1 = MaxPooling3((2, 2, 2))
         self.pool_3d_2 = MaxPooling3((4, 4, 4))
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
                          self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a, self.pool_3d_1, self.pool_3d_2]
 
-        # self.fork = Fork(prototype = Linear(use_bias=True),
-        #                          output_names = ['l', 'a'], input_dim = dim_h, output_dims = [dim_data, n_class],
-        #                          name="location classification", **inits)
-        # self.softmax = Softmax(name="softmax")
-        #
-        # self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-        #                  self.rect_h, self.linear_h1, self.linear_h2, self.fork, self.softmax]
+
     @property
     def output_dim(self):
-        return 10
+        return self.n_class
 
     @output_dim.setter
     def output_dim(self, value):
@@ -106,7 +100,7 @@ class RAM(BaseRecurrent, Initializable, Random):
 
     def get_dim(self, name):
         if name == 'prob':
-            return 10 # for mnist_lenet
+            return self.n_class
         elif name == 'h':
             return self.dim_h
         elif name == 'l':
@@ -123,20 +117,23 @@ class RAM(BaseRecurrent, Initializable, Random):
             from theano.tensor.signal.pool import pool_2d
             from attentione2d import ZoomableAttentionWindow
 
-            zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, 1)
+            scale = 1
+            zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N, scale )
             rho_orig = zoomer_orig.read_patch(x, l[:,1], l[:,0]) # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels*self.read_N*self.read_N))
 
-            N_larger = 2*self.read_N
-            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, 2) #accurally the last parameter is not used in read_patch function
+            scale = 2
+            N_larger = scale *self.read_N
+            zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, scale ) #accurally the last parameter is not used in read_patch function
             rho_larger = zoomer_larger.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_larger = pool_2d(rho_larger,(2,2)) # downsampling
+            rho_larger = pool_2d(rho_larger,(scale ,scale )) # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
 
-            N_larger = 4*self.read_N
-            zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, 4)
+            scale = 4
+            N_larger = scale *self.read_N
+            zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger, scale )
             rho_largest = zoomer_largest.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_largest = pool_2d(rho_largest,(4,4)) # downsampling
+            rho_largest = pool_2d(rho_largest,(scale ,scale )) # downsampling
             rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels*self.read_N*self.read_N))
 
             rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)

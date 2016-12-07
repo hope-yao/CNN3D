@@ -234,7 +234,7 @@ class ZoomableAttentionWindow3d(object):
         batch_size = images.shape[0]
 
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32')* 0.3
+        sigma = T.ones([batch_size], 'float32')* 0.5
 
         # Reshape input into proper 2d images
         I = images.reshape((batch_size * channels, self.img_height, self.img_width, self.img_depth))
@@ -436,12 +436,12 @@ if __name__ == "__main__":
     from mpl_toolkits.mplot3d import Axes3D
     import matplotlib.pyplot as plt
 
-    N = 10
+    N = 7
     channels = 1
     depth = 32
     height = 32
     width = 32
-    scale = 4
+    scale = 3
 
     # ------------------------------------------------------------------------
     att = ZoomableAttentionWindow3d(channels, height, width, depth, N, scale)
@@ -458,19 +458,19 @@ if __name__ == "__main__":
                               outputs=W_)
 
     # ------------------------------------------------------------------------
-    # from fuel.datasets.hdf5 import H5PYDataset
-    # train_set = H5PYDataset('./data/shapenet10.hdf5', which_sets=('train',))
-    # handle = train_set.open()
-    # data = train_set.get_data(handle, slice(0, 1))
-    # I = data[0].reshape(1,width*height*depth)
-    # print((I.shape))
-
-    I = np.float32(np.ones((1, width * height * depth)))
-    I = np.float32(np.zeros((1, width, height, depth)))
-    I[0,15:16,15:16,15:16] = 1.
-    I[0,15:16,15:16,5:8] = 1.
-    I[0,1:3,15:16,15:16] = 10.
-    I = I.reshape((1,width*height*depth))
+    from fuel.datasets.hdf5 import H5PYDataset
+    train_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('train',))
+    handle = train_set.open()
+    data = train_set.get_data(handle, slice(0, 1))
+    I = data[0].reshape(1,width*height*depth)
+    print((I.shape))
+    #
+    # I = np.float32(np.ones((1, width * height * depth)))
+    # I = np.float32(np.zeros((1, width, height, depth)))
+    # I[0,15:16,15:16,15:16] = 1.
+    # I[0,15:16,15:16,5:8] = 1.
+    # I[0,1:3,15:16,15:16] = 10.
+    # I = I.reshape((1,width*height*depth))
 
     center_x = [15]
     center_y = [15]
@@ -493,24 +493,23 @@ if __name__ == "__main__":
         for i in range(V.shape[0]):
             for j in range(V.shape[1]):
                 for k in range(V.shape[2]):
-                    if V[i, j, k] != 0:
-                        if V[i,j,k] > 0.01*V.max():
-                            x = x + [i]
-                            y = y + [j]
-                            z = z + [k]
-                            t = t + [V[i, j, k]]
-                            if i == V.shape[0]/2:
-                                y1 = y1 + [j]
-                                z1 = z1 + [k]
-                                t1 = t1 + [V[i, j, k]]
-                            if j == V.shape[1]/2:
-                                x2 = x2 + [i]
-                                z2 = z2 + [k]
-                                t2 = t2 + [V[i, j, k]]
-                            if k == V.shape[2]/2:
-                                x3 = x3 + [i]
-                                y3 = y3 + [j]
-                                t3 = t3 + [V[i, j, k]]
+                    if V[i,j,k] > 0.05*V.max():
+                        x = x + [i]
+                        y = y + [j]
+                        z = z + [k]
+                        t = t + [V[i, j, k]]
+                        if i == V.shape[0]/2:
+                            y1 = y1 + [j]
+                            z1 = z1 + [k]
+                            t1 = t1 + [V[i, j, k]]
+                        if j == V.shape[1]/2:
+                            x2 = x2 + [i]
+                            z2 = z2 + [k]
+                            t2 = t2 + [V[i, j, k]]
+                        if k == V.shape[2]/2:
+                            x3 = x3 + [i]
+                            y3 = y3 + [j]
+                            t3 = t3 + [V[i, j, k]]
 
         x = np.asarray(x)
         y = np.asarray(y)
@@ -563,7 +562,6 @@ if __name__ == "__main__":
 
         plt.show()
         a = 1
-
 
 
     viz2(WW)

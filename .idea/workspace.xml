@@ -1,55 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="read_small in attention3d is not working, start testing RAM3D">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/potcup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_att.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_probpng.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/potcup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/shapenet" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/cat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_patch_2D.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_2D.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_3D_cup_att10_scale3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_3D_cup_att30_scale1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/att/read_small_3D_cup_att6_scale5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM_blocks/cat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM_blocks/read_patch_2D.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RAM_blocks/read_small_2D.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n128" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n128" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att8-itr5-0n128" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr5-0n128" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att8-itr8-0n64" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr8-0n64" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/potcup-simple-20161204-192319/potcup" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/potcup-simple-20161204-192319/potcup" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_100_prob_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_100_prob_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_100_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_100_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_10_prob_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_10_prob_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_10_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_10_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_test10_prob_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_test10_prob_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_test10_window_tar_192445.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_test10_window_tar_192445.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204435/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204435/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/modelidx_10_prob_tar_204523.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/modelidx_10_prob_tar_204523.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/modelidx_10_window_tar_204523.png" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/modelidx_10_window_tar_204523.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-220803/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-220803/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161204-204548/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161204-204548/shapenet" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161204-215147/shapenet" afterPath="$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161204-215147/shapenet" />
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-224830/potcup" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CNN3D.iml" afterPath="$PROJECT_DIR$/.idea/CNN3D.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_KERAS/RAM.py" afterPath="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/RAM_model.py" afterPath="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/attentione3d.py" afterPath="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/temp_test.py" afterPath="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" afterPath="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/train_RAM.py" afterPath="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
     </list>
     <ignored path="CNN3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,13 +30,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="scan_op.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="560" column="58" selection-start-line="560" selection-start-column="58" selection-end-line="560" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="link.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/gof/link.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5253">
+              <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="298" column="16" selection-start-line="298" selection-start-column="16" selection-end-line="298" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sequences.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/sequences.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attentione3d.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="252" column="40" selection-start-line="252" selection-start-column="40" selection-end-line="252" selection-end-column="40" />
+              <folding>
+                <marker date="1481080724364" expanded="false" signature="23:188" ph="import ..." />
+                <marker date="1481080724364" expanded="true" signature="328:701" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="333:607" ph="&quot;&quot;&quot;Batched version of dot-product....&quot;&quot;&quot;" />
+                <marker date="1481080724364" expanded="true" signature="902:1339" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="1402:3076" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="1411:2483" ph="&quot;&quot;&quot;Extract a batch of attention windows from the given images....&quot;&quot;&quot;" />
+                <marker date="1481080724364" expanded="true" signature="5223:6311" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="6376:8728" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="8410:8728" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="8794:10005" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="10071:10210" ph="..." />
+                <marker date="1481080724364" expanded="true" signature="22583:22598" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/recurrent/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_saved_model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="97" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="97" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2460">
-              <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
+            <state relative-caret-position="920">
+              <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
               <folding>
                 <element signature="e#58#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding>
+                <element signature="e#53#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,82 +142,10 @@
       <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="151" column="114" selection-start-line="151" selection-start-column="114" selection-end-line="151" selection-end-column="114" />
               <folding>
-                <element signature="e#34#81#0" expanded="true" />
-                <element signature="e#3837#3874#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RAM_model_sigma.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3180">
-              <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temp_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-              <folding>
-                <element signature="e#53#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RAM.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_KERAS/RAM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <element signature="e#499#536#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attentione3d.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="461" column="47" selection-start-line="461" selection-start-column="47" selection-end-line="461" selection-end-column="47" />
-              <folding>
-                <element signature="e#23#54#0" expanded="true" />
-                <element signature="e#1411#3076#0" expanded="false" />
-                <element signature="e#3082#3083#0" expanded="false" />
-                <element signature="e#6385#8728#0" expanded="false" />
-                <element signature="e#8804#10005#0" expanded="false" />
-                <element signature="e#11743#12952#0" expanded="false" />
-                <element signature="e#13026#14659#0" expanded="false" />
-                <element signature="e#14747#15310#0" expanded="false" />
-                <element signature="e#15388#16084#0" expanded="false" />
-                <element signature="e#16119#17168#0" expanded="false" />
-                <element signature="e#17215#18267#0" expanded="false" />
-                <element signature="e#19926#22480#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_saved_model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#1360#2110#0" expanded="false" />
-                <element signature="e#2142#4633#0" expanded="false" />
+                <marker date="1481089001719" expanded="false" signature="34:93" ph="import ..." />
               </folding>
             </state>
           </provider>
@@ -179,7 +165,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bb450dd109afa4274867bbe415345c23723cea1d" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -192,49 +178,21 @@
         <option value="$PROJECT_DIR$/LeNet3D_function.py" />
         <option value="$PROJECT_DIR$/LeNet3D.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/attention_module/test.py" />
         <option value="$PROJECT_DIR$/attention_module/draw_classify_simple.py" />
         <option value="$PROJECT_DIR$/attention_module/train-classify-simple.py" />
-        <option value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py" />
-        <option value="$PROJECT_DIR$/attention_module/blocks_conv_same_border.py" />
-        <option value="$PROJECT_DIR$/attention_module/train_conv_RAM.py" />
-        <option value="$PROJECT_DIR$/attention_module/test_saved_model.py" />
-        <option value="$PROJECT_DIR$/attention_module/conv_RAM_model.py" />
-        <option value="$PROJECT_DIR$/attention_module/attention.py" />
-        <option value="$PROJECT_DIR$/attention_module/RAM_model.py" />
-        <option value="$PROJECT_DIR$/attention_module/train_RAM.py" />
-        <option value="$PROJECT_DIR$/RAM/attention.py" />
-        <option value="$PROJECT_DIR$/RAM/attentione2d.py" />
-        <option value="$PROJECT_DIR$/RAM/conv_RAM_model.py" />
-        <option value="$PROJECT_DIR$/bricks3D/LeNet3D.py" />
-        <option value="$PROJECT_DIR$/blocks-experiments.ipynb" />
-        <option value="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_3" />
-        <option value="$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5" />
-        <option value="$PROJECT_DIR$/RAM/test_saved_model.py" />
-        <option value="$PROJECT_DIR$/RAM/attentione3d.py" />
-        <option value="$PROJECT_DIR$/RAM/temp_test.py" />
-        <option value="$PROJECT_DIR$/RAM/RAM_model_sigma.py" />
-        <option value="$PROJECT_DIR$/RAM/train_RAM.py" />
-        <option value="$PROJECT_DIR$/RAM/RAM_model.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py" />
-        <option value="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
-        <option value="$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-        <option value="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-155413/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1-bs16" />
-        <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-        <option value="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1" />
-        <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
+        <option value="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
+        <option value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
+        <option value="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
+        <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1985" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -261,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -289,55 +248,257 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RAM_KERAS" />
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM_blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM_blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="potcup-simple-20161206-224830" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../3dcnn-attention" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/log/RAM3D/read_small" />
-      <recent name="$PROJECT_DIR$/log/RAM3D/read_patch" />
-      <recent name="$PROJECT_DIR$/log/RAM3D" />
-      <recent name="$PROJECT_DIR$/log/RAM" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/RAM" />
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/attention_module" />
+      <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\p2admin\Documents\Max\Projects\CNN3D" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_KERAS/RAM.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/RAM_model.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/attentione3d.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/temp_test.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/test_saved_model.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/train_RAM.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/blocks-experiments.ipynb</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/markdown-navigator.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n128</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr5-0n128</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr8-0n64</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/potcup-simple-20161204-192319/potcup</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_100_prob_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_100_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_10_prob_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_10_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_test10_prob_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/modelidx_test10_window_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-192445/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204435/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/modelidx_10_prob_tar_204523.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/modelidx_10_window_tar_204523.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-204523/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161201-220803/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161204-204548/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_patch/shapenet-simple-20161204-215147/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/potcup</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_att.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_probpng.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/potcup</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/att/cat.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/att/read_patch_2D.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/att/read_small_2D.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/att/read_small_3D_cup_att10_scale3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/att/read_small_3D_cup_att30_scale1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/att/read_small_3D_cup_att6_scale5.png</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/cat.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/read_patch_2D.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RAM_blocks/read_small_2D.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n128</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att8-itr5-0n128</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att8-itr8-0n64</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/potcup-simple-20161204-192319/potcup</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_100_prob_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_100_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_10_prob_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_10_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_test10_prob_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/modelidx_test10_window_tar_192445.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-192445/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204435/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/modelidx_10_prob_tar_204523.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/modelidx_10_window_tar_204523.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-204523/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161201-220803/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161204-204548/shapenet</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/RAM3D/shapenet-simple-20161204-215147/shapenet</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunManager" selected="Python.test_saved_model">
-    <configuration default="false" name="train_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="attentione3d" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -351,6 +512,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="train_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -389,19 +567,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_KERAS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -541,19 +719,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.train_RAM" />
-      <item index="1" class="java.lang.String" itemvalue="Python.attentione3d" />
+      <item index="0" class="java.lang.String" itemvalue="Python.attentione3d" />
+      <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
       <item index="2" class="java.lang.String" itemvalue="Python.test_saved_model" />
       <item index="3" class="java.lang.String" itemvalue="Python.temp_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.RAM" />
+      <item index="4" class="java.lang.String" itemvalue="Python.RAM_model" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.test_saved_model" />
         <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
-        <item index="2" class="java.lang.String" itemvalue="Python.attentione3d" />
-        <item index="3" class="java.lang.String" itemvalue="Python.temp_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.RAM" />
+        <item index="2" class="java.lang.String" itemvalue="Python.temp_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RAM_model" />
+        <item index="4" class="java.lang.String" itemvalue="Python.attentione3d" />
       </list>
     </recent_temporary>
   </component>
@@ -599,202 +777,59 @@
       <option name="project" value="LOCAL" />
       <updated>1479687405337</updated>
     </task>
-    <task id="LOCAL-00005" summary="training loop running now, but result is incorrect.">
-      <created>1479772081974</created>
+    <task id="LOCAL-00005" summary="fixed hope l prob problem">
+      <created>1479760914016</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1479772081974</updated>
+      <updated>1479760914016</updated>
     </task>
-    <task id="LOCAL-00006" summary="problem: parameters not updating">
-      <created>1479776962464</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1479776962464</updated>
-    </task>
-    <task id="LOCAL-00007" summary="used multiple glimpse of different resolution.&#10;it can achieve 2.5% testing error when attention=28 and iter=1&#10;but it is not working for all other cases.">
-      <created>1479847304160</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1479847304160</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Found parameter setting is crucial to network convergence.&#10;current best setting:&#10;AdaDelta-Orth-Guassian-att5-itr5&#10;which can provide down to 1.9% testing accuracy&#10;&#10;Start to working on its convolution version">
-      <created>1479953025937</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1479953025937</updated>
-    </task>
-    <task id="LOCAL-00009" summary="removed concatenation of l and rho by using convolution in conv_RAM_model.py. But the original code is not working properly now.">
-      <created>1480139832265</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1480139832265</updated>
-    </task>
-    <task id="LOCAL-00010" summary="conv_RAM_model.py passed compilation, but still problematic">
-      <created>1480374748837</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1480374748837</updated>
-    </task>
-    <task id="LOCAL-00011" summary="added same border conv for blocks. this is necessary for core network to have covolution layers">
-      <created>1480387763954</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1480387763955</updated>
-    </task>
-    <task id="LOCAL-00012" summary="single forward pass of RAM is running now, by changing the states into vectors">
-      <created>1480442943852</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1480442943852</updated>
-    </task>
-    <task id="LOCAL-00013" summary="single forward pass of RAM is running now, by changing the states into vectors">
-      <created>1480461867856</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1480461867856</updated>
-    </task>
-    <task id="LOCAL-00014" summary="detached heads">
-      <created>1480461905839</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1480461905839</updated>
-    </task>
-    <task id="LOCAL-00015" summary="RAM on different patch size starts training now">
-      <created>1480463002040</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1480463002040</updated>
-    </task>
-    <task id="LOCAL-00016" summary="RAM on different patch size starts training now">
-      <created>1480464137201</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1480464137201</updated>
-    </task>
-    <task id="LOCAL-00017" summary="RAM on different patch size still converges slow only to 40%">
-      <created>1480473671193</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1480473671193</updated>
-    </task>
-    <task id="LOCAL-00018" summary="conv_RAM is running now, but RAM is not. changing back">
-      <created>1480552744126</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1480552744126</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Both RAM and cov_RAM is running now.">
-      <created>1480553721296</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1480553721296</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Both RAM and cov_RAM is running now.">
-      <created>1480644636097</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1480644636097</updated>
-    </task>
-    <task id="LOCAL-00021" summary="RAM on 3D achieved 13% error rate using itr5 att5 addelta">
-      <created>1480645396213</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1480645396213</updated>
-    </task>
-    <task id="LOCAL-00022" summary="1. It seems that sigma in filterbank matrix has a big influence in convergence rate. achieved 12.4% testing error in 50 epoch&#10;2. Added some code for visual testing&#10;3. Trying to figure out why attention window is random now&#10;">
-      <created>1480910730245</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1480910730245</updated>
-    </task>
-    <task id="LOCAL-00023" summary="By setting sigma=0.5, it is able to achieve 9.5% testing error in 70 epoch&#10;">
-      <created>1480915117349</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1480915117349</updated>
-    </task>
-    <task id="LOCAL-00024" summary="By setting sigma=0.5, it is able to achieve 9.5% testing error in 70 epoch&#10;">
-      <created>1480915908168</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1480915908168</updated>
-    </task>
-    <task id="LOCAL-00025" summary="It seems there are something wrong with read_patch for 3D.&#10;1. Scale factor doesn't work at all.&#10;2. tend to ignore smaller parts with small sigma&#10;3. larger sigma will result in blur patch">
-      <created>1480964772563</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1480964772563</updated>
-    </task>
-    <task id="LOCAL-00026" summary="testing adding sigma as a parameter in RNN. &#10;NEED to figure out how to initial l">
-      <created>1480977283537</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1480977283537</updated>
-    </task>
-    <task id="LOCAL-00027" summary="read_small in attention3d is not working, start testing RAM3D">
-      <created>1480996252168</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1480996252169</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20920044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5256959" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41327623" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23867229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802682" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4664751" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5364026" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36015326" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39559388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23867229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36015326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -828,26 +863,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test Max's idea that uses a multidimensional label" />
     <MESSAGE value="fixed hope n_iter problem" />
-    <MESSAGE value="training loop running now, but result is incorrect." />
-    <MESSAGE value="problem: parameters not updating" />
-    <MESSAGE value="used multiple glimpse of different resolution.&#10;it can achieve 2.5% testing error when attention=28 and iter=1&#10;but it is not working for all other cases." />
-    <MESSAGE value="Found parameter setting is crucial to network convergence.&#10;current best setting:&#10;AdaDelta-Orth-Guassian-att5-itr5&#10;which can provide down to 1.9% testing accuracy&#10;&#10;Start to working on its convolution version" />
-    <MESSAGE value="removed concatenation of l and rho by using convolution in conv_RAM_model.py. But the original code is not working properly now." />
-    <MESSAGE value="conv_RAM_model.py passed compilation, but still problematic" />
-    <MESSAGE value="added same border conv for blocks. this is necessary for core network to have covolution layers" />
-    <MESSAGE value="single forward pass of RAM is running now, by changing the states into vectors" />
-    <MESSAGE value="detached heads" />
-    <MESSAGE value="RAM on different patch size starts training now" />
-    <MESSAGE value="RAM on different patch size still converges slow only to 40%" />
-    <MESSAGE value="conv_RAM is running now, but RAM is not. changing back" />
-    <MESSAGE value="Both RAM and cov_RAM is running now." />
-    <MESSAGE value="RAM on 3D achieved 13% error rate using itr5 att5 addelta" />
-    <MESSAGE value="1. It seems that sigma in filterbank matrix has a big influence in convergence rate. achieved 12.4% testing error in 50 epoch&#10;2. Added some code for visual testing&#10;3. Trying to figure out why attention window is random now&#10;" />
-    <MESSAGE value="By setting sigma=0.5, it is able to achieve 9.5% testing error in 70 epoch&#10;" />
-    <MESSAGE value="It seems there are something wrong with read_patch for 3D.&#10;1. Scale factor doesn't work at all.&#10;2. tend to ignore smaller parts with small sigma&#10;3. larger sigma will result in blur patch" />
-    <MESSAGE value="testing adding sigma as a parameter in RNN. &#10;NEED to figure out how to initial l" />
-    <MESSAGE value="read_small in attention3d is not working, start testing RAM3D" />
-    <option name="LAST_COMMIT_MESSAGE" value="read_small in attention3d is not working, start testing RAM3D" />
+    <MESSAGE value="fixed hope l prob problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed hope l prob problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -861,6 +878,21 @@
           <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/tree/tree.py</url>
           <line>680</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py</url>
+          <line>1448</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py</url>
+          <line>1456</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py</url>
+          <line>1459</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LeNet3D_function.py</url>
@@ -918,64 +950,19 @@
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM_blocks/RAM_model.py</url>
-          <line>239</line>
+          <url>file://$PROJECT_DIR$/RAM_blocks/train_RAM.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py</url>
+          <line>539</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="python-line">
-          <url>file://$PROJECT_DIR$/bricks3D/LeNet3D.py</url>
-          <line>145</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py</url>
-          <line>607</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py</url>
-          <line>241</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/initialization.py</url>
-          <line>192</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM_blocks/attentione2d.py</url>
-          <line>424</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/bricks3D/LeNet3D.py</url>
-          <line>218</line>
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM_blocks/train_RAM.py</url>
-          <line>93</line>
-          <option name="timeStamp" value="146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM_blocks/temp_test.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAM_blocks/temp_test.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan_op.py</url>
-          <line>538</line>
-          <option name="timeStamp" value="177" />
+          <line>39</line>
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -988,366 +975,261 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="187" />
+      <option name="time" value="92" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="inputs" language="Python" />
+        <watch expression="b" language="Python" />
+        <watch expression="aa" language="Python" />
+        <watch expression="cont" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple_3d.py" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/algorithms/__init__.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="16" />
+        <state relative-caret-position="2023">
+          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/simple.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="263" column="33" selection-start-line="263" selection-start-column="27" selection-end-line="263" selection-end-column="34" />
+        <state relative-caret-position="1003">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/toolz/itertoolz.py">
+    <entry file="file://$PROJECT_DIR$/potcup_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+        <state relative-caret-position="1190">
+          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/abstract_conv.py">
+    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
+    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/extensions/monitoring.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/extensions/__init__.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/main_loop.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/atexit.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/type.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/cross_validation.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/tree/tree.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/sklearn/ensemble/weight_boosting.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/fuel/utils/__init__.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/var.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/op.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scalar/basic.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/elemwise.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/gof/graph.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/compile/function_module.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/cost.py" />
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/nnet/nnet.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/Boosted_CNN3D.py" />
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/initialization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15615">
-          <caret line="1057" column="0" selection-start-line="1055" selection-start-column="16" selection-end-line="1057" selection-end-column="27" />
+        <state relative-caret-position="1003">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/blocks_conv_same_border.readme">
+    <entry file="file://$PROJECT_DIR$/potcup_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        <state relative-caret-position="1190">
+          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging" />
-    <entry file="file://$PROJECT_DIR$/boosting/LeNet3D.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/monitoring.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4695">
-          <caret line="313" column="24" selection-start-line="313" selection-start-column="24" selection-end-line="313" selection-end-column="24" />
+        <state relative-caret-position="2023">
+          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boosting/Boosted_CNN3D.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/extensions/saveload.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
+        <state relative-caret-position="1377">
+          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/conv.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/interfaces.py">
+    <entry file="file://$PROJECT_DIR$/cnn3d_bricks.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D.py" />
+    <entry file="file://$PROJECT_DIR$/LeNet3D_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/attention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12920">
+          <caret line="760" column="0" selection-start-line="760" selection-start-column="0" selection-end-line="760" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/compile/function_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14450">
+          <caret line="873" column="52" selection-start-line="873" selection-start-column="51" selection-end-line="873" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/gof/link.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5253">
+          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/draw_classify_simple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="118" column="28" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_module/train-classify-simple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="298" column="16" selection-start-line="298" selection-start-column="16" selection-end-line="298" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/tensor/var.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/theano/scan_module/scan_op.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="560" column="58" selection-start-line="560" selection-start-column="58" selection-end-line="560" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/recurrent/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/fuel/datasets/hdf5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/fuel/datasets/mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/read_small_2D.png" />
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/read_patch_2D.png" />
-    <entry file="file://$PROJECT_DIR$/log/RAM/summary">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="235" column="41" selection-start-line="235" selection-start-column="41" selection-end-line="235" selection-end-column="41" />
-          <folding>
-            <element signature="e#9908#13446#0" expanded="false" />
-            <element signature="e#15063#15094#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks-experiments.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="1579" column="0" selection-start-line="1579" selection-start-column="0" selection-end-line="1579" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr5-0n128">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" selection-start-line="29" selection-start-column="4" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n128">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41986">
-          <caret line="3037" column="21" selection-start-line="3037" selection-start-column="17" selection-end-line="3037" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att8-itr8-0n64">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5845" column="31" selection-start-line="5845" selection-start-column="31" selection-end-line="5845" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/h5py/_hl/files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_3" />
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/compile/function_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="850" column="0" selection-start-line="850" selection-start-column="0" selection-end-line="850" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bricks3D/cnn3d_bricks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="274" column="7" selection-start-line="274" selection-start-column="7" selection-end-line="274" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/initialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="144" column="14" selection-start-line="144" selection-start-column="6" selection-end-line="144" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/sequences.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/tensor/signal/pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="165" column="26" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2211">
-          <caret line="227" column="17" selection-start-line="198" selection-start-column="0" selection-end-line="227" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_patch/AdaDelta-Orth-Guassian-att5-itr5-0n64-sigma_e_5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3180">
-          <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="2557" column="80" selection-start-line="2557" selection-start-column="80" selection-end-line="2557" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/recurrent/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/conv_RAM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="212" column="44" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_conv_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="114" column="26" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan_op.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="538" column="0" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="1053" column="74" selection-start-line="1053" selection-start-column="74" selection-end-line="1053" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-155413/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1-bs16" />
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="3751" column="0" selection-start-line="3751" selection-start-column="0" selection-end-line="3751" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_KERAS/RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#499#536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
-          <folding>
-            <element signature="e#58#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-181231/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="2464" column="15" selection-start-line="2464" selection-start-column="5" selection-end-line="2464" selection-end-column="15" />
+          <caret line="252" column="40" selection-start-line="252" selection-start-column="40" selection-end-line="252" selection-end-column="40" />
+          <folding>
+            <marker date="1481080724364" expanded="false" signature="23:188" ph="import ..." />
+            <marker date="1481080724364" expanded="true" signature="328:701" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="333:607" ph="&quot;&quot;&quot;Batched version of dot-product....&quot;&quot;&quot;" />
+            <marker date="1481080724364" expanded="true" signature="902:1339" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="1402:3076" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="1411:2483" ph="&quot;&quot;&quot;Extract a batch of attention windows from the given images....&quot;&quot;&quot;" />
+            <marker date="1481080724364" expanded="true" signature="5223:6311" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="6376:8728" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="8410:8728" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="8794:10005" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="10071:10210" ph="..." />
+            <marker date="1481080724364" expanded="true" signature="22583:22598" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_probpng.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/train1_att.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/blocks/bricks/sequences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
-          <folding>
-            <element signature="e#34#81#0" expanded="true" />
-            <element signature="e#3837#3874#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="499">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="393">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="e#53#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py">
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        <state relative-caret-position="920">
+          <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#1360#2110#0" expanded="false" />
-            <element signature="e#2142#4633#0" expanded="false" />
+            <element signature="e#58#105#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="461" column="47" selection-start-line="461" selection-start-column="47" selection-end-line="461" selection-end-column="47" />
+        <state relative-caret-position="204">
+          <caret line="151" column="114" selection-start-line="151" selection-start-column="114" selection-end-line="151" selection-end-column="114" />
           <folding>
-            <element signature="e#23#54#0" expanded="true" />
-            <element signature="e#1411#3076#0" expanded="false" />
-            <element signature="e#3082#3083#0" expanded="false" />
-            <element signature="e#6385#8728#0" expanded="false" />
-            <element signature="e#8804#10005#0" expanded="false" />
-            <element signature="e#11743#12952#0" expanded="false" />
-            <element signature="e#13026#14659#0" expanded="false" />
-            <element signature="e#14747#15310#0" expanded="false" />
-            <element signature="e#15388#16084#0" expanded="false" />
-            <element signature="e#16119#17168#0" expanded="false" />
-            <element signature="e#17215#18267#0" expanded="false" />
-            <element signature="e#19926#22480#0" expanded="false" />
+            <marker date="1481089001719" expanded="false" signature="34:93" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="97" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

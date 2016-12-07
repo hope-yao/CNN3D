@@ -45,7 +45,7 @@ from blocks.model import Model
 from fuel.datasets.mnist import MNIST
 
 # from blocks.extras import Plot
-import blocks_extras.extensions.plot as Plot
+# import blocks_extras.extensions.plot as Plot
 
 from RAM_model import *
 
@@ -75,9 +75,9 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         channels = 1
         img_ndim = 3
         from fuel.datasets.hdf5 import H5PYDataset
-        train_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('train',))
+        train_set = H5PYDataset('c:/users/p2admin/documents/max/projects/cnn3d/potcup_vox.hdf5', which_sets=('train',))
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
-        test_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('test',))
+        test_set = H5PYDataset('c:/users/p2admin/documents/max/projects/cnn3d/potcup_vox.hdf5', which_sets=('test',))
         test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
     elif dataset == 'shapenet':
         image_size = (32,32,32)
@@ -169,14 +169,14 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, dest="dataset",
                         default="potcup", help="Dataset to use: [mnist|shapenet|potcup]")
     parser.add_argument("--epochs", type=int, dest="epochs",
-                        default=200, help="how many epochs")
+                        default=2000, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
-                        default=16, help="Size of each mini-batch")
+                        default=200, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
                         default=1e-2, help="Learning rate")
-    parser.add_argument("--attention", "-a", type=int, default=5,
+    parser.add_argument("--attention", "-a", type=int, default=3,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
-                        default=3, help="number of time iteration in RNN")  # dim should be the number of classes
+                        default=8, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
     main(**vars(args))

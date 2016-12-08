@@ -36,11 +36,12 @@ class RAM(BaseRecurrent, Initializable, Random):
             self.img_height, self.img_width = image_size
         elif self.image_ndim == 3:
             self.img_height, self.img_width, self.img_depth = image_size
-        self.dim_h = 256
+        self.dim_h = 16
 
-        ########change according to number of classes
-        self.n_class = 10
+        # l = tensor.matrix('l')  # for a batch
+        n_class = 2
         dim_h = self.dim_h
+        dim_data = 2
         inits = {
             # 'weights_init': IsotropicGaussian(0.01),
             # 'biases_init': Constant(0.),
@@ -50,9 +51,9 @@ class RAM(BaseRecurrent, Initializable, Random):
 
         # glimpse network
         n0 = 16
-        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
+        self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
-        n1 = 8
+        n1 = 16
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
@@ -65,19 +66,21 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
 
         # location network
-        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, self.image_ndim], name="location network", **inits)
+        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, dim_data], name="location network", **inits)
 
         # classification network
-        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, self.n_class], name="classification network", **inits)
+        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
 
-        self.scale1 = 1
-        self.scale2 = 1
-        self.pool_3d_1 = MaxPooling3((self.scale1, self.scale1, self.scale1))
-        self.pool_3d_2 = MaxPooling3((self.scale2, self.scale2, self.scale2))
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a, self.pool_3d_1, self.pool_3d_2]
+                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
 
-
+        # self.fork = Fork(prototype = Linear(use_bias=True),
+        #                          output_names = ['l', 'a'], input_dim = dim_h, output_dims = [dim_data, n_class],
+        #                          name="location classification", **inits)
+        # self.softmax = Softmax(name="softmax")
+        #
+        # self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
+        #                  self.rect_h, self.linear_h1, self.linear_h2, self.fork, self.softmax]
     @property
     def output_dim(self):
         return self.n_class

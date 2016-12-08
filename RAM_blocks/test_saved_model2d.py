@@ -5,10 +5,8 @@ from blocks.model import Model
 from fuel.datasets.hdf5 import H5PYDataset
 import RAM_model as RAM_model
 
-d = 5 # attention window size
-
 # with open('../log/RAM3D/read_small/potcup-simple-20161206-181231/potcup', "rb") as f:
-with open('./bmnist-simple-20161207-231204/bmnist', "rb") as f:
+with open('./bmnist-simple-20161208-132422/bmnist', "rb") as f:
         p = load(f, 'model')
 
 if isinstance(p, Model):
@@ -52,10 +50,9 @@ ax2.set_xlim([0, 28])
 ax2.set_ylim([0, 28])
 
 plt.plot(l[:,0,1],l[:,0,0],'r.')
-for i in range(5):
+for i in range(ram.n_iter):
     y = l[i,0,0]
     x = l[i,0,1]
-    inc = 5
     ax2.text(x , y, i, fontsize=15, color='red')
     import matplotlib.patches as patches
     p = patches.Rectangle(

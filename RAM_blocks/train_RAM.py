@@ -111,7 +111,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         dtensor5 = T.TensorType('float32', (False,) * 5)
         x = dtensor5('input')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, y_hat = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, y_hat, _, _, _ = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
     y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
     y_int = T.cast(y, 'int64')
 
@@ -183,9 +183,9 @@ if __name__ == "__main__":
                         default=64, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
                         default=1e-2, help="Learning rate")
-    parser.add_argument("--attention", "-a", type=int, default=3,
+    parser.add_argument("--attention", "-a", type=int, default=5,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
-                        default=8, help="number of time iteration in RNN")  # dim should be the number of classes
+                        default=5, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
     main(**vars(args))

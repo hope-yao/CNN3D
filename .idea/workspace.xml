@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="temp_test works for just one step">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM_blocks/bmnist-simple-20161208-131205/bmnist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/bmnist.hdf5" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/shapenet10.hdf5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/bmnist-simple-20161208-131205/bmnist" afterPath="$PROJECT_DIR$/RAM_blocks/bmnist-simple-20161208-131205/bmnist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/RAM_model.py" afterPath="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" afterPath="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/train_RAM.py" afterPath="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
     </list>
     <ignored path="CNN3D.iws" />
@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="147" column="15" selection-start-line="147" selection-start-column="15" selection-end-line="147" selection-end-column="15" />
+            <state relative-caret-position="336">
+              <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
               <folding>
                 <element signature="e#58#105#0" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            <state relative-caret-position="-284">
+              <caret line="30" column="19" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="19" />
               <folding>
                 <element signature="e#34#81#0" expanded="true" />
                 <element signature="e#3945#3982#0" expanded="false" />
@@ -52,20 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="attentione2d.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione2d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
+            <state relative-caret-position="1036">
               <caret line="244" column="22" selection-start-line="244" selection-start-column="22" selection-end-line="244" selection-end-column="22" />
               <folding />
             </state>
@@ -75,7 +65,7 @@
       <file leaf-file-name="RAM_model_sigma.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3180">
+            <state relative-caret-position="396">
               <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
               <folding />
             </state>
@@ -141,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_saved_model2d.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_saved_model2d.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -212,10 +202,10 @@
         <option value="$PROJECT_DIR$/RAM_blocks/attentione3d.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/temp_test.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/train_RAM.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" />
       </list>
     </option>
   </component>
@@ -283,6 +273,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM_blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -309,7 +313,7 @@
       <recent name="$PROJECT_DIR$/log/RAM" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train_RAM">
+  <component name="RunManager" selected="Python.test_saved_model2d">
     <configuration default="false" name="train_RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,23 +365,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="RAM" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_KERAS" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CNN3D" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_KERAS/RAM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="RAM_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -391,6 +378,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CNN3D" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/RAM_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_saved_model2d" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RAM_blocks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CNN3D" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -551,16 +555,16 @@
       <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
       <item index="2" class="java.lang.String" itemvalue="Python.attentione3d" />
       <item index="3" class="java.lang.String" itemvalue="Python.temp_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.RAM" />
-      <item index="5" class="java.lang.String" itemvalue="Python.RAM_model" />
+      <item index="4" class="java.lang.String" itemvalue="Python.RAM_model" />
+      <item index="5" class="java.lang.String" itemvalue="Python.test_saved_model2d" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.train_RAM" />
-        <item index="1" class="java.lang.String" itemvalue="Python.RAM_model" />
-        <item index="2" class="java.lang.String" itemvalue="Python.temp_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.attentione3d" />
-        <item index="4" class="java.lang.String" itemvalue="Python.RAM" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test_saved_model2d" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train_RAM" />
+        <item index="2" class="java.lang.String" itemvalue="Python.RAM_model" />
+        <item index="3" class="java.lang.String" itemvalue="Python.temp_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.attentione3d" />
       </list>
     </recent_temporary>
   </component>
@@ -774,7 +778,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481075722266</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changed gitignore to include hdf5 database">
+      <created>1481228253308</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1481228253308</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -788,14 +799,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20920044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1347207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43040684" sideWeight="0.5043812" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48394004" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48394004" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4025696" sideWeight="0.49561885" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.509636" sideWeight="0.49561885" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -863,7 +874,8 @@
     <MESSAGE value="read_small in attention3d is not working, start testing RAM3D" />
     <MESSAGE value="changed potcup dataset" />
     <MESSAGE value="temp_test works for just one step" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp_test works for just one step" />
+    <MESSAGE value="Changed gitignore to include hdf5 database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed gitignore to include hdf5 database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1275,14 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3180">
-          <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -1326,27 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
-          <folding>
-            <element signature="e#34#81#0" expanded="true" />
-            <element signature="e#3945#3982#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/shapenet10.hdf5">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state />
@@ -1360,9 +1343,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model_sigma.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="214" column="37" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione2d.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
+        <state relative-caret-position="1036">
           <caret line="244" column="22" selection-start-line="244" selection-start-column="22" selection-end-line="244" selection-end-column="22" />
           <folding />
         </state>
@@ -1370,10 +1361,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="147" column="15" selection-start-line="147" selection-start-column="15" selection-end-line="147" selection-end-column="15" />
+        <state relative-caret-position="336">
+          <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
           <folding>
             <element signature="e#58#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#34#81#0" expanded="true" />
+            <element signature="e#3945#3982#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

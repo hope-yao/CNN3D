@@ -49,10 +49,10 @@ class RAM(BaseRecurrent, Initializable, Random):
         }
 
         # glimpse network
-        n0 = 16
+        n0 = 64
         self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
-        n1 = 8
+        n1 = 32
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)

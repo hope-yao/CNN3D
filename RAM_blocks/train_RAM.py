@@ -84,9 +84,9 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         channels = 1
         img_ndim = 3
         from fuel.datasets.hdf5 import H5PYDataset
-        train_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('train',))
+        train_set = H5PYDataset('../data/potcup_hollow_vox.hdf5', which_sets=('train',))
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
-        test_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('test',))
+        test_set = H5PYDataset('../data/potcup_hollow_vox.hdf5', which_sets=('test',))
         test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
     elif dataset == 'shapenet':
         image_size = (32,32,32)
@@ -176,7 +176,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--dataset", type=str, dest="dataset",
-                        default="bmnist", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
+                        default="shapenet", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
     parser.add_argument("--epochs", type=int, dest="epochs",
                         default=500, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",

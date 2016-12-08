@@ -78,7 +78,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
     # ---------------------------COMPILE-------------------------------------
     x = tensor.ftensor4('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, y_hat = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, y_hat, _, _, _ = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
     y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
     y_int = T.cast(y, 'int64')
 
@@ -131,26 +131,18 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
                        Timing(),
                        FinishAfter(after_n_epochs=epochs),
                        TrainingDataMonitoring(
-                           train_monitors,
+                           [cost, error],
                            prefix="train",
                            after_epoch=True),
-                       #            DataStreamMonitoring(
-                       #                monitors,
-                       #                valid_stream,
-                       ##                updates=scan_updates,
-                       #                prefix="valid"),
                        DataStreamMonitoring(
-                           monitors,
+                           [cost, error],
                            test_stream,
-                           #                updates=scan_updates,
                            prefix="test"),
-                       # Checkpoint(name, before_training=False, after_epoch=True, save_separately=['log', 'model']),
                        Checkpoint("{}/{}".format(subdir, dataset), save_main_loop=False, before_training=True,
                                   after_epoch=True, save_separately=['log', 'model']),
-                       # SampleCheckpoint(image_size=image_size[0], channels=channels, save_subdir=subdir,
-                       #                  before_training=True, after_epoch=True),
                        ProgressBar(),
-                       Printing()] + plotting_extensions)
+                       Printing()]
+    )
 
     main_loop.run()
 

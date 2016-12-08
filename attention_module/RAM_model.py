@@ -65,7 +65,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
 
         # location network
-        self.linear_l = MLP(activations=[Identity()], dims=[dim_h, dim_data], name="location network", **inits)
+        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, dim_data], name="location network", **inits)
 
         # classification network
         self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
@@ -115,26 +115,26 @@ class RAM(BaseRecurrent, Initializable, Random):
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
-               outputs=['l', 'prob', 'h'])  # h seems not necessary
+               outputs=['l', 'prob', 'h', 'rho_orig', 'rho_larger', 'rho_largest'])  # h seems not necessary
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
             from attention import ZoomableAttentionWindow
 
             zoomer_orig = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, self.read_N)
-            rho_orig = zoomer_orig.read_patch(x, l[:,1], l[:,0]) # glimpse sensor in 2D
+            rho_orig = zoomer_orig.read_patch(x, l[:,1]*28, l[:,0]*28) # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels*self.read_N*self.read_N))
 
-            N_larger = 2*self.read_N
+            N_larger = 1*self.read_N
             zoomer_larger = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
-            rho_larger = zoomer_larger.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_larger = pool_2d(rho_larger,(2,2)) # downsampling
+            rho_larger = zoomer_larger.read_patch(x, l[:, 1]*28, l[:, 0]*28)  # glimpse sensor in 2D
+            # rho_larger = pool_2d(rho_larger,(2,2)) # downsampling
             rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels*self.read_N*self.read_N))
 
-            N_larger = 4*self.read_N
+            N_larger = 1*self.read_N
             zoomer_largest = ZoomableAttentionWindow(self.channels, self.img_height, self.img_width, N_larger)
-            rho_largest = zoomer_largest.read_patch(x, l[:, 1], l[:, 0])  # glimpse sensor in 2D
-            rho_largest = pool_2d(rho_largest,(4,4)) # downsampling
+            rho_largest = zoomer_largest.read_patch(x, l[:, 1]*28, l[:, 0]*28)  # glimpse sensor in 2D
+            # rho_largest = pool_2d(rho_largest,(4,4)) # downsampling
             rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels*self.read_N*self.read_N))
 
             rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
@@ -152,11 +152,11 @@ class RAM(BaseRecurrent, Initializable, Random):
         prob = self.linear_a.apply(h)
         # l, _prob = self.fork.apply(h)
         # prob = self.softmax.apply(_prob)
-        return l, prob, h
+        return l, prob, h, rho_orig, rho_larger, rho_largest
 
     # ------------------------------------------------------------------------
 
-    @application(inputs=['features'], outputs=['l', 'prob'])
+    @application(inputs=['features'], outputs=['l', 'prob','rho_orig', 'rho_larger', 'rho_largest'])
     def classify(self, features):
         batch_size = features.shape[0]
         # No particular use apart from control n_steps in RNN
@@ -175,9 +175,9 @@ class RAM(BaseRecurrent, Initializable, Random):
         #     center_z_ = T.vector()
         #     init_l = [center_x_, center_y_, center_z_]
         # init_l = tensor.matrix('l')  # for a batch
-        l, prob, h = self.apply(x=features, dummy=u)
+        l, prob, h,rho_orig, rho_larger, rho_largest = self.apply(x=features, dummy=u)
 
-        return l, prob
+        return l, prob,rho_orig, rho_larger, rho_largest
 
 if __name__ == "__main__":
 
@@ -189,15 +189,16 @@ if __name__ == "__main__":
     # ------------------------------------------------------------------------
     x = tensor.ftensor4('features')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, prob,rho_orig, rho_larger, rho_largest = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
 
-    f = theano.function([x], [l, prob])
+    f = theano.function([x], [l, prob,rho_orig, rho_larger, rho_largest])
     # test single forward pass
     mnist_train = H5PYDataset('./data/mnist.hdf5', which_sets=('train',))
     handle = mnist_train.open()
     train_data = mnist_train.get_data(handle, slice(0, 16))
     xx = train_data[0]
     print(xx.shape)
-    l, prob = f(xx)
+    l, prob,rho_orig, rho_larger, rho_largest = f(xx)
     print(l)
     print(prob)
+    print(rho_orig)

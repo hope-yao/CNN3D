@@ -1,0 +1,12 @@
+        # hacked by Hope, changing half border to same border
+        # this code block needes is modified from keras
+        # it needs to be added to: blocks/bricks/conv.py  after line 144
+        def _postprocess_conv2d_output(conv_out, x, np_kernel, strides):
+            if np_kernel.shape[2] % 2 == 0:
+                conv_out = conv_out[:, :, :(x.shape[2] + strides[0] - 1) // strides[0], :]
+            if np_kernel.shape[3] % 2 == 0:
+                conv_out = conv_out[:, :, :, :(x.shape[3] + strides[1] - 1) // strides[1]]
+            return conv_out
+        if self.border_mode=='full':
+            output = _postprocess_conv2d_output(output, input_, self.W, self.step)
+#############

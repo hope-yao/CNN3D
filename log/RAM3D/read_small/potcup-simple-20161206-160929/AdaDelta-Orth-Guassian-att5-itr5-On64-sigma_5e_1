@@ -1,0 +1,3751 @@
+/home/hope-yao/anaconda2/bin/python /home/hope-yao/Documents/CNN3D/RAM_blocks/train_RAM.py
+Using gpu device 0: TITAN X (Pascal) (CNMeM is enabled with initial size: 10.0% of memory, cuDNN 5105)
+attentione3d.py:260: UserWarning: pool_3d() will have the parameter ignore_border default value changed to True (currently False). To have consistent behavior with all Theano version, explicitly add the parameter ignore_border=True. On the GPU, using ignore_border=True is needed to use cuDNN. When using ignore_border=False and not using cuDNN, the only GPU combination supported is when `ws == stride and pad == (0, 0, 0) and mode == 'max'`. Otherwise, the convolution will be executed on CPU.
+  II = pool_3d(II , ws=(self.scale, self.scale, self.scale))  # downsampling
+/home/hope-yao/Documents/CNN3D/bricks3D/cnn3d_bricks.py:321: UserWarning: DEPRECATION: the 'padding' parameter is not going to exist anymore as it is going to be replaced by the parameter 'pad'.
+  ignore_border=self.ignore_border)
+[16:09:30] blocks.algorithms Taking the cost gradient
+[16:09:40] blocks.algorithms The cost gradient computation graph is built
+[16:09:50] blocks.main_loop Entered the main loop
+[16:09:50] blocks.extensions.saveload Checkpointing has started
+[16:09:51] blocks.extensions.saveload Checkpointing has finished
+[16:09:51] blocks.algorithms Initializing the training algorithm
+[16:12:05] blocks.algorithms The training algorithm is initialized
+[16:12:05] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:05] blocks.extensions.monitoring Monitoring on auxiliary data finished
+
+-------------------------------------------------------------------------------
+BEFORE FIRST EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: True
+	 epochs_done: 0
+	 iterations_done: 0
+	 received_first_batch: False
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 0:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.38871088624
+	 time_initialization: 133.865473032
+
+Epoch 0, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:07] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+[16:12:08] blocks.extensions.saveload Checkpointing has finished
+	 epochs_done: 1
+Epoch 0, step 2 |                            #           | Elapsed Time: 0:00:02
+	 iterations_done: 2
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.297487229109
+	 time_read_data_this_epoch: 0.00386691093445
+	 time_read_data_total: 0.00386691093445
+	 time_train_this_epoch: 1.6409060955
+	 time_train_total: 1.6409060955
+	 train_error: 0.78125
+	 train_recognition: 8.98376846313
+
+Epoch 1, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:10] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:10] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 2
+	 iterations_done: 4
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.343884795904
+	 time_read_data_this_epoch: 0.00396466255188
+	 time_read_data_total: 0.00783157348633
+	 time_train_this_epoch: 1.61690378189
+	 time_train_total: 3.2578098774
+	 train_error: 0.78125
+	 train_recognition: 2.38057851791
+
+[16:12:11] blocks.extensions.saveload Checkpointing has finished
+Epoch 1, step 2 |                            #           | Elapsed Time: 0:00:02
+Epoch 2, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:13] blocks.extensions.saveload Checkpointing has started
+[16:12:14] blocks.extensions.saveload Checkpointing has finished
+Epoch 2, step 2 |                            #           | Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 3
+	 iterations_done: 6
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 6:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.650788486004
+	 time_read_data_this_epoch: 0.00370931625366
+	 time_read_data_total: 0.01154088974
+	 time_train_this_epoch: 1.61860203743
+	 time_train_total: 4.87641191483
+	 train_error: 0.25
+	 train_recognition: 1.17166090012
+
+Epoch 3, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:15] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:16] blocks.extensions.saveload Checkpointing has started
+[16:12:16] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 4
+	 iterations_done: 8
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 8:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.301090866327
+	 time_read_data_this_epoch: 0.00402498245239
+	 time_read_data_total: 0.0155658721924
+	 time_train_this_epoch: 1.63022398949
+	 time_train_total: 6.50663590431
+	 train_error: 0.53125
+	 train_recognition: 0.743107199669
+
+Epoch 3, step 2 |                            #           | Elapsed Time: 0:00:02
+Epoch 4, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:18] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:18] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:18] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 5
+	 iterations_done: 10
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 10:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.605737626553
+	 time_read_data_this_epoch: 0.00394892692566
+	 time_read_data_total: 0.019514799118
+	 time_train_this_epoch: 1.62715291977
+	 time_train_total: 8.13378882408
+	 train_error: 0.5
+	 train_recognition: 0.921371936798
+
+[16:12:19] blocks.extensions.saveload Checkpointing has finished
+Epoch 4, step 2 |                            #           | Elapsed Time: 0:00:02
+Epoch 5, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:21] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 6
+	 iterations_done: 12
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 12:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.606403768063
+	 time_read_data_this_epoch: 0.00385904312134
+	 time_read_data_total: 0.0233738422394
+	 time_train_this_epoch: 1.63092470169
+	 time_train_total: 9.76471352577
+	 train_error: 0.03125
+	 train_recognition: 0.60281252861
+
+[16:12:24] blocks.extensions.saveload Checkpointing has finished
+Epoch 5, step 2 |                                 #      | Elapsed Time: 0:00:04
+Epoch 6, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:26] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:26] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 7
+	 iterations_done: 14
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 14:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.574463129044
+	 time_read_data_this_epoch: 0.00413680076599
+	 time_read_data_total: 0.0275106430054
+	 time_train_this_epoch: 1.6598508358
+	 time_train_total: 11.4245643616
+	 train_error: 0.03125
+	 train_recognition: 0.56448161602
+
+[16:12:27] blocks.extensions.saveload Checkpointing has finished
+Epoch 6, step 2 |                            #           | Elapsed Time: 0:00:02
+Epoch 7, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:29] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:29] blocks.extensions.saveload Checkpointing has started
+[16:12:30] blocks.extensions.saveload Checkpointing has finished
+Epoch 7, step 2 |                            #           | Elapsed Time: 0:00:02
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 8
+	 iterations_done: 16
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 16:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 0.834777474403
+	 time_read_data_this_epoch: 0.00404667854309
+	 time_read_data_total: 0.0315573215485
+	 time_train_this_epoch: 1.62986707687
+	 time_train_total: 13.0544314384
+	 train_error: 0.25
+	 train_recognition: 0.576630830765
+
+Epoch 8, step 2 |              #                         | Elapsed Time: 0:00:01[16:12:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:32] blocks.extensions.saveload Checkpointing has started
+[16:12:33] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+Epoch 8, step 2 |                              #         | Elapsed Time: 0:00:03
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 9
+	 iterations_done: 18
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 18:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.93366658688
+	 time_read_data_this_epoch: 0.00400590896606
+	 time_read_data_total: 0.0355632305145
+	 time_train_this_epoch: 1.62836480141
+	 time_train_total: 14.6827962399
+	 train_error: 0.09375
+	 train_recognition: 0.601589202881
+
+Epoch 9, step 2 |               #                        | Elapsed Time: 0:00:01[16:12:34] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:35] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:35] blocks.extensions.saveload Checkpointing has started
+[16:12:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 9, step 2 |                              #         | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 10
+	 iterations_done: 20
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 20:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0
+	 test_recognition: 0.527738273144
+	 time_read_data_this_epoch: 0.00529050827026
+	 time_read_data_total: 0.0408537387848
+	 time_train_this_epoch: 1.71775388718
+	 time_train_total: 16.400550127
+	 train_error: 0.25
+	 train_recognition: 0.676221013069
+
+Epoch 10, step 2 |              #                        | Elapsed Time: 0:00:01[16:12:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:38] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:38] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 11
+	 iterations_done: 22
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 22:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.272717118263
+	 time_read_data_this_epoch: 0.0046079158783
+	 time_read_data_total: 0.0454616546631
+	 time_train_this_epoch: 1.70919418335
+	 time_train_total: 18.1097443104
+	 train_error: 0.0
+	 train_recognition: 0.40949100256
+
+[16:12:39] blocks.extensions.saveload Checkpointing has finished
+Epoch 10, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 11, step 2 |               #                       | Elapsed Time: 0:00:01[16:12:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:41] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:41] blocks.extensions.saveload Checkpointing has started
+[16:12:42] blocks.extensions.saveload Checkpointing has finished
+Epoch 11, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 12
+	 iterations_done: 24
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 24:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.13543844223
+	 time_read_data_this_epoch: 0.0046820640564
+	 time_read_data_total: 0.0501437187195
+	 time_train_this_epoch: 1.71022200584
+	 time_train_total: 19.8199663162
+	 train_error: 0.25
+	 train_recognition: 0.526815712452
+
+Epoch 12, step 2 |               #                       | Elapsed Time: 0:00:01[16:12:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:44] blocks.extensions.saveload Checkpointing has started
+[16:12:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 12, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 13
+	 iterations_done: 26
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 26:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.44483435154
+	 time_read_data_this_epoch: 0.00500512123108
+	 time_read_data_total: 0.0551488399506
+	 time_train_this_epoch: 1.72397971153
+	 time_train_total: 21.5439460278
+	 train_error: 0.0625
+	 train_recognition: 0.3583304286
+
+Epoch 13, step 2 |              #                        | Elapsed Time: 0:00:01[16:12:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:47] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 14
+	 iterations_done: 28
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 28:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.199605509639
+	 time_read_data_this_epoch: 0.00502800941467
+	 time_read_data_total: 0.0601768493652
+	 time_train_this_epoch: 1.70882797241
+	 time_train_total: 23.2527740002
+	 train_error: 0.0625
+	 train_recognition: 0.267251133919
+
+[16:12:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 13, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 14, step 2 |               #                       | Elapsed Time: 0:00:01[16:12:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:50] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:50] blocks.extensions.saveload Checkpointing has started
+[16:12:51] blocks.extensions.saveload Checkpointing has finished
+Epoch 14, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 15
+	 iterations_done: 30
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 30:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.212672576308
+	 time_read_data_this_epoch: 0.00460982322693
+	 time_read_data_total: 0.0647866725922
+	 time_train_this_epoch: 1.71318697929
+	 time_train_total: 24.9659609795
+	 train_error: 0.03125
+	 train_recognition: 0.131216794252
+
+Epoch 15, step 2 |               #                       | Elapsed Time: 0:00:01[16:12:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:53] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:53] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 16
+	 iterations_done: 32
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 32:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.546130537987
+	 time_read_data_this_epoch: 0.00460386276245
+	 time_read_data_total: 0.0693905353546
+	 time_train_this_epoch: 1.71463298798
+	 time_train_total: 26.6805939674
+	 train_error: 0.0
+	 train_recognition: 0.057352822274
+
+[16:12:54] blocks.extensions.saveload Checkpointing has finished
+Epoch 15, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 16, step 2 |               #                       | Elapsed Time: 0:00:01[16:12:56] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:12:56] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:12:56] blocks.extensions.saveload Checkpointing has started
+[16:12:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 16, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 17
+	 iterations_done: 34
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 34:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.162996903062
+	 time_read_data_this_epoch: 0.0054042339325
+	 time_read_data_total: 0.0747947692871
+	 time_train_this_epoch: 1.7271270752
+	 time_train_total: 28.4077210426
+	 train_error: 0.0
+	 train_recognition: 0.0686499997973
+
+Epoch 17, step 2 |              #                        | Elapsed Time: 0:00:01[16:12:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:00] blocks.extensions.saveload Checkpointing has started
+[16:13:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 17, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 18
+	 iterations_done: 36
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 36:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.238684311509
+	 time_read_data_this_epoch: 0.00465202331543
+	 time_read_data_total: 0.0794467926025
+	 time_train_this_epoch: 1.71100878716
+	 time_train_total: 30.1187298298
+	 train_error: 0.03125
+	 train_recognition: 0.0523340925574
+
+Epoch 18, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:02] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:03] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 19
+	 iterations_done: 38
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 38:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0
+	 test_recognition: 0.120200559497
+	 time_read_data_this_epoch: 0.00462293624878
+	 time_read_data_total: 0.0840697288513
+	 time_train_this_epoch: 1.71257615089
+	 time_train_total: 31.8313059807
+	 train_error: 0.0
+	 train_recognition: 0.0312836915255
+
+[16:13:04] blocks.extensions.saveload Checkpointing has finished
+Epoch 18, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 19, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:06] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:06] blocks.extensions.saveload Checkpointing has started
+[16:13:07] blocks.extensions.saveload Checkpointing has finished
+Epoch 19, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 20
+	 iterations_done: 40
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 40:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.088207796216
+	 time_read_data_this_epoch: 0.00464415550232
+	 time_read_data_total: 0.0887138843536
+	 time_train_this_epoch: 1.71334910393
+	 time_train_total: 33.5446550846
+	 train_error: 0.0
+	 train_recognition: 0.0315946526825
+
+Epoch 20, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:09] blocks.extensions.saveload Checkpointing has started
+[16:13:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 20, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 21
+	 iterations_done: 42
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 42:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.386740416288
+	 time_read_data_this_epoch: 0.00538802146912
+	 time_read_data_total: 0.0941019058228
+	 time_train_this_epoch: 1.71526193619
+	 time_train_total: 35.2599170208
+	 train_error: 0.03125
+	 train_recognition: 0.0612931884825
+
+Epoch 21, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:12] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:12] blocks.extensions.saveload Checkpointing has started
+[16:13:13] blocks.extensions.saveload Checkpointing has finished
+Epoch 21, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 22
+	 iterations_done: 44
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 44:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.164536014199
+	 time_read_data_this_epoch: 0.00466990470886
+	 time_read_data_total: 0.0987718105316
+	 time_train_this_epoch: 1.71190810204
+	 time_train_total: 36.9718251228
+	 train_error: 0.0
+	 train_recognition: 0.0196046195924
+
+Epoch 22, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:15] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:15] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:15] blocks.extensions.saveload Checkpointing has started
+[16:13:16] blocks.extensions.saveload Checkpointing has finished
+Epoch 22, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 23
+	 iterations_done: 46
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 46:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.181818187237
+	 test_recognition: 0.230586394668
+	 time_read_data_this_epoch: 0.00463390350342
+	 time_read_data_total: 0.103405714035
+	 time_train_this_epoch: 1.70923995972
+	 time_train_total: 38.6810650826
+	 train_error: 0.0
+	 train_recognition: 0.0218379050493
+
+Epoch 23, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:18] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:18] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:18] blocks.extensions.saveload Checkpointing has started
+[16:13:19] blocks.extensions.saveload Checkpointing has finished
+Epoch 23, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 24
+	 iterations_done: 48
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 48:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.24769198895
+	 time_read_data_this_epoch: 0.00459218025208
+	 time_read_data_total: 0.107997894287
+	 time_train_this_epoch: 1.71468305588
+	 time_train_total: 40.3957481384
+	 train_error: 0.0
+	 train_recognition: 0.00934224762022
+
+Epoch 24, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:21] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 25
+	 iterations_done: 50
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 50:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 1.00124657154
+	 time_read_data_this_epoch: 0.00499415397644
+	 time_read_data_total: 0.112992048264
+	 time_train_this_epoch: 1.71106886864
+	 time_train_total: 42.1068170071
+	 train_error: 0.0
+	 train_recognition: 0.0061569865793
+
+[16:13:22] blocks.extensions.saveload Checkpointing has finished
+Epoch 24, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 25, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:24] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:24] blocks.extensions.saveload Checkpointing has started
+[16:13:27] blocks.extensions.saveload Checkpointing has finished
+Epoch 25, step 2 |                           #           | Elapsed Time: 0:00:05
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 26
+	 iterations_done: 52
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 52:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.846722364426
+	 time_read_data_this_epoch: 0.00479292869568
+	 time_read_data_total: 0.117784976959
+	 time_train_this_epoch: 1.71728396416
+	 time_train_total: 43.8241009712
+	 train_error: 0.0
+	 train_recognition: 0.00583477923647
+
+Epoch 26, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:29] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:29] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 27
+	 iterations_done: 54
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 54:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.93087297678
+	 time_read_data_this_epoch: 0.00482892990112
+	 time_read_data_total: 0.12261390686
+	 time_train_this_epoch: 1.73965501785
+	 time_train_total: 45.5637559891
+	 train_error: 0.0
+	 train_recognition: 0.00306230131537
+
+[16:13:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 26, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 27, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:32] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:33] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:33] blocks.extensions.saveload Checkpointing has started
+[16:13:34] blocks.extensions.saveload Checkpointing has finished
+Epoch 27, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 28
+	 iterations_done: 56
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 56:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 1.05603861809
+	 time_read_data_this_epoch: 0.00470519065857
+	 time_read_data_total: 0.127319097519
+	 time_train_this_epoch: 1.70409679413
+	 time_train_total: 47.2678527832
+	 train_error: 0.0
+	 train_recognition: 0.00202655908652
+
+Epoch 28, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:35] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:36] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:36] blocks.extensions.saveload Checkpointing has started
+[16:13:37] blocks.extensions.saveload Checkpointing has finished
+Epoch 28, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 29
+	 iterations_done: 58
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 58:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.834286928177
+	 time_read_data_this_epoch: 0.00463676452637
+	 time_read_data_total: 0.131955862045
+	 time_train_this_epoch: 1.7041592598
+	 time_train_total: 48.972012043
+	 train_error: 0.0
+	 train_recognition: 0.00347977504134
+
+Epoch 29, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:39] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:39] blocks.extensions.saveload Checkpointing has started
+[16:13:40] blocks.extensions.saveload Checkpointing has finished
+Epoch 29, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 30
+	 iterations_done: 60
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 60:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.0909090936184
+	 test_recognition: 0.932138383389
+	 time_read_data_this_epoch: 0.00484800338745
+	 time_read_data_total: 0.136803865433
+	 time_train_this_epoch: 1.71230506897
+	 time_train_total: 50.684317112
+	 train_error: 0.0
+	 train_recognition: 0.00208497606218
+
+Epoch 30, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:42] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+[16:13:43] blocks.extensions.saveload Checkpointing has finished
+Epoch 30, step 2 |                              #        | Elapsed Time: 0:00:03
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 31
+	 iterations_done: 62
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 62:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.66519641876
+	 time_read_data_this_epoch: 0.00472092628479
+	 time_read_data_total: 0.141524791718
+	 time_train_this_epoch: 1.71073079109
+	 time_train_total: 52.3950479031
+	 train_error: 0.0
+	 train_recognition: 0.00237134797499
+
+Epoch 31, step 2 |               #                       | Elapsed Time: 0:00:01[16:13:45] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:45] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 32
+	 iterations_done: 64
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 64:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.12018990517
+	 time_read_data_this_epoch: 0.00463485717773
+	 time_read_data_total: 0.146159648895
+	 time_train_this_epoch: 1.70780706406
+	 time_train_total: 54.1028549671
+	 train_error: 0.0
+	 train_recognition: 0.00247867475264
+
+[16:13:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 31, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 32, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:48] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:48] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:48] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 33
+	 iterations_done: 66
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 66:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.90391719341
+	 time_read_data_this_epoch: 0.00471091270447
+	 time_read_data_total: 0.1508705616
+	 time_train_this_epoch: 1.70484495163
+	 time_train_total: 55.8076999187
+	 train_error: 0.0
+	 train_recognition: 0.00150260259397
+
+[16:13:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 32, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 33, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:51] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:51] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:51] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 34
+	 iterations_done: 68
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 68:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.90880167484
+	 time_read_data_this_epoch: 0.0049741268158
+	 time_read_data_total: 0.155844688416
+	 time_train_this_epoch: 1.70605301857
+	 time_train_total: 57.5137529373
+	 train_error: 0.0
+	 train_recognition: 0.00112775131129
+
+[16:13:52] blocks.extensions.saveload Checkpointing has finished
+Epoch 33, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 34, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:54] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:54] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 35
+	 iterations_done: 70
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 70:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 1.87190926075
+	 time_read_data_this_epoch: 0.0045690536499
+	 time_read_data_total: 0.160413742065
+	 time_train_this_epoch: 1.70581364632
+	 time_train_total: 59.2195665836
+	 train_error: 0.0
+	 train_recognition: 0.000958085642196
+
+[16:13:55] blocks.extensions.saveload Checkpointing has finished
+Epoch 34, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 35, step 2 |              #                        | Elapsed Time: 0:00:01[16:13:57] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:13:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:13:57] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 36
+	 iterations_done: 72
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 72:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.63265323639
+	 time_read_data_this_epoch: 0.00458097457886
+	 time_read_data_total: 0.164994716644
+	 time_train_this_epoch: 1.70181202888
+	 time_train_total: 60.9213786125
+	 train_error: 0.0
+	 train_recognition: 0.000951416499447
+
+[16:13:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 35, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 36, step 2 |              #                        | Elapsed Time: 0:00:01[16:14:00] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:00] blocks.extensions.saveload Checkpointing has started
+[16:14:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 36, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 37
+	 iterations_done: 74
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 74:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.53226041794
+	 time_read_data_this_epoch: 0.00488376617432
+	 time_read_data_total: 0.169878482819
+	 time_train_this_epoch: 1.705493927
+	 time_train_total: 62.6268725395
+	 train_error: 0.0
+	 train_recognition: 0.000808810000308
+
+Epoch 37, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:03] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:03] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 38
+	 iterations_done: 76
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 76:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.92209911346
+	 time_read_data_this_epoch: 0.00471997261047
+	 time_read_data_total: 0.174598455429
+	 time_train_this_epoch: 1.71085119247
+	 time_train_total: 64.337723732
+	 train_error: 0.0
+	 train_recognition: 0.000755528861191
+
+[16:14:05] blocks.extensions.saveload Checkpointing has finished
+Epoch 37, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 38, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:07] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 39
+	 iterations_done: 78
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 78:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.80831480026
+	 time_read_data_this_epoch: 0.00480818748474
+	 time_read_data_total: 0.179406642914
+	 time_train_this_epoch: 1.71375823021
+	 time_train_total: 66.0514819622
+	 train_error: 0.0
+	 train_recognition: 0.000746669131331
+
+[16:14:08] blocks.extensions.saveload Checkpointing has finished
+Epoch 38, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 39, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:10] blocks.extensions.saveload Checkpointing has started
+[16:14:11] blocks.extensions.saveload Checkpointing has finished
+
+Epoch 39, step 2 |                               #       | Elapsed Time: 0:00:03
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 40
+	 iterations_done: 80
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 80:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.78440189362
+	 time_read_data_this_epoch: 0.00471019744873
+	 time_read_data_total: 0.184116840363
+	 time_train_this_epoch: 1.71202993393
+	 time_train_total: 67.7635118961
+	 train_error: 0.0
+	 train_recognition: 0.000492330582347
+
+Epoch 40, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:13] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:13] blocks.extensions.saveload Checkpointing has started
+[16:14:14] blocks.extensions.saveload Checkpointing has finished
+Epoch 40, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 41, step 1 |#                                      | Elapsed Time: 0:00:00
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 41
+	 iterations_done: 82
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 82:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.69022750854
+	 time_read_data_this_epoch: 0.00462412834167
+	 time_read_data_total: 0.188740968704
+	 time_train_this_epoch: 1.71861720085
+	 time_train_total: 69.482129097
+	 train_error: 0.0
+	 train_recognition: 0.000635778065771
+
+Epoch 41, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:16] blocks.extensions.saveload Checkpointing has started
+[16:14:17] blocks.extensions.saveload Checkpointing has finished
+Epoch 41, step 2 |                              #        | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 42
+	 iterations_done: 84
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 84:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.38257026672
+	 time_read_data_this_epoch: 0.00462222099304
+	 time_read_data_total: 0.193363189697
+	 time_train_this_epoch: 1.70922112465
+	 time_train_total: 71.1913502216
+	 train_error: 0.0
+	 train_recognition: 0.000877259881236
+
+Epoch 42, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:19] blocks.extensions.saveload Checkpointing has started
+[16:14:20] blocks.extensions.saveload Checkpointing has finished
+Epoch 42, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 43
+	 iterations_done: 86
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 86:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.3477294445
+	 time_read_data_this_epoch: 0.00454497337341
+	 time_read_data_total: 0.197908163071
+	 time_train_this_epoch: 1.71908378601
+	 time_train_total: 72.9104340076
+	 train_error: 0.0
+	 train_recognition: 0.000479010574054
+
+Epoch 43, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:22] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:22] blocks.extensions.saveload Checkpointing has started
+[16:14:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 43, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 44
+	 iterations_done: 88
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 88:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.76572942734
+	 time_read_data_this_epoch: 0.00490355491638
+	 time_read_data_total: 0.202811717987
+	 time_train_this_epoch: 1.71618080139
+	 time_train_total: 74.626614809
+	 train_error: 0.0
+	 train_recognition: 0.000748337071855
+
+Epoch 44, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:25] blocks.extensions.saveload Checkpointing has started
+[16:14:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 44, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 45
+	 iterations_done: 90
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 90:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.80214214325
+	 time_read_data_this_epoch: 0.0046648979187
+	 time_read_data_total: 0.207476615906
+	 time_train_this_epoch: 1.7166929245
+	 time_train_total: 76.3433077335
+	 train_error: 0.0
+	 train_recognition: 0.000321279541822
+
+Epoch 45, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:28] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:28] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 46
+	 iterations_done: 92
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 92:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.77132844925
+	 time_read_data_this_epoch: 0.00473117828369
+	 time_read_data_total: 0.212207794189
+	 time_train_this_epoch: 1.71106123924
+	 time_train_total: 78.0543689728
+	 train_error: 0.0
+	 train_recognition: 0.00038522304385
+
+[16:14:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 45, step 2 |                           #           | Elapsed Time: 0:00:05
+Epoch 46, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:33] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:33] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:33] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 47
+	 iterations_done: 94
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 94:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.71399140358
+	 time_read_data_this_epoch: 0.00459241867065
+	 time_read_data_total: 0.21680021286
+	 time_train_this_epoch: 1.7502477169
+	 time_train_total: 79.8046166897
+	 train_error: 0.0
+	 train_recognition: 0.000370202527847
+
+[16:14:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 46, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 47, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:36] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:37] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 48
+	 iterations_done: 96
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 96:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.69696497917
+	 time_read_data_this_epoch: 0.005047082901
+	 time_read_data_total: 0.221847295761
+	 time_train_this_epoch: 1.74986505508
+	 time_train_total: 81.5544817448
+	 train_error: 0.0
+	 train_recognition: 0.000338707410265
+
+[16:14:38] blocks.extensions.saveload Checkpointing has finished
+Epoch 47, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 48, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:39] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:40] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:40] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 49
+	 iterations_done: 98
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 98:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.35710597038
+	 time_read_data_this_epoch: 0.00469303131104
+	 time_read_data_total: 0.226540327072
+	 time_train_this_epoch: 1.71845579147
+	 time_train_total: 83.2729375362
+	 train_error: 0.0
+	 train_recognition: 0.000407084124163
+
+[16:14:41] blocks.extensions.saveload Checkpointing has finished
+Epoch 48, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 49, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:43] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:43] blocks.extensions.saveload Checkpointing has started
+[16:14:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 49, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 50
+	 iterations_done: 100
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 100:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.45325660706
+	 time_read_data_this_epoch: 0.00467491149902
+	 time_read_data_total: 0.231215238571
+	 time_train_this_epoch: 1.71480917931
+	 time_train_total: 84.9877467155
+	 train_error: 0.0
+	 train_recognition: 0.000244405964622
+
+Epoch 50, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:46] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:46] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+[16:14:47] blocks.extensions.saveload Checkpointing has finished
+Epoch 50, step 2 |                               #       | Elapsed Time: 0:00:03
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 51
+	 iterations_done: 102
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 102:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.37596893311
+	 time_read_data_this_epoch: 0.00459599494934
+	 time_read_data_total: 0.235811233521
+	 time_train_this_epoch: 1.71263408661
+	 time_train_total: 86.7003808022
+	 train_error: 0.0
+	 train_recognition: 0.00046014986583
+
+Epoch 51, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:49] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:49] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:49] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 52
+	 iterations_done: 104
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 104:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.90235376358
+	 time_read_data_this_epoch: 0.00464630126953
+	 time_read_data_total: 0.24045753479
+	 time_train_this_epoch: 1.71127128601
+	 time_train_total: 88.4116520882
+	 train_error: 0.0
+	 train_recognition: 0.000380161975045
+
+[16:14:50] blocks.extensions.saveload Checkpointing has finished
+Epoch 51, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 52, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:52] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:52] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 53
+	 iterations_done: 106
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 106:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.90655350685
+	 time_read_data_this_epoch: 0.00464916229248
+	 time_read_data_total: 0.245106697083
+	 time_train_this_epoch: 1.70898294449
+	 time_train_total: 90.1206350327
+	 train_error: 0.0
+	 train_recognition: 0.000244288647082
+
+[16:14:53] blocks.extensions.saveload Checkpointing has finished
+Epoch 52, step 2 |                              #        | Elapsed Time: 0:00:03
+Epoch 53, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:55] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:55] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 54
+	 iterations_done: 108
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 108:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.91353225708
+	 time_read_data_this_epoch: 0.00471615791321
+	 time_read_data_total: 0.249822854996
+	 time_train_this_epoch: 1.7097671032
+	 time_train_total: 91.8304021358
+	 train_error: 0.0
+	 train_recognition: 0.000230002813623
+
+[16:14:56] blocks.extensions.saveload Checkpointing has finished
+Epoch 53, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 54, step 2 |               #                       | Elapsed Time: 0:00:01[16:14:58] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:14:58] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:14:58] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 55
+	 iterations_done: 110
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 110:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.97814011574
+	 time_read_data_this_epoch: 0.0047447681427
+	 time_read_data_total: 0.254567623138
+	 time_train_this_epoch: 1.71609807014
+	 time_train_total: 93.546500206
+	 train_error: 0.0
+	 train_recognition: 0.000373450980987
+
+[16:15:00] blocks.extensions.saveload Checkpointing has finished
+Epoch 54, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 55, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:01] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:02] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:02] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 56
+	 iterations_done: 112
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 112:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.97628760338
+	 time_read_data_this_epoch: 0.00460195541382
+	 time_read_data_total: 0.259169578552
+	 time_train_this_epoch: 1.71650385857
+	 time_train_total: 95.2630040646
+	 train_error: 0.0
+	 train_recognition: 0.000208534038393
+
+[16:15:03] blocks.extensions.saveload Checkpointing has finished
+Epoch 55, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 56, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:04] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:05] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:05] blocks.extensions.saveload Checkpointing has started
+[16:15:06] blocks.extensions.saveload Checkpointing has finished
+Epoch 56, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 57
+	 iterations_done: 114
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 114:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.98775577545
+	 time_read_data_this_epoch: 0.00466394424438
+	 time_read_data_total: 0.263833522797
+	 time_train_this_epoch: 1.71455693245
+	 time_train_total: 96.977560997
+	 train_error: 0.0
+	 train_recognition: 0.000194977706997
+
+Epoch 57, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 58
+	 iterations_done: 116
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 116:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.99886393547
+	 time_read_data_this_epoch: 0.00466799736023
+	 time_read_data_total: 0.268501520157
+	 time_train_this_epoch: 1.71620583534
+	 time_train_total: 98.6937668324
+	 train_error: 0.0
+	 train_recognition: 0.000183603377081
+
+[16:15:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 57, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 58, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:11] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:11] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:11] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 59
+	 iterations_done: 118
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 118:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.98379540443
+	 time_read_data_this_epoch: 0.00457096099854
+	 time_read_data_total: 0.273072481155
+	 time_train_this_epoch: 1.71164393425
+	 time_train_total: 100.405410767
+	 train_error: 0.0
+	 train_recognition: 0.000177890688065
+
+[16:15:12] blocks.extensions.saveload Checkpointing has finished
+Epoch 58, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 59, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:14] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:14] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 60
+	 iterations_done: 120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 120:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.92651343346
+	 time_read_data_this_epoch: 0.00461983680725
+	 time_read_data_total: 0.277692317963
+	 time_train_this_epoch: 1.71259975433
+	 time_train_total: 102.118010521
+	 train_error: 0.0
+	 train_recognition: 0.000197247165488
+
+[16:15:15] blocks.extensions.saveload Checkpointing has finished
+Epoch 59, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 60, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:17] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:17] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:17] blocks.extensions.saveload Checkpointing has started
+[16:15:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 60, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 61
+	 iterations_done: 122
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 122:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.7251458168
+	 time_read_data_this_epoch: 0.00493311882019
+	 time_read_data_total: 0.282625436783
+	 time_train_this_epoch: 1.71339797974
+	 time_train_total: 103.831408501
+	 train_error: 0.0
+	 train_recognition: 0.000232965685427
+
+Epoch 61, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:20] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:20] blocks.extensions.saveload Checkpointing has started
+[16:15:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 61, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 62
+	 iterations_done: 124
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 124:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.55608129501
+	 time_read_data_this_epoch: 0.0046648979187
+	 time_read_data_total: 0.287290334702
+	 time_train_this_epoch: 1.70932269096
+	 time_train_total: 105.540731192
+	 train_error: 0.0
+	 train_recognition: 0.000223156283027
+
+Epoch 62, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:23] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:23] blocks.extensions.saveload Checkpointing has started
+[16:15:25] blocks.extensions.saveload Checkpointing has finished
+Epoch 62, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 63
+	 iterations_done: 126
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 126:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.61216449738
+	 time_read_data_this_epoch: 0.00456500053406
+	 time_read_data_total: 0.291855335236
+	 time_train_this_epoch: 1.71532392502
+	 time_train_total: 107.256055117
+	 train_error: 0.0
+	 train_recognition: 0.000141727883602
+
+Epoch 63, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:27] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:27] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 64
+	 iterations_done: 128
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 128:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.54556870461
+	 time_read_data_this_epoch: 0.00471019744873
+	 time_read_data_total: 0.296565532684
+	 time_train_this_epoch: 1.71174716949
+	 time_train_total: 108.967802286
+	 train_error: 0.0
+	 train_recognition: 0.000170758663444
+
+[16:15:28] blocks.extensions.saveload Checkpointing has finished
+Epoch 63, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 64, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:30] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:30] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 65
+	 iterations_done: 130
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 130:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.60328054428
+	 time_read_data_this_epoch: 0.00460314750671
+	 time_read_data_total: 0.301168680191
+	 time_train_this_epoch: 1.71819806099
+	 time_train_total: 110.686000347
+	 train_error: 0.0
+	 train_recognition: 0.000128625484649
+
+[16:15:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 64, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 65, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:32] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:33] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:33] blocks.extensions.saveload Checkpointing has started
+[16:15:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 65, step 2 |                           #           | Elapsed Time: 0:00:05
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 66
+	 iterations_done: 132
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 132:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.7171523571
+	 time_read_data_this_epoch: 0.00460982322693
+	 time_read_data_total: 0.305778503418
+	 time_train_this_epoch: 1.71494579315
+	 time_train_total: 112.40094614
+	 train_error: 0.0
+	 train_recognition: 0.000105883664219
+
+Epoch 66, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:38] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:38] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+[16:15:39] blocks.extensions.saveload Checkpointing has finished
+AFTER ANOTHER EPOCH
+Epoch 66, step 2 |                                #      | Elapsed Time: 0:00:03
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 67
+	 iterations_done: 134
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 134:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.69366073608
+	 time_read_data_this_epoch: 0.00479197502136
+	 time_read_data_total: 0.310570478439
+	 time_train_this_epoch: 1.73692202568
+	 time_train_total: 114.137868166
+	 train_error: 0.0
+	 train_recognition: 0.000158899114467
+
+Epoch 67, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:41] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:41] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+[16:15:42] blocks.extensions.saveload Checkpointing has finished
+	 epoch_started: False
+	 epochs_done: 68
+	 iterations_done: 136
+	 received_first_batch: True
+Epoch 67, step 2 |                               #       | Elapsed Time: 0:00:03
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 136:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.81205201149
+	 time_read_data_this_epoch: 0.00471234321594
+	 time_read_data_total: 0.315282821655
+	 time_train_this_epoch: 1.71545386314
+	 time_train_total: 115.853322029
+	 train_error: 0.0
+	 train_recognition: 9.41213220358e-05
+
+Epoch 68, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:44] blocks.extensions.saveload Checkpointing has started
+[16:15:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 68, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 69
+	 iterations_done: 138
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 138:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.85071015358
+	 time_read_data_this_epoch: 0.00469613075256
+	 time_read_data_total: 0.319978952408
+	 time_train_this_epoch: 1.74175477028
+	 time_train_total: 117.595076799
+	 train_error: 0.0
+	 train_recognition: 0.000113738657092
+
+Epoch 69, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:47] blocks.extensions.saveload Checkpointing has started
+[16:15:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 69, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 70
+	 iterations_done: 140
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 140:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 2.87383008003
+	 time_read_data_this_epoch: 0.0044538974762
+	 time_read_data_total: 0.324432849884
+	 time_train_this_epoch: 1.72619986534
+	 time_train_total: 119.321276665
+	 train_error: 0.0
+	 train_recognition: 0.000101481440652
+
+Epoch 70, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:50] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:50] blocks.extensions.saveload Checkpointing has started
+[16:15:52] blocks.extensions.saveload Checkpointing has finished
+Epoch 70, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 71
+	 iterations_done: 142
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 142:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.42462134361
+	 time_read_data_this_epoch: 0.00465893745422
+	 time_read_data_total: 0.329091787338
+	 time_train_this_epoch: 1.71361684799
+	 time_train_total: 121.034893513
+	 train_error: 0.0
+	 train_recognition: 0.000144856079714
+
+Epoch 71, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:54] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 72
+	 iterations_done: 144
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 144:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.8068921566
+	 time_read_data_this_epoch: 0.00471496582031
+	 time_read_data_total: 0.333806753159
+	 time_train_this_epoch: 1.70965719223
+	 time_train_total: 122.744550705
+	 train_error: 0.0
+	 train_recognition: 0.000122457975522
+
+[16:15:55] blocks.extensions.saveload Checkpointing has finished
+Epoch 71, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 72, step 2 |               #                       | Elapsed Time: 0:00:01[16:15:56] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:15:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:15:57] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 73
+	 iterations_done: 146
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 146:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.82471442223
+	 time_read_data_this_epoch: 0.00469827651978
+	 time_read_data_total: 0.338505029678
+	 time_train_this_epoch: 1.72368216515
+	 time_train_total: 124.46823287
+	 train_error: 0.0
+	 train_recognition: 7.47661179048e-05
+
+[16:15:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 72, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 73, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:00] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:00] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 74
+	 iterations_done: 148
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 148:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.79183411598
+	 time_read_data_this_epoch: 0.00463485717773
+	 time_read_data_total: 0.343139886856
+	 time_train_this_epoch: 1.71320104599
+	 time_train_total: 126.181433916
+	 train_error: 0.0
+	 train_recognition: 8.77682250575e-05
+
+[16:16:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 73, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 74, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:03] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:03] blocks.extensions.saveload Checkpointing has started
+[16:16:04] blocks.extensions.saveload Checkpointing has finished
+Epoch 74, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 75
+	 iterations_done: 150
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 150:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.81336355209
+	 time_read_data_this_epoch: 0.0046501159668
+	 time_read_data_total: 0.347790002823
+	 time_train_this_epoch: 1.70900201797
+	 time_train_total: 127.890435934
+	 train_error: 0.0
+	 train_recognition: 7.02466641087e-05
+
+Epoch 75, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:06] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:06] blocks.extensions.saveload Checkpointing has started
+[16:16:07] blocks.extensions.saveload Checkpointing has finished
+Epoch 75, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 76
+	 iterations_done: 152
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 152:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.83780050278
+	 time_read_data_this_epoch: 0.0046660900116
+	 time_read_data_total: 0.352456092834
+	 time_train_this_epoch: 1.71548700333
+	 time_train_total: 129.605922937
+	 train_error: 0.0
+	 train_recognition: 6.56176780467e-05
+
+Epoch 76, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:09] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 77
+	 iterations_done: 154
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 154:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.82036495209
+	 time_read_data_this_epoch: 0.00464296340942
+	 time_read_data_total: 0.357099056244
+	 time_train_this_epoch: 1.71870875359
+	 time_train_total: 131.324631691
+	 train_error: 0.0
+	 train_recognition: 7.89809491835e-05
+
+[16:16:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 76, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 77, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:12] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:12] blocks.extensions.saveload Checkpointing has started
+[16:16:13] blocks.extensions.saveload Checkpointing has finished
+Epoch 77, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 78
+	 iterations_done: 156
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 156:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.12305021286
+	 time_read_data_this_epoch: 0.00468611717224
+	 time_read_data_total: 0.361785173416
+	 time_train_this_epoch: 1.71582078934
+	 time_train_total: 133.04045248
+	 train_error: 0.0
+	 train_recognition: 9.08254442038e-05
+
+Epoch 78, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:15] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:15] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:15] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 79
+	 iterations_done: 158
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 158:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.12672567368
+	 time_read_data_this_epoch: 0.00465989112854
+	 time_read_data_total: 0.366445064545
+	 time_train_this_epoch: 1.71506381035
+	 time_train_total: 134.755516291
+	 train_error: 0.0
+	 train_recognition: 6.022285379e-05
+
+[16:16:17] blocks.extensions.saveload Checkpointing has finished
+Epoch 78, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 79, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:18] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:19] blocks.extensions.saveload Checkpointing has started
+[16:16:20] blocks.extensions.saveload Checkpointing has finished
+Epoch 79, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 80
+	 iterations_done: 160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 160:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.64527487755
+	 time_read_data_this_epoch: 0.00459504127502
+	 time_read_data_total: 0.37104010582
+	 time_train_this_epoch: 1.71079516411
+	 time_train_total: 136.466311455
+	 train_error: 0.0
+	 train_recognition: 0.000149842875544
+
+Epoch 80, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:22] blocks.extensions.saveload Checkpointing has started
+[16:16:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 80, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 81
+	 iterations_done: 162
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 162:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.66090250015
+	 time_read_data_this_epoch: 0.00462603569031
+	 time_read_data_total: 0.37566614151
+	 time_train_this_epoch: 1.72196912766
+	 time_train_total: 138.188280582
+	 train_error: 0.0
+	 train_recognition: 6.55123731121e-05
+
+Epoch 81, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:25] blocks.extensions.saveload Checkpointing has started
+[16:16:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 81, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 82
+	 iterations_done: 164
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 164:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.55983662605
+	 time_read_data_this_epoch: 0.00498533248901
+	 time_read_data_total: 0.380651473999
+	 time_train_this_epoch: 1.71139931679
+	 time_train_total: 139.899679899
+	 train_error: 0.0
+	 train_recognition: 9.74379436229e-05
+
+Epoch 82, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:28] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:28] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 83
+	 iterations_done: 166
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 166:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.97507405281
+	 time_read_data_this_epoch: 0.00499391555786
+	 time_read_data_total: 0.385645389557
+	 time_train_this_epoch: 1.71760392189
+	 time_train_total: 141.617283821
+	 train_error: 0.0
+	 train_recognition: 7.64945580158e-05
+
+[16:16:29] blocks.extensions.saveload Checkpointing has finished
+Epoch 82, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 83, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:31] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:31] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 84
+	 iterations_done: 168
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 168:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.99915790558
+	 time_read_data_this_epoch: 0.00463700294495
+	 time_read_data_total: 0.390282392502
+	 time_train_this_epoch: 1.71744918823
+	 time_train_total: 143.334733009
+	 train_error: 0.0
+	 train_recognition: 4.7702480515e-05
+
+[16:16:32] blocks.extensions.saveload Checkpointing has finished
+Epoch 83, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 84, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:34] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:34] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 85
+[16:16:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 84, step 2 |                               #       | Elapsed Time: 0:00:03
+	 iterations_done: 170
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 170:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.9613275528
+	 time_read_data_this_epoch: 0.0046329498291
+	 time_read_data_total: 0.394915342331
+	 time_train_this_epoch: 1.71285200119
+	 time_train_total: 145.047585011
+	 train_error: 0.0
+	 train_recognition: 5.60437765671e-05
+
+Epoch 85, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:37] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:37] blocks.extensions.saveload Checkpointing has started
+[16:16:38] blocks.extensions.saveload Checkpointing has finished
+Epoch 85, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 86
+	 iterations_done: 172
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 172:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.95495772362
+	 time_read_data_this_epoch: 0.0048508644104
+	 time_read_data_total: 0.399766206741
+	 time_train_this_epoch: 1.72366905212
+	 time_train_total: 146.771254063
+	 train_error: 0.0
+	 train_recognition: 5.33818383701e-05
+
+Epoch 86, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:40] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:40] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:40] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 87
+	 iterations_done: 174
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 174:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.99611210823
+	 time_read_data_this_epoch: 0.0045850276947
+	 time_read_data_total: 0.404351234436
+	 time_train_this_epoch: 1.71159529686
+	 time_train_total: 148.48284936
+	 train_error: 0.0
+	 train_recognition: 4.34124594904e-05
+
+[16:16:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 86, step 2 |                           #           | Elapsed Time: 0:00:05
+Epoch 87, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:45] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:46] blocks.extensions.saveload Checkpointing has started
+[16:16:47] blocks.extensions.saveload Checkpointing has finished
+Epoch 87, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 88
+	 iterations_done: 176
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 176:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.31197023392
+	 time_read_data_this_epoch: 0.00470995903015
+	 time_read_data_total: 0.409061193466
+	 time_train_this_epoch: 1.73872518539
+	 time_train_total: 150.221574545
+	 train_error: 0.0
+	 train_recognition: 6.46891421638e-05
+
+Epoch 88, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:48] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:49] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:49] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 89
+	 iterations_done: 178
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 178:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.2161693573
+	 time_read_data_this_epoch: 0.00472569465637
+	 time_read_data_total: 0.413786888123
+	 time_train_this_epoch: 1.72560191154
+	 time_train_total: 151.947176456
+	 train_error: 0.0
+	 train_recognition: 7.02706238371e-05
+
+[16:16:50] blocks.extensions.saveload Checkpointing has finished
+Epoch 88, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 89, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:52] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:52] blocks.extensions.saveload Checkpointing has started
+[16:16:53] blocks.extensions.saveload Checkpointing has finished
+Epoch 89, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 90
+	 iterations_done: 180
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 180:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.23922157288
+	 time_read_data_this_epoch: 0.00462198257446
+	 time_read_data_total: 0.418408870697
+	 time_train_this_epoch: 1.71497988701
+	 time_train_total: 153.662156343
+	 train_error: 0.0
+	 train_recognition: 3.91094508814e-05
+
+Epoch 90, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:55] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:55] blocks.extensions.saveload Checkpointing has started
+[16:16:56] blocks.extensions.saveload Checkpointing has finished
+Epoch 90, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 91
+	 iterations_done: 182
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 182:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.21175193787
+	 time_read_data_this_epoch: 0.00432181358337
+	 time_read_data_total: 0.42273068428
+	 time_train_this_epoch: 1.71531367302
+	 time_train_total: 155.377470016
+	 train_error: 0.0
+	 train_recognition: 4.57371315861e-05
+
+Epoch 91, step 2 |               #                       | Elapsed Time: 0:00:01[16:16:58] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:16:58] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:16:58] blocks.extensions.saveload Checkpointing has started
+[16:16:59] blocks.extensions.saveload Checkpointing has finished
+Epoch 91, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 92
+	 iterations_done: 184
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 184:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.20011377335
+	 time_read_data_this_epoch: 0.00479388237
+	 time_read_data_total: 0.42752456665
+	 time_train_this_epoch: 1.71919989586
+	 time_train_total: 157.096669912
+	 train_error: 0.0
+	 train_recognition: 4.34196881542e-05
+
+Epoch 92, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:01] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:01] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:01] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 93
+	 iterations_done: 186
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 186:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.19037246704
+	 time_read_data_this_epoch: 0.00466990470886
+	 time_read_data_total: 0.432194471359
+	 time_train_this_epoch: 1.72100710869
+	 time_train_total: 158.817677021
+	 train_error: 0.0
+	 train_recognition: 4.5234006393e-05
+
+[16:17:02] blocks.extensions.saveload Checkpointing has finished
+Epoch 92, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 93, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:04] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:04] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:04] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 94
+	 iterations_done: 188
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 188:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.21880912781
+	 time_read_data_this_epoch: 0.00467896461487
+	 time_read_data_total: 0.436873435974
+	 time_train_this_epoch: 1.71440196037
+	 time_train_total: 160.532078981
+	 train_error: [16:17:06] blocks.extensions.saveload Checkpointing has finished
+Epoch 93, step 2 |                               #       | Elapsed Time: 0:00:03
+0.0
+	 train_recognition: 3.30592447426e-05
+
+Epoch 94, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 95
+	 iterations_done: 190
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 190:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.9569132328
+	 time_read_data_this_epoch: 0.00467395782471
+	 time_read_data_total: 0.441547393799
+	 time_train_this_epoch: 1.71803498268
+	 time_train_total: 162.250113964
+	 train_error: 0.0
+	 train_recognition: 6.12128642388e-05
+
+[16:17:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 94, step 2 |                               #       | Elapsed Time: 0:00:03
+Epoch 95, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:10] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:11] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:11] blocks.extensions.saveload Checkpointing has started
+[16:17:12] blocks.extensions.saveload Checkpointing has finished
+Epoch 95, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 96
+	 iterations_done: 192
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 192:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.93247461319
+	 time_read_data_this_epoch: 0.00468873977661
+	 time_read_data_total: 0.446236133575
+	 time_train_this_epoch: 1.71308588982
+	 time_train_total: 163.963199854
+	 train_error: 0.0
+	 train_recognition: 5.2901381423e-05
+
+Epoch 96, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:14] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:14] blocks.extensions.saveload Checkpointing has started
+[16:17:15] blocks.extensions.saveload Checkpointing has finished
+Epoch 96, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 97
+	 iterations_done: 194
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 194:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.91864466667
+	 time_read_data_this_epoch: 0.00464725494385
+	 time_read_data_total: 0.450883388519
+	 time_train_this_epoch: 1.71667385101
+	 time_train_total: 165.679873705
+	 train_error: 0.0
+	 train_recognition: 4.19218413299e-05
+
+Epoch 97, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:17] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:17] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:17] blocks.extensions.saveload Checkpointing has started
+[16:17:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 97, step 2 |                               #       | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 98
+	 iterations_done: 196
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 196:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.94956278801
+	 time_read_data_this_epoch: 0.00491881370544
+	 time_read_data_total: 0.455802202225
+	 time_train_this_epoch: 1.72826099396
+	 time_train_total: 167.408134699
+	 train_error: 0.0
+	 train_recognition: 3.63486651622e-05
+
+Epoch 98, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:20] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:20] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+[16:17:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 98, step 2 |                               #       | Elapsed Time: 0:00:03
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 99
+	 iterations_done: 198
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 198:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.95447087288
+	 time_read_data_this_epoch: 0.00462412834167
+	 time_read_data_total: 0.460426330566
+	 time_train_this_epoch: 1.71585392952
+	 time_train_total: 169.123988628
+	 train_error: 0.0
+	 train_recognition: 3.12895426759e-05
+
+Epoch 99, step 2 |               #                       | Elapsed Time: 0:00:01[16:17:23] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:23] blocks.extensions.saveload Checkpointing has started
+[16:17:24] blocks.extensions.saveload Checkpointing has finished
+Epoch 99, step 2 |                                #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 100
+	 iterations_done: 200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 200:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.91128993034
+	 time_read_data_this_epoch: 0.00478792190552
+	 time_read_data_total: 0.465214252472
+	 time_train_this_epoch: 1.7523329258
+	 time_train_total: 170.876321554
+	 train_error: 0.0
+	 train_recognition: 5.05651696585e-05
+
+Epoch 100, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:27] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:27] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 101
+	 iterations_done: 202
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+[16:17:28] blocks.extensions.saveload Checkpointing has finished
+Log records from the iteration 202:
+Epoch 100, step 2 |                               #      | Elapsed Time: 0:00:03
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 3.98052692413
+	 time_read_data_this_epoch: 0.005774974823
+	 time_read_data_total: 0.470989227295
+	 time_train_this_epoch: 1.76351714134
+	 time_train_total: 172.639838696
+	 train_error: 0.0
+	 train_recognition: 2.79179730569e-05
+
+Epoch 101, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:30] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:30] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 102
+	 iterations_done: 204
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 204:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.36232805252
+	 time_read_data_this_epoch: 0.0046660900116
+	 time_read_data_total: 0.475655317307
+	 time_train_this_epoch: 1.71625828743
+	 time_train_total: 174.356096983
+	 train_error: 0.0
+	 train_recognition: 4.54129585705e-05
+
+[16:17:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 101, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 102, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:32] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:33] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:33] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 103
+	 iterations_done: 206
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 206:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.35995054245
+	 time_read_data_this_epoch: 0.0046558380127
+	 time_read_data_total: 0.480311155319
+	 time_train_this_epoch: 1.71293210983
+	 time_train_total: 176.069029093
+	 train_error: 0.0
+	 train_recognition: 2.9855144021e-05
+
+[16:17:34] blocks.extensions.saveload Checkpointing has finished
+Epoch 102, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 103, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:36] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:36] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:36] blocks.extensions.saveload Checkpointing has started
+[16:17:37] blocks.extensions.saveload Checkpointing has finished
+Epoch 103, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 104
+	 iterations_done: 208
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 208:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.34757947922
+	 time_read_data_this_epoch: 0.00466370582581
+	 time_read_data_total: 0.484974861145
+	 time_train_this_epoch: 1.71429395676
+	 time_train_total: 177.78332305
+	 train_error: 0.0
+	 train_recognition: 2.98514078167e-05
+
+Epoch 104, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:39] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:39] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:39] blocks.extensions.saveload Checkpointing has started
+
+[16:17:40] blocks.extensions.saveload Checkpointing has finished
+-------------------------------------------------------------------------------
+Epoch 104, step 2 |                               #      | Elapsed Time: 0:00:03
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 105
+	 iterations_done: 210
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 210:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.35829353333
+	 time_read_data_this_epoch: 0.00549817085266
+	 time_read_data_total: 0.490473031998
+	 time_train_this_epoch: 1.7232670784
+	 time_train_total: 179.506590128
+	 train_error: 0.0
+	 train_recognition: 2.79141931969e-05
+
+Epoch 105, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:42] blocks.extensions.saveload Checkpointing has started
+[16:17:43] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 106
+	 iterations_done: 212
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 212:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.18165016174
+	 time_read_data_this_epoch: 0.00470495223999
+	 time_read_data_total: 0.495177984238
+	 time_train_this_epoch: 1.73902273178
+	 time_train_total: 181.24561286
+	 train_error: 0.0
+	 train_recognition: 3.74849732907e-05
+
+Epoch 105, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 106, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:45] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:45] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 107
+	 iterations_done: 214
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 214:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.23643541336
+	 time_read_data_this_epoch: 0.00464701652527
+	 time_read_data_total: 0.499825000763
+	 time_train_this_epoch: 1.72283315659
+	 time_train_total: 182.968446016
+	 train_error: 0.0
+	 train_recognition: 2.31829326367e-05
+
+[16:17:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 106, step 2 |                        #             | Elapsed Time: 0:00:05
+Epoch 107, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:51] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:51] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 108
+	 iterations_done: 216
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 216:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.25080823898
+	 time_read_data_this_epoch: 0.0068027973175
+	 time_read_data_total: 0.50662779808
+	 time_train_this_epoch: 1.75064396858
+	 time_train_total: 184.719089985
+	 train_error: 0.0
+	 train_recognition: 2.63606671069e-05
+
+[16:17:52] blocks.extensions.saveload Checkpointing has finished
+Epoch 107, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 108, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:54] blocks.extensions.saveload Checkpointing has started
+[16:17:55] blocks.extensions.saveload Checkpointing has finished
+Epoch 108, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 109
+	 iterations_done: 218
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 218:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.14047908783
+	 time_read_data_this_epoch: 0.00462174415588
+	 time_read_data_total: 0.511249542236
+	 time_train_this_epoch: 1.71538996696
+	 time_train_total: 186.434479952
+	 train_error: 0.0
+	 train_recognition: 3.35471231665e-05
+
+Epoch 109, step 2 |               #                      | Elapsed Time: 0:00:01[16:17:57] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:17:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:17:57] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 110
+	 iterations_done: 220
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 220:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.16682195663
+	 time_read_data_this_epoch: 0.00465106964111
+	 time_read_data_total: 0.515900611877
+	 time_train_this_epoch: 1.71237468719
+	 time_train_total: 188.146854639
+	 train_error: 0.0
+	 train_recognition: 2.42818823608e-05
+
+[16:17:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 109, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 110, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:00] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:00] blocks.extensions.saveload Checkpointing has started
+[16:18:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 110, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 111
+	 iterations_done: 222
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 222:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.18707227707
+	 time_read_data_this_epoch: 0.00492382049561
+	 time_read_data_total: 0.520824432373
+	 time_train_this_epoch: 1.71998381615
+	 time_train_total: 189.866838455
+	 train_error: 0.0
+	 train_recognition: 2.40807075897e-05
+
+Epoch 111, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:03] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:03] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 112
+	 iterations_done: 224
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 224:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.22532701492
+	 time_read_data_this_epoch: 0.00502371788025
+	 time_read_data_total: 0.525848150253
+	 time_train_this_epoch: 1.72556900978
+[16:18:04] blocks.extensions.saveload Checkpointing has finished
+Epoch 111, step 2 |                               #      | Elapsed Time: 0:00:03
+	 time_train_total: 191.592407465
+	 train_error: 0.0
+	 train_recognition: 1.80195602297e-05
+
+Epoch 112, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:06] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:06] blocks.extensions.saveload Checkpointing has started
+[16:18:07] blocks.extensions.saveload Checkpointing has finished
+Epoch 112, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 113
+	 iterations_done: 226
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 226:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.27482414246
+	 time_read_data_this_epoch: 0.00462198257446
+	 time_read_data_total: 0.530470132828
+	 time_train_this_epoch: 1.71258711815
+	 time_train_total: 193.304994583
+	 train_error: 0.0
+	 train_recognition: 1.96102610062e-05
+
+Epoch 113, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:10] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:10] blocks.extensions.saveload Checkpointing has started
+[16:18:11] blocks.extensions.saveload Checkpointing has finished
+Epoch 113, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 114
+	 iterations_done: 228
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 228:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.24899816513
+	 time_read_data_this_epoch: 0.0046398639679
+	 time_read_data_total: 0.535109996796
+	 time_train_this_epoch: 1.73184704781
+	 time_train_total: 195.036841631
+	 train_error: 0.0
+	 train_recognition: 2.58167056018e-05
+
+Epoch 114, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:13] blocks.extensions.saveload Checkpointing has started
+[16:18:14] blocks.extensions.saveload Checkpointing has finished
+Epoch 114, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 115
+	 iterations_done: 230
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 230:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.29571771622
+	 time_read_data_this_epoch: 0.00492811203003
+	 time_read_data_total: 0.540038108826
+	 time_train_this_epoch: 1.72418212891
+	 time_train_total: 196.76102376
+	 train_error: 0.0
+	 train_recognition: 1.87720415852e-05
+
+Epoch 115, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:16] blocks.extensions.saveload Checkpointing has started
+[16:18:17] blocks.extensions.saveload Checkpointing has finished
+Epoch 115, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 116
+	 iterations_done: 232
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 232:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.29674530029
+	 time_read_data_this_epoch: 0.00500988960266
+	 time_read_data_total: 0.545047998428
+	 time_train_this_epoch: 1.71087789536
+	 time_train_total: 198.471901655
+	 train_error: 0.0
+	 train_recognition: 2.07874654734e-05
+
+Epoch 116, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:19] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:19] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 117
+	 iterations_done: 234
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 234:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.30584478378
+	 time_read_data_this_epoch: 0.00467991828918
+	 time_read_data_total: 0.549727916718
+	 time_train_this_epoch: 1.72836995125
+	 time_train_total: 200.200271606
+	 train_error: 0.0
+	 train_recognition: 2.06868608075e-05
+
+[16:18:20] blocks.extensions.saveload Checkpointing has finished
+Epoch 116, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 117, step 2 |              #                       | Elapsed Time: 0:00:01[16:18:22] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:22] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 118
+	 iterations_done: 236
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 236:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.56783103943
+	 time_read_data_this_epoch: 0.00464105606079
+	 time_read_data_total: 0.554368972778
+	 time_train_this_epoch: 1.70680379868
+	 time_train_total: 201.907075405
+	 train_error: 0.0
+	 train_recognition: 3.20717772411e-05
+
+[16:18:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 117, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 118, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:25] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 119
+	 iterations_done: 238
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 238:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.56833934784
+	 time_read_data_this_epoch: 0.00486707687378
+	 time_read_data_total: 0.559236049652
+	 time_train_this_epoch: 1.72206091881
+	 time_train_total: 203.629136324
+	 train_error: 0.0
+	 train_recognition: 2.10742982745e-05
+
+[16:18:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 118, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 119, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:28] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:28] blocks.extensions.saveload Checkpointing has started
+[16:18:30] blocks.extensions.saveload Checkpointing has finished
+Epoch 119, step 2 |                                #     | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 120
+	 iterations_done: 240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 240:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.34546518326
+	 time_read_data_this_epoch: 0.00475716590881
+	 time_read_data_total: 0.563993215561
+	 time_train_this_epoch: 1.72283983231
+	 time_train_total: 205.351976156
+	 train_error: 0.0
+	 train_recognition: 3.74661867681e-05
+
+Epoch 120, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:32] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 121
+	 iterations_done: 242
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 242:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.3443274498
+	 time_read_data_this_epoch: 0.00496292114258
+	 time_read_data_total: 0.568956136703
+	 time_train_this_epoch: 1.72199010849
+	 time_train_total: 207.073966265
+	 train_error: 0.0
+	 train_recognition: 2.17969900405e-05
+
+[16:18:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 120, step 2 |                               #      | Elapsed Time: 0:00:03
+Epoch 121, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:35] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:35] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:35] blocks.extensions.saveload Checkpointing has started
+[16:18:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 121, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 122
+	 iterations_done: 244
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 244:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.36897516251
+	 time_read_data_this_epoch: 0.00559020042419
+	 time_read_data_total: 0.574546337128
+	 time_train_this_epoch: 1.72345304489
+	 time_train_total: 208.79741931
+	 train_error: 0.0
+	 train_recognition: 1.69875565916e-05
+
+Epoch 122, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:38] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:38] blocks.extensions.saveload Checkpointing has started
+[16:18:39] blocks.extensions.saveload Checkpointing has finished
+Epoch 122, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 123
+	 iterations_done: 246
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 246:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.36229801178
+	 time_read_data_this_epoch: 0.00462365150452
+	 time_read_data_total: 0.579169988632
+	 time_train_this_epoch: 1.73084497452
+	 time_train_total: 210.528264284
+	 train_error: 0.0
+	 train_recognition: 1.95431330212e-05
+
+Epoch 123, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:41] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:41] blocks.extensions.saveload Checkpointing has started
+[16:18:42] blocks.extensions.saveload Checkpointing has finished
+Epoch 123, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 124
+	 iterations_done: 248
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 248:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.38686561584
+	 time_read_data_this_epoch: 0.00466084480286
+	 time_read_data_total: 0.583830833435
+	 time_train_this_epoch: 1.71093702316
+	 time_train_total: 212.239201307
+	 train_error: 0.0
+	 train_recognition: 1.69763661688e-05
+
+Epoch 124, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:44] blocks.extensions.saveload Checkpointing has started
+[16:18:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 124, step 2 |                               #      | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 125
+	 iterations_done: 250
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 250:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.43201255798
+	 time_read_data_this_epoch: 0.00463175773621
+	 time_read_data_total: 0.588462591171
+	 time_train_this_epoch: 1.71996283531
+	 time_train_total: 213.959164143
+	 train_error: 0.0
+	 train_recognition: 1.44505829667e-05
+
+Epoch 125, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:47] blocks.extensions.saveload Checkpointing has started
+[16:18:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 125, step 2 |                                #     | Elapsed Time: 0:00:03
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 126
+	 iterations_done: 252
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 252:
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.42464447021
+	 time_read_data_this_epoch: 0.00488901138306
+	 time_read_data_total: 0.593351602554
+	 time_train_this_epoch: 1.74725389481
+	 time_train_total: 215.706418037
+	 train_error: 0.0
+	 train_recognition: 1.94686217583e-05
+
+Epoch 126, step 2 |               #                      | Elapsed Time: 0:00:01[16:18:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[16:18:51] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[16:18:51] blocks.extensions.saveload Checkpointing has started
+[16:18:54] blocks.main_loop Received epoch interrupt signal.
+
+Blocks will complete this epoch of training and run extensions before exiting. If you do not want to complete this epoch, press CTRL + C again to stop training after the current batch.
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: True
+	 epoch_started: False
+	 epochs_done: 127
+	 iterations_done: 254
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 254:
+	 epoch_interrupt_received: True
+	 saved_to: ('potcup-simple-20161206-160929/potcup',)
+	 test_error: 0.909090936184
+	 test_recognition: 4.44250249863
+	 time_read_data_this_epoch: 0.00515413284302
+	 time_read_data_total: 0.598505735397
+	 time_train_this_epoch: 1.77613306046
+	 time_train_total: 217.482551098
+	 train_error: 0.0
+	 train_recognition: 1.59965911735e-05
+
+[16:18:54] blocks.extensions.saveload Checkpointing has finished
+Epoch 126, step 2 |                       #              | Elapsed Time: 0:00:05
+[16:18:54] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+TRAINING HAS BEEN FINISHED:
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: True
+	 epoch_started: False
+	 epochs_done: 127
+	 iterations_done: 254
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 254:
+	 epoch_interrupt_received: True
+	 saved_to: ('potcup-simple-20161206-160929/potcup', 'potcup-simple-20161206-160929/potcup')
+	 test_error: 0.909090936184
+	 test_recognition: 4.44250249863
+	 time_read_data_this_epoch: 0.00515413284302
+	 time_read_data_total: 0.598505735397
+	 time_train_this_epoch: 1.77613306046
+	 time_train_total: 217.482551098
+	 train_error: 0.0
+	 train_recognition: 1.59965911735e-05
+	 training_finished: True
+
+[16:18:55] blocks.extensions.saveload Checkpointing has finished
+
+Process finished with exit code 0

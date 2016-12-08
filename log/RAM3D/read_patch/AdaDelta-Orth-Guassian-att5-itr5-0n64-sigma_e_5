@@ -1,0 +1,3544 @@
+/home/hope-yao/anaconda2/bin/python /home/hope-yao/Documents/CNN3D/RAM/train_RAM.py
+Using gpu device 0: TITAN X (Pascal) (CNMeM is enabled with initial size: 10.0% of memory, cuDNN 5105)
+bricks3D/cnn3d_bricks.py:321: UserWarning: DEPRECATION: the 'padding' parameter is not going to exist anymore as it is going to be replaced by the parameter 'pad'.
+  ignore_border=self.ignore_border)
+[21:51:48] blocks.algorithms Taking the cost gradient
+[21:51:57] blocks.algorithms The cost gradient computation graph is built
+[21:52:07] blocks.main_loop Entered the main loop
+[21:52:07] blocks.extensions.saveload Checkpointing has started
+[21:52:08] blocks.extensions.saveload Checkpointing has finished
+[21:52:08] blocks.algorithms Initializing the training algorithm
+[21:54:12] blocks.algorithms The training algorithm is initialized
+[21:54:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:54:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+
+-------------------------------------------------------------------------------
+BEFORE FIRST EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: True
+	 epochs_done: 0
+	 iterations_done: 0
+	 received_first_batch: False
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 0:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.868666768074
+	 test_recognition: 4.50384902954
+	 time_initialization: 124.272515774
+
+Epoch 0, step 40 |#                                      | Elapsed Time: 0:00:15[21:54:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:54:30] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:54:30] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 1
+	 iterations_done: 40
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 40:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.869666755199
+	 test_recognition: 2.45257639885
+	 time_read_data_this_epoch: 0.407923698425
+	 time_read_data_total: 0.407923698425
+	 time_train_this_epoch: 15.37504673
+	 time_train_total: 15.37504673
+	 train_error: 0.808230519295
+	 train_recognition: 2.39462995529
+
+[21:54:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 0, step 40 |                      #                | Elapsed Time: 0:00:17
+Epoch 1, step 40 |#                                      | Elapsed Time: 0:00:15[21:54:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:54:48] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:54:48] blocks.extensions.saveload Checkpointing has started
+[21:54:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 1, step 40 |                        #              | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 2
+	 iterations_done: 80
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 80:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.845333397388
+	 test_recognition: 2.30511474609
+	 time_read_data_this_epoch: 0.399616956711
+	 time_read_data_total: 0.807540655136
+	 time_train_this_epoch: 15.5356090069
+	 time_train_total: 30.9106557369
+	 train_error: 0.771980404854
+	 train_recognition: 2.13880753517
+
+Epoch 2, step 40 |#                                      | Elapsed Time: 0:00:15[21:55:05] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:55:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:55:07] blocks.extensions.saveload Checkpointing has started
+[21:55:07] blocks.extensions.saveload Checkpointing has finished
+Epoch 2, step 40 |                         #             | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 3
+	 iterations_done: 120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 120:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.753666639328
+	 test_recognition: 1.94519209862
+	 time_read_data_this_epoch: 0.398519277573
+	 time_read_data_total: 1.20605993271
+	 time_train_this_epoch: 15.5666201115
+	 time_train_total: 46.4772758484
+	 train_error: 0.689532399178
+	 train_recognition: 1.92330396175
+
+Epoch 3, step 40 |   #                                   | Elapsed Time: 0:00:15[21:55:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:55:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:55:25] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 4
+	 iterations_done: 160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 160:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.738666653633
+	 test_recognition: 2.24980545044
+	 time_read_data_this_epoch: 0.396881341934
+	 time_read_data_total: 1.60294127464
+	 time_train_this_epoch: 15.8294143677
+	 time_train_total: 62.3066902161
+	 train_error: 0.615058541298
+	 train_recognition: 1.65562438965
+
+[21:55:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 3, step 40 |                            #          | Elapsed Time: 0:00:18
+Epoch 4, step 40 |         #                             | Elapsed Time: 0:00:16[21:55:43] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:55:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:55:44] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 5
+	 iterations_done: 200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 200:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.492999970913
+	 test_recognition: 1.45413184166
+	 time_read_data_this_epoch: 0.400135040283
+	 time_read_data_total: 2.00307631493
+	 time_train_this_epoch: 16.4242146015
+	 time_train_total: 78.7309048176
+	 train_error: 0.513214230537
+	 train_recognition: 1.38694882393
+
+[21:55:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 4, step 40 |                                 #     | Elapsed Time: 0:00:18
+Epoch 5, step 40 |            #                          | Elapsed Time: 0:00:16[21:56:02] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:56:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:56:03] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 6
+	 iterations_done: 240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 240:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: [21:56:04] blocks.extensions.saveload Checkpointing has finished
+Epoch 5, step 40 |                                    #  | Elapsed Time: 0:00:19
+0.461999982595
+	 test_recognition: 1.34829735756
+	 time_read_data_this_epoch: 0.396511793137
+	 time_read_data_total: 2.39958810806
+	 time_train_this_epoch: 16.7059731483
+	 time_train_total: 95.4368779659
+	 train_error: 0.451863616705
+	 train_recognition: 1.26593351364
+
+Epoch 6, step 40 |        #                              | Elapsed Time: 0:00:16[21:56:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:56:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:56:22] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+[21:56:25] blocks.extensions.saveload Checkpointing has finished
+	 epoch_started: False
+	 epochs_done: 7
+Epoch 6, step 40 |                        #              | Elapsed Time: 0:00:20
+	 iterations_done: 280
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 280:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.474000036716
+	 test_recognition: 1.32889151573
+	 time_read_data_this_epoch: 0.395068407059
+	 time_read_data_total: 2.79465651512
+	 time_train_this_epoch: 16.2982294559
+	 time_train_total: 111.735107422
+	 train_error: 0.403516203165
+	 train_recognition: 1.18357121944
+
+Epoch 7, step 40 |               #                       | Elapsed Time: 0:00:17[21:56:43] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:56:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:56:44] blocks.extensions.saveload Checkpointing has started
+[21:56:45] blocks.extensions.saveload Checkpointing has finished
+Epoch 7, step 40 |                                      #| Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 8
+	 iterations_done: 320
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 320:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.447666704655
+	 test_recognition: 1.43526685238
+	 time_read_data_this_epoch: 0.407821178436
+	 time_read_data_total: 3.20247769356
+	 time_train_this_epoch: 17.0173983574
+	 time_train_total: 128.752505779
+	 train_error: 0.372493445873
+	 train_recognition: 1.09018421173
+
+Epoch 8, step 40 |      #                                | Elapsed Time: 0:00:16[21:57:01] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:57:02] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:57:02] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 9
+	 iterations_done: 360
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 360:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.470666646957
+	 test_recognition: 1.21894955635
+	 time_read_data_this_epoch: 0.403978586197
+	 time_read_data_total: 3.60645627975
+	 time_train_this_epoch: 16.0890362263
+	 time_train_total: 144.841542006
+	 train_error: 0.369688302279
+	 train_recognition: 1.09483921528
+
+[21:57:03] blocks.extensions.saveload Checkpointing has finished
+Epoch 8, step 40 |                              #        | Elapsed Time: 0:00:18
+Epoch 9, step 40 |                  #                    | Elapsed Time: 0:00:17[21:57:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:57:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:57:22] blocks.extensions.saveload Checkpointing has started
+[21:57:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 9, step 40 |                                   #   | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 10
+	 iterations_done: 400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 400:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.434666693211
+	 test_recognition: 1.19157886505
+	 time_read_data_this_epoch: 0.402276992798
+	 time_read_data_total: 4.00873327255
+	 time_train_this_epoch: 17.2994532585
+	 time_train_total: 162.140995264
+	 train_error: 0.339990288019
+	 train_recognition: 1.02232670784
+
+Epoch 10, step 40 |             #                        | Elapsed Time: 0:00:16[21:57:40] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:57:41] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:57:41] blocks.extensions.saveload Checkpointing has started
+[21:57:42] blocks.extensions.saveload Checkpointing has finished
+Epoch 10, step 40 |                                     #| Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 11
+	 iterations_done: 440
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 440:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.379333347082
+	 test_recognition: 1.09017407894
+	 time_read_data_this_epoch: 0.400407314301
+	 time_read_data_total: 4.40914058685
+	 time_train_this_epoch: 16.4620778561
+	 time_train_total: 178.60307312
+	 train_error: 0.317493498325
+	 train_recognition: 0.9382173419
+
+Epoch 11, step 40 |          #                           | Elapsed Time: 0:00:16[21:57:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:58:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:58:00] blocks.extensions.saveload Checkpointing has started
+[21:58:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 11, step 40 |                                  #   | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 12
+	 iterations_done: 480
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 480:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.39633333683
+	 test_recognition: 1.09683871269
+	 time_read_data_this_epoch: 0.40135550499
+	 time_read_data_total: 4.81049609184
+	 time_train_this_epoch: 16.1377432346
+	 time_train_total: 194.740816355
+	 train_error: 0.317217499018
+	 train_recognition: 0.933339595795
+
+Epoch 12, step 40 |                      #               | Elapsed Time: 0:00:17[21:58:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:58:20] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:58:20] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 13
+	 iterations_done: 520
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 520:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.393666654825
+	 test_recognition: 1.03470182419
+	 time_read_data_this_epoch: 0.397535324097
+	 time_read_data_total: 5.20803141594
+	 time_train_this_epoch: 17.3479580879
+	 time_train_total: 212.088774443
+	 train_error: 0.301366895437
+	 train_recognition: 0.904400527477
+
+[21:58:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 12, step 40 |                            #         | Elapsed Time: 0:00:19
+Epoch 13, step 40 |           #                          | Elapsed Time: 0:00:16[21:58:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:58:39] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:58:39] blocks.extensions.saveload Checkpointing has started
+[21:58:40] blocks.extensions.saveload Checkpointing has finished
+Epoch 13, step 40 |                                   #  | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 14
+	 iterations_done: 560
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 560:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.333333313465
+	 test_recognition: 1.03277909756
+	 time_read_data_this_epoch: 0.40788269043
+	 time_read_data_total: 5.61591410637
+	 time_train_this_epoch: 16.2031404972
+	 time_train_total: 228.29191494
+	 train_error: 0.27091884613
+	 train_recognition: 0.81185901165
+
+Epoch 14, step 40 |                    #                 | Elapsed Time: 0:00:17[21:58:57] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:58:58] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:58:58] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 15
+	 iterations_done: 600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 600:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.277000010014
+	 test_recognition: 0.818429172039
+	 time_read_data_this_epoch: 0.405162096024
+	 time_read_data_total: 6.02107620239
+	 time_train_this_epoch: 17.0785782337
+	 time_train_total: 245.370493174
+	 train_error: 0.269068151712
+	 train_recognition: 0.800178349018
+
+[21:58:59] blocks.extensions.saveload Checkpointing has finished
+Epoch 14, step 40 |                               #      | Elapsed Time: 0:00:19
+Epoch 15, step 40 |       #                              | Elapsed Time: 0:00:15[21:59:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:59:17] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:59:17] blocks.extensions.saveload Checkpointing has started
+[21:59:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 15, step 40 |                               #      | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 16
+	 iterations_done: 640
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 640:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.285666644573
+	 test_recognition: 0.829938292503
+	 time_read_data_this_epoch: 0.398572206497
+	 time_read_data_total: 6.41964840889
+	 time_train_this_epoch: 15.8196017742
+	 time_train_total: 261.190094948
+	 train_error: 0.239220768213
+	 train_recognition: 0.72707593441
+
+Epoch 16, step 40 |                  #                   | Elapsed Time: 0:00:17[21:59:35] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:59:36] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:59:36] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 17
+	 iterations_done: 680
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 680:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.281333357096
+	 test_recognition: 0.91796952486
+	 time_read_data_this_epoch: 0.400046110153
+	 time_read_data_total: 6.81969451904
+	 time_train_this_epoch: 16.9557831287
+	 time_train_total: 278.145878077
+	 train_error: 0.239668771625
+	 train_recognition: 0.715111970901
+
+[21:59:37] blocks.extensions.saveload Checkpointing has finished
+Epoch 16, step 40 |                                #     | Elapsed Time: 0:00:19
+Epoch 17, step 40 |        #                             | Elapsed Time: 0:00:16[21:59:54] blocks.extensions.monitoring Monitoring on auxiliary data started
+[21:59:55] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[21:59:55] blocks.extensions.saveload Checkpointing has started
+[21:59:56] blocks.extensions.saveload Checkpointing has finished
+Epoch 17, step 40 |                                 #    | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 18
+	 iterations_done: 720
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 720:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.305999994278
+	 test_recognition: 0.855901062489
+	 time_read_data_this_epoch: 0.398549556732
+	 time_read_data_total: 7.21824407578
+	 time_train_this_epoch: 15.9682633877
+	 time_train_total: 294.114141464
+	 train_error: 0.228396058083
+	 train_recognition: 0.678948044777
+
+Epoch 18, step 40 |               #                      | Elapsed Time: 0:00:16[22:00:13] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:00:14] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:00:14] blocks.extensions.saveload Checkpointing has started
+[22:00:15] blocks.extensions.saveload Checkpointing has finished
+Epoch 18, step 40 |                                   #  | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 19
+	 iterations_done: 760
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 760:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.378000020981
+	 test_recognition: 1.0375893116
+	 time_read_data_this_epoch: 0.400332212448
+	 time_read_data_total: 7.61857628822
+	 time_train_this_epoch: 16.654463768
+	 time_train_total: 310.768605232
+	 train_error: 0.203220754862
+	 train_recognition: 0.625489115715
+
+Epoch 19, step 40 |                 #                    | Elapsed Time: 0:00:16[22:00:32] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:00:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:00:34] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 20
+	 iterations_done: 800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 800:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.335333347321
+	 test_recognition: 1.04803466797
+	 time_read_data_this_epoch: 0.408317089081
+	 time_read_data_total: 8.0268933773
+	 time_train_this_epoch: 16.9041490555
+	 time_train_total: 327.672754288
+	 train_error: 0.220870107412
+	 train_recognition: 0.639299035072
+
+[22:00:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 19, step 40 |                                #     | Elapsed Time: 0:00:19
+Epoch 20, step 40 |          #                           | Elapsed Time: 0:00:16[22:00:51] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:00:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:00:52] blocks.extensions.saveload Checkpointing has started
+[22:00:53] blocks.extensions.saveload Checkpointing has finished
+Epoch 20, step 40 |                                   #  | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 21
+	 iterations_done: 840
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 840:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.260666668415
+	 test_recognition: 0.768995165825
+	 time_read_data_this_epoch: 0.410922288895
+	 time_read_data_total: 8.4378156662
+	 time_train_this_epoch: 16.1403951645
+	 time_train_total: 343.813149452
+	 train_error: 0.218269437551
+	 train_recognition: 0.651896357536
+
+Epoch 21, step 40 |                 #                    | Elapsed Time: 0:00:16[22:01:11] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:01:12] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:01:12] blocks.extensions.saveload Checkpointing has started
+[22:01:13] blocks.extensions.saveload Checkpointing has finished
+Epoch 21, step 40 |                                 #    | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 22
+	 iterations_done: 880
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 880:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.261000007391
+	 test_recognition: 0.750238656998
+	 time_read_data_this_epoch: 0.399460792542
+	 time_read_data_total: 8.83727645874
+	 time_train_this_epoch: 16.8687338829
+	 time_train_total: 360.681883335
+	 train_error: 0.187470763922
+	 train_recognition: 0.544800519943
+
+Epoch 22, step 40 |               #                      | Elapsed Time: 0:00:16[22:01:30] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:01:31] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:01:31] blocks.extensions.saveload Checkpointing has started
+[22:01:32] blocks.extensions.saveload Checkpointing has finished
+Epoch 22, step 40 |                                  #   | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 23
+	 iterations_done: 920
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 920:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.243999987841
+	 test_recognition: 0.688249945641
+	 time_read_data_this_epoch: 0.397676229477
+	 time_read_data_total: 9.23495268822
+	 time_train_this_epoch: 16.6715612411
+	 time_train_total: 377.353444576
+	 train_error: 0.183071419597
+	 train_recognition: 0.541495203972
+
+Epoch 23, step 40 |         #                            | Elapsed Time: 0:00:16[22:01:49] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:01:50] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:01:50] blocks.extensions.saveload Checkpointing has started
+[22:01:51] blocks.extensions.saveload Checkpointing has finished
+Epoch 23, step 40 |                                 #    | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 24
+	 iterations_done: 960
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 960:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.209000021219
+	 test_recognition: 0.631756544113
+	 time_read_data_this_epoch: 0.397643327713
+	 time_read_data_total: 9.63259601593
+	 time_train_this_epoch: 15.993242979
+	 time_train_total: 393.346687555
+	 train_error: 0.18467207253
+	 train_recognition: 0.534625411034
+
+Epoch 24, step 40 |                  #                   | Elapsed Time: 0:00:17[22:02:08] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:02:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:02:09] blocks.extensions.saveload Checkpointing has started
+[22:02:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 24, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 25
+	 iterations_done: 1000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1000:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.322999984026
+	 test_recognition: 0.915289700031
+	 time_read_data_this_epoch: 0.396288394928
+	 time_read_data_total: 10.0288844109
+	 time_train_this_epoch: 16.9402987957
+	 time_train_total: 410.286986351
+	 train_error: 0.157519504428
+	 train_recognition: 0.472678899765
+
+Epoch 25, step 40 |         #                            | Elapsed Time: 0:00:16[22:02:27] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:02:28] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:02:28] blocks.extensions.saveload Checkpointing has started
+[22:02:29] blocks.extensions.saveload Checkpointing has finished
+Epoch 25, step 40 |                                 #    | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 26
+	 iterations_done: 1040
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1040:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.234666660428
+	 test_recognition: 0.62496817112
+	 time_read_data_this_epoch: 0.395632982254
+	 time_read_data_total: 10.4245173931
+	 time_train_this_epoch: 15.9851205349
+	 time_train_total: 426.272106886
+	 train_error: 0.162870138884
+	 train_recognition: 0.485102832317
+
+Epoch 26, step 40 |                     #                | Elapsed Time: 0:00:17[22:02:47] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:02:48] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:02:48] blocks.extensions.saveload Checkpointing has started
+[22:02:50] blocks.extensions.saveload Checkpointing has finished
+Epoch 26, step 40 |             #                        | Elapsed Time: 0:00:21
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 27
+	 iterations_done: 1080
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1080:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.182000011206
+	 test_recognition: 0.544973015785
+	 time_read_data_this_epoch: 0.394958019257
+	 time_read_data_total: 10.8194754124
+	 time_train_this_epoch: 17.2576870918
+	 time_train_total: 443.529793978
+	 train_error: 0.13294801116
+	 train_recognition: 0.381619483232
+
+Epoch 27, step 40 |       #                              | Elapsed Time: 0:00:15[22:03:07] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:03:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:03:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 28
+	 iterations_done: 1120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1120:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.190666645765
+	 test_recognition: 0.527428209782
+	 time_read_data_this_epoch: 0.401491641998
+	 time_read_data_total: 11.2209670544
+	 time_train_this_epoch: 15.8308701515
+	 time_train_total: 459.360664129
+	 train_error: 0.140996754169
+	 train_recognition: 0.41455155611
+
+[22:03:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 27, step 40 |                               #      | Elapsed Time: 0:00:18
+Epoch 28, step 40 |                      #               | Elapsed Time: 0:00:17[22:03:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:03:28] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:03:28] blocks.extensions.saveload Checkpointing has started
+[22:03:29] blocks.extensions.saveload Checkpointing has finished
+Epoch 28, step 40 |                             #        | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 29
+	 iterations_done: 1160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1160:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.169666677713
+	 test_recognition: 0.51747995615
+	 time_read_data_this_epoch: 0.39791727066
+	 time_read_data_total: 11.618884325
+	 time_train_this_epoch: 17.3013958931
+	 time_train_total: 476.662060022
+	 train_error: 0.11584738642
+	 train_recognition: 0.340565800667
+
+Epoch 29, step 40 |        #                             | Elapsed Time: 0:00:16[22:03:45] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:03:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:03:46] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 30
+	 iterations_done: 1200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1200:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.239666670561
+	 test_recognition: 0.683078944683
+	 time_read_data_this_epoch: 0.400980472565
+	 time_read_data_total: 12.0198647976
+	 time_train_this_epoch: 15.8963296413
+	 time_train_total: 492.558389664
+	 train_error: 0.128970772028
+	 train_recognition: 0.365967363119
+
+[22:03:47] blocks.extensions.saveload Checkpointing has finished
+Epoch 29, step 40 |                                #     | Elapsed Time: 0:00:18
+Epoch 30, step 40 |                  #                   | Elapsed Time: 0:00:17[22:04:04] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:04:06] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:04:06] blocks.extensions.saveload Checkpointing has started
+[22:04:07] blocks.extensions.saveload Checkpointing has finished
+Epoch 30, step 40 |                                 #    | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 31
+	 iterations_done: 1240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1240:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.176666647196
+	 test_recognition: 0.548046410084
+	 time_read_data_this_epoch: 0.401547670364
+	 time_read_data_total: 12.421412468
+	 time_train_this_epoch: 16.9194629192
+	 time_train_total: 509.477852583
+	 train_error: 0.122272729874
+	 train_recognition: 0.350349366665
+
+Epoch 31, step 40 |             #                        | Elapsed Time: 0:00:16[22:04:23] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:04:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:04:25] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 32
+	 iterations_done: 1280
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1280:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.240000009537
+	 test_recognition: 0.745937526226
+	 time_read_data_this_epoch: 0.396311998367
+	 time_read_data_total: 12.8177244663
+	 time_train_this_epoch: 16.471517086
+	 time_train_total: 525.949369669
+	 train_error: 0.109097398818
+	 train_recognition: 0.315604060888
+
+[22:04:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 31, step 40 |                                     #| Elapsed Time: 0:00:19
+Epoch 32, step 40 |           #                          | Elapsed Time: 0:00:16[22:04:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:04:44] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:04:44] blocks.extensions.saveload Checkpointing has started
+[22:04:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 32, step 40 |                                    # | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 33
+	 iterations_done: 1320
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1320:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.27500000596
+	 test_recognition: 0.734614491463
+	 time_read_data_this_epoch: 0.398105859756
+	 time_read_data_total: 13.2158303261
+	 time_train_this_epoch: 16.2568500042
+	 time_train_total: 542.206219673
+	 train_error: 0.115422070026
+	 train_recognition: 0.329746365547
+
+Epoch 33, step 40 |                  #                   | Elapsed Time: 0:00:17[22:05:02] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:05:03] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:05:03] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 34
+	 iterations_done: 1360
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1360:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.155666664243
+	 test_recognition: 0.432387441397
+	 time_read_data_this_epoch: 0.409875869751
+	 time_read_data_total: 13.6257061958
+	 time_train_this_epoch: 16.9554386139
+	 time_train_total: 559.161658287
+	 train_error: 0.110672071576
+	 train_recognition: 0.314282298088
+
+[22:05:04] blocks.extensions.saveload Checkpointing has finished
+Epoch 33, step 40 |                              #       | Elapsed Time: 0:00:19
+Epoch 34, step 40 |            #                         | Elapsed Time: 0:00:16[22:05:21] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:05:22] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:05:22] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 35
+	 iterations_done: 1400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1400:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.342000037432
+	 test_recognition: 1.43440783024
+	 time_read_data_this_epoch: 0.41103553772
+	 time_read_data_total: 14.0367417336
+	 time_train_this_epoch: 16.3614759445
+	 time_train_total: 575.523134232
+	 train_error: 0.104746744037
+	 train_recognition: 0.286722630262
+
+[22:05:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 34, step 40 |                                     #| Elapsed Time: 0:00:18
+Epoch 35, step 40 |                     #                | Elapsed Time: 0:00:17[22:05:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:05:42] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:05:42] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 36
+	 iterations_done: 1440
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1440:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.252000004053
+	 test_recognition: 0.970996260643
+	 time_read_data_this_epoch: 0.399794816971
+	 time_read_data_total: 14.4365365505
+	 time_train_this_epoch: 17.2659935951
+	 time_train_total: 592.789127827
+	 train_error: 0.106970772147
+	 train_recognition: 0.311244606972
+
+[22:05:43] blocks.extensions.saveload Checkpointing has finished
+Epoch 35, step 40 |                             #        | Elapsed Time: 0:00:19
+Epoch 36, step 40 |        #                             | Elapsed Time: 0:00:16[22:05:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:06:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:06:00] blocks.extensions.saveload Checkpointing has started
+[22:06:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 36, step 40 |                                #     | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 37
+	 iterations_done: 1480
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1480:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.201666668057
+	 test_recognition: 0.597163975239
+	 time_read_data_this_epoch: 0.397273778915
+	 time_read_data_total: 14.8338103294
+	 time_train_this_epoch: 15.8972351551
+	 time_train_total: 608.686362982
+	 train_error: 0.0860226973891
+	 train_recognition: 0.251958996058
+
+Epoch 37, step 40 |                    #                 | Elapsed Time: 0:00:17[22:06:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:06:20] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:06:20] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 38
+	 iterations_done: 1520
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1520:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.198666661978
+	 test_recognition: 0.547285199165
+	 time_read_data_this_epoch: 0.399779081345
+	 time_read_data_total: 15.2335894108
+	 time_train_this_epoch: 17.0842077732
+	 time_train_total: 625.770570755
+	 train_error: 0.0819220542908
+	 train_recognition: 0.239937856793
+
+[22:06:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 37, step 40 |                               #      | Elapsed Time: 0:00:19
+Epoch 38, step 40 |             #                        | Elapsed Time: 0:00:16[22:06:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:06:39] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:06:39] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 39
+	 iterations_done: 1560
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1560:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.159999996424
+	 test_recognition: 0.492551743984
+	 time_read_data_this_epoch: 0.402647733688
+	 time_read_data_total: 15.6362371445
+	 time_train_this_epoch: 16.4356133938
+	 time_train_total: 642.206184149
+	 train_error: 0.0890226960182
+	 train_recognition: 0.250665038824
+
+[22:06:40] blocks.extensions.saveload Checkpointing has finished
+Epoch 38, step 40 |                                     #| Elapsed Time: 0:00:18
+Epoch 39, step 40 |                   #                  | Elapsed Time: 0:00:17[22:06:58] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:06:59] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:06:59] blocks.extensions.saveload Checkpointing has started
+[22:07:00] blocks.extensions.saveload Checkpointing has finished
+Epoch 39, step 40 |                              #       | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 40
+	 iterations_done: 1600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1600:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.183666661382
+	 test_recognition: 0.68144762516
+	 time_read_data_this_epoch: 0.403980255127
+	 time_read_data_total: 16.0402173996
+	 time_train_this_epoch: 17.1218848228
+	 time_train_total: 659.328068972
+	 train_error: 0.086873345077
+	 train_recognition: 0.244388431311
+
+Epoch 40, step 40 |       #                              | Elapsed Time: 0:00:15[22:07:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:07:17] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:07:17] blocks.extensions.saveload Checkpointing has started
+[22:07:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 40, step 40 |                                #     | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 41
+	 iterations_done: 1640
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1640:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.142999976873
+	 test_recognition: 0.49116024375
+	 time_read_data_this_epoch: 0.407721281052
+	 time_read_data_total: 16.4479386806
+	 time_train_this_epoch: 15.8616056442
+	 time_train_total: 675.189674616
+	 train_error: 0.0924739912152
+	 train_recognition: 0.251455962658
+
+Epoch 41, step 40 |                #                     | Elapsed Time: 0:00:16[22:07:36] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:07:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:07:37] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 42
+	 iterations_done: 1680
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1680:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.177333325148
+	 test_recognition: 0.597299516201
+	 time_read_data_this_epoch: 0.401424884796
+	 time_read_data_total: 16.8493635654
+	 time_train_this_epoch: 16.7380833626
+	 time_train_total: 691.927757978
+	 train_error: 0.0843733549118
+	 train_recognition: 0.231329873204
+
+[22:07:38] blocks.extensions.saveload Checkpointing has finished
+Epoch 41, step 40 |                                  #   | Elapsed Time: 0:00:19
+Epoch 42, step 40 |               #                      | Elapsed Time: 0:00:16[22:07:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:07:56] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:07:56] blocks.extensions.saveload Checkpointing has started
+[22:07:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 42, step 40 |                                 #    | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 43
+	 iterations_done: 1720
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1720:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.179666668177
+	 test_recognition: 0.568286478519
+	 time_read_data_this_epoch: 0.39898276329
+	 time_read_data_total: 17.2483463287
+	 time_train_this_epoch: 16.6479656696
+	 time_train_total: 708.575723648
+	 train_error: 0.0850973799825
+	 train_recognition: 0.245962813497
+
+Epoch 43, step 40 |                 #                    | Elapsed Time: 0:00:16[22:08:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:08:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:08:16] blocks.extensions.saveload Checkpointing has started
+[22:08:17] blocks.extensions.saveload Checkpointing has finished
+Epoch 43, step 40 |                               #      | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 44
+	 iterations_done: 1760
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1760:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.1426666677
+	 test_recognition: 0.459981590509
+	 time_read_data_this_epoch: 0.475214719772
+	 time_read_data_total: 17.7235610485
+	 time_train_this_epoch: 16.769005537
+	 time_train_total: 725.344729185
+	 train_error: 0.0794739946723
+	 train_recognition: 0.228552341461
+
+Epoch 44, step 40 |           #                          | Elapsed Time: 0:00:16[22:08:33] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:08:35] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:08:35] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 45
+	 iterations_done: 1800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1800:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.138000011444
+	 test_recognition: 0.413935124874
+	 time_read_data_this_epoch: 0.414936304092
+	 time_read_data_total: 18.1384973526
+	 time_train_this_epoch: 16.1652395725
+	 time_train_total: 741.509968758
+	 train_error: 0.0782986879349
+	 train_recognition: 0.220198124647
+
+[22:08:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 44, step 40 |                                   #  | Elapsed Time: 0:00:18
+Epoch 45, step 40 |                   #                  | Elapsed Time: 0:00:17[22:08:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:08:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:08:54] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 46
+	 iterations_done: 1840
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1840:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.12866666913
+	 test_recognition: 0.394145935774
+	 time_read_data_this_epoch: 0.41163277626
+	 time_read_data_total: 18.5501301289
+	 time_train_this_epoch: 17.0117237568
+	 time_train_total: 758.521692514
+	 train_error: 0.0712240114808
+	 train_recognition: 0.197344362736
+
+[22:08:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 45, step 40 |                #                     | Elapsed Time: 0:00:21
+Epoch 46, step 40 |                #                     | Elapsed Time: 0:00:16[22:09:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:09:15] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:09:15] blocks.extensions.saveload Checkpointing has started
+[22:09:16] blocks.extensions.saveload Checkpointing has finished
+Epoch 46, step 40 |                                  #   | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 47
+	 iterations_done: 1880
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1880:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.216333344579
+	 test_recognition: 0.636019349098
+	 time_read_data_this_epoch: 0.394358158112
+	 time_read_data_total: 18.944488287
+	 time_train_this_epoch: 16.7869594097
+	 time_train_total: 775.308651924
+	 train_error: 0.0706233531237
+	 train_recognition: 0.196932584047
+
+Epoch 47, step 40 |             #                        | Elapsed Time: 0:00:16[22:09:33] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:09:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:09:34] blocks.extensions.saveload Checkpointing has started
+[22:09:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 47, step 40 |                                     #| Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 48
+	 iterations_done: 1920
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1920:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.178000003099
+	 test_recognition: 0.509038746357
+	 time_read_data_this_epoch: 0.40286898613
+	 time_read_data_total: 19.3473572731
+	 time_train_this_epoch: 16.4356195927
+	 time_train_total: 791.744271517
+	 train_error: 0.0807727277279
+	 train_recognition: 0.215740278363
+
+Epoch 48, step 40 |         #                            | Elapsed Time: 0:00:16[22:09:52] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:09:53] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:09:53] blocks.extensions.saveload Checkpointing has started
+[22:09:54] blocks.extensions.saveload Checkpointing has finished
+Epoch 48, step 40 |                                  #   | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 49
+	 iterations_done: 1960
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 1960:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.175999984145
+	 test_recognition: 0.494475752115
+	 time_read_data_this_epoch: 0.40674996376
+	 time_read_data_total: 19.7541072369
+	 time_train_this_epoch: 16.0037503242
+	 time_train_total: 807.748021841
+	 train_error: 0.093272715807
+	 train_recognition: 0.261860519648
+
+Epoch 49, step 40 |                     #                | Elapsed Time: 0:00:17[22:10:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:10:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:10:13] blocks.extensions.saveload Checkpointing has started
+[22:10:14] blocks.extensions.saveload Checkpointing has finished
+Epoch 49, step 40 |                             #        | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 50
+	 iterations_done: 2000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2000:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.137666672468
+	 test_recognition: 0.39609977603
+	 time_read_data_this_epoch: 0.406325340271
+	 time_read_data_total: 20.1604325771
+	 time_train_this_epoch: 17.2300565243
+	 time_train_total: 824.978078365
+	 train_error: 0.0783246532083
+	 train_recognition: 0.230576664209
+
+Epoch 50, step 40 |           #                          | Elapsed Time: 0:00:16[22:10:30] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:10:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:10:32] blocks.extensions.saveload Checkpointing has started
+[22:10:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 50, step 40 |                                    # | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 51
+	 iterations_done: 2040
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2040:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.20733332634
+	 test_recognition: 0.569117188454
+	 time_read_data_this_epoch: 0.403708457947
+	 time_read_data_total: 20.5641410351
+	 time_train_this_epoch: 16.2074460983
+	 time_train_total: 841.185524464
+	 train_error: 0.0676980391145
+	 train_recognition: 0.18311829865
+
+Epoch 51, step 40 |                 #                    | Elapsed Time: 0:00:16[22:10:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:10:51] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:10:51] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 52
+	 iterations_done: 2080
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2080:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.164666652679
+	 test_recognition: 0.490315198898
+	 time_read_data_this_epoch: 0.412063598633
+	 time_read_data_total: 20.9762046337
+	 time_train_this_epoch: 16.8178501129
+	 time_train_total: 858.003374577
+	 train_error: 0.0667727217078
+	 train_recognition: 0.184915319085
+
+[22:10:52] blocks.extensions.saveload Checkpointing has finished
+Epoch 51, step 40 |                                 #    | Elapsed Time: 0:00:19
+Epoch 52, step 40 |                 #                    | Elapsed Time: 0:00:16[22:11:09] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:11:11] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:11:11] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 53
+	 iterations_done: 2120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2120:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.12199999392
+	 test_recognition: 0.353474348783
+	 time_read_data_this_epoch: 0.415430784225
+	 time_read_data_total: 21.3916354179
+	 time_train_this_epoch: 16.8297612667
+	 time_train_total: 874.833135843
+	 train_error: 0.0641980394721
+	 train_recognition: 0.179084688425
+
+[22:11:12] blocks.extensions.saveload Checkpointing has finished
+Epoch 52, step 40 |                                 #    | Elapsed Time: 0:00:19
+Epoch 53, step 40 |            #                         | Elapsed Time: 0:00:16[22:11:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:11:30] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:11:30] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 54
+	 iterations_done: 2160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2160:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.303666651249
+	 test_recognition: 1.20576548576
+	 time_read_data_this_epoch: 0.406190633774
+	 time_read_data_total: 21.7978260517
+	 time_train_this_epoch: 16.3501214981
+	 time_train_total: 891.183257341
+	 train_error: 0.0665454491973
+	 train_recognition: 0.177457749844
+
+[22:11:30] blocks.extensions.saveload Checkpointing has finished
+Epoch 53, step 40 |                                     #| Elapsed Time: 0:00:18
+Epoch 54, step 40 |                  #                   | Elapsed Time: 0:00:17[22:11:48] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:11:49] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:11:49] blocks.extensions.saveload Checkpointing has started
+[22:11:50] blocks.extensions.saveload Checkpointing has finished
+Epoch 54, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 55
+	 iterations_done: 2200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2200:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.169333323836
+	 test_recognition: 0.529066264629
+	 time_read_data_this_epoch: 0.404726743698
+	 time_read_data_total: 22.2025527954
+	 time_train_this_epoch: 16.9318454266
+	 time_train_total: 908.115102768
+	 train_error: 0.0618993341923
+	 train_recognition: 0.182997688651
+
+Epoch 55, step 40 |        #                             | Elapsed Time: 0:00:16[22:12:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:12:08] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:12:08] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 56
+	 iterations_done: 2240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2240:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.169333323836
+	 test_recognition: 0.476100981236
+	 time_read_data_this_epoch: 0.40341591835
+	 time_read_data_total: 22.6059687138
+	 time_train_this_epoch: 15.9256668091
+	 time_train_total: 924.040769577
+	 train_error: 0.0543993413448
+	 train_recognition: 0.140313640237
+
+[22:12:09] blocks.extensions.saveload Checkpointing has finished
+Epoch 55, step 40 |                                 #    | Elapsed Time: 0:00:18
+Epoch 56, step 40 |                     #                | Elapsed Time: 0:00:17[22:12:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:12:28] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:12:28] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 57
+	 iterations_done: 2280
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2280:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.122999988496
+	 test_recognition: 0.38243958354
+	 time_read_data_this_epoch: 0.406877756119
+	 time_read_data_total: 23.0128464699
+	 time_train_this_epoch: 17.2264990807
+	 time_train_total: 941.267268658
+	 train_error: 0.0674480423331
+	 train_recognition: 0.176323205233
+
+[22:12:29] blocks.extensions.saveload Checkpointing has finished
+Epoch 56, step 40 |                          #           | Elapsed Time: 0:00:20
+Epoch 57, step 40 |              #                       | Elapsed Time: 0:00:16[22:12:46] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:12:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:12:47] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 58
+	 iterations_done: 2320
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2320:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.163666650653
+	 test_recognition: 0.526006102562
+	 time_read_data_this_epoch: 0.483523845673
+	 time_read_data_total: 23.4963703156
+	 time_train_this_epoch: 16.4905116558
+	 time_train_total: 957.757780313
+	 train_error: 0.0619740113616
+	 train_recognition: 0.167252480984
+
+[22:12:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 57, step 40 |                                #     | Elapsed Time: 0:00:19
+Epoch 58, step 40 |               #                      | Elapsed Time: 0:00:16[22:13:05] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:13:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:13:07] blocks.extensions.saveload Checkpointing has started
+[22:13:08] blocks.extensions.saveload Checkpointing has finished
+Epoch 58, step 40 |                                   #  | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 59
+	 iterations_done: 2360
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2360:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.142000004649
+	 test_recognition: 0.446736901999
+	 time_read_data_this_epoch: 0.45413351059
+	 time_read_data_total: 23.9505038261
+	 time_train_this_epoch: 16.5585870743
+	 time_train_total: 974.316367388
+	 train_error: 0.059649348259
+	 train_recognition: 0.15487088263
+
+Epoch 59, step 40 |              #                       | Elapsed Time: 0:00:16[22:13:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:13:26] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:13:26] blocks.extensions.saveload Checkpointing has started
+[22:13:27] blocks.extensions.saveload Checkpointing has finished
+Epoch 59, step 40 |                                     #| Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 60
+	 iterations_done: 2400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2400:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.15066665411
+	 test_recognition: 0.449456781149
+	 time_read_data_this_epoch: 0.411828279495
+	 time_read_data_total: 24.3623321056
+	 time_train_this_epoch: 16.4872200489
+	 time_train_total: 990.803587437
+	 train_error: 0.0549740195274
+	 train_recognition: 0.151741176844
+
+Epoch 60, step 40 |             #                        | Elapsed Time: 0:00:16[22:13:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:13:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:13:45] blocks.extensions.saveload Checkpointing has started
+[22:13:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 60, step 40 |                                     #| Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 61
+	 iterations_done: 2440
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2440:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.117999993265
+	 test_recognition: 0.399850070477
+	 time_read_data_this_epoch: 0.400604009628
+	 time_read_data_total: 24.7629361153
+	 time_train_this_epoch: 16.4440870285
+	 time_train_total: 1007.24767447
+	 train_error: 0.0630746632814
+	 train_recognition: 0.174203962088
+
+Epoch 61, step 40 |                   #                  | Elapsed Time: 0:00:17[22:14:03] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:14:05] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:14:05] blocks.extensions.saveload Checkpointing has started
+[22:14:05] blocks.extensions.saveload Checkpointing has finished
+Epoch 61, step 40 |                              #       | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 62
+	 iterations_done: 2480
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2480:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.152333334088
+	 test_recognition: 0.539560198784
+	 time_read_data_this_epoch: 0.40739941597
+	 time_read_data_total: 25.1703355312
+	 time_train_this_epoch: 17.0707335472
+	 time_train_total: 1024.31840801
+	 train_error: 0.0567986965179
+	 train_recognition: 0.150093704462
+
+Epoch 62, step 40 |        #                             | Elapsed Time: 0:00:16[22:14:22] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:14:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:14:23] blocks.extensions.saveload Checkpointing has started
+[22:14:24] blocks.extensions.saveload Checkpointing has finished
+Epoch 62, step 40 |                                #     | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 63
+	 iterations_done: 2520
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2520:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.123000003397
+	 test_recognition: 0.463875859976
+	 time_read_data_this_epoch: 0.404859304428
+	 time_read_data_total: 25.5751948357
+	 time_train_this_epoch: 15.8908641338
+	 time_train_total: 1040.20927215
+	 train_error: 0.052899338305
+	 train_recognition: 0.13958273828
+
+Epoch 63, step 40 |                    #                 | Elapsed Time: 0:00:17[22:14:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:14:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:14:43] blocks.extensions.saveload Checkpointing has started
+[22:14:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 63, step 40 |                               #      | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 64
+	 iterations_done: 2560
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2560:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.173999994993
+	 test_recognition: 0.510347127914
+	 time_read_data_this_epoch: 0.400585174561
+	 time_read_data_total: 25.9757800102
+	 time_train_this_epoch: 17.0906236172
+	 time_train_total: 1057.29989576
+	 train_error: 0.0541493408382
+	 train_recognition: 0.15143981576
+
+Epoch 64, step 40 |              #                       | Elapsed Time: 0:00:16[22:15:01] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:15:02] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:15:02] blocks.extensions.saveload Checkpointing has started
+[22:15:03] blocks.extensions.saveload Checkpointing has finished
+Epoch 64, step 40 |                                     #| Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 65
+	 iterations_done: 2600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2600:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.137999996543
+	 test_recognition: 0.511777877808
+	 time_read_data_this_epoch: 0.395511865616
+	 time_read_data_total: 26.3712918758
+	 time_train_this_epoch: 16.4935336113
+	 time_train_total: 1073.79342937
+	 train_error: 0.0538993403316
+	 train_recognition: 0.153535068035
+
+Epoch 65, step 40 |               #                      | Elapsed Time: 0:00:16[22:15:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:15:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:15:21] blocks.extensions.saveload Checkpointing has started
+[22:15:23] blocks.extensions.saveload Checkpointing has finished
+Epoch 65, step 40 |                    #                 | Elapsed Time: 0:00:20
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 66
+	 iterations_done: 2640
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2640:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.149666666985
+	 test_recognition: 0.496320188046
+	 time_read_data_this_epoch: 0.40194940567
+	 time_read_data_total: 26.7732412815
+	 time_train_this_epoch: 16.6600470543
+	 time_train_total: 1090.45347643
+	 train_error: 0.0527240112424
+	 train_recognition: 0.145592346787
+
+Epoch 66, step 40 |            #                         | Elapsed Time: 0:00:16[22:15:40] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:15:41] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:15:41] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 67
+	 iterations_done: 2680
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2680:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.105000004172
+	 test_recognition: 0.417075306177
+	 time_read_data_this_epoch: 0.392968893051
+	 time_read_data_total: 27.1662101746
+	 time_train_this_epoch: 16.3319430351
+	 time_train_total: 1106.78541946
+	 train_error: 0.0552240125835
+	 train_recognition: 0.156020477414
+
+[22:15:42] blocks.extensions.saveload Checkpointing has finished
+Epoch 66, step 40 |                                    # | Elapsed Time: 0:00:18
+Epoch 67, step 40 |              #                       | Elapsed Time: 0:00:16[22:15:59] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:16:01] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:16:01] blocks.extensions.saveload Checkpointing has started
+[22:16:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 67, step 40 |                                     #| Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 68
+	 iterations_done: 2720
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2720:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.159666657448
+	 test_recognition: 0.455866724253
+	 time_read_data_this_epoch: 0.399124383926
+	 time_read_data_total: 27.5653345585
+	 time_train_this_epoch: 16.4992284775
+	 time_train_total: 1123.28464794
+	 train_error: 0.0522727146745
+	 train_recognition: 0.136478871107
+
+Epoch 68, step 40 |                      #               | Elapsed Time: 0:00:17[22:16:19] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:16:20] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:16:20] blocks.extensions.saveload Checkpointing has started
+[22:16:21] blocks.extensions.saveload Checkpointing has finished
+Epoch 68, step 40 |                             #        | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 69
+	 iterations_done: 2760
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2760:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.0950000062585
+	 test_recognition: 0.337034463882
+	 time_read_data_this_epoch: 0.409162044525
+	 time_read_data_total: 27.974496603
+	 time_train_this_epoch: 17.2890553474
+	 time_train_total: 1140.57370329
+	 train_error: 0.043574668467
+	 train_recognition: 0.12324655056
+
+Epoch 69, step 40 |       #                              | Elapsed Time: 0:00:15[22:16:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:16:39] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:16:39] blocks.extensions.saveload Checkpointing has started
+[22:16:40] blocks.extensions.saveload Checkpointing has finished
+Epoch 69, step 40 |                                #     | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 70
+	 iterations_done: 2800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2800:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.155666679144
+	 test_recognition: 0.535109877586
+	 time_read_data_this_epoch: 0.398330211639
+	 time_read_data_total: 28.3728268147
+	 time_train_this_epoch: 15.8197443485
+	 time_train_total: 1156.39344764
+	 train_error: 0.053798686713
+	 train_recognition: 0.159121602774
+
+Epoch 70, step 40 |                 #                    | Elapsed Time: 0:00:16[22:16:57] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:16:58] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:16:58] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 71
+	 iterations_done: 2840
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2840:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.155666664243
+	 test_recognition: 0.490898430347
+	 time_read_data_this_epoch: 0.400404453278
+	 time_read_data_total: 28.7732312679
+	 time_train_this_epoch: 16.8206164837
+	 time_train_total: 1173.21406412
+	 train_error: 0.0505486913025
+	 train_recognition: 0.137261256576
+
+[22:16:59] blocks.extensions.saveload Checkpointing has finished
+Epoch 70, step 40 |                                 #    | Elapsed Time: 0:00:19
+Epoch 71, step 40 |               #                      | Elapsed Time: 0:00:16[22:17:16] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:17:18] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:17:18] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 72
+	 iterations_done: 2880
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2880:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.122999988496
+	 test_recognition: 0.412586838007
+	 time_read_data_this_epoch: 0.398226499557
+	 time_read_data_total: 29.1714577675
+	 time_train_this_epoch: 16.619780302
+	 time_train_total: 1189.83384442
+	 train_error: 0.0513993427157
+	 train_recognition: 0.141103044152
+
+[22:17:18] blocks.extensions.saveload Checkpointing has finished
+Epoch 71, step 40 |                                    # | Elapsed Time: 0:00:19
+Epoch 72, step 40 |                  #                   | Elapsed Time: 0:00:17[22:17:36] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:17:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:17:37] blocks.extensions.saveload Checkpointing has started
+[22:17:38] blocks.extensions.saveload Checkpointing has finished
+Epoch 72, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 73
+	 iterations_done: 2920
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2920:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.120000004768
+	 test_recognition: 0.404338777065
+	 time_read_data_this_epoch: 0.401386976242
+	 time_read_data_total: 29.5728447437
+	 time_train_this_epoch: 16.9584505558
+	 time_train_total: 1206.79229498
+	 train_error: 0.0517727136612
+	 train_recognition: 0.137109905481
+
+Epoch 73, step 40 |           #                          | Elapsed Time: 0:00:16[22:17:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:17:56] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:17:56] blocks.extensions.saveload Checkpointing has started
+[22:17:57] blocks.extensions.saveload Checkpointing has finished
+Epoch 73, step 40 |                                    # | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 74
+	 iterations_done: 2960
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 2960:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.146666660905
+	 test_recognition: 0.462372392416
+	 time_read_data_this_epoch: 0.403294563293
+	 time_read_data_total: 29.976139307
+	 time_train_this_epoch: 16.2194037437
+	 time_train_total: 1223.01169872
+	 train_error: 0.0478733703494
+	 train_recognition: 0.134762972593
+
+Epoch 74, step 40 |               #                      | Elapsed Time: 0:00:16[22:18:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:18:15] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:18:15] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 75
+	 iterations_done: 3000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3000:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.131999999285
+	 test_recognition: 0.460934698582
+	 time_read_data_this_epoch: 0.401369810104
+	 time_read_data_total: 30.3775091171
+	 time_train_this_epoch: 16.5905957222
+	 time_train_total: 1239.60229445
+	 train_error: 0.0505973920226
+	 train_recognition: 0.13937060535
+
+[22:18:16] blocks.extensions.saveload Checkpointing has finished
+Epoch 74, step 40 |                                   #  | Elapsed Time: 0:00:19
+Epoch 75, step 40 |               #                      | Elapsed Time: 0:00:16[22:18:33] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:18:34] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:18:34] blocks.extensions.saveload Checkpointing has started
+[22:18:35] blocks.extensions.saveload Checkpointing has finished
+Epoch 75, step 40 |                                    # | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 76
+	 iterations_done: 3040
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3040:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.141999989748
+	 test_recognition: 0.471278250217
+	 time_read_data_this_epoch: 0.404072999954
+	 time_read_data_total: 30.7815821171
+	 time_train_this_epoch: 16.5980029106
+	 time_train_total: 1256.20029736
+	 train_error: 0.0473474040627
+	 train_recognition: 0.130901128054
+
+Epoch 76, step 40 |                      #               | Elapsed Time: 0:00:17[22:18:53] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:18:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:18:54] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 77
+	 iterations_done: 3080
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3080:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.147666662931
+	 test_recognition: 0.452256381512
+	 time_read_data_this_epoch: 0.40011382103
+	 time_read_data_total: 31.1816959381
+	 time_train_this_epoch: 17.3239593506
+	 time_train_total: 1273.52425671
+	 train_error: 0.040224019438
+	 train_recognition: 0.107924856246
+
+[22:18:55] blocks.extensions.saveload Checkpointing has finished
+Epoch 76, step 40 |                            #         | Elapsed Time: 0:00:19
+Epoch 77, step 40 |              #                       | Elapsed Time: 0:00:16[22:19:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:19:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:19:13] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 78
+	 iterations_done: 3120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3120:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.123000003397
+	 test_recognition: 0.476249307394
+	 time_read_data_this_epoch: 0.404623746872
+	 time_read_data_total: 31.586319685
+	 time_train_this_epoch: 16.565114975
+	 time_train_total: 1290.08937168
+	 train_error: 0.065224006772
+	 train_recognition: 0.17333766818
+
+[22:19:14] blocks.extensions.saveload Checkpointing has finished
+Epoch 77, step 40 |                                    # | Elapsed Time: 0:00:19
+Epoch 78, step 40 |       #                              | Elapsed Time: 0:00:15[22:19:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:19:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:19:32] blocks.extensions.saveload Checkpointing has started
+[22:19:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 78, step 40 |                                #     | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 79
+	 iterations_done: 3160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3160:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.146999999881
+	 test_recognition: 0.537761509418
+	 time_read_data_this_epoch: 0.408037662506
+	 time_read_data_total: 31.9943573475
+	 time_train_this_epoch: 15.7967739105
+	 time_train_total: 1305.88614559
+	 train_error: 0.0416980460286
+	 train_recognition: 0.113786377013
+
+Epoch 79, step 40 |                   #                  | Elapsed Time: 0:00:17[22:19:50] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:19:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:19:52] blocks.extensions.saveload Checkpointing has started
+[22:19:53] blocks.extensions.saveload Checkpointing has finished
+Epoch 79, step 40 |                               #      | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 80
+	 iterations_done: 3200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3200:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.162333339453
+	 test_recognition: 0.501019537449
+	 time_read_data_this_epoch: 0.405700683594
+	 time_read_data_total: 32.4000580311
+	 time_train_this_epoch: 17.0238652229
+	 time_train_total: 1322.91001081
+	 train_error: 0.0490746721625
+	 train_recognition: 0.135782808065
+
+Epoch 80, step 40 |                 #                    | Elapsed Time: 0:00:16[22:20:10] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:20:11] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:20:11] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 81
+	 iterations_done: 3240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3240:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.137666672468
+	 test_recognition: 0.483226835728
+	 time_read_data_this_epoch: 0.400693178177
+	 time_read_data_total: 32.8007512093
+	 time_train_this_epoch: 16.7952518463
+	 time_train_total: 1339.70526266
+	 train_error: 0.0309999939054
+	 train_recognition: 0.0880284979939
+
+[22:20:12] blocks.extensions.saveload Checkpointing has finished
+Epoch 80, step 40 |                                  #   | Elapsed Time: 0:00:19
+Epoch 81, step 40 |                  #                   | Elapsed Time: 0:00:17[22:20:29] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:20:31] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:20:31] blocks.extensions.saveload Checkpointing has started
+[22:20:31] blocks.extensions.saveload Checkpointing has finished
+Epoch 81, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 82
+	 iterations_done: 3280
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3280:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.131666660309
+	 test_recognition: 0.46408957243
+	 time_read_data_this_epoch: 0.399483442307
+	 time_read_data_total: 33.2002346516
+	 time_train_this_epoch: 16.8910975456
+	 time_train_total: 1356.59636021
+	 train_error: 0.0337986908853
+	 train_recognition: 0.089976772666
+
+Epoch 82, step 40 |      #                               | Elapsed Time: 0:00:15[22:20:48] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:20:49] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:20:49] blocks.extensions.saveload Checkpointing has started
+[22:20:50] blocks.extensions.saveload Checkpointing has finished
+Epoch 82, step 40 |                               #      | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 83
+	 iterations_done: 3320
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3320:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.121666654944
+	 test_recognition: 0.41498669982
+	 time_read_data_this_epoch: 0.401497125626
+	 time_read_data_total: 33.6017317772
+	 time_train_this_epoch: 15.7736070156
+	 time_train_total: 1372.36996722
+	 train_error: 0.047948051244
+	 train_recognition: 0.130293607712
+
+Epoch 83, step 40 |                      #               | Elapsed Time: 0:00:17[22:21:08] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:21:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:21:09] blocks.extensions.saveload Checkpointing has started
+[22:21:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 83, step 40 |                            #         | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 84
+	 iterations_done: 3360
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3360:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.180999994278
+	 test_recognition: 0.695119142532
+	 time_read_data_this_epoch: 0.399092674255
+	 time_read_data_total: 34.0008244514
+	 time_train_this_epoch: 17.3685364723
+	 time_train_total: 1389.73850369
+	 train_error: 0.0406980440021
+	 train_recognition: 0.105644740164
+
+Epoch 84, step 40 |        #                             | Elapsed Time: 0:00:16[22:21:26] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:21:27] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:21:27] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 85
+	 iterations_done: 3400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3400:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.109000004828
+	 test_recognition: 0.404264867306
+	 time_read_data_this_epoch: 0.399667263031
+	 time_read_data_total: 34.4004917145
+	 time_train_this_epoch: 15.9084732533
+	 time_train_total: 1405.64697695
+	 train_error: 0.0443246625364
+	 train_recognition: 0.128976434469
+
+[22:21:28] blocks.extensions.saveload Checkpointing has finished
+Epoch 84, step 40 |                                #     | Elapsed Time: 0:00:18
+Epoch 85, step 40 |              #                       | Elapsed Time: 0:00:16[22:21:45] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:21:46] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:21:46] blocks.extensions.saveload Checkpointing has started
+[22:21:49] blocks.extensions.saveload Checkpointing has finished
+Epoch 85, step 40 |                       #              | Elapsed Time: 0:00:20
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 86
+	 iterations_done: 3440
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3440:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.144666656852
+	 test_recognition: 0.549941062927
+	 time_read_data_this_epoch: 0.399802684784
+	 time_read_data_total: 34.8002943993
+	 time_train_this_epoch: 16.4772496223
+	 time_train_total: 1422.12422657
+	 train_error: 0.0343246683478
+	 train_recognition: 0.0900897607207
+
+Epoch 86, step 40 |              #                       | Elapsed Time: 0:00:16[22:22:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:22:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:22:07] blocks.extensions.saveload Checkpointing has started
+[22:22:08] blocks.extensions.saveload Checkpointing has finished
+Epoch 86, step 40 |                                    # | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 87
+	 iterations_done: 3480
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3480:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.215666681528
+	 test_recognition: 0.679724037647
+	 time_read_data_this_epoch: 0.40650510788
+	 time_read_data_total: 35.2067995071
+	 time_train_this_epoch: 16.5212686062
+	 time_train_total: 1438.64549518
+	 train_error: 0.0368246659636
+	 train_recognition: 0.0988583117723
+
+Epoch 87, step 40 |                  #                   | Elapsed Time: 0:00:17[22:22:25] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:22:26] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:22:26] blocks.extensions.saveload Checkpointing has started
+[22:22:27] blocks.extensions.saveload Checkpointing has finished
+Epoch 87, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 88
+	 iterations_done: 3520
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3520:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.134333342314
+	 test_recognition: 0.471271753311
+	 time_read_data_this_epoch: 0.4031457901
+	 time_read_data_total: 35.6099452972
+	 time_train_this_epoch: 16.9552872181
+	 time_train_total: 1455.60078239
+	 train_error: 0.0347240157425
+	 train_recognition: 0.0896956175566
+
+Epoch 88, step 40 |          #                           | Elapsed Time: 0:00:16[22:22:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:22:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:22:45] blocks.extensions.saveload Checkpointing has started
+[22:22:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 88, step 40 |                                   #  | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 89
+	 iterations_done: 3560
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3560:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.123999997973
+	 test_recognition: 0.514752149582
+	 time_read_data_this_epoch: 0.401961326599
+	 time_read_data_total: 36.0119066238
+	 time_train_this_epoch: 16.1137423515
+	 time_train_total: 1471.71452475
+	 train_error: 0.0364480391145
+	 train_recognition: 0.0988095402718
+
+Epoch 89, step 40 |                  #                   | Elapsed Time: 0:00:17[22:23:04] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:23:05] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:23:05] blocks.extensions.saveload Checkpointing has started
+[22:23:06] blocks.extensions.saveload Checkpointing has finished
+Epoch 89, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 90
+	 iterations_done: 3600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3600:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.143666654825
+	 test_recognition: 0.512157738209
+	 time_read_data_this_epoch: 0.398946762085
+	 time_read_data_total: 36.4108533859
+	 time_train_this_epoch: 16.9003932476
+	 time_train_total: 1488.61491799
+	 train_error: 0.0400486961007
+	 train_recognition: 0.101776517928
+
+Epoch 90, step 40 |       #                              | Elapsed Time: 0:00:15[22:23:22] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:23:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:23:23] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 91
+	 iterations_done: 3640
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3640:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.133000001311
+	 test_recognition: 0.489491522312
+	 time_read_data_this_epoch: 0.401299953461
+	 time_read_data_total: 36.8121533394
+	 time_train_this_epoch: 15.855158329
+	 time_train_total: 1504.47007632
+	 train_error: 0.0351493470371
+	 train_recognition: 0.0916239023209
+
+[22:23:24] blocks.extensions.saveload Checkpointing has finished
+Epoch 90, step 40 |                                 #    | Elapsed Time: 0:00:18
+Epoch 91, step 40 |                  #                   | Elapsed Time: 0:00:17[22:23:42] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:23:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:23:43] blocks.extensions.saveload Checkpointing has started
+[22:23:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 91, step 40 |                                #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 92
+	 iterations_done: 3680
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3680:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.121666654944
+	 test_recognition: 0.573419749737
+	 time_read_data_this_epoch: 0.398751735687
+	 time_read_data_total: 37.2109050751
+	 time_train_this_epoch: 16.9558122158
+	 time_train_total: 1521.42588854
+	 train_error: 0.0288246683776
+	 train_recognition: 0.0766510516405
+
+Epoch 92, step 40 |       #                              | Elapsed Time: 0:00:15[22:24:00] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:24:01] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:24:01] blocks.extensions.saveload Checkpointing has started
+[22:24:02] blocks.extensions.saveload Checkpointing has finished
+Epoch 92, step 40 |                               #      | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 93
+	 iterations_done: 3720
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3720:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.139666646719
+	 test_recognition: 0.491333544254
+	 time_read_data_this_epoch: 0.396613836288
+	 time_read_data_total: 37.6075189114
+	 time_train_this_epoch: 15.8094537258
+	 time_train_total: 1537.23534226
+	 train_error: 0.0472986958921
+	 train_recognition: 0.14702399075
+
+Epoch 93, step 40 |                 #                    | Elapsed Time: 0:00:16[22:24:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:24:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:24:21] blocks.extensions.saveload Checkpointing has started
+[22:24:22] blocks.extensions.saveload Checkpointing has finished
+Epoch 93, step 40 |                               #      | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 94
+	 iterations_done: 3760
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3760:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.138666659594
+	 test_recognition: 0.466084063053
+	 time_read_data_this_epoch: 0.409692287445
+	 time_read_data_total: 38.0172111988
+	 time_train_this_epoch: 16.8956339359
+	 time_train_total: 1554.1309762
+	 train_error: 0.0334999933839
+	 train_recognition: 0.0853751450777
+
+Epoch 94, step 40 |         #                            | Elapsed Time: 0:00:16[22:24:38] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:24:40] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:24:40] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 95
+	 iterations_done: 3800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3800:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.149666652083
+	 test_recognition: 0.472756952047
+	 time_read_data_this_epoch: 0.409226417542
+	 time_read_data_total: 38.4264376163
+	 time_train_this_epoch: 16.0299267769
+	 time_train_total: 1570.16090298
+	 train_error: 0.0282499976456
+	 train_recognition: 0.0787799060345
+
+[22:24:41] blocks.extensions.saveload Checkpointing has finished
+Epoch 94, step 40 |                                  #   | Elapsed Time: 0:00:18
+Epoch 95, step 40 |                      #               | Elapsed Time: 0:00:17[22:24:58] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:25:00] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:25:00] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 96
+	 iterations_done: 3840
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3840:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.130666658282
+	 test_recognition: 0.500291109085
+	 time_read_data_this_epoch: 0.403571605682
+	 time_read_data_total: 38.830009222
+	 time_train_this_epoch: 17.3308007717
+	 time_train_total: 1587.49170375
+	 train_error: 0.0389999896288
+	 train_recognition: 0.113160610199
+
+[22:25:01] blocks.extensions.saveload Checkpointing has finished
+Epoch 95, step 40 |                            #         | Elapsed Time: 0:00:19
+Epoch 96, step 40 |        #                             | Elapsed Time: 0:00:16[22:25:17] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:25:18] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:25:18] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 97
+	 iterations_done: 3880
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3880:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.135666668415
+	 test_recognition: 0.471766084433
+	 time_read_data_this_epoch: 0.402102231979
+	 time_read_data_total: 39.232111454
+	 time_train_this_epoch: 15.9418122768
+	 time_train_total: 1603.43351603
+	 train_error: 0.032399341464
+	 train_recognition: 0.0889508873224
+
+[22:25:19] blocks.extensions.saveload Checkpointing has finished
+Epoch 96, step 40 |                                  #   | Elapsed Time: 0:00:18
+Epoch 97, step 40 |            #                         | Elapsed Time: 0:00:16[22:25:36] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:25:37] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:25:37] blocks.extensions.saveload Checkpointing has started
+[22:25:38] blocks.extensions.saveload Checkpointing has finished
+Epoch 97, step 40 |                                     #| Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 98
+	 iterations_done: 3920
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3920:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.182666644454
+	 test_recognition: 0.721397697926
+	 time_read_data_this_epoch: 0.398520469666
+	 time_read_data_total: 39.6306319237
+	 time_train_this_epoch: 16.3270685673
+	 time_train_total: 1619.76058459
+	 train_error: 0.0346720740199
+	 train_recognition: 0.102061927319
+
+Epoch 98, step 40 |                 #                    | Elapsed Time: 0:00:16[22:25:55] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:25:57] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:25:57] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 99
+	 iterations_done: 3960
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 3960:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.158333331347
+	 test_recognition: 0.538645267487
+	 time_read_data_this_epoch: 0.401985406876
+	 time_read_data_total: 40.0326173306
+	 time_train_this_epoch: 16.8423755169
+	 time_train_total: 1636.60296011
+	 train_error: 0.0380746610463
+	 train_recognition: 0.116395495832
+
+[22:25:58] blocks.extensions.saveload Checkpointing has finished
+Epoch 98, step 40 |                                 #    | Elapsed Time: 0:00:19
+Epoch 99, step 40 |           #                          | Elapsed Time: 0:00:16[22:26:14] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:26:16] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:26:16] blocks.extensions.saveload Checkpointing has started
+[22:26:16] blocks.extensions.saveload Checkpointing has finished
+Epoch 99, step 40 |                                   #  | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 100
+	 iterations_done: 4000
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4000:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.128999993205
+	 test_recognition: 0.531055092812
+	 time_read_data_this_epoch: 0.401361703873
+	 time_read_data_total: 40.4339790344
+	 time_train_this_epoch: 16.2199075222
+	 time_train_total: 1652.82286763
+	 train_error: 0.028474021703
+	 train_recognition: 0.070149846375
+
+Epoch 100, step 40 |                       #             | Elapsed Time: 0:00:17[22:26:34] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:26:35] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:26:35] blocks.extensions.saveload Checkpointing has started
+[22:26:36] blocks.extensions.saveload Checkpointing has finished
+Epoch 100, step 40 |                        #            | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 101
+	 iterations_done: 4040
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4040:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.126000002027
+	 test_recognition: 0.457296520472
+	 time_read_data_this_epoch: 0.402030944824
+	 time_read_data_total: 40.8360099792
+	 time_train_this_epoch: 17.0813434124
+	 time_train_total: 1669.90421104
+	 train_error: 0.0300746671855
+	 train_recognition: 0.0809256955981
+
+Epoch 101, step 40 |          #                          | Elapsed Time: 0:00:15[22:26:52] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:26:54] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:26:54] blocks.extensions.saveload Checkpointing has started
+
+[22:26:55] blocks.extensions.saveload Checkpointing has finished
+-------------------------------------------------------------------------------
+Epoch 101, step 40 |                                   # | Elapsed Time: 0:00:18
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 102
+	 iterations_done: 4080
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4080:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.206999987364
+	 test_recognition: 0.711128950119
+	 time_read_data_this_epoch: 0.399776220322
+	 time_read_data_total: 41.2357861996
+	 time_train_this_epoch: 15.7653074265
+	 time_train_total: 1685.66951847
+	 train_error: 0.0295746717602
+	 train_recognition: 0.0812889561057
+
+Epoch 102, step 40 |                       #             | Elapsed Time: 0:00:17[22:27:12] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:27:13] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:27:13] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 103
+	 iterations_done: 4120
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4120:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.12199999392
+	 test_recognition: 0.524748325348
+	 time_read_data_this_epoch: 0.404028654099
+	 time_read_data_total: 41.6398148537
+	 time_train_this_epoch: 17.0619218349
+	 time_train_total: 1702.73144031
+	 train_error: 0.0389999896288
+	 train_recognition: 0.10482339561
+
+[22:27:14] blocks.extensions.saveload Checkpointing has finished
+Epoch 102, step 40 |                         #           | Elapsed Time: 0:00:19
+Epoch 103, step 40 |             #                       | Elapsed Time: 0:00:16[22:27:31] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:27:32] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:27:32] blocks.extensions.saveload Checkpointing has started
+[22:27:33] blocks.extensions.saveload Checkpointing has finished
+Epoch 103, step 40 |                                    #| Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 104
+	 iterations_done: 4160
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4160:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.140666663647
+	 test_recognition: 0.581750929356
+	 time_read_data_this_epoch: 0.402888536453
+	 time_read_data_total: 42.0427033901
+	 time_train_this_epoch: 15.9766600132
+	 time_train_total: 1718.70810032
+	 train_error: 0.0214999951422
+	 train_recognition: 0.0621986500919
+
+Epoch 104, step 40 |                          #          | Elapsed Time: 0:00:17[22:27:51] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:27:52] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:27:52] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 105
+	 iterations_done: 4200
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4200:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.127999991179
+	 test_recognition: 0.518711447716
+	 time_read_data_this_epoch: 0.400975227356
+	 time_read_data_total: 42.4436786175
+	 time_train_this_epoch: 17.3222637177
+	 time_train_total: 1736.03036404
+	 train_error: 0.0334480516613
+	 train_recognition: 0.0922879651189
+
+[22:27:54] blocks.extensions.saveload Checkpointing has finished
+Epoch 104, step 40 |         #                           | Elapsed Time: 0:00:21
+Epoch 105, step 40 |           #                         | Elapsed Time: 0:00:15[22:28:10] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:28:12] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:28:12] blocks.extensions.saveload Checkpointing has started
+[22:28:13] blocks.extensions.saveload Checkpointing has finished
+Epoch 105, step 40 |                                    #| Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 106
+	 iterations_done: 4240
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4240:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.158333331347
+	 test_recognition: 0.848443210125
+	 time_read_data_this_epoch: 0.407013654709
+	 time_read_data_total: 42.8506922722
+	 time_train_this_epoch: 15.8287210464
+	 time_train_total: 1751.85908508
+	 train_error: 0.0238246675581
+	 train_recognition: 0.0662574321032
+
+Epoch 106, step 40 |                   #                 | Elapsed Time: 0:00:16[22:28:30] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:28:31] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:28:31] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 107
+	 iterations_done: 4280
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4280:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.123000003397
+	 test_recognition: 0.586639285088
+	 time_read_data_this_epoch: 0.402388095856
+	 time_read_data_total: 43.253080368
+	 time_train_this_epoch: 16.5769834518
+	 time_train_total: 1768.43606853
+	 train_error: 0.02349999547
+	 train_recognition: 0.0699856281281
+
+[22:28:32] blocks.extensions.saveload Checkpointing has finished
+Epoch 106, step 40 |                              #      | Elapsed Time: 0:00:19
+Epoch 107, step 40 |              #                      | Elapsed Time: 0:00:16[22:28:49] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:28:50] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:28:50] blocks.extensions.saveload Checkpointing has started
+[22:28:51] blocks.extensions.saveload Checkpointing has finished
+Epoch 107, step 40 |                                  #  | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 108
+	 iterations_done: 4320
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4320:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.172333329916
+	 test_recognition: 0.705056548119
+	 time_read_data_this_epoch: 0.4010181427
+	 time_read_data_total: 43.6540985107
+	 time_train_this_epoch: 16.1645252705
+	 time_train_total: 1784.60059381
+	 train_error: 0.0358733646572
+	 train_recognition: 0.0919513255358
+
+Epoch 108, step 40 |                     #               | Elapsed Time: 0:00:16[22:29:08] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:29:09] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:29:09] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 109
+	 iterations_done: 4360
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4360:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.137666657567
+	 test_recognition: 0.516447663307
+	 time_read_data_this_epoch: 0.398094892502
+	 time_read_data_total: 44.0521934032
+	 time_train_this_epoch: 16.8674311638
+	 time_train_total: 1801.46802497
+	 train_error: 0.0272240247577
+	 train_recognition: 0.0699886232615
+
+[22:29:10] blocks.extensions.saveload Checkpointing has finished
+Epoch 108, step 40 |                           #         | Elapsed Time: 0:00:19
+Epoch 109, step 40 |                      #              | Elapsed Time: 0:00:17[22:29:28] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:29:29] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:29:29] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 110
+	 iterations_done: 4400
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4400:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.115999996662
+	 test_recognition: 0.510865688324
+	 time_read_data_this_epoch: 0.400930166245
+	 time_read_data_total: 44.4531235695
+	 time_train_this_epoch: 16.9189925194
+	 time_train_total: 1818.38701749
+	 train_error: 0.0307986978441
+	 train_recognition: 0.0847050622106
+
+[22:29:30] blocks.extensions.saveload Checkpointing has finished
+Epoch 109, step 40 |                         #           | Elapsed Time: 0:00:19
+Epoch 110, step 40 |           #                         | Elapsed Time: 0:00:15[22:29:46] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:29:47] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:29:47] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 111
+	 iterations_done: 4440
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4440:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.122666656971
+	 test_recognition: 0.559855103493
+	 time_read_data_this_epoch: 0.395966768265
+	 time_read_data_total: 44.8490903378
+	 time_train_this_epoch: 15.8532173634
+	 time_train_total: 1834.24023485
+	 train_error: 0.0361493416131
+	 train_recognition: 0.105815216899
+
+[22:29:48] blocks.extensions.saveload Checkpointing has finished
+Epoch 110, step 40 |                                    #| Elapsed Time: 0:00:18
+Epoch 111, step 40 |                      #              | Elapsed Time: 0:00:17[22:30:06] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:30:07] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:30:07] blocks.extensions.saveload Checkpointing has started
+[22:30:08] blocks.extensions.saveload Checkpointing has finished
+Epoch 111, step 40 |                         #           | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 112
+	 iterations_done: 4480
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4480:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.147666662931
+	 test_recognition: 0.654446840286
+	 time_read_data_this_epoch: 0.402187824249
+	 time_read_data_total: 45.251278162
+	 time_train_this_epoch: 16.950117588
+	 time_train_total: 1851.19035244
+	 train_error: 0.0268246736377
+	 train_recognition: 0.0676106587052
+
+Epoch 112, step 40 |           #                         | Elapsed Time: 0:00:15[22:30:24] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:30:25] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:30:25] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 113
+	 iterations_done: 4520
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4520:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.118999995291
+	 test_recognition: 0.566246509552
+	 time_read_data_this_epoch: 0.401151895523
+	 time_read_data_total: 45.6524300575
+	 time_train_this_epoch: 15.8197956085
+	 time_train_total: 1867.01014805
+	 train_error: 0.0199740212411
+	 train_recognition: 0.0555030927062
+
+[22:30:26] blocks.extensions.saveload Checkpointing has finished
+Epoch 112, step 40 |                                    #| Elapsed Time: 0:00:18
+Epoch 113, step 40 |                         #           | Elapsed Time: 0:00:17[22:30:44] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:30:45] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:30:45] blocks.extensions.saveload Checkpointing has started
+[22:30:46] blocks.extensions.saveload Checkpointing has finished
+Epoch 113, step 40 |                       #             | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 114
+	 iterations_done: 4560
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4560:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.121666654944
+	 test_recognition: 0.659822285175
+	 time_read_data_this_epoch: 0.400950670242
+	 time_read_data_total: 46.0533807278
+	 time_train_this_epoch: 17.2346572876
+	 time_train_total: 1884.24480534
+	 train_error: 0.0236493498087
+	 train_recognition: 0.0629761368036
+
+Epoch 114, step 40 |                  #                  | Elapsed Time: 0:00:16[22:31:03] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:31:04] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:31:04] blocks.extensions.saveload Checkpointing has started
+[22:31:05] blocks.extensions.saveload Checkpointing has finished
+Epoch 114, step 40 |                               #     | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 115
+	 iterations_done: 4600
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4600:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.11400000006
+	 test_recognition: 0.537168383598
+	 time_read_data_this_epoch: 0.398031949997
+	 time_read_data_total: 46.4514126778
+	 time_train_this_epoch: 16.4870347977
+	 time_train_total: 1900.73184013
+	 train_error: 0.0372240245342
+	 train_recognition: 0.0992690548301
+
+Epoch 115, step 40 |            #                        | Elapsed Time: 0:00:16[22:31:22] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:31:23] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:31:23] blocks.extensions.saveload Checkpointing has started
+[22:31:24] blocks.extensions.saveload Checkpointing has finished
+Epoch 115, step 40 |                                  #  | Elapsed Time: 0:00:18
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 116
+	 iterations_done: 4640
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4640:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.119999989867
+	 test_recognition: 0.430984556675
+	 time_read_data_this_epoch: 0.402036905289
+	 time_read_data_total: 46.8534495831
+	 time_train_this_epoch: 15.9690079689
+	 time_train_total: 1916.7008481
+	 train_error: 0.0507499799132
+	 train_recognition: 0.149454802275
+
+Epoch 116, step 40 |                      #              | Elapsed Time: 0:00:17[22:31:41] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:31:43] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:31:43] blocks.extensions.saveload Checkpointing has started
+[22:31:44] blocks.extensions.saveload Checkpointing has finished
+Epoch 116, step 40 |                          #          | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 117
+	 iterations_done: 4680
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4680:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.168666660786
+	 test_recognition: 0.708356738091
+	 time_read_data_this_epoch: 0.406829595566
+	 time_read_data_total: 47.2602791786
+	 time_train_this_epoch: 16.9101424217
+	 time_train_total: 1933.61099052
+	 train_error: 0.0326493419707
+	 train_recognition: 0.0913073867559
+
+Epoch 117, step 40 |              #                      | Elapsed Time: 0:00:16[22:32:00] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:32:02] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:32:02] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 118
+	 iterations_done: 4720
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4720:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.152333348989
+	 test_recognition: 0.648938417435
+	 time_read_data_this_epoch: 0.404797792435
+	 time_read_data_total: 47.6650769711
+	 time_train_this_epoch: 16.1480796337
+	 time_train_total: 1949.75907016
+	 train_error: 0.0207986980677
+	 train_recognition: 0.0615682825446
+
+[22:32:02] blocks.extensions.saveload Checkpointing has finished
+Epoch 117, step 40 |                                 #   | Elapsed Time: 0:00:18
+Epoch 118, step 40 |                    #                | Elapsed Time: 0:00:16[22:32:20] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:32:21] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:32:21] blocks.extensions.saveload Checkpointing has started
+[22:32:22] blocks.extensions.saveload Checkpointing has finished
+Epoch 118, step 40 |                           #         | Elapsed Time: 0:00:19
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: False
+	 epoch_started: False
+	 epochs_done: 119
+	 iterations_done: 4760
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4760:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.127000004053
+	 test_recognition: 0.568825125694
+	 time_read_data_this_epoch: 0.401838779449
+	 time_read_data_total: 48.0669157505
+	 time_train_this_epoch: 16.7355351448
+	 time_train_total: 1966.4946053
+	 train_error: 0.024149350822
+	 train_recognition: 0.0629697814584
+
+Epoch 119, step 37 | #                                   | Elapsed Time: 0:00:14[22:32:37] blocks.main_loop Received epoch interrupt signal.
+
+Blocks will complete this epoch of training and run extensions before exiting. If you do not want to complete this epoch, press CTRL + C again to stop training after the current batch.
+Epoch 119, step 40 |              #                      | Elapsed Time: 0:00:16[22:32:39] blocks.extensions.monitoring Monitoring on auxiliary data started
+[22:32:40] blocks.extensions.monitoring Monitoring on auxiliary data finished
+[22:32:40] blocks.extensions.saveload Checkpointing has started
+[22:32:41] blocks.extensions.saveload Checkpointing has finished
+Epoch 119, step 40 |                                 #   | Elapsed Time: 0:00:18
+[22:32:41] blocks.extensions.saveload Checkpointing has started
+
+-------------------------------------------------------------------------------
+AFTER ANOTHER EPOCH
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: True
+	 epoch_started: False
+	 epochs_done: 120
+	 iterations_done: 4800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4800:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet',)
+	 test_error: 0.129000008106
+	 test_recognition: 0.535500764847
+	 time_read_data_this_epoch: 0.398275375366
+	 time_read_data_total: 48.4651911259
+	 time_train_this_epoch: 16.0991353989
+	 time_train_total: 1982.5937407
+	 train_error: 0.0270486921072
+	 train_recognition: 0.0731507688761
+
+[22:32:42] blocks.extensions.saveload Checkpointing has finished
+
+-------------------------------------------------------------------------------
+TRAINING HAS BEEN FINISHED:
+-------------------------------------------------------------------------------
+Training status:
+	 batch_interrupt_received: False
+	 epoch_interrupt_received: True
+	 epoch_started: False
+	 epochs_done: 120
+	 iterations_done: 4800
+	 received_first_batch: True
+	 resumed_from: None
+	 training_started: True
+Log records from the iteration 4800:
+	 saved_to: ('shapenet-simple-20161204-215147/shapenet', 'shapenet-simple-20161204-215147/shapenet')
+	 test_error: 0.129000008106
+	 test_recognition: 0.535500764847
+	 time_read_data_this_epoch: 0.398275375366
+	 time_read_data_total: 48.4651911259
+	 time_train_this_epoch: 16.0991353989
+	 time_train_total: 1982.5937407
+	 train_error: 0.0270486921072
+	 train_recognition: 0.0731507688761
+	 training_finished: True
+
+
+Process finished with exit code 0

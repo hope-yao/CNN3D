@@ -463,7 +463,7 @@ if __name__ == "__main__":
 
     # ------------------------------------------------------------------------
     from fuel.datasets.hdf5 import H5PYDataset
-    train_set = H5PYDataset('../data/potcup_vox.hdf5', which_sets=('train',))
+    train_set = H5PYDataset('../data/potcup_hollow_vox.hdf5', which_sets=('train',))
     handle = train_set.open()
     data = train_set.get_data(handle, slice(0, 1))
     I = data[0].reshape(1,width*height*depth)

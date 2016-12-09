@@ -4,10 +4,8 @@ from blocks.serialization import load
 from blocks.model import Model
 from fuel.datasets.hdf5 import H5PYDataset
 
-d = 5 # attention window size
-
 # with open('../log/RAM3D/read_small/potcup-simple-20161206-181231/potcup', "rb") as f:
-with open('./shapenet-simple-20161207-132832/shapenet', "rb") as f:
+with open('./shapenet-simple-20161208-140611/shapenet', "rb") as f:
         p = load(f, 'model')
 
 if isinstance(p, Model):
@@ -17,17 +15,17 @@ ram = model.get_top_bricks()[0]
 dtensor5 = tensor.TensorType('float32', (False,) * 5)
 x = dtensor5('input')  # keyword from fuel
 y = tensor.matrix('targets')  # keyword from fuel
-l, y_hat = ram.classify(x)
-f = theano.function([x], [l, y_hat])
+l, y_hat, rho_orig, rho_larger, rho_largest = ram.classify(x)
+f = theano.function([x], [l, y_hat, rho_orig, rho_larger, rho_largest])
 
 mnist_train = H5PYDataset('../data/shapenet10.hdf5', which_sets=('train',))
 handle = mnist_train.open()
-model_idx = 10
+model_idx = 100
 train_data = mnist_train.get_data(handle, slice(model_idx , model_idx +1))
 xx = train_data[0]
 YY = train_data[1]
 print(xx.shape)
-l, prob = f(xx)
+l, prob, rho_orig, rho_larger, rho_largest = f(xx)
 print(l)
 print(YY)
 print(prob)
@@ -47,7 +45,7 @@ plt.show()
 import numpy as np
 # for [y, r, c, cx, cy, cz] in f(train_features[0,:,:,:].reshape(1,32*32*32)):
 #     print(cx, cy, cz)
-cx,cy,cz = l[:,0,0],l[:,0,1],l[:,0,2]
+cx,cy,cz = l[:,0,0]*32,l[:,0,1]*32,l[:,0,2]*32
 '''visualize 3D data'''
 def plot_cube(ax, x, y, z, inc, a, i):
     "x y z location and alpha"
@@ -149,7 +147,7 @@ def viz2(V,cx,cy,cz,d):
 
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
-viz2(train_data[0][0][0].reshape(32,32,32),cx,cy,cz,d)
+viz2(train_data[0][0][0].reshape(32,32,32),cx,cy,cz,ram.read_N)
 print(cx)
 print(cy)
 print(cz)

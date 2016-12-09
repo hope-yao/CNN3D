@@ -41,9 +41,8 @@ class RAM(BaseRecurrent, Initializable, Random):
         # l = tensor.matrix('l')  # for a batch
         n_class = 2
         dim_h = self.dim_h
-        dim_data = 2
         inits = {
-            # 'weights_init': IsotropicGaussian(0.01),
+            # 'weights_init': Constant(1.),
             # 'biases_init': Constant(0.),
             'weights_init': Orthogonal(),
             'biases_init': IsotropicGaussian(),
@@ -66,21 +65,19 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.linear_h2 = MLP(activations=[Identity()], dims=[dim_h, dim_h], name="core network 1", **inits)
 
         # location network
-        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, dim_data], name="location network", **inits)
+        self.linear_l = MLP(activations=[Logistic()], dims=[dim_h, self.image_ndim], name="location network", **inits)
 
         # classification network
-        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, n_class], name="classification network", **inits)
+        self.linear_a = MLP(activations=[Softmax()], dims=[dim_h, self.n_class], name="classification network", **inits)
 
+        self.scale1 = 1
+        self.scale2 = 1
+        self.pool_3d_1 = MaxPooling3((self.scale1, self.scale1, self.scale1))
+        self.pool_3d_2 = MaxPooling3((self.scale2, self.scale2, self.scale2))
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
+                         self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a, self.pool_3d_1, self.pool_3d_2]
 
-        # self.fork = Fork(prototype = Linear(use_bias=True),
-        #                          output_names = ['l', 'a'], input_dim = dim_h, output_dims = [dim_data, n_class],
-        #                          name="location classification", **inits)
-        # self.softmax = Softmax(name="softmax")
-        #
-        # self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
-        #                  self.rect_h, self.linear_h1, self.linear_h2, self.fork, self.softmax]
+
     @property
     def output_dim(self):
         return self.n_class
@@ -116,7 +113,7 @@ class RAM(BaseRecurrent, Initializable, Random):
     # ------------------------------------------------------------------------
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
-               outputs=['l', 'prob', 'h'])  # h seems not necessary
+               outputs=['l', 'prob', 'h', 'rho_orig', 'rho_larger', 'rho_largest'])  # h seems not necessary
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
@@ -172,11 +169,11 @@ class RAM(BaseRecurrent, Initializable, Random):
         prob = self.linear_a.apply(h)
         # l, _prob = self.fork.apply(h)
         # prob = self.softmax.apply(_prob)
-        return l, prob, h
+        return l, prob, h, rho_orig, rho_larger, rho_largest
 
     # ------------------------------------------------------------------------
 
-    @application(inputs=['features'], outputs=['l', 'prob'])
+    @application(inputs=['features'], outputs=['l', 'prob', 'rho_orig', 'rho_larger', 'rho_largest'])
     def classify(self, features):
         batch_size = features.shape[0]
         # No particular use apart from control n_steps in RNN
@@ -195,9 +192,9 @@ class RAM(BaseRecurrent, Initializable, Random):
         #     center_z_ = T.vector()
         #     init_l = [center_x_, center_y_, center_z_]
         # init_l = tensor.matrix('l')  # for a batch
-        l, prob, h = self.apply(x=features, dummy=u)
+        l, prob, h, rho_orig, rho_larger, rho_largest = self.apply(x=features, dummy=u)
 
-        return l, prob
+        return l, prob, rho_orig, rho_larger, rho_largest
 
 if __name__ == "__main__":
     ndim = 3
@@ -209,8 +206,8 @@ if __name__ == "__main__":
         # ------------------------------------------------------------------------
         x = tensor.ftensor4('features')  # keyword from fuel
         y = tensor.matrix('targets')  # keyword from fuel
-        l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
-        f = theano.function([x], [l, prob])
+        l, prob, rho_orig, rho_larger, rho_largest = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+        f = theano.function([x], [l, prob, rho_orig, rho_larger, rho_largest])
         # ------------------------------------------------------------------------
         # test single forward pass
         from fuel.datasets.hdf5 import H5PYDataset
@@ -219,7 +216,7 @@ if __name__ == "__main__":
         train_data = mnist_train.get_data(handle, slice(0, 16))
         xx = train_data[0]
         print(xx.shape)
-        l, prob = f(xx)
+        l, prob, rho_orig, rho_larger, rho_largest = f(xx)
         print(l)
         print(prob)
     elif ndim==3:
@@ -230,8 +227,8 @@ if __name__ == "__main__":
         dtensor5 = T.TensorType('float32', (False,) * 5)
         x = dtensor5('features')  # keyword from fuel
         y = tensor.matrix('targets')  # keyword from fuel
-        l, prob = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
-        f = theano.function([x], [l, prob])
+        l, prob, rho_orig, rho_larger, rho_largest = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+        f = theano.function([x], [l, prob, rho_orig, rho_larger, rho_largest])
         # ------------------------------------------------------------------------
         # test single forward pass
         from fuel.datasets.hdf5 import H5PYDataset
@@ -240,6 +237,6 @@ if __name__ == "__main__":
         train_data = mnist_train.get_data(handle, slice(0, 16))
         xx = train_data[0]
         print(xx.shape)
-        l, prob = f(xx)
+        l, prob, rho_orig, rho_larger, rho_largest = f(xx)
         print(l)
         print(prob)

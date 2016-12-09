@@ -42,7 +42,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.n_class = 10
         dim_h = self.dim_h
         inits = {
-            # 'weights_init': IsotropicGaussian(0.01),
+            # 'weights_init': Constant(1.),
             # 'biases_init': Constant(0.),
             'weights_init': Orthogonal(),
             'biases_init': IsotropicGaussian(),

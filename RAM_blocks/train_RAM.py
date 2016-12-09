@@ -8,6 +8,7 @@ from __future__ import division, print_function
 
 import logging
 import numpy as np
+# import sys
 
 FORMAT = '[%(asctime)s] %(name)-15s %(message)s'
 DATEFMT = "%H:%M:%S"
@@ -98,6 +99,10 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
 
     subdir = dataset + time.strftime("%Y%m%d-%H%M%S")
+    if not os.path.exists(subdir):
+        os.makedirs(subdir)
+    # sys.stdout = open("{}/{}.txt".format(subdir, dataset), "w")
+
     # ---------------------------RAM_blocks SETUP-------------------------------------
     ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter)
     ram.push_initialization_config()
@@ -138,10 +143,6 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         # step_rule=Scale(learning_rate=learning_rate)
     )
 
-    # -------------------------Setup monitors--------------------------------------
-    if not os.path.exists(subdir):
-        os.makedirs(subdir)
-
     # -------------------------MAIN LOOP--------------------------------------
     main_loop = MainLoop(
         model=Model(cost),
@@ -168,6 +169,8 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 
     main_loop.run()
 
+    # sys.stdout.close()
+
 # -----------------------------------------------------------------------------
 
 if __name__ == "__main__":
@@ -185,4 +188,6 @@ if __name__ == "__main__":
     parser.add_argument("--n-iter", type=int, dest="n_iter",
                         default=5, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
+
+
     main(**vars(args))

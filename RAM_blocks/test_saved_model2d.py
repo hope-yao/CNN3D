@@ -20,7 +20,7 @@ f = theano.function([x], [l, prob, rho_orig, rho_larger, rho_largest])
 
 mnist_train = H5PYDataset('../data/bmnist.hdf5', which_sets=('train',))
 handle = mnist_train.open()
-model_idx = 3000
+model_idx = 2000
 train_data = mnist_train.get_data(handle, slice(model_idx , model_idx +1))
 xx = train_data[0]
 YY = train_data[1]

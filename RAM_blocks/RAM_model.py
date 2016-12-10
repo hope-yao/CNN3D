@@ -25,7 +25,7 @@ from bricks3D.cnn3d_bricks import Convolutional3, MaxPooling3, ConvolutionalSequ
 
 
 class RAM(BaseRecurrent, Initializable, Random):
-    def __init__(self, image_size, channels, attention, n_iter, **kwargs):
+    def __init__(self, image_size, channels, attention, n_iter, n_class, **kwargs):
         super(RAM, self).__init__(**kwargs)
 
         self.n_iter = n_iter
@@ -39,7 +39,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.dim_h = 256
 
         ########change according to number of classes
-        self.n_class = 10
+        self.n_class = n_class
         dim_h = self.dim_h
         inits = {
             # 'weights_init': Constant(1.),
@@ -165,7 +165,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         h_l = self.rect_linear_g1.apply(l)  # theta_g^1
         g_t = self.rect_g.apply(self.linear_g21.apply(h_g) + self.linear_g22.apply(h_l))  # theta_g^2
         h = self.rect_h.apply(self.linear_h1.apply(g_t) + self.linear_h2.apply(h))
-        l = self.linear_l.apply(h)
+        l = self.linear_l.apply(0.1*h)
         prob = self.linear_a.apply(h)
         # l, _prob = self.fork.apply(h)
         # prob = self.softmax.apply(_prob)

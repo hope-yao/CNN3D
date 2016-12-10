@@ -64,6 +64,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         image_size = (28, 28)
         channels = 1
         img_ndim = 2
+        n_class = 10
         data_train = MNIST(which_sets=["train"], sources=['features', 'targets'])
         data_test = MNIST(which_sets=["test"], sources=['features', 'targets'])
         train_stream = DataStream.default_stream(data_train, iteration_scheme=SequentialScheme(data_train.num_examples, batch_size))
@@ -74,6 +75,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         image_size = (28,28)
         channels = 1
         img_ndim = 2
+        n_class = 10
         from fuel.datasets.hdf5 import H5PYDataset
         train_set = H5PYDataset('../data/bmnist.hdf5', which_sets=('train',))
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
@@ -83,6 +85,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         image_size = (32,32,32)
         channels = 1
         img_ndim = 3
+        n_class = 2
         from fuel.datasets.hdf5 import H5PYDataset
         train_set = H5PYDataset('../data/potcup_hollow_vox.hdf5', which_sets=('train',))
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
@@ -92,6 +95,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         image_size = (32,32,32)
         channels = 1
         img_ndim = 3
+        n_class = 10
         from fuel.datasets.hdf5 import H5PYDataset
         train_set = H5PYDataset('../data/shapenet10.hdf5', which_sets=('train',))
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
@@ -104,7 +108,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
     # sys.stdout = open("{}/{}.txt".format(subdir, dataset), "w")
 
     # ---------------------------RAM_blocks SETUP-------------------------------------
-    ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter)
+    ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter, n_class=n_class)
     ram.push_initialization_config()
     ram.initialize()
 
@@ -176,7 +180,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--dataset", type=str, dest="dataset",
-                        default="bmnist", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
+                        default="potcup", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
     parser.add_argument("--epochs", type=int, dest="epochs",
                         default=500, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
@@ -186,7 +190,7 @@ if __name__ == "__main__":
     parser.add_argument("--attention", "-a", type=int, default=5,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
-                        default=5, help="number of time iteration in RNN")  # dim should be the number of classes
+                        default=10, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
 
 

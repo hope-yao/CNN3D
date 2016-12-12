@@ -69,15 +69,6 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         # valid_stream = Flatten(
         #     DataStream.default_stream(data_valid, iteration_scheme=SequentialScheme(data_valid.num_examples, batch_size)))
         test_stream = DataStream.default_stream(data_test, iteration_scheme=SequentialScheme(data_test.num_examples, batch_size))
-    elif dataset == 'bmnist':
-        image_size = (28,28)
-        channels = 1
-        img_ndim = 2
-        from fuel.datasets.hdf5 import H5PYDataset
-        train_set = H5PYDataset('../data/bmnist.hdf5', which_sets=('train',))
-        train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
-        test_set = H5PYDataset('../data/bmnist.hdf5', which_sets=('test',))
-        test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
     elif dataset == 'potcup':
         image_size = (32,32,32)
         channels = 1

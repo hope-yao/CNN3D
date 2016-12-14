@@ -10,9 +10,9 @@ def viz3(V,flag):
     x1 = y1 = z1 = t1 = []
     x2 = y2 = z2 = t2 = []
     x3 = y3 = z3 = t3 = []
-    for i in range(V.shape[0]):
-        for j in range(V.shape[1]):
-            for k in range(V.shape[2]):
+    for i in range(0,V.shape[0],2):
+        for j in range(0,V.shape[1],2):
+            for k in range(0,V.shape[2],2):
                 if V[i, j, k] > 0.05 * V.max():
                     x = x + [i]
                     y = y + [j]

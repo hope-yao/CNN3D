@@ -156,40 +156,41 @@ class ZoomableAttentionWindow3d(object):
 
         return FY, FX, FZ
 
-    def read_large(self, images, center_y, center_x, center_z):
+    #flipped x and y for the 3d conv case
+    def read_large(self, images, center_x, center_y, center_z):
         N = self.N
         channels = self.channels
         batch_size = images.shape[0]
         print(images.ndim)
 
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32')*0.1
 
         # Reshape input into proper 3d images
         I = images.reshape((batch_size, self.img_height, self.img_width, self.img_depth))
 
         # Get separable filterbank
-        FY, FX, FZ = self.filterbank_matrices(center_y, center_x, center_z, delta, sigma, 1)
+        FY, FX, FZ = self.filterbank_matrices(center_x, center_y, center_z, delta, sigma, 1) #output of filterbank is ordered as FY, FX, FZ!!!
 
-        FY = T.repeat(FY, channels, axis=0)
         FX = T.repeat(FX, channels, axis=0)
+        FY = T.repeat(FY, channels, axis=0)
         FZ = T.repeat(FZ, channels, axis=0)
 
         # apply to the batch of images
         I1 = I.reshape((batch_size, self.img_height, self.img_width * self.img_depth))
-        IY = my_batched_dot(FY, I1).reshape((batch_size, N, self.img_width, self.img_depth))
-        I2 = IY.dimshuffle([0, 1, 3, 2]).reshape((batch_size, N * self.img_depth, self.img_width))
-        IX = my_batched_dot(I2, FX.transpose([0, 2, 1])).reshape((batch_size, N, self.img_depth, N)).dimshuffle(
+        IX = my_batched_dot(FX, I1).reshape((batch_size, N, self.img_width, self.img_depth))
+        I2 = IX.dimshuffle([0, 1, 3, 2]).reshape((batch_size, N * self.img_depth, self.img_width))
+        IY = my_batched_dot(I2, FY.transpose([0, 2, 1])).reshape((batch_size, N, self.img_depth, N)).dimshuffle(
             [0, 1, 3, 2])
-        I3 = IX.dimshuffle([0, 3, 1, 2]).reshape((batch_size, self.img_depth, N * N))
+        I3 = IY.dimshuffle([0, 3, 1, 2]).reshape((batch_size, self.img_depth, N * N))
         IZ = my_batched_dot(FZ, I3).reshape((batch_size, N, N, N)).dimshuffle([0, 2, 3, 1])
         #
         # Max hack: convert back to an image
-        IYY = my_batched_dot(FY.transpose([0, 2, 1]), IZ.reshape((batch_size, N, N * N))).reshape(
+        IXX = my_batched_dot(FX.transpose([0, 2, 1]), IZ.reshape((batch_size, N, N * N))).reshape(
             (batch_size, self.img_height, N, N))
-        I11 = IYY.dimshuffle([0, 1, 3, 2]).reshape((batch_size, self.img_height * N, N))
-        IXX = my_batched_dot(I11, FX).reshape((batch_size, self.img_height, N, self.img_width)).dimshuffle([0, 1, 3, 2])
-        I22 = IXX.dimshuffle([0, 3, 1, 2]).reshape((batch_size, N, self.img_height * self.img_width))
+        I11 = IXX.dimshuffle([0, 1, 3, 2]).reshape((batch_size, self.img_height * N, N))
+        IYY = my_batched_dot(I11, FY).reshape((batch_size, self.img_height, N, self.img_width)).dimshuffle([0, 1, 3, 2])
+        I22 = IYY.dimshuffle([0, 3, 1, 2]).reshape((batch_size, N, self.img_height * self.img_width))
         IZZ = my_batched_dot(FZ.transpose([0, 2, 1]), I22).reshape(
             (batch_size, self.img_depth, self.img_height, self.img_width)).dimshuffle([0, 2, 3, 1])
 
@@ -249,11 +250,12 @@ class ZoomableAttentionWindow3d(object):
         # # apply to the batch of images
         # apply to the batch of images
         I1 = I.reshape((batch_size, self.img_height, self.img_width * self.img_depth))
-        IY = my_batched_dot(FY, I1).reshape((batch_size, N*self.scale, self.img_width, self.img_depth))
-        I2 = IY.dimshuffle([0, 1, 3, 2]).reshape((batch_size, N*self.scale * self.img_depth, self.img_width))
-        IX = my_batched_dot(I2, FX.transpose([0, 2, 1])).reshape((batch_size, N*self.scale, self.img_depth, N*self.scale)).dimshuffle([0, 1, 3, 2])
-        I3 = IX.dimshuffle([0, 3, 1, 2]).reshape((batch_size, self.img_depth, N*self.scale * N*self.scale))
-        IZ = my_batched_dot(FZ, I3)
+        IX = my_batched_dot(FX, I1).reshape((batch_size, N, self.img_width, self.img_depth))
+        I2 = IX.dimshuffle([0, 1, 3, 2]).reshape((batch_size, N * self.img_depth, self.img_width))
+        IY = my_batched_dot(I2, FY.transpose([0, 2, 1])).reshape((batch_size, N, self.img_depth, N)).dimshuffle(
+            [0, 1, 3, 2])
+        I3 = IY.dimshuffle([0, 3, 1, 2]).reshape((batch_size, self.img_depth, N * N))
+        IZ = my_batched_dot(FZ, I3).reshape((batch_size, N, N, N)).dimshuffle([0, 2, 3, 1])
 
         II =  IZ.reshape((batch_size*channels,N*self.scale,N*self.scale,N*self.scale))
         from theano.tensor.signal.pool import pool_3d

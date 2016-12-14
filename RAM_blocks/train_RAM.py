@@ -45,9 +45,10 @@ from blocks.model import Model
 
 from fuel.datasets.mnist import MNIST
 
-from blocks_extras.extensions.plot import Plot
+# from blocks_extras.extensions.plot import Plot
 
 from RAM_model import *
+# from conv_RAM_model3d import *
 
 sys.setrecursionlimit(100000)
 
@@ -81,6 +82,18 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         train_stream = DataStream.default_stream(train_set,iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
         test_set = H5PYDataset('../data/bmnist.hdf5', which_sets=('test',))
         test_stream = DataStream.default_stream(test_set,iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
+    elif dataset == 'potcup2d':
+        image_size = (28,28)
+        channels = 1
+        img_ndim = 2
+        n_class = 2
+        from fuel.datasets.hdf5 import H5PYDataset
+        train_set = H5PYDataset('../data/2dpotcup/potcup2d.hdf5', which_sets=('train',))
+        train_stream = DataStream.default_stream(train_set,
+                                                 iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
+        test_set = H5PYDataset('../data/2dpotcup/potcup2d.hdf5', which_sets=('test',))
+        test_stream = DataStream.default_stream(test_set,
+                                                iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
     elif dataset == 'potcup':
         image_size = (32,32,32)
         channels = 1
@@ -108,6 +121,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
     # sys.stdout = open("{}/{}.txt".format(subdir, dataset), "w")
 
     # ---------------------------RAM_blocks SETUP-------------------------------------
+    # ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter, n_class=n_class)
     ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter, n_class=n_class)
     ram.push_initialization_config()
     ram.initialize()
@@ -140,9 +154,9 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         #     StepClipping(10.),
         #     Adam(learning_rate),
         # ])
-        # step_rule =AdaDelta()
+        step_rule =AdaDelta()
         # step_rule = AdaGrad()
-        step_rule=RMSProp(1e-3),
+        # step_rule=RMSProp(1e-3),
         # step_rule=Momentum(learning_rate=learning_rate, momentum=0.95)
         # step_rule=Scale(learning_rate=learning_rate)
     )
@@ -167,7 +181,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
                               after_epoch=True, save_separately=['log', 'model']),
                     ProgressBar(),
                     Printing(),
-                    Plot(subdir, channels=[["train_cost","test_cost"], ["train_error","test_error"]], after_epoch=True)
+                    # Plot(subdir, channels=[["train_cost","test_cost"], ["train_error","test_error"]], after_epoch=True)
                     ]
     )
 
@@ -180,17 +194,17 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--dataset", type=str, dest="dataset",
-                        default="potcup", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
+                        default="potcup2d", help="Dataset to use: [mnist|bmnist|shapenet|potcup|potcup2d]")
     parser.add_argument("--epochs", type=int, dest="epochs",
                         default=500, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
                         default=64, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
                         default=1e-2, help="Learning rate")
-    parser.add_argument("--attention", "-a", type=int, default=5,
+    parser.add_argument("--attention", "-a", type=int, default=28,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
-                        default=10, help="number of time iteration in RNN")  # dim should be the number of classes
+                        default=1, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
 
 

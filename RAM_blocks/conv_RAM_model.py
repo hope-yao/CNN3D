@@ -27,7 +27,7 @@ from theano.tensor.signal.pool import pool_2d
 
 
 class conv_RAM(BaseRecurrent, Initializable, Random):
-    def __init__(self, image_size, channels, attention, n_iter, **kwargs):
+    def __init__(self, image_size, channels, attention, n_iter, n_class, **kwargs):
         super(conv_RAM, self).__init__(**kwargs)
 
         self.n_iter = n_iter
@@ -42,7 +42,6 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
         self.dim_h = (28/2/2)**2*3*16 #
 
         l = tensor.matrix('l')  # for a batch
-        n_class = 10
         dim_h = self.dim_h
         dim_data = 2
         inits = {
@@ -92,7 +91,7 @@ class conv_RAM(BaseRecurrent, Initializable, Random):
 
     @property
     def output_dim(self):
-        return 10
+        return self.n_class
 
     @output_dim.setter
     def output_dim(self, value):

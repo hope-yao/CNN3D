@@ -9,7 +9,7 @@ import numpy
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-with open('./potcup20161209-142816/potcup', "rb") as f:
+with open('./potcup20161219-142049/potcup', "rb") as f:
 # with open('./shapenet-simple-20161208-140611/shapenet', "rb") as f:
         p = load(f, 'model')
 

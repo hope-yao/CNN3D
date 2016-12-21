@@ -200,7 +200,7 @@ if __name__ == "__main__":
     ndim = 3
     # ----------------------------------------------------------------------
     if ndim==2:
-        ram = RAM(image_size=(28,28), channels=1, attention=5, n_iter=4)
+        ram = RAM(image_size=(28,28), channels=1, attention=5, n_iter=4, n_class=10)
         ram.push_initialization_config()
         ram.initialize()
         # ------------------------------------------------------------------------
@@ -220,7 +220,7 @@ if __name__ == "__main__":
         print(l)
         print(prob)
     elif ndim==3:
-        ram = RAM(image_size=(32,32,32), channels=1, attention=7, n_iter=4)
+        ram = RAM(image_size=(32,32,32), channels=1, attention=7, n_iter=4, n_class=10)
         ram.push_initialization_config()
         ram.initialize()
         # ------------------------------------------------------------------------

@@ -180,9 +180,9 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--dataset", type=str, dest="dataset",
-                        default="potcup", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
+                        default="bmnist", help="Dataset to use: [mnist|bmnist|shapenet|potcup]")
     parser.add_argument("--epochs", type=int, dest="epochs",
-                        default=500, help="how many epochs")
+                        default=9, help="how many epochs")
     parser.add_argument("--bs", "--batch-size", type=int, dest="batch_size",
                         default=64, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
@@ -190,7 +190,7 @@ if __name__ == "__main__":
     parser.add_argument("--attention", "-a", type=int, default=5,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
-                        default=10, help="number of time iteration in RNN")  # dim should be the number of classes
+                        default=8, help="number of time iteration in RNN")  # dim should be the number of classes
     args = parser.parse_args()
 
 

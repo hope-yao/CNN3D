@@ -202,7 +202,7 @@ class ZoomableAttentionWindow(object):
         batch_size = images.shape[0]
 
         delta = T.ones([batch_size], 'float32')
-        sigma = T.ones([batch_size], 'float32')
+        sigma = T.ones([batch_size], 'float32')*0.1
 
         # Reshape input into proper 2d images
         I = images.reshape((batch_size * channels, self.img_height, self.img_width))

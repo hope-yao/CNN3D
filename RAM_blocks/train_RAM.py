@@ -47,8 +47,8 @@ from fuel.datasets.mnist import MNIST
 
 # from blocks_extras.extensions.plot import Plot
 
-from RAM_model import *
-# from conv_RAM_model3d import *
+# from RAM_model import *
+from conv_RAM_model import *
 
 sys.setrecursionlimit(100000)
 
@@ -88,10 +88,10 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         img_ndim = 2
         n_class = 2
         from fuel.datasets.hdf5 import H5PYDataset
-        train_set = H5PYDataset('../data/2dpotcup/potcup2d.hdf5', which_sets=('train',))
+        train_set = H5PYDataset('../data/2dpotcup/potcup2d_point.hdf5', which_sets=('train',))
         train_stream = DataStream.default_stream(train_set,
                                                  iteration_scheme=ShuffledScheme(train_set.num_examples, batch_size))
-        test_set = H5PYDataset('../data/2dpotcup/potcup2d.hdf5', which_sets=('test',))
+        test_set = H5PYDataset('../data/2dpotcup/potcup2d_point.hdf5', which_sets=('test',))
         test_stream = DataStream.default_stream(test_set,
                                                 iteration_scheme=ShuffledScheme(test_set.num_examples, batch_size))
     elif dataset == 'potcup':
@@ -122,7 +122,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
 
     # ---------------------------RAM_blocks SETUP-------------------------------------
     # ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter, n_class=n_class)
-    ram = RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter, n_class=n_class)
+    ram = conv_RAM(image_size=image_size, channels=channels, attention=attention, n_iter=n_iter, n_class=n_class)
     ram.push_initialization_config()
     ram.initialize()
 
@@ -133,7 +133,7 @@ def main(dataset, epochs, batch_size, learning_rate, attention,
         dtensor5 = T.TensorType('float32', (False,) * 5)
         x = dtensor5('input')  # keyword from fuel
     y = tensor.matrix('targets')  # keyword from fuel
-    l, y_hat, _, _, _ = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
+    l, y_hat, _, _ = ram.classify(x)  # directly use theano to build the graph? Might be able to track iteration idx.
     y_hat_last = y_hat[-1, :, :]  # pay attention to its shape and perhaps should use argmax?
     y_int = T.cast(y, 'int64')
 
@@ -201,7 +201,7 @@ if __name__ == "__main__":
                         default=64, help="Size of each mini-batch")
     parser.add_argument("--lr", "--learning-rate", type=float, dest="learning_rate",
                         default=1e-2, help="Learning rate")
-    parser.add_argument("--attention", "-a", type=int, default=28,
+    parser.add_argument("--attention", "-a", type=int, default=14,
                         help="Use attention mechanism (read_window)")
     parser.add_argument("--n-iter", type=int, dest="n_iter",
                         default=1, help="number of time iteration in RNN")  # dim should be the number of classes

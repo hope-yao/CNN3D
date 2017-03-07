@@ -155,24 +155,24 @@ ax_canvas3.get_xaxis().set_visible(False)
 ax_canvas3.get_yaxis().set_visible(False)
 
 
-# glimpse_idx = 4
-# glimpse4 = numpy.zeros((28,28))
-# canvas4 = numpy.zeros((28,28))
-# x_start = l[glimpse_idx,0,1]-ram.read_N/2.
-# x_end = l[glimpse_idx,0,1]+ram.read_N/2.
-# y_start = l[glimpse_idx,0,0]-ram.read_N/2.
-# y_end = l[glimpse_idx,0,0]+ram.read_N/2.
-# # glimpse_idx = glimpse_idx + 1
-# glimpse4[x_start:x_end,y_start:y_end] = rho_orig[glimpse_idx,0,:].reshape(ram.read_N,ram.read_N)
-# canvas4 = canvas3 + glimpse4
-# # ax_glimpse0.get_xaxis().set_visible(False)
-# # ax_glimpse0.get_yaxis().set_visible(False)
-# ax_glimpse4.imshow(glimpse4, cmap='Greys', interpolation='nearest')
-# ax_canvas4.imshow(canvas4, cmap='Greys', interpolation='nearest')
-# ax_glimpse4.get_xaxis().set_visible(False)
-# ax_glimpse4.get_yaxis().set_visible(False)
-# ax_canvas4.get_xaxis().set_visible(False)
-# ax_canvas4.get_yaxis().set_visible(False)
+glimpse_idx = 4
+glimpse4 = numpy.zeros((28,28))
+canvas4 = numpy.zeros((28,28))
+x_start = l[glimpse_idx,0,1]-ram.read_N/2.
+x_end = l[glimpse_idx,0,1]+ram.read_N/2.
+y_start = l[glimpse_idx,0,0]-ram.read_N/2.
+y_end = l[glimpse_idx,0,0]+ram.read_N/2.
+# glimpse_idx = glimpse_idx + 1
+glimpse4[x_start:x_end,y_start:y_end] = rho_orig[glimpse_idx,0,:].reshape(ram.read_N,ram.read_N)
+canvas4 = canvas3 + glimpse4
+# ax_glimpse0.get_xaxis().set_visible(False)
+# ax_glimpse0.get_yaxis().set_visible(False)
+ax_glimpse4.imshow(glimpse4, cmap='Greys', interpolation='nearest')
+ax_canvas4.imshow(canvas4, cmap='Greys', interpolation='nearest')
+ax_glimpse4.get_xaxis().set_visible(False)
+ax_glimpse4.get_yaxis().set_visible(False)
+ax_canvas4.get_xaxis().set_visible(False)
+ax_canvas4.get_yaxis().set_visible(False)
 
 plt.show(True)
 

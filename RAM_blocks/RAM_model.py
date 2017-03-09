@@ -40,6 +40,7 @@ class RAM(BaseRecurrent, Initializable, Random):
 
         ########change according to number of classes
         self.n_class = n_class
+
         dim_h = self.dim_h
         inits = {
             # 'weights_init': Constant(1.),
@@ -52,7 +53,7 @@ class RAM(BaseRecurrent, Initializable, Random):
         n0 = 64
         self.rect_linear_g0 = MLP(activations=[Rectifier()], dims=[3*self.read_N**self.image_ndim, n0], name="glimpse network 0", **inits) # 3 glimpse of different resolution
 
-        n1 = 32
+        n1 = 64
         self.rect_linear_g1 = MLP(activations=[Rectifier()], dims=[self.image_ndim, n1], name="glimpse network 1", **inits)
 
         self.linear_g21 = MLP(activations=[Identity()], dims=[n0, dim_h], name="glimpse network 2", **inits)
@@ -77,6 +78,8 @@ class RAM(BaseRecurrent, Initializable, Random):
         self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
                          self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a, self.pool_3d_1, self.pool_3d_2]
 
+        # self.children = [self.rect_linear_g0, self.rect_linear_g1, self.linear_g21, self.linear_g22, self.rect_g,
+        #                  self.rect_h, self.linear_h1, self.linear_h2, self.linear_l, self.linear_a]
 
     @property
     def output_dim(self):
@@ -114,6 +117,7 @@ class RAM(BaseRecurrent, Initializable, Random):
     @recurrent(sequences=['dummy'], contexts=['x'],
                states=['l', 'h'],
                outputs=['l', 'prob', 'h', 'rho_orig', 'rho_larger', 'rho_largest'])  # h seems not necessary
+               # outputs=['l', 'prob', 'h', 'rho_orig'])
     def apply(self, x, dummy, l=None, h=None):
         if self.image_ndim == 2:
             from theano.tensor.signal.pool import pool_2d
@@ -148,18 +152,19 @@ class RAM(BaseRecurrent, Initializable, Random):
             rho_orig = zoomer_orig.read_small(x, (l[:, 0]+shiftx)*dim_size, (l[:, 1]+shifty)*dim_size, (l[:, 2]+shiftz)*dim_size)  # glimpse sensor in 2D
             rho_orig = rho_orig.reshape((x.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
-            zoomer_larger = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth,  self.read_N, self.scale1)
-            rho_larger = zoomer_larger.read_small(x, (l[:, 0]+shiftx)*dim_size, (l[:, 1]+shifty)*dim_size, (l[:, 2]+shiftz)*dim_size)  # glimpse sensor in 2D
-            rho_larger = self.pool_3d_1.apply(rho_larger)  # downsampling
-            rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
+            # zoomer_larger = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth,  self.read_N, self.scale1)
+            # rho_larger = zoomer_larger.read_small(x, (l[:, 0]+shiftx)*dim_size, (l[:, 1]+shifty)*dim_size, (l[:, 2]+shiftz)*dim_size)  # glimpse sensor in 2D
+            # rho_larger = self.pool_3d_1.apply(rho_larger)  # downsampling
+            # rho_larger = rho_larger.reshape((rho_larger.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
+            #
+            # zoomer_largest = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth,  self.read_N, self.scale1)
+            #
+            # rho_largest = zoomer_largest.read_small(x, (l[:, 0]+shiftx)*dim_size, (l[:, 1]+shifty)*dim_size, (l[:, 2]+shiftz)*dim_size)  # glimpse sensor in 2D
+            # rho_largest = self.pool_3d_2.apply(rho_largest)  # downsampling
+            # rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
 
-            zoomer_largest = ZoomableAttentionWindow3d(self.channels, self.img_height, self.img_width, self.img_depth,  self.read_N, self.scale1)
-
-            rho_largest = zoomer_largest.read_small(x, (l[:, 0]+shiftx)*dim_size, (l[:, 1]+shifty)*dim_size, (l[:, 2]+shiftz)*dim_size)  # glimpse sensor in 2D
-            rho_largest = self.pool_3d_2.apply(rho_largest)  # downsampling
-            rho_largest = rho_largest.reshape((rho_largest.shape[0], self.channels * self.read_N * self.read_N * self.read_N))
-
-            rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
+            # rho = T.concatenate([rho_orig, rho_larger, rho_largest], axis=1)
+            rho = rho_orig
 
         h_g = self.rect_linear_g0.apply(rho)  # theta_g^0
         h_l = self.rect_linear_g1.apply(l)  # theta_g^1
@@ -170,10 +175,12 @@ class RAM(BaseRecurrent, Initializable, Random):
         # l, _prob = self.fork.apply(h)
         # prob = self.softmax.apply(_prob)
         return l, prob, h, rho_orig, rho_larger, rho_largest
+        # return l, prob, h, rho_orig
 
     # ------------------------------------------------------------------------
 
     @application(inputs=['features'], outputs=['l', 'prob', 'rho_orig', 'rho_larger', 'rho_largest'])
+    # @application(inputs=['features'], outputs=['l', 'prob', 'rho_orig'])
     def classify(self, features):
         batch_size = features.shape[0]
         # No particular use apart from control n_steps in RNN
@@ -193,8 +200,9 @@ class RAM(BaseRecurrent, Initializable, Random):
         #     init_l = [center_x_, center_y_, center_z_]
         # init_l = tensor.matrix('l')  # for a batch
         l, prob, h, rho_orig, rho_larger, rho_largest = self.apply(x=features, dummy=u)
-
+        # l, prob, h, rho_orig = self.apply(x=features, dummy=u)
         return l, prob, rho_orig, rho_larger, rho_largest
+        # return l, prob, rho_orig
 
 if __name__ == "__main__":
     ndim = 3

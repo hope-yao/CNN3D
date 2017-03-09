@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="START DOING">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RAM_blocks/potcup20161219-142049/draw_classify.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/LeNet" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/draw_classify.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Viz_LeNet_tf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/LeNet_Mnist.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/load_LeNet.py" />
+    <list default="true" id="fa6a9b15-aa08-411a-a963-c59961d5cda2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VIZ_LENET_TF.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/blocks-experiments-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/attentione2d.py" afterPath="$PROJECT_DIR$/RAM_blocks/attentione2d.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" afterPath="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RAM_blocks/viz.py" afterPath="$PROJECT_DIR$/RAM_blocks/viz.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Viz_LeNet_tf.py" afterPath="$PROJECT_DIR$/Viz_LeNet_tf.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks-experiments.ipynb" afterPath="$PROJECT_DIR$/blocks-experiments.ipynb" />
     </list>
     <list id="61689683-8f46-4735-9a29-1e06ecf30ae3" name="New changelist" comment="" />
@@ -37,21 +31,9 @@
       <file leaf-file-name="train_RAM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="127" column="69" selection-start-line="127" selection-start-column="68" selection-end-line="127" selection-end-column="69" />
+            <state relative-caret-position="221">
+              <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RAM_model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/RAM_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="215" column="55" selection-start-line="215" selection-start-column="50" selection-end-line="215" selection-end-column="55" />
-              <folding>
-                <element signature="e#3949#3986#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -59,10 +41,22 @@
       <file leaf-file-name="viz.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RAM_blocks/viz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+            <state relative-caret-position="1273">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
-                <element signature="e#178#192#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_saved_model2d.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,7 +65,7 @@
       <file leaf-file-name="LeNet3D.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="473">
               <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
               <folding>
                 <element signature="e#1602#2886#1" expanded="false" />
@@ -81,45 +75,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Viz_LeNet_tf.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Viz_LeNet_tf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="330" column="20" selection-start-line="330" selection-start-column="20" selection-end-line="330" selection-end-column="20" />
-              <folding>
-                <element signature="e#994#1032#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cost.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/bricks/cost.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_saved_model2d.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blocks-experiments.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blocks-experiments.ipynb">
+      <file leaf-file-name="filter_visualization.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../3dcnn-attention/scripts/filter_visualization.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="29" />
+              <selected id="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Viz_LeNet_tf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Viz_LeNet_tf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+              <folding>
+                <element signature="e#994#1032#0" expanded="true" />
+                <element signature="e#7230#9114#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VIZ_LENET_TF.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VIZ_LENET_TF.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attentione2d.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione2d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="248" column="20" selection-start-line="248" selection-start-column="20" selection-end-line="248" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,18 +131,8 @@
       <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23160">
+            <state relative-caret-position="271">
               <caret line="1579" column="0" selection-start-line="1579" selection-start-column="0" selection-end-line="1579" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train_conv_RAM.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RAM_blocks/train_conv_RAM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-560">
-              <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -213,17 +207,17 @@
         <option value="$PROJECT_DIR$/data/load_LeNet.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/attentione2d.py" />
         <option value="$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py" />
-        <option value="$PROJECT_DIR$/RAM_blocks/viz.py" />
         <option value="$PROJECT_DIR$/blocks-experiments.ipynb" />
+        <option value="$PROJECT_DIR$/RAM_blocks/viz.py" />
         <option value="$PROJECT_DIR$/Viz_LeNet_tf.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="149" />
-    <option name="y" value="122" />
+    <option name="x" value="159" />
+    <option name="y" value="176" />
     <option name="width" value="1590" />
-    <option name="height" value="696" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -267,6 +261,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bricks3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNN3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RAM_blocks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -815,7 +837,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481330312599</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="some changes to attention....&#10;Added visualization of LeNet">
+      <created>1488920872617</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1488920872617</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
@@ -828,27 +857,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="122" width="1590" height="696" extended-state="0" />
+    <frame x="159" y="176" width="1590" height="904" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28916448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21475196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43040684" sideWeight="0.5043812" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42184153" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45787546" sideWeight="0.49561885" order="2" side_tool="false" content_ui="tabs" x="1985" y="463" width="1855" height="189" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55172414" sideWeight="0.49561885" order="2" side_tool="false" content_ui="tabs" x="1985" y="463" width="1855" height="189" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48715204" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4828694" sideWeight="0.49789253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -882,7 +911,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="used multiple glimpse of different resolution.&#10;it can achieve 2.5% testing error when attention=28 and iter=1&#10;but it is not working for all other cases." />
     <MESSAGE value="Found parameter setting is crucial to network convergence.&#10;current best setting:&#10;AdaDelta-Orth-Guassian-att5-itr5&#10;which can provide down to 1.9% testing accuracy&#10;&#10;Start to working on its convolution version" />
     <MESSAGE value="removed concatenation of l and rho by using convolution in conv_RAM_model.py. But the original code is not working properly now." />
     <MESSAGE value="conv_RAM_model.py passed compilation, but still problematic" />
@@ -907,7 +935,8 @@
     <MESSAGE value="live plot is working now.&#10;1. run in terminal: bokeh-server &#10;2. open in browser: http://localhost:5006/" />
     <MESSAGE value="test_saved_model2d produces good looking figure now. But attention location and patch info doesn't match" />
     <MESSAGE value="put all 3d visualization code in to viz.py&#10;working on visualization of 3D results similar to 2D MNIST" />
-    <option name="LAST_COMMIT_MESSAGE" value="put all 3d visualization code in to viz.py&#10;working on visualization of 3D results similar to 2D MNIST" />
+    <MESSAGE value="some changes to attention....&#10;Added visualization of LeNet" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes to attention....&#10;Added visualization of LeNet" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -1070,7 +1099,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/RAM_blocks/viz.py</url>
-          <line>172</line>
+          <line>102</line>
           <option name="timeStamp" value="227" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1088,6 +1117,26 @@
           <line>212</line>
           <option name="timeStamp" value="233" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Viz_LeNet_tf.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Viz_LeNet_tf.py</url>
+          <line>319</line>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Viz_LeNet_tf.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Viz_LeNet_tf.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1099,26 +1148,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="234" />
+      <option name="time" value="238" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/shapenet-simple-20161206-004000/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="2557" column="80" selection-start-line="2557" selection-start-column="80" selection-end-line="2557" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/theano/scan_module/scan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="1053" column="74" selection-start-line="1053" selection-start-column="74" selection-end-line="1053" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-155413/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1-bs16" />
     <entry file="file://$PROJECT_DIR$/log/RAM3D/read_small/potcup-simple-20161206-160929/AdaDelta-Orth-Guassian-att5-itr5-On64-sigma_5e_1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -1196,16 +1230,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/mnist20161208-205146/mnist.txt" />
     <entry file="file://$PROJECT_DIR$/test.txt" />
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#53#65#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/projections/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -1231,27 +1255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-          <folding>
-            <element signature="e#23#54#0" expanded="false" />
-            <element signature="e#1419#3084#0" expanded="false" />
-            <element signature="e#3090#3091#0" expanded="false" />
-            <element signature="e#5240#6319#0" expanded="false" />
-            <element signature="e#6393#8736#0" expanded="false" />
-            <element signature="e#8812#10013#0" expanded="false" />
-            <element signature="e#11751#12960#0" expanded="false" />
-            <element signature="e#13034#14667#0" expanded="false" />
-            <element signature="e#14755#15318#0" expanded="false" />
-            <element signature="e#15396#16092#0" expanded="false" />
-            <element signature="e#16127#17176#0" expanded="false" />
-            <element signature="e#17223#18275#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,13 +1340,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../InfoGAN/infogan/misc/test_saved_model3d.py" />
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -1359,48 +1355,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="238" column="29" selection-start-line="238" selection-start-column="29" selection-end-line="238" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/blocks/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/viz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding>
-            <element signature="e#178#192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23160">
-          <caret line="1579" column="0" selection-start-line="1579" selection-start-column="0" selection-end-line="1579" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1427,14 +1385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="127" column="69" selection-start-line="127" selection-start-column="68" selection-end-line="127" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RAM_blocks/train_conv_RAM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-560">
@@ -1453,9 +1403,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="482" column="29" selection-start-line="482" selection-start-column="29" selection-end-line="482" selection-end-column="29" />
+          <folding>
+            <element signature="e#1419#3084#0" expanded="false" />
+            <element signature="e#3090#3091#0" expanded="false" />
+            <element signature="e#5240#6319#0" expanded="false" />
+            <element signature="e#6393#8736#0" expanded="false" />
+            <element signature="e#8812#10013#0" expanded="false" />
+            <element signature="e#11751#12960#0" expanded="false" />
+            <element signature="e#13034#14667#0" expanded="false" />
+            <element signature="e#14755#15318#0" expanded="false" />
+            <element signature="e#15396#16092#0" expanded="false" />
+            <element signature="e#16127#17176#0" expanded="false" />
+            <element signature="e#17223#18275#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/blocks_conv_same_border.readme">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/temp_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/viz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/attentione2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="248" column="20" selection-start-line="248" selection-start-column="20" selection-end-line="248" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/test_saved_model2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../3dcnn-attention/scripts/filter_visualization.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="-1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RAM_blocks/train_RAM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bricks3D/LeNet3D.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="473">
           <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
           <folding>
             <element signature="e#1602#2886#1" expanded="false" />
@@ -1464,13 +1503,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="1579" column="0" selection-start-line="1579" selection-start-column="0" selection-end-line="1579" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Viz_LeNet_tf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="330" column="20" selection-start-line="330" selection-start-column="20" selection-end-line="330" selection-end-column="20" />
+        <state relative-caret-position="16">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#994#1032#0" expanded="true" />
+            <element signature="e#7230#9114#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIZ_LENET_TF.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="-1" />
         </state>
       </provider>
     </entry>

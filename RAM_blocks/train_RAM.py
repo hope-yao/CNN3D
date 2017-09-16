@@ -45,7 +45,7 @@ from blocks.model import Model
 
 from fuel.datasets.mnist import MNIST
 
-from blocks_extras.extensions.plot import Plot
+# from blocks_extras.extensions.plot import Plot
 
 from RAM_model import *
 
